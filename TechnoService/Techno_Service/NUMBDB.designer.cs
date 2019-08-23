@@ -22,7 +22,7 @@ namespace Techno_Service
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="NUMBDB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="NUMBDATABASE")]
 	public partial class NUMBDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -39,7 +39,7 @@ namespace Techno_Service
     #endregion
 		
 		public NUMBDBDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["NUMBDBConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["NUMBDATABASEConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -174,7 +174,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(MAX)")]
 		public string Title
 		{
 			get
@@ -194,7 +194,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(MAX)")]
 		public string Name
 		{
 			get
@@ -214,7 +214,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Surname", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Surname", DbType="VarChar(MAX)")]
 		public string Surname
 		{
 			get
@@ -234,7 +234,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contacts", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contacts", DbType="VarChar(MAX)")]
 		public string Contacts
 		{
 			get
@@ -254,7 +254,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(MAX)")]
 		public string Email
 		{
 			get
@@ -274,7 +274,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Username", DbType="VarChar(MAX)")]
 		public string Username
 		{
 			get
@@ -294,7 +294,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Password", DbType="VarChar(MAX)")]
 		public string Password
 		{
 			get
@@ -314,7 +314,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address1", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address1", DbType="VarChar(MAX)")]
 		public string Address1
 		{
 			get
@@ -334,7 +334,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address2", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address2", DbType="VarChar(MAX)")]
 		public string Address2
 		{
 			get
@@ -354,7 +354,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_City", DbType="VarChar(MAX)")]
 		public string City
 		{
 			get
@@ -374,7 +374,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Province", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Province", DbType="VarChar(MAX)")]
 		public string Province
 		{
 			get
@@ -394,7 +394,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZipCode", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ZipCode", DbType="VarChar(MAX)")]
 		public string ZipCode
 		{
 			get
@@ -453,10 +453,6 @@ namespace Techno_Service
 		
 		private string _Category;
 		
-		private string _Image;
-		
-		private int _Discount;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -473,10 +469,6 @@ namespace Techno_Service
     partial void OnQuantityChanged();
     partial void OnCategoryChanging(string value);
     partial void OnCategoryChanged();
-    partial void OnImageChanging(string value);
-    partial void OnImageChanged();
-    partial void OnDiscountChanging(int value);
-    partial void OnDiscountChanged();
     #endregion
 		
 		public Product()
@@ -584,7 +576,7 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category", DbType="VarChar(MAX)")]
 		public string Category
 		{
 			get
@@ -600,46 +592,6 @@ namespace Techno_Service
 					this._Category = value;
 					this.SendPropertyChanged("Category");
 					this.OnCategoryChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Image
-		{
-			get
-			{
-				return this._Image;
-			}
-			set
-			{
-				if ((this._Image != value))
-				{
-					this.OnImageChanging(value);
-					this.SendPropertyChanging();
-					this._Image = value;
-					this.SendPropertyChanged("Image");
-					this.OnImageChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Int NOT NULL")]
-		public int Discount
-		{
-			get
-			{
-				return this._Discount;
-			}
-			set
-			{
-				if ((this._Discount != value))
-				{
-					this.OnDiscountChanging(value);
-					this.SendPropertyChanging();
-					this._Discount = value;
-					this.SendPropertyChanged("Discount");
-					this.OnDiscountChanged();
 				}
 			}
 		}

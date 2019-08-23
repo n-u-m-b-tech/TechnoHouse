@@ -38,7 +38,7 @@ namespace TechWeb
                 }
                 else
                 {
-                    Response.Redirect("UserRegister.aspx");
+                    Response.Redirect("SignUp.aspx");
                 }
 
             }

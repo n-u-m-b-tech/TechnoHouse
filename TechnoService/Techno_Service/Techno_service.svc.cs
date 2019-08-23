@@ -12,6 +12,7 @@ namespace Techno_Service
     public class Techno_service : ITechno_service
     {
         NUMBDBDataContext db = new NUMBDBDataContext();
+        
 
         public bool Login(string email, string password)
         {
