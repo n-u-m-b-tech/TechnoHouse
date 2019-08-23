@@ -71,6 +71,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\NUMBDB.mdf" />
+    <Content Include="App_Data\NUMBDB_log.ldf">
+      <DependentUpon>NUMBDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Techno_service.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -89,9 +93,7 @@
     </Compile>
     <Compile Include="User.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="app.config" />
     <Content Include="NUMBDB.dbml">
