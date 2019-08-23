@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TechWeb.LogIn" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LogIn.aspx.cs" Inherits="TechWeb.LogIn" %>
 
 <!DOCTYPE html>
 
@@ -88,3 +88,4 @@
 	<script src="scripts/bootstrap.min.js"></script>
 </body>
 </html>
+
