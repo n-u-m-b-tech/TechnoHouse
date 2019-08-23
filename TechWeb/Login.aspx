@@ -60,10 +60,9 @@
 				  </div>
                     <br />
 				  <!-- Sign in button -->
-				  <asp:button ID="btnSignIn" runat="server" text="Sign in" OnClick="btnSignIn_Click" CssClass="btn"></asp:button>
-                    
+				  <asp:button ID="btnSignIn" runat="server" text="Sign in" OnClick="btnSignIn_Click" CssClass="btn"></asp:button>      
                     <div>
-                        <asp:Label ID="lblErrorMessage" runat="server" Text="Incorrect User Credential" ForeColor ="red"></asp:Label>
+                     
                     </div>
                     <div>
                         <asp:Label ID="lblMsg" runat="server" Text="Login successful" ForeColor ="red"></asp:Label>
