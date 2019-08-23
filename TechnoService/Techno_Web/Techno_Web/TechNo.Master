@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TechNo.master.cs" Inherits="Techno_Web.TechNo" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .auto-style1 {
+            width: 485px;
+        }
+        #container {
+            height: 600px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <!--Wrapper-->
+    <div id="wrapper">
+            <!-- Header-->
+            <header id="header">  
+            <!---Menu -->
+                 <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol">
+                        <img src="images/logo.png"  width="70px" height="70px" alt="" /></span>
+                </a>
+                <input id="txtSearch" type="search" placeholder="Search" runat="server" class="auto-style1"/><asp:Button ID="BtnSearch" runat="server" Text="Search" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </header>
+           <br />   
+        <nav id="navigator">
+                <ul>
+                    <li><a href="UserRegister.aspx">Register</a></li>
+                    <li><a href="Login.aspx">Log In</a></li>
+                    <li><a href="Catalogue.aspx">Products</a></li>
+                    <li><a href="ContactUs.aspx">Contact Us</a></li>
+                    <li><a href="About.aspx">About</a></li>
+                </ul>
+        </nav>
+
+        <section id="container">
+            <div id="catalogue">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            </div>
+            <div id="contents">
+        </section>
+
+
+        <footer id="footer"> <div class="inner">
+                    <section>
+                      <h2> Follow Us</h2>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands style2 fa-twitter"> <span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon brands style2 fa-facebook"> <span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon brands style2 fa-instagram"> <span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                    </section>
+                </div>
+        </footer>
+
+    </div>
+    </form>
+</body>
+</html>

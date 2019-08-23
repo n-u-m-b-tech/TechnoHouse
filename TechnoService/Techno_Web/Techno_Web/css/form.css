@@ -1,0 +1,61 @@
+﻿body {
+    background-image: url(https://www.google.co.za/search?q=tech+home&client=opera&hs=87s&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjOnISDy5TkAhXMTxUIHQEmBXgQ_AUIESgB&biw=1326&bih=664#imgrc=mcfUNgyhugH6UM:);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-control {
+    margin: 10px;
+}
+
+    .form-control:focus {
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.card {
+    width: 45%;
+    margin: auto;
+    margin-top: 150px;
+    opacity: 0.9;
+    letter-spacing: 1.5px;
+}
+
+    .card h5 {
+        background-color: #669900;
+        color: white;
+        letter-spacing: 2px;
+        font-family: 'Lobster', cursive;
+    }
+
+    .card p {
+        color: #446600;
+    }
+
+    .card a {
+        color: black;
+    }
+
+.text-center {
+    padding-top: 30px;
+}
+
+.btn {
+    margin: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #446600;
+    opacity: 0.9;
+    letter-spacing: 1.5px;
+}
+
+    .btn:hover {
+        background-color: #446600;
+        color: #ffffff;
+    }
+
+.radio label {
+    margin: 15px
+}
