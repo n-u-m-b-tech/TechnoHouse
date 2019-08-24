@@ -11,7 +11,7 @@ namespace TechWeb
 {
 
 
-    public partial class EditProduct
+    public partial class ViewProduct
     {
 
         /// <summary>

@@ -85,7 +85,43 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\facebook.svg" />
+    <Content Include="images\icons\badoo.png" />
+    <Content Include="images\icons\behance.png" />
+    <Content Include="images\icons\deviantart.png" />
+    <Content Include="images\icons\dribbble.png" />
+    <Content Include="images\icons\dropbox.png" />
+    <Content Include="images\icons\facebook.png" />
+    <Content Include="images\icons\flickr.png" />
+    <Content Include="images\icons\foursquare.png" />
+    <Content Include="images\icons\google-plus.png" />
+    <Content Include="images\icons\instagram.png" />
+    <Content Include="images\icons\line.png" />
+    <Content Include="images\icons\linkedin.png" />
+    <Content Include="images\icons\myspace.png" />
+    <Content Include="images\icons\path.png" />
+    <Content Include="images\icons\pinterest.png" />
+    <Content Include="images\icons\quora.png" />
+    <Content Include="images\icons\skype.png" />
+    <Content Include="images\icons\snapchat.png" />
+    <Content Include="images\icons\soundcloud.png" />
+    <Content Include="images\icons\spotify.png" />
+    <Content Include="images\icons\swarm.png" />
+    <Content Include="images\icons\telegram.png" />
+    <Content Include="images\icons\tumblr.png" />
+    <Content Include="images\icons\twitter.png" />
+    <Content Include="images\icons\viber.png" />
+    <Content Include="images\icons\vimeo.png" />
+    <Content Include="images\icons\vine.png" />
+    <Content Include="images\icons\whatsapp.png" />
+    <Content Include="images\icons\yelp.png" />
+    <Content Include="images\icons\youtube.png" />
+    <Content Include="images\instagram.svg" />
+    <Content Include="images\twitter.svg" />
+    <Content Include="images\youtube.svg" />
     <Content Include="SearchProduct.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="ViewProduct.aspx" />
     <Content Include="WelcomePage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
@@ -97,7 +133,7 @@
     <Content Include="Catalogue.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
-    <Content Include="EditProduct.aspx" />
+    <Content Include="RegditProduct.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="images\logo.png" />
@@ -124,12 +160,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="EditProduct.aspx.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
+    <Compile Include="RegditProduct.aspx.cs">
+      <DependentUpon>RegditProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditProduct.aspx.designer.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
+    <Compile Include="RegditProduct.aspx.designer.cs">
+      <DependentUpon>RegditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +198,13 @@
     </Compile>
     <Compile Include="ShoppingCart.aspx.designer.cs">
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
@@ -197,6 +240,13 @@
     </Compile>
     <Compile Include="UserAccount.aspx.designer.cs">
       <DependentUpon>UserAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="WelcomePage.aspx.cs">
       <DependentUpon>WelcomePage.aspx</DependentUpon>

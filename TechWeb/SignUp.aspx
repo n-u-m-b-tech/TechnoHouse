@@ -133,11 +133,10 @@
                     <section>
                       <h2> Follow Us</h2>
                         <ul class="icons">
-                            <li><a href="#" class="icon brands style2 fa-twitter"> <span class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon brands style2 fa-facebook"> <span class="label">Facebook</span></a></li>
-                            <li><a href="#" class="icon brands style2 fa-instagram"> <span class="label">Instagram</span></a></li>
-                            <li><a href="#" class="icon solid style2 fa-phone"><span class="label">PSSDDhone</span></a></li>
-                            <li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+                           <li><a href="https://www.facebook.com"><img src="images/icons/facebook.png" alt="Facebook" width="30" height="30" /></a></li>
+                            <li><a href="https://www.instagram.com"><img src="images/icons/instagram.png" alt="Instagram" width="30" height="30" /></a></li>
+                            <li><a href="https://www.twitter.com"><img src="images/icons/twitter.png" alt="Twitter" width="30" height="30" /></a></li>
+                            <li><a href="https://www.youtube.com"><img src="images/icons/youtube.png" alt="YouTube" width="30" height="30" /></a></li>
                         </ul>
                     </section>
                 </div>
