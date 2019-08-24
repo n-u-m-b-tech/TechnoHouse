@@ -40,7 +40,7 @@
                  <!-- Logo -->
                 <a href="index.html" class="logo">
                     <span class="symbol">
-                        <img src="images/logo.png"  width="70px" height="70px" alt="" /></span>
+                        <img src="images/logo.png"  width="70" height="70" alt="" /></span>
                 </a>
                 <input id="txtSearch" type="search" placeholder="Search" runat="server" class="auto-style1"/><asp:Button ID="BtnSearch" runat="server" Text="Search" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,7 +48,7 @@
            <br />   
         <nav id="navigator">
                 <ul>
-                    <li><a href="UserRegister.aspx">Register</a></li>
+                    <li><a href="SignUp.aspx">Register</a></li>
                     <li><a href="Login.aspx">Log In</a></li>
                     <li><a href="Catalogue.aspx">Products</a></li>
                     <li><a href="ContactUs.aspx">Contact Us</a></li>
@@ -69,6 +69,8 @@
 
             </div>
             <div id="contents">
+
+            </div>
         </section>
 
 
