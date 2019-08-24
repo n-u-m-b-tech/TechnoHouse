@@ -8,7 +8,7 @@
      <meta charset="utf-8" />
      <meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no" />
 </head>
-<body>
+<body style="height: 1050px">
     <div id="header" class="header">
         <div class="trim">
             <a href="https://image.freepik.com/free-vector/blue-smart-home-logo-design_1051-1738.jpg" class="left logo" title="Home">TECHNOHOUSE</a>
@@ -49,23 +49,23 @@
     </div>
 
     <div id="search-bar" class="search bar">
-        <h1>I hold brief category and search bar bafwethu</h1>
+        <h1 style="height: 45px; width: 952px">I hold brief category and search bar bafwethu</h1>
     </div>
 
-    <div id="delivery" class="delivery"><h3>Ask me about delivery and am your guy</h3></div>
+    <div id="delivery" class="delivery"><h3 style="height: 50px; width: 948px">Ask me about delivery and am your guy</h3></div>
 
     <div id="section" class="section">
-        <h2>i hold all the left top categories, centre and right contents</h2>
+        <h2 style="height: 400px; width: 953px">i hold all the left top categories, centre and right contents</h2>
     </div>
 
 
 
     <div id="newsletter" class="newsletter">
-        <h2>signup and recieve 200 off</h2>
+        <h2 style="height: 82px; width: 944px">signup and recieve 200 off</h2>
     </div>
 
     <div id="footer">
-        <h2>i hold the footer</h2>
+        <h2 style="height: 176px; width: 953px; margin-right: 0px; margin-top: 50px">i hold the footer</h2>
     </div>
 
 </body>
