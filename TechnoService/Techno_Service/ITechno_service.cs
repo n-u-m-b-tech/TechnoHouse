@@ -30,6 +30,10 @@ namespace Techno_Service
         List<ProductD> search_by_price(string value);
         [OperationContract]
         ProductD productinfor_retrieval(int ID);
+        [OperationContract]
+        List<ProductD> price_by_ASC();
+        [OperationContract]
+        List<ProductD> price_by_DESC();
 
         //transaction
         [OperationContract]

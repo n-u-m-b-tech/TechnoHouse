@@ -387,6 +387,16 @@ namespace Techno_Service
             }
 
         }
+
+        public List<ProductD> price_by_ASC()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ProductD> price_by_DESC()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
         
