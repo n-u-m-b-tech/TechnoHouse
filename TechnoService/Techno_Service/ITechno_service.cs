@@ -28,6 +28,13 @@ namespace Techno_Service
         List<ProductD> search_by_cat(string category);
         [OperationContract]
         List<ProductD> search_by_price(string value);
+        [OperationContract]
+        ProductD productinfor_retrieval(int ID);
+
+        //transaction
+        [OperationContract]
+        Boolean Add_to_Cart(ProductD product);
+
 
 
         //shushan code

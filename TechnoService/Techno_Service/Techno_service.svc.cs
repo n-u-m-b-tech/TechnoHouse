@@ -201,7 +201,26 @@ namespace Techno_Service
 
         public List<ProductD> search_by_price(string value)
         {
-            throw new NotImplementedException();
+            var productlist = (from p in db.Products
+                               where p.Price.Equals(value)
+                               select p);
+            List<ProductD> priceP = new List<ProductD>();
+
+            foreach(Product prop in productlist)
+            {
+                ProductD fprp = new ProductD
+                {
+                    ID = prop.Product_Id,
+                    name = prop.Name,
+                    description = prop.Description,
+                    price = (Double)prop.Price,
+                    quantity = prop.Quantity,
+                    category = prop.Category
+
+                };
+                priceP.Add(fprp);
+            }
+            return priceP;
         }
 
         //line divider added
@@ -320,6 +339,35 @@ namespace Techno_Service
             {
                 return -1;
             }
+        }
+
+        public ProductD productinfor_retrieval(int ID)
+        {
+            var prod = (from p in db.Products
+                        where p.Product_Id.Equals(ID)
+                        select p).FirstOrDefault();
+            if (prod != null)
+            {
+                ProductD product = new ProductD
+                {
+                    ID = prod.Product_Id,
+                    name = prod.Name,
+                    description = prod.Description,
+                    price = (Double)prod.Price,
+                    quantity = prod.Quantity,
+                    category = prod.Category
+                };
+                return product;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public bool Add_to_Cart(ProductD product)
+        {
+            throw new NotImplementedException();
         }
     }
 }
