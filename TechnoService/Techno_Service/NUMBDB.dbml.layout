@@ -14,5 +14,25 @@
         <elementListCompartment Id="b42bbfeb-ae9e-4472-942b-770005294eff" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="e2690529-31b2-4440-ab93-10fd8960729e" absoluteBounds="6.5, 2.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/NUMBDBDataContext/Cart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6292797a-8edd-4837-b182-520b934c3246" absoluteBounds="6.515, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 1.73159912109375); (7.5 : 1.73159912109375); (7.5 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NUMBDBDataContext/Product/Product_Cart" />
+      <nodes>
+        <classShapeMoniker Id="36bf9717-fc80-4bd5-b2eb-c9877d68e684" />
+        <classShapeMoniker Id="e2690529-31b2-4440-ab93-10fd8960729e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.46715413411458); (6.5 : 3.46715413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NUMBDBDataContext/Client/Client_Cart" />
+      <nodes>
+        <classShapeMoniker Id="5c4fe234-bf89-4e16-b10d-aba7d658ae5c" />
+        <classShapeMoniker Id="e2690529-31b2-4440-ab93-10fd8960729e" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

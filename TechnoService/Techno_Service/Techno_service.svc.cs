@@ -365,9 +365,27 @@ namespace Techno_Service
             }
         }
 
-        public bool Add_to_Cart(ProductD product)
+        public bool Add_to_Cart(ProductD product,int userID)
         {
-            throw new NotImplementedException();
+            Cart cart = new Cart
+            {
+                user_Id = userID,
+                product_Id = product.ID,
+                Total = Convert.ToDecimal(product.price)
+
+            };
+
+            db.Carts.InsertOnSubmit(cart);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+
         }
     }
 }
