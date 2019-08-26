@@ -263,10 +263,22 @@ namespace TechWeb.TechService {
         private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private char activeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string brandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string categoryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string descriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal discountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string manufactureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
@@ -301,6 +313,32 @@ namespace TechWeb.TechService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public char active {
+            get {
+                return this.activeField;
+            }
+            set {
+                if ((this.activeField.Equals(value) != true)) {
+                    this.activeField = value;
+                    this.RaisePropertyChanged("active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string brand {
+            get {
+                return this.brandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.brandField, value) != true)) {
+                    this.brandField = value;
+                    this.RaisePropertyChanged("brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string category {
             get {
                 return this.categoryField;
@@ -322,6 +360,32 @@ namespace TechWeb.TechService {
                 if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
                     this.descriptionField = value;
                     this.RaisePropertyChanged("description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal discount {
+            get {
+                return this.discountField;
+            }
+            set {
+                if ((this.discountField.Equals(value) != true)) {
+                    this.discountField = value;
+                    this.RaisePropertyChanged("discount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string manufacture {
+            get {
+                return this.manufactureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.manufactureField, value) != true)) {
+                    this.manufactureField = value;
+                    this.RaisePropertyChanged("manufacture");
                 }
             }
         }
@@ -361,6 +425,858 @@ namespace TechWeb.TechService {
                 if ((this.quantityField.Equals(value) != true)) {
                     this.quantityField = value;
                     this.RaisePropertyChanged("quantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<char> ACTIVEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Cart[] CartsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> DiscountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Invoice[] InvoicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Product_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string manufactureField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<char> ACTIVE {
+            get {
+                return this.ACTIVEField;
+            }
+            set {
+                if ((this.ACTIVEField.Equals(value) != true)) {
+                    this.ACTIVEField = value;
+                    this.RaisePropertyChanged("ACTIVE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandField, value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Cart[] Carts {
+            get {
+                return this.CartsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CartsField, value) != true)) {
+                    this.CartsField = value;
+                    this.RaisePropertyChanged("Carts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Category {
+            get {
+                return this.CategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
+                    this.CategoryField = value;
+                    this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Discount {
+            get {
+                return this.DiscountField;
+            }
+            set {
+                if ((this.DiscountField.Equals(value) != true)) {
+                    this.DiscountField = value;
+                    this.RaisePropertyChanged("Discount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Invoice[] Invoices {
+            get {
+                return this.InvoicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
+                    this.InvoicesField = value;
+                    this.RaisePropertyChanged("Invoices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Product_Id {
+            get {
+                return this.Product_IdField;
+            }
+            set {
+                if ((this.Product_IdField.Equals(value) != true)) {
+                    this.Product_IdField = value;
+                    this.RaisePropertyChanged("Product_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string manufacture {
+            get {
+                return this.manufactureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.manufactureField, value) != true)) {
+                    this.manufactureField = value;
+                    this.RaisePropertyChanged("manufacture");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cart", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class Cart : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Cart_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Client ClientField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Product ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int product_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int user_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Cart_Id {
+            get {
+                return this.Cart_IdField;
+            }
+            set {
+                if ((this.Cart_IdField.Equals(value) != true)) {
+                    this.Cart_IdField = value;
+                    this.RaisePropertyChanged("Cart_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Client Client {
+            get {
+                return this.ClientField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientField, value) != true)) {
+                    this.ClientField = value;
+                    this.RaisePropertyChanged("Client");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Product Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int product_Id {
+            get {
+                return this.product_IdField;
+            }
+            set {
+                if ((this.product_IdField.Equals(value) != true)) {
+                    this.product_IdField = value;
+                    this.RaisePropertyChanged("product_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int user_Id {
+            get {
+                return this.user_IdField;
+            }
+            set {
+                if ((this.user_IdField.Equals(value) != true)) {
+                    this.user_IdField = value;
+                    this.RaisePropertyChanged("user_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Invoice", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class Invoice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Client ClientField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Invoice_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> Invoice_totalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Product ProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Product_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> Tot_priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<decimal> Unit_PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int client_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> quantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Client Client {
+            get {
+                return this.ClientField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ClientField, value) != true)) {
+                    this.ClientField = value;
+                    this.RaisePropertyChanged("Client");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Invoice_Id {
+            get {
+                return this.Invoice_IdField;
+            }
+            set {
+                if ((this.Invoice_IdField.Equals(value) != true)) {
+                    this.Invoice_IdField = value;
+                    this.RaisePropertyChanged("Invoice_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Invoice_total {
+            get {
+                return this.Invoice_totalField;
+            }
+            set {
+                if ((this.Invoice_totalField.Equals(value) != true)) {
+                    this.Invoice_totalField = value;
+                    this.RaisePropertyChanged("Invoice_total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Product Product {
+            get {
+                return this.ProductField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
+                    this.ProductField = value;
+                    this.RaisePropertyChanged("Product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Product_Id {
+            get {
+                return this.Product_IdField;
+            }
+            set {
+                if ((this.Product_IdField.Equals(value) != true)) {
+                    this.Product_IdField = value;
+                    this.RaisePropertyChanged("Product_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Tot_price {
+            get {
+                return this.Tot_priceField;
+            }
+            set {
+                if ((this.Tot_priceField.Equals(value) != true)) {
+                    this.Tot_priceField = value;
+                    this.RaisePropertyChanged("Tot_price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Unit_Price {
+            get {
+                return this.Unit_PriceField;
+            }
+            set {
+                if ((this.Unit_PriceField.Equals(value) != true)) {
+                    this.Unit_PriceField = value;
+                    this.RaisePropertyChanged("Unit_Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int client_id {
+            get {
+                return this.client_idField;
+            }
+            set {
+                if ((this.client_idField.Equals(value) != true)) {
+                    this.client_idField = value;
+                    this.RaisePropertyChanged("client_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                if ((this.quantityField.Equals(value) != true)) {
+                    this.quantityField = value;
+                    this.RaisePropertyChanged("quantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Client", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class Client : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<char> ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address1Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Address2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Cart[] CartsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Client_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContactsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TechWeb.TechService.Invoice[] InvoicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProvinceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SurnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string User_typeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZipCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<char> Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address1 {
+            get {
+                return this.Address1Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address1Field, value) != true)) {
+                    this.Address1Field = value;
+                    this.RaisePropertyChanged("Address1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address2 {
+            get {
+                return this.Address2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Address2Field, value) != true)) {
+                    this.Address2Field = value;
+                    this.RaisePropertyChanged("Address2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Cart[] Carts {
+            get {
+                return this.CartsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CartsField, value) != true)) {
+                    this.CartsField = value;
+                    this.RaisePropertyChanged("Carts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Client_Id {
+            get {
+                return this.Client_IdField;
+            }
+            set {
+                if ((this.Client_IdField.Equals(value) != true)) {
+                    this.Client_IdField = value;
+                    this.RaisePropertyChanged("Client_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Contacts {
+            get {
+                return this.ContactsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContactsField, value) != true)) {
+                    this.ContactsField = value;
+                    this.RaisePropertyChanged("Contacts");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TechWeb.TechService.Invoice[] Invoices {
+            get {
+                return this.InvoicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
+                    this.InvoicesField = value;
+                    this.RaisePropertyChanged("Invoices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Province {
+            get {
+                return this.ProvinceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceField, value) != true)) {
+                    this.ProvinceField = value;
+                    this.RaisePropertyChanged("Province");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Surname {
+            get {
+                return this.SurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SurnameField, value) != true)) {
+                    this.SurnameField = value;
+                    this.RaisePropertyChanged("Surname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string User_type {
+            get {
+                return this.User_typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.User_typeField, value) != true)) {
+                    this.User_typeField = value;
+                    this.RaisePropertyChanged("User_type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ZipCode {
+            get {
+                return this.ZipCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZipCodeField, value) != true)) {
+                    this.ZipCodeField = value;
+                    this.RaisePropertyChanged("ZipCode");
                 }
             }
         }
@@ -421,17 +1337,47 @@ namespace TechWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_price", ReplyAction="http://tempuri.org/ITechno_service/search_by_priceResponse")]
         System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> search_by_priceAsync(string value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
-        int AddProduct(int ID);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor_retrieval", ReplyAction="http://tempuri.org/ITechno_service/productinfor_retrievalResponse")]
+        TechWeb.TechService.ProductD productinfor_retrieval(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor_retrieval", ReplyAction="http://tempuri.org/ITechno_service/productinfor_retrievalResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD> productinfor_retrievalAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_ASC", ReplyAction="http://tempuri.org/ITechno_service/price_by_ASCResponse")]
+        TechWeb.TechService.ProductD[] price_by_ASC();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_ASC", ReplyAction="http://tempuri.org/ITechno_service/price_by_ASCResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_ASCAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_DESC", ReplyAction="http://tempuri.org/ITechno_service/price_by_DESCResponse")]
+        TechWeb.TechService.ProductD[] price_by_DESC();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_DESC", ReplyAction="http://tempuri.org/ITechno_service/price_by_DESCResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
+        bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
+        System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
-        System.Threading.Tasks.Task<int> AddProductAsync(int ID);
+        int AddProduct(TechWeb.TechService.ProductD addP);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
+        System.Threading.Tasks.Task<int> AddProductAsync(TechWeb.TechService.ProductD addP);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/EditProduct", ReplyAction="http://tempuri.org/ITechno_service/EditProductResponse")]
         int EditProduct(int ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/EditProduct", ReplyAction="http://tempuri.org/ITechno_service/EditProductResponse")]
         System.Threading.Tasks.Task<int> EditProductAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
+        TechWeb.TechService.Product productinfor(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.Product> productinforAsync(int ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -517,12 +1463,44 @@ namespace TechWeb.TechService {
             return base.Channel.search_by_priceAsync(value);
         }
         
-        public int AddProduct(int ID) {
-            return base.Channel.AddProduct(ID);
+        public TechWeb.TechService.ProductD productinfor_retrieval(int ID) {
+            return base.Channel.productinfor_retrieval(ID);
         }
         
-        public System.Threading.Tasks.Task<int> AddProductAsync(int ID) {
-            return base.Channel.AddProductAsync(ID);
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD> productinfor_retrievalAsync(int ID) {
+            return base.Channel.productinfor_retrievalAsync(ID);
+        }
+        
+        public TechWeb.TechService.ProductD[] price_by_ASC() {
+            return base.Channel.price_by_ASC();
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_ASCAsync() {
+            return base.Channel.price_by_ASCAsync();
+        }
+        
+        public TechWeb.TechService.ProductD[] price_by_DESC() {
+            return base.Channel.price_by_DESC();
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync() {
+            return base.Channel.price_by_DESCAsync();
+        }
+        
+        public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID) {
+            return base.Channel.Add_to_Cart(product, userID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID) {
+            return base.Channel.Add_to_CartAsync(product, userID);
+        }
+        
+        public int AddProduct(TechWeb.TechService.ProductD addP) {
+            return base.Channel.AddProduct(addP);
+        }
+        
+        public System.Threading.Tasks.Task<int> AddProductAsync(TechWeb.TechService.ProductD addP) {
+            return base.Channel.AddProductAsync(addP);
         }
         
         public int EditProduct(int ID) {
@@ -531,6 +1509,14 @@ namespace TechWeb.TechService {
         
         public System.Threading.Tasks.Task<int> EditProductAsync(int ID) {
             return base.Channel.EditProductAsync(ID);
+        }
+        
+        public TechWeb.TechService.Product productinfor(int ID) {
+            return base.Channel.productinfor(ID);
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.Product> productinforAsync(int ID) {
+            return base.Channel.productinforAsync(ID);
         }
     }
 }

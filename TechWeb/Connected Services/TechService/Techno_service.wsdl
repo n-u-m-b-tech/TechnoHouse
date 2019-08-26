@@ -49,6 +49,30 @@
   <wsdl:message name="ITechno_service_search_by_price_OutputMessage">
     <wsdl:part name="parameters" element="tns:search_by_priceResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_productinfor_retrieval_InputMessage">
+    <wsdl:part name="parameters" element="tns:productinfor_retrieval" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_productinfor_retrieval_OutputMessage">
+    <wsdl:part name="parameters" element="tns:productinfor_retrievalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_price_by_ASC_InputMessage">
+    <wsdl:part name="parameters" element="tns:price_by_ASC" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_price_by_ASC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:price_by_ASCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_price_by_DESC_InputMessage">
+    <wsdl:part name="parameters" element="tns:price_by_DESC" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_price_by_DESC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:price_by_DESCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_Add_to_Cart_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add_to_Cart" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_Add_to_Cart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Add_to_CartResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_AddProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:AddProduct" />
   </wsdl:message>
@@ -60,6 +84,12 @@
   </wsdl:message>
   <wsdl:message name="ITechno_service_EditProduct_OutputMessage">
     <wsdl:part name="parameters" element="tns:EditProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_productinfor_InputMessage">
+    <wsdl:part name="parameters" element="tns:productinfor" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_productinfor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:productinforResponse" />
   </wsdl:message>
   <wsdl:portType name="ITechno_service">
     <wsdl:operation name="UserRegister">
@@ -90,6 +120,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/search_by_price" message="tns:ITechno_service_search_by_price_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/search_by_priceResponse" message="tns:ITechno_service_search_by_price_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="productinfor_retrieval">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/productinfor_retrieval" message="tns:ITechno_service_productinfor_retrieval_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/productinfor_retrievalResponse" message="tns:ITechno_service_productinfor_retrieval_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="price_by_ASC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/price_by_ASC" message="tns:ITechno_service_price_by_ASC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/price_by_ASCResponse" message="tns:ITechno_service_price_by_ASC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="price_by_DESC">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/price_by_DESC" message="tns:ITechno_service_price_by_DESC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/price_by_DESCResponse" message="tns:ITechno_service_price_by_DESC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_to_Cart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/Add_to_Cart" message="tns:ITechno_service_Add_to_Cart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/Add_to_CartResponse" message="tns:ITechno_service_Add_to_Cart_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/AddProduct" message="tns:ITechno_service_AddProduct_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/AddProductResponse" message="tns:ITechno_service_AddProduct_OutputMessage" />
@@ -97,6 +143,10 @@
     <wsdl:operation name="EditProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/EditProduct" message="tns:ITechno_service_EditProduct_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/EditProductResponse" message="tns:ITechno_service_EditProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="productinfor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/productinfor" message="tns:ITechno_service_productinfor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/productinforResponse" message="tns:ITechno_service_productinfor_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITechno_service" type="tns:ITechno_service">
@@ -164,6 +214,42 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="productinfor_retrieval">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/productinfor_retrieval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="price_by_ASC">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/price_by_ASC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="price_by_DESC">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/price_by_DESC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_to_Cart">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/Add_to_Cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddProduct">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/AddProduct" style="document" />
       <wsdl:input>
@@ -175,6 +261,15 @@
     </wsdl:operation>
     <wsdl:operation name="EditProduct">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/EditProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="productinfor">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/productinfor" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -10,6 +10,10 @@ namespace Techno_Service
         public string name, description, category;
         public int quantity, ID;
         public double price;
+        public decimal discount;
+        public string manufacture;
+        public string brand;
+        public char active;
        
       
     }
