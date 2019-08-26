@@ -275,6 +275,7 @@ namespace Techno_Service
                 try
                 {
                     db.SubmitChanges();
+                   
                 }
                 catch (Exception ex)
                 {
