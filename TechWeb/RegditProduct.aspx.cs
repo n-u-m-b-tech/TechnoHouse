@@ -19,28 +19,28 @@ namespace TechWeb
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
 
-            ProductD pro = new ProductD
-            {
-                name = name.Value,
-                description = description.Value,
-                brand = brand.Value,
-                category = category.Value,
-                price = Convert.ToDouble(price.Value),
-                manufacture = manufacturer.Value,
-                quantity = Convert.ToInt32(quantity.Value),
-                discount = 0
+            ProductD pro = new ProductD();
+
+            pro.name = name.Value;
+            pro.description = description.Value;
+            pro.brand = brand.Value;
+            pro.category = category.Value;
+            pro.price = Convert.ToDouble(price.Value);
+            pro.manufacture = manufacturer.Value;
+            pro.quantity = Convert.ToInt32(quantity.Value);
+            pro.discount = 0;
                 
-            };
+            
+           
+           
 
-            int status = client.AddProduct(pro);
-
-            if (status.Equals(0))
+            if (client.AddProduct(pro) == 0)
             {
                 Response.Redirect("EditProduct.aspx");
             }
             else
             {
-                Response.Redirect("#");
+                Response.Redirect("EditProduct.aspx");
             }
         }
 

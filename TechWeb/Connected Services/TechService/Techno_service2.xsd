@@ -158,7 +158,7 @@
   <xs:element name="AddProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="Product" nillable="true" type="q10:ProductD" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="addP" nillable="true" type="q10:ProductD" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

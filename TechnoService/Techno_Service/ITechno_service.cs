@@ -43,7 +43,7 @@ namespace Techno_Service
 
         //shushan code
         [OperationContract]
-        int AddProduct(Product addP);
+        int AddProduct(ProductD addP);
         [OperationContract]
         int EditProduct(int ID);
         [OperationContract]

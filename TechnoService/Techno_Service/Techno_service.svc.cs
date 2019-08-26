@@ -391,18 +391,19 @@ namespace Techno_Service
             }
         }
 
+    
+
         public int AddProduct(ProductD addP)
         {
-
             Product pro = new Product
             {
                 Name = addP.name,
-                Category = addP.category,
                 Description = addP.description,
-                Price =(Decimal) addP.price,
-                Brand = addP.brand,
-                ACTIVE = null,
+                Price = (Decimal)addP.price,
                 Quantity = addP.quantity,
+                Category = addP.category,
+                ACTIVE = null,
+                Brand = addP.brand,
                 manufacture = addP.manufacture,
                 Discount = (Decimal)addP.discount
 
@@ -413,12 +414,12 @@ namespace Techno_Service
             {
                 db.SubmitChanges();
                 return 0;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 ex.GetBaseException();
                 return -1;
             }
-
         }
     }
 }
