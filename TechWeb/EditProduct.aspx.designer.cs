@@ -10,7 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class EditProduct {
+    public partial class EditProduct1 {
         
         /// <summary>
         /// name control.
@@ -85,12 +85,12 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlInputText quantity;
         
         /// <summary>
-        /// BtnRegister control.
+        /// btnUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRegister;
+        protected global::System.Web.UI.WebControls.Button btnUpdate;
     }
 }

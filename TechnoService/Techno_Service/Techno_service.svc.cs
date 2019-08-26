@@ -52,7 +52,10 @@ namespace Techno_Service
                         description = prop.Description,
                         price = (Double)prop.Price,
                         quantity = prop.Quantity,
-                        category = prop.Category
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount
                     };
                     catProducts.Add(Fproduct);
                 }
@@ -215,7 +218,10 @@ namespace Techno_Service
                     description = prop.Description,
                     price = (Double)prop.Price,
                     quantity = prop.Quantity,
-                    category = prop.Category
+                    category = prop.Category,
+                    brand= prop.Brand,
+                    manufacture = prop.manufacture,
+                    discount = (Decimal)prop.Discount
 
                 };
                 priceP.Add(fprp);
@@ -257,6 +263,9 @@ namespace Techno_Service
                     Description = pro.description,
                     Price = Convert.ToInt64(pro.price),
                     Quantity = pro.quantity,
+                    Brand=pro.brand,
+                    manufacture = pro.manufacture,
+                    Discount = pro.discount
                     // IMG_URL = pro.url 
                 };
 
@@ -365,7 +374,10 @@ namespace Techno_Service
                     description = prod.Description,
                     price = (Double)prod.Price,
                     quantity = prod.Quantity,
-                    category = prod.Category
+                    category = prod.Category,
+                    manufacture = prod.manufacture,
+                    brand = prod.Brand,
+                    discount = (Decimal)prod.Discount
                 };
                 return product;
             }
@@ -401,7 +413,8 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC()
         {
-            throw new NotImplementedException();
+            
+                return null;
         }
 
         public List<ProductD> price_by_DESC()
