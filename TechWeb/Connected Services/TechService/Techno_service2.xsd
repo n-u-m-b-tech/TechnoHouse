@@ -102,6 +102,59 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="productinfor_retrieval">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="productinfor_retrievalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinfor_retrievalResult" nillable="true" type="q6:ProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price_by_ASC">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price_by_ASCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="price_by_ASCResult" nillable="true" type="q7:ArrayOfProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price_by_DESC">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="price_by_DESCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="price_by_DESCResult" nillable="true" type="q8:ArrayOfProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_to_Cart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="product" nillable="true" type="q9:ProductD" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_to_CartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_to_CartResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddProduct">
     <xs:complexType>
       <xs:sequence>
