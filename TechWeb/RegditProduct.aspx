@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html  xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title> Register or Edit Product</title>
+        <title> Register product</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no" />
 
