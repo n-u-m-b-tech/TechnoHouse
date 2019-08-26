@@ -42,7 +42,7 @@ namespace Techno_Service
     #endregion
 		
 		public NUMBDBDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["NUMBDATABASEConnectionString"].ConnectionString, mappingSource)
+				base(global::Techno_Service.Properties.Settings.Default.NUMBDATABASEConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

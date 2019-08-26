@@ -46,7 +46,9 @@ namespace Techno_Service
         int AddProduct(int ID);
         [OperationContract]
         int EditProduct(int ID);
-        
+        [OperationContract]
+        Product productinfor(int ID);
+
 
     }
 }
