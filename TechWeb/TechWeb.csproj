@@ -121,6 +121,7 @@
     <Content Include="images\instagram.svg" />
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
+    <Content Include="Invoice.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="ViewProduct.aspx" />
@@ -176,6 +177,13 @@
     </Compile>
     <Compile Include="EditProduct.aspx.designer.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegditProduct.aspx.cs">
       <DependentUpon>RegditProduct.aspx</DependentUpon>

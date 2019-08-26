@@ -32,6 +32,7 @@
         }
     </style>
 </head>
+
 <body>
     <form id="form1" runat="server">
         <table class="auto-style1">
@@ -73,11 +74,34 @@
             </tr>
             <tr>
                 <td class="auto-style6">
-                    <asp:Button ID="btnSubmit" runat="server" Height="31px" Text="Submit" Width="121px" />
+                    <asp:Button ID="btnSubmit" runat="server" Height="31px" Text="Submit" Width="121px" OnClick="btnSubmit_Click" />
                 </td>
                 <td class="auto-style6"></td>
             </tr>
         </table>
     </form>
+
+        <!--Footer-->
+            <footer id="footer">
+                <div class="inner">
+                    <section>
+                      <h2> Follow Us</h2>
+                        <ul class="icons">
+                            <li><a href="https://www.facebook.com"><img src="images/icons/facebook.png" alt="Facebook" width="30" height="30" /></a></li>
+                            <li><a href="https://www.instagram.com"><img src="images/icons/instagram.png" alt="Instagram" width="30" height="30" /></a></li>
+                            <li><a href="https://www.twitter.com"><img src="images/icons/twitter.png" alt="Twitter" width="30" height="30" /></a></li>
+                            <li><a href="https://www.youtube.com"><img src="images/icons/youtube.png" alt="YouTube" width="30" height="30" /></a></li>
+                            </ul>
+                    </section>
+                </div>
+            </footer>
+    
+
+     <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
