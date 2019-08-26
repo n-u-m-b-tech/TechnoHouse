@@ -12,7 +12,7 @@ namespace Techno_Service
     public class Techno_service : ITechno_service
     {
         NUMBDBDataContext db = new NUMBDBDataContext();
-        
+
 
         public bool Login(string email, string password)
         {
@@ -183,7 +183,7 @@ namespace Techno_Service
                 Address2 = user.address2,
                 City = user.city,
                 ZipCode = user.ZipCode,
-                Province = "Gauteng"
+                Province = user.province
             };
 
             db.Clients.InsertOnSubmit(addUser);
@@ -209,7 +209,7 @@ namespace Techno_Service
                                select p);
             List<ProductD> priceP = new List<ProductD>();
 
-            foreach(Product prop in productlist)
+            foreach (Product prop in productlist)
             {
                 ProductD fprp = new ProductD
                 {
@@ -234,7 +234,7 @@ namespace Techno_Service
 
         //should also pass the instance you want to add
         //noted changes made
-        public int AddProduct(int ID)
+        public int AddProduct(Product addP)
         {
             ProductD pro = new ProductD();
 
@@ -242,19 +242,19 @@ namespace Techno_Service
             dynamic item = from p in db.Products
                            select p;
 
-            bool codeExists = false;
+            bool productExists = false;
 
             foreach (Product p in item)
             {
-                if (p.Product_Id == ID)
+                if (p.Product_Id == addP.Product_Id)
                 {
-                    codeExists = true;
+                    productExists = true;
                     return 1;
                 }
 
             }
 
-            if (codeExists == false)
+            if (productExists == false)
             {
                 var newProduct = new Product
                 {
@@ -275,14 +275,13 @@ namespace Techno_Service
                 try
                 {
                     db.SubmitChanges();
-                   
+                    return 0;
                 }
                 catch (Exception ex)
                 {
                     ex.GetBaseException();
-                  //  pro.ErrorMsg();
+                    return -1;
                 }
-                return 0;
             }
             else
             {
@@ -294,7 +293,7 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        
+
         public int EditProduct(int ID)
         {
 
@@ -310,9 +309,21 @@ namespace Techno_Service
 
             foreach (Product p in item)
             {
+
                 if (p.Product_Id == ID)
                 {
                     codeExists = true;
+                    Product editP = productinfor(ID);
+
+                    editP = new Product
+                    {
+                        Name = pro.name,
+                        Category = pro.category,
+                        Description = pro.description,
+                        Price = Convert.ToInt64(pro.price),
+                        Quantity = pro.quantity,
+                    };
+
                     return 1;
                 }
 
@@ -322,33 +333,31 @@ namespace Techno_Service
             {
                 var newProduct = new Product
                 {
-                    
+
                     Name = pro.name,
                     Category = pro.category,
                     Description = pro.description,
                     Price = Convert.ToInt64(pro.price),
                     Quantity = pro.quantity,
-                    //  IMG_URL = pro.url
+                    
                 };
-
-
                 //exception handling
                 try
                 {
                     db.SubmitChanges();
-                    return 0;
+                    return 1;
                 }
                 catch (Exception ex)
                 {
                     ex.GetBaseException();
                     // pro.ErrorMsg();
                 }
-                return 0;
             }
             else
             {
-                return -1;
+                return 0;
             }
+            return -1;
         }
 
         public ProductD productinfor_retrieval(int ID)
@@ -378,7 +387,7 @@ namespace Techno_Service
             }
         }
 
-        public bool Add_to_Cart(ProductD product,int userID)
+        public bool Add_to_Cart(ProductD product, int userID)
         {
             Cart cart = new Cart
             {
@@ -393,7 +402,8 @@ namespace Techno_Service
             {
                 db.SubmitChanges();
                 return true;
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 ex.GetBaseException();
                 return false;
@@ -410,6 +420,30 @@ namespace Techno_Service
         public List<ProductD> price_by_DESC()
         {
             throw new NotImplementedException();
+        }
+
+        public Product productinfor(int ID)
+        {
+            var prod = (from p in db.Products
+                        where p.Product_Id.Equals(ID)
+                        select p).FirstOrDefault();
+            if (prod != null)
+            {
+                Product product = new Product
+                {
+                    //ID = prod.Product_Id,
+                    Name = prod.Name,
+                    Description = prod.Description,
+                    Price = prod.Price,
+                    Quantity = prod.Quantity,
+                    Category = prod.Category
+                };
+                return product;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
