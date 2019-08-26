@@ -15,6 +15,7 @@
       <Column Name="City" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="Province" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="ZipCode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Client_Cart" Member="Carts" ThisKey="Client_Id" OtherKey="user_Id" Type="Cart" />
     </Type>
   </Table>
   <Table Name="dbo.Product" Member="Products">
@@ -25,6 +26,18 @@
       <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Category" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="Product_Cart" Member="Carts" ThisKey="Product_Id" OtherKey="product_Id" Type="Cart" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cart" Member="Carts">
+    <Type Name="Cart">
+      <Column Name="Cart_Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="user_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="product_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Cart" Member="Product" ThisKey="product_Id" OtherKey="Product_Id" Type="Product" IsForeignKey="true" />
+      <Association Name="Client_Cart" Member="Client" ThisKey="user_Id" OtherKey="Client_Id" Type="Client" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
