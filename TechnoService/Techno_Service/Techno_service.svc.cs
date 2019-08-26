@@ -234,7 +234,7 @@ namespace Techno_Service
 
         //should also pass the instance you want to add
         //noted changes made
-        public int AddProduct(int ID)
+        public int AddProduct(Product addP)
         {
             ProductD pro = new ProductD();
 
@@ -242,19 +242,19 @@ namespace Techno_Service
             dynamic item = from p in db.Products
                            select p;
 
-            bool codeExists = false;
+            bool productExists = false;
 
             foreach (Product p in item)
             {
-                if (p.Product_Id == ID)
+                if (p.Product_Id == addP.Product_Id)
                 {
-                    codeExists = true;
+                    productExists = true;
                     return 1;
                 }
 
             }
 
-            if (codeExists == false)
+            if (productExists == false)
             {
                 var newProduct = new Product
                 {
@@ -275,13 +275,13 @@ namespace Techno_Service
                 try
                 {
                     db.SubmitChanges();
+                    return 0;
                 }
                 catch (Exception ex)
                 {
                     ex.GetBaseException();
-                    //  pro.ErrorMsg();
+                    return -1;
                 }
-                return 0;
             }
             else
             {
