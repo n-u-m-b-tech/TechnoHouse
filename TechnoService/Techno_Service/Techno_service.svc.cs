@@ -234,62 +234,7 @@ namespace Techno_Service
 
         //should also pass the instance you want to add
         //noted changes made
-        public int AddProduct(Product addP)
-        {
-            ProductD pro = new ProductD();
-
-
-            dynamic item = from p in db.Products
-                           select p;
-
-            bool productExists = false;
-
-            foreach (Product p in item)
-            {
-                if (p.Product_Id == addP.Product_Id)
-                {
-                    productExists = true;
-                    return 1;
-                }
-
-            }
-
-            if (productExists == false)
-            {
-                var newProduct = new Product
-                {
-                    Name = pro.name,
-                    Category = pro.category,
-                    Description = pro.description,
-                    Price = Convert.ToInt64(pro.price),
-                    Quantity = pro.quantity,
-                    Brand=pro.brand,
-                    manufacture = pro.manufacture,
-                    Discount = pro.discount
-                    // IMG_URL = pro.url 
-                };
-
-                db.Products.InsertOnSubmit(newProduct);
-
-                //exception handling
-                try
-                {
-                    db.SubmitChanges();
-                    return 0;
-                }
-                catch (Exception ex)
-                {
-                    ex.GetBaseException();
-                    return -1;
-                }
-            }
-            else
-            {
-                return -1;
-            }
-
-
-        }
+       
         //line divider added
         //*************************************************************************************************************
 
@@ -444,6 +389,36 @@ namespace Techno_Service
             {
                 return null;
             }
+        }
+
+        public int AddProduct(ProductD addP)
+        {
+
+            Product pro = new Product
+            {
+                Name = addP.name,
+                Category = addP.category,
+                Description = addP.description,
+                Price =(Decimal) addP.price,
+                Brand = addP.brand,
+                ACTIVE = null,
+                Quantity = addP.quantity,
+                manufacture = addP.manufacture,
+                Discount = (Decimal)addP.discount
+
+            };
+
+            db.Products.InsertOnSubmit(pro);
+            try
+            {
+                db.SubmitChanges();
+                return 0;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return -1;
+            }
+
         }
     }
 }
