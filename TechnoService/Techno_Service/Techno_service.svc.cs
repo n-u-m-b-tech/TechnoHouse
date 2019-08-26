@@ -52,7 +52,10 @@ namespace Techno_Service
                         description = prop.Description,
                         price = (Double)prop.Price,
                         quantity = prop.Quantity,
-                        category = prop.Category
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount
                     };
                     catProducts.Add(Fproduct);
                 }
