@@ -421,6 +421,30 @@ namespace TechWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_price", ReplyAction="http://tempuri.org/ITechno_service/search_by_priceResponse")]
         System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> search_by_priceAsync(string value);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor_retrieval", ReplyAction="http://tempuri.org/ITechno_service/productinfor_retrievalResponse")]
+        TechWeb.TechService.ProductD productinfor_retrieval(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor_retrieval", ReplyAction="http://tempuri.org/ITechno_service/productinfor_retrievalResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD> productinfor_retrievalAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_ASC", ReplyAction="http://tempuri.org/ITechno_service/price_by_ASCResponse")]
+        TechWeb.TechService.ProductD[] price_by_ASC();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_ASC", ReplyAction="http://tempuri.org/ITechno_service/price_by_ASCResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_ASCAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_DESC", ReplyAction="http://tempuri.org/ITechno_service/price_by_DESCResponse")]
+        TechWeb.TechService.ProductD[] price_by_DESC();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_DESC", ReplyAction="http://tempuri.org/ITechno_service/price_by_DESCResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
+        bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
+        System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
         int AddProduct(int ID);
         
@@ -515,6 +539,38 @@ namespace TechWeb.TechService {
         
         public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> search_by_priceAsync(string value) {
             return base.Channel.search_by_priceAsync(value);
+        }
+        
+        public TechWeb.TechService.ProductD productinfor_retrieval(int ID) {
+            return base.Channel.productinfor_retrieval(ID);
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD> productinfor_retrievalAsync(int ID) {
+            return base.Channel.productinfor_retrievalAsync(ID);
+        }
+        
+        public TechWeb.TechService.ProductD[] price_by_ASC() {
+            return base.Channel.price_by_ASC();
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_ASCAsync() {
+            return base.Channel.price_by_ASCAsync();
+        }
+        
+        public TechWeb.TechService.ProductD[] price_by_DESC() {
+            return base.Channel.price_by_DESC();
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync() {
+            return base.Channel.price_by_DESCAsync();
+        }
+        
+        public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID) {
+            return base.Channel.Add_to_Cart(product, userID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID) {
+            return base.Channel.Add_to_CartAsync(product, userID);
         }
         
         public int AddProduct(int ID) {
