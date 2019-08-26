@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegditProduct.aspx.cs" Inherits="TechWeb.EditProduct" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="TechWeb.EditProduct1" %>
 
 <!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml">
+<html >
     <head>
-        <title> Register or Edit Product</title>
+        <title> Edit Product</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scale=no" />
 
@@ -30,7 +30,7 @@
             <div id="main">
                 <div class="inner">
                     <header>
-                        <h1 >Register product</h1>
+                        <h1 >Register or Edit a product</h1>
                     </header>
                     <section>
                         <form method="post" action="#" runat="server">
@@ -62,7 +62,7 @@
                                </div>
                              <ul class="actions">
                                 <li>
-                                    <asp:Button ID="BtnRegister" runat="server" type="register" Text="Register" class="primary" OnClick="BtnRegister_Click" />
+                                    <asp:Button ID="btnUpdate" runat="server" type="update" Text="Update" class="primary" OnClick="BtnUpdate_Click" />
                                 </li>
                             </ul>
                         </form>
@@ -94,3 +94,4 @@
     <script src="assets/js/main.js"></script>
    </body>
 </html>
+
