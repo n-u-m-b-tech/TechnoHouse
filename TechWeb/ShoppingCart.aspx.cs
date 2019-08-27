@@ -13,5 +13,20 @@ namespace TechWeb
         {
 
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Updatebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CheckoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

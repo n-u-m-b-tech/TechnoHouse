@@ -334,15 +334,27 @@ namespace Techno_Service
 
         public bool Add_to_Cart(ProductD product, int userID)
         {
-            Cart cart = new Cart
+
+            var item = (from i in db.Products
+                        where product.ID.Equals(i.Product_Id)
+                        select i).FirstOrDefault();
+
+            if (item == null)
             {
-                user_Id = userID,
-                product_Id = product.ID,
-                Total = Convert.ToDecimal(product.price)
+                Cart cart = new Cart
+                {
+                    user_Id = userID,
+                    product_Id = product.ID,
+                    Total = Convert.ToDecimal(product.price)
 
-            };
+                };
 
-            db.Carts.InsertOnSubmit(cart);
+                db.Carts.InsertOnSubmit(cart);
+            }
+            else
+            {
+                item.Quantity += 1;
+            }
             try
             {
                 db.SubmitChanges();
