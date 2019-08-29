@@ -40,7 +40,7 @@
                  <!-- Logo -->
                 <a href="index.html" class="logo">
                     <span class="symbol">
-                        <img src="images/logo.png"  width="70" height="70" alt="" /></span>
+                        <img src= "<%=imageurl%>"  width="70" height="70" alt="" /></span>
                 </a>
                 <input id="txtSearch" type="search" placeholder="Search" runat="server" class="auto-style1"/><asp:Button ID="BtnSearch" runat="server" Text="Search" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -10,7 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class ViewProduct {
+    public partial class Site1 {
         
         /// <summary>
         /// form1 control.
@@ -22,21 +22,12 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// brandlink control.
+        /// contents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink brandlink;
-        
-        /// <summary>
-        /// BtnCheckout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnCheckout;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contents;
     }
 }
