@@ -71,9 +71,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TechServiceDB.mdf" />
+    <Content Include="App_Data\TechServiceDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Data\TechServiceDB_log.ldf">
       <DependentUpon>TechServiceDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Techno_service.svc" />
     <Content Include="Web.config" />
