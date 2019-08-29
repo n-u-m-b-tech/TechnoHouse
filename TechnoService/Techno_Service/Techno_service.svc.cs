@@ -11,7 +11,7 @@ namespace Techno_Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Techno_service.svc or Techno_service.svc.cs at the Solution Explorer and start debugging.
     public class Techno_service : ITechno_service
     {
-        TECHDBDataContext db = new TECHDBDataContext();
+        NUMBDBDataContext db = new NUMBDBDataContext();
 
 
         public bool Login(string email, string password)
@@ -178,16 +178,12 @@ namespace Techno_Service
                 Surname = user.surname,
                 Contacts = user.contacs,
                 Email = user.email,
-                Username = user.username,
                 Password = Secrecy.HashPassword(user.password),
                 Address1 = user.address1,
                 Address2 = user.address2,
                 City = user.city,
-                Province = user.province,
                 ZipCode = user.ZipCode,
-                User_type = "Test",
-                Active = 'T'
-              
+                Province = user.province
             };
 
             db.Clients.InsertOnSubmit(addUser);
@@ -338,27 +334,15 @@ namespace Techno_Service
 
         public bool Add_to_Cart(ProductD product, int userID)
         {
-
-            var item = (from i in db.Products
-                        where product.ID.Equals(i.Product_Id)
-                        select i).FirstOrDefault();
-
-            if (item == null)
+            Cart cart = new Cart
             {
-                Cart cart = new Cart
-                {
-                    user_Id = userID,
-                    product_Id = product.ID,
-                    Total = Convert.ToDecimal(product.price)
+                user_Id = userID,
+                product_Id = product.ID,
+                Total = Convert.ToDecimal(product.price)
 
-                };
+            };
 
-                db.Carts.InsertOnSubmit(cart);
-            }
-            else
-            {
-                item.Quantity += 1;
-            }
+            db.Carts.InsertOnSubmit(cart);
             try
             {
                 db.SubmitChanges();
@@ -374,73 +358,13 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC()
         {
-            var product = (from p in db.Products
-                          orderby p.Price ascending
-                           select p);
-
-            if(product != null)
-            {
-                List<ProductD> desc = new List<ProductD>();
-                foreach(Product de in product)
-                {
-                    ProductD pro = new ProductD
-                    {
-                        name = de.Name,
-                        description = de.Description,
-                        price = Convert.ToDouble(de.Price),
-                        quantity = de.Quantity,
-                        category = de.Category,
-                        active = Convert.ToChar(de.ACTIVE),
-                        brand = de.Brand,
-                        manufacture = de.manufacture,
-                        discount = (Decimal)de.Discount
-                    };
-
-                    desc.Add(pro);
-                }
-                return desc;
-            }
-            else
-            {
+            
                 return null;
-            }
-
-         
         }
 
         public List<ProductD> price_by_DESC()
         {
-            var asc = (from p in db.Products
-                       orderby p.Price descending
-                       select p);
-
-            if (asc != null)
-            {
-                List<ProductD> ascP = new List<ProductD>();
-                foreach (Product de in asc)
-                {
-
-                    ProductD pro = new ProductD
-                    {
-                        name = de.Name,
-                        description = de.Description,
-                        price = Convert.ToDouble(de.Price),
-                        quantity = de.Quantity,
-                        category = de.Category,
-                        active = Convert.ToChar(de.ACTIVE),
-                        brand = de.Brand,
-                        manufacture = de.manufacture,
-                        discount = (Decimal)de.Discount
-                    };
-
-                    ascP.Add(pro);
-                }
-                return ascP;
-            }
-            else
-            {
-                return null;
-            }
+            throw new NotImplementedException();
         }
 
         public Product productinfor(int ID)
@@ -478,7 +402,7 @@ namespace Techno_Service
                 Price = (Decimal)addP.price,
                 Quantity = addP.quantity,
                 Category = addP.category,
-                ACTIVE = 'T',
+                ACTIVE = null,
                 Brand = addP.brand,
                 manufacture = addP.manufacture,
                 Discount = (Decimal)addP.discount

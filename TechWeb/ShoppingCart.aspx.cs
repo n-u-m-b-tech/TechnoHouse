@@ -14,17 +14,23 @@ namespace TechWeb
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
 
         }
 
-        protected void Updatebutton_Click(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        protected void CheckoutButton_Click(object sender, EventArgs e)
+        protected void Button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button20_Click(object sender, EventArgs e)
         {
 
         }

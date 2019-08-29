@@ -20,17 +20,14 @@ namespace TechWeb
                     Title = title.Value,
                     name = name.Value,
                     surname = surname.Value,
-                    contacs = "number",
                     email = email.Value,
-                    username = username.Value,
                     password = pass.Value,
                     address1 = add1.Value,
                     address2 = add2.Value,
-                    city = city.Value,
-                    province = prov.Value,
                     ZipCode = zip.Value,
-                    user_type = "test",
-                    Active = "T"
+                    city = city.Value,
+                    username = username.Value,
+                    province = prov.Value
 
 
                 };

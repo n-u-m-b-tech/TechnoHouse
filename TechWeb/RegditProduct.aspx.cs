@@ -23,18 +23,20 @@ namespace TechWeb
 
             pro.name = name.Value;
             pro.description = description.Value;
-            pro.price = Convert.ToDouble(price.Value);
-            pro.quantity = Convert.ToInt32(quantity.Value);
-            pro.category = category.Value;
-            pro.active = Convert.ToChar(active.Value);
             pro.brand = brand.Value;
+            pro.category = category.Value;
+            pro.price = Convert.ToDouble(price.Value);
             pro.manufacture = manufacturer.Value;
+            pro.quantity = Convert.ToInt32(quantity.Value);
             pro.discount = 0;
-  
+                
+            
+           
+           
 
             if (client.AddProduct(pro) == 0)
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("EditProduct.aspx");
             }
             else
             {
