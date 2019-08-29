@@ -71,6 +71,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TechServiceDB.mdf" />
+    <Content Include="App_Data\TechServiceDB_log.ldf">
+      <DependentUpon>TechServiceDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Techno_service.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -90,14 +94,17 @@
     </Compile>
     <Compile Include="Secrecy.cs" />
     <Compile Include="ShoppingCartClass.cs" />
+    <Compile Include="TECHDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TECHDB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Techno_service.svc.cs">
       <DependentUpon>Techno_service.svc</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="app.config" />
     <Content Include="NUMBDB.dbml">
@@ -112,6 +119,14 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="TECHDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>TECHDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="TECHDB.dbml.layout">
+      <DependentUpon>TECHDB.dbml</DependentUpon>
     </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
