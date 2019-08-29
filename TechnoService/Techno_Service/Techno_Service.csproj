@@ -71,12 +71,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TECHNODB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="App_Data\TECHNODB.mdf" />
     <Content Include="App_Data\TECHNODB_log.ldf">
       <DependentUpon>TECHNODB.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TECHDB.dbml">
       <SubType>Designer</SubType>

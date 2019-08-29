@@ -92,6 +92,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="ContactPage.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="EditProduct.aspx" />
     <Content Include="HomePage.aspx" />
@@ -130,6 +131,7 @@
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
     <Content Include="Invoice.aspx" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="UserRegistration.aspx" />
@@ -164,6 +166,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ContactPage.aspx.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactPage.aspx.designer.cs">
+      <DependentUpon>ContactPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +200,13 @@
     </Compile>
     <Compile Include="Invoice.aspx.designer.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegditProduct.aspx.cs">
       <DependentUpon>RegditProduct.aspx</DependentUpon>
