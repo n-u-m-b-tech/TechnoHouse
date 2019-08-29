@@ -374,13 +374,73 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC()
         {
-            
+            var product = (from p in db.Products
+                          orderby p.Price ascending
+                           select p);
+
+            if(product != null)
+            {
+                List<ProductD> desc = new List<ProductD>();
+                foreach(Product de in product)
+                {
+                    ProductD pro = new ProductD
+                    {
+                        name = de.Name,
+                        description = de.Description,
+                        price = Convert.ToDouble(de.Price),
+                        quantity = de.Quantity,
+                        category = de.Category,
+                        active = Convert.ToChar(de.ACTIVE),
+                        brand = de.Brand,
+                        manufacture = de.manufacture,
+                        discount = (Decimal)de.Discount
+                    };
+
+                    desc.Add(pro);
+                }
+                return desc;
+            }
+            else
+            {
                 return null;
+            }
+
+         
         }
 
         public List<ProductD> price_by_DESC()
         {
-            throw new NotImplementedException();
+            var asc = (from p in db.Products
+                       orderby p.Price descending
+                       select p);
+
+            if (asc != null)
+            {
+                List<ProductD> ascP = new List<ProductD>();
+                foreach (Product de in asc)
+                {
+
+                    ProductD pro = new ProductD
+                    {
+                        name = de.Name,
+                        description = de.Description,
+                        price = Convert.ToDouble(de.Price),
+                        quantity = de.Quantity,
+                        category = de.Category,
+                        active = Convert.ToChar(de.ACTIVE),
+                        brand = de.Brand,
+                        manufacture = de.manufacture,
+                        discount = (Decimal)de.Discount
+                    };
+
+                    ascP.Add(pro);
+                }
+                return ascP;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Product productinfor(int ID)

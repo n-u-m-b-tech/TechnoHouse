@@ -22,7 +22,7 @@ namespace Techno_Service
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="NUMBDATABASE")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="TECHNODB")]
 	public partial class TECHDBDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,9 +30,6 @@ namespace Techno_Service
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertOrder(Order instance);
-    partial void UpdateOrder(Order instance);
-    partial void DeleteOrder(Order instance);
     partial void InsertCart(Cart instance);
     partial void UpdateCart(Cart instance);
     partial void DeleteCart(Cart instance);
@@ -45,6 +42,9 @@ namespace Techno_Service
     partial void InsertInvoice(Invoice instance);
     partial void UpdateInvoice(Invoice instance);
     partial void DeleteInvoice(Invoice instance);
+    partial void InsertOrder(Order instance);
+    partial void UpdateOrder(Order instance);
+    partial void DeleteOrder(Order instance);
     partial void InsertOrderDetail(OrderDetail instance);
     partial void UpdateOrderDetail(OrderDetail instance);
     partial void DeleteOrderDetail(OrderDetail instance);
@@ -57,7 +57,7 @@ namespace Techno_Service
     #endregion
 		
 		public TECHDBDataContext() : 
-				base(global::Techno_Service.Properties.Settings.Default.NUMBDATABASEConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["TECHNODBConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -84,14 +84,6 @@ namespace Techno_Service
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<Order> Orders
-		{
-			get
-			{
-				return this.GetTable<Order>();
-			}
 		}
 		
 		public System.Data.Linq.Table<Cart> Carts
@@ -126,6 +118,14 @@ namespace Techno_Service
 			}
 		}
 		
+		public System.Data.Linq.Table<Order> Orders
+		{
+			get
+			{
+				return this.GetTable<Order>();
+			}
+		}
+		
 		public System.Data.Linq.Table<OrderDetail> OrderDetails
 		{
 			get
@@ -148,459 +148,6 @@ namespace Techno_Service
 			{
 				return this.GetTable<Product>();
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Orders")]
-	public partial class Order : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Order_Id;
-		
-		private int _Client_ID;
-		
-		private int _Payment_Id;
-		
-		private int _Delivery_Id;
-		
-		private int _OrderNumber;
-		
-		private System.DateTime _OrderDate;
-		
-		private System.DateTime _ShipDate;
-		
-		private decimal _Tax;
-		
-		private string _Delivery_Status;
-		
-		private string _Payment_Status;
-		
-		private System.DateTime _Payment_Date;
-		
-		private EntitySet<Invoice> _Invoices;
-		
-		private EntityRef<Client> _Client;
-		
-		private EntityRef<Delivery> _Delivery;
-		
-		private EntityRef<Payment> _Payment;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnOrder_IdChanging(int value);
-    partial void OnOrder_IdChanged();
-    partial void OnClient_IDChanging(int value);
-    partial void OnClient_IDChanged();
-    partial void OnPayment_IdChanging(int value);
-    partial void OnPayment_IdChanged();
-    partial void OnDelivery_IdChanging(int value);
-    partial void OnDelivery_IdChanged();
-    partial void OnOrderNumberChanging(int value);
-    partial void OnOrderNumberChanged();
-    partial void OnOrderDateChanging(System.DateTime value);
-    partial void OnOrderDateChanged();
-    partial void OnShipDateChanging(System.DateTime value);
-    partial void OnShipDateChanged();
-    partial void OnTaxChanging(decimal value);
-    partial void OnTaxChanged();
-    partial void OnDelivery_StatusChanging(string value);
-    partial void OnDelivery_StatusChanged();
-    partial void OnPayment_StatusChanging(string value);
-    partial void OnPayment_StatusChanged();
-    partial void OnPayment_DateChanging(System.DateTime value);
-    partial void OnPayment_DateChanged();
-    #endregion
-		
-		public Order()
-		{
-			this._Invoices = new EntitySet<Invoice>(new Action<Invoice>(this.attach_Invoices), new Action<Invoice>(this.detach_Invoices));
-			this._Client = default(EntityRef<Client>);
-			this._Delivery = default(EntityRef<Delivery>);
-			this._Payment = default(EntityRef<Payment>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Order_Id
-		{
-			get
-			{
-				return this._Order_Id;
-			}
-			set
-			{
-				if ((this._Order_Id != value))
-				{
-					this.OnOrder_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Order_Id = value;
-					this.SendPropertyChanged("Order_Id");
-					this.OnOrder_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
-		public int Client_ID
-		{
-			get
-			{
-				return this._Client_ID;
-			}
-			set
-			{
-				if ((this._Client_ID != value))
-				{
-					if (this._Client.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnClient_IDChanging(value);
-					this.SendPropertyChanging();
-					this._Client_ID = value;
-					this.SendPropertyChanged("Client_ID");
-					this.OnClient_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Id", DbType="Int NOT NULL")]
-		public int Payment_Id
-		{
-			get
-			{
-				return this._Payment_Id;
-			}
-			set
-			{
-				if ((this._Payment_Id != value))
-				{
-					if (this._Payment.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnPayment_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Payment_Id = value;
-					this.SendPropertyChanged("Payment_Id");
-					this.OnPayment_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Id", DbType="Int NOT NULL")]
-		public int Delivery_Id
-		{
-			get
-			{
-				return this._Delivery_Id;
-			}
-			set
-			{
-				if ((this._Delivery_Id != value))
-				{
-					if (this._Delivery.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnDelivery_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Delivery_Id = value;
-					this.SendPropertyChanged("Delivery_Id");
-					this.OnDelivery_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderNumber", DbType="Int NOT NULL")]
-		public int OrderNumber
-		{
-			get
-			{
-				return this._OrderNumber;
-			}
-			set
-			{
-				if ((this._OrderNumber != value))
-				{
-					this.OnOrderNumberChanging(value);
-					this.SendPropertyChanging();
-					this._OrderNumber = value;
-					this.SendPropertyChanged("OrderNumber");
-					this.OnOrderNumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderDate", DbType="Date NOT NULL")]
-		public System.DateTime OrderDate
-		{
-			get
-			{
-				return this._OrderDate;
-			}
-			set
-			{
-				if ((this._OrderDate != value))
-				{
-					this.OnOrderDateChanging(value);
-					this.SendPropertyChanging();
-					this._OrderDate = value;
-					this.SendPropertyChanged("OrderDate");
-					this.OnOrderDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipDate", DbType="Date NOT NULL")]
-		public System.DateTime ShipDate
-		{
-			get
-			{
-				return this._ShipDate;
-			}
-			set
-			{
-				if ((this._ShipDate != value))
-				{
-					this.OnShipDateChanging(value);
-					this.SendPropertyChanging();
-					this._ShipDate = value;
-					this.SendPropertyChanged("ShipDate");
-					this.OnShipDateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tax", DbType="Decimal(18,0) NOT NULL")]
-		public decimal Tax
-		{
-			get
-			{
-				return this._Tax;
-			}
-			set
-			{
-				if ((this._Tax != value))
-				{
-					this.OnTaxChanging(value);
-					this.SendPropertyChanging();
-					this._Tax = value;
-					this.SendPropertyChanged("Tax");
-					this.OnTaxChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Delivery_Status
-		{
-			get
-			{
-				return this._Delivery_Status;
-			}
-			set
-			{
-				if ((this._Delivery_Status != value))
-				{
-					this.OnDelivery_StatusChanging(value);
-					this.SendPropertyChanging();
-					this._Delivery_Status = value;
-					this.SendPropertyChanged("Delivery_Status");
-					this.OnDelivery_StatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Payment_Status
-		{
-			get
-			{
-				return this._Payment_Status;
-			}
-			set
-			{
-				if ((this._Payment_Status != value))
-				{
-					this.OnPayment_StatusChanging(value);
-					this.SendPropertyChanging();
-					this._Payment_Status = value;
-					this.SendPropertyChanged("Payment_Status");
-					this.OnPayment_StatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Date", DbType="Date NOT NULL")]
-		public System.DateTime Payment_Date
-		{
-			get
-			{
-				return this._Payment_Date;
-			}
-			set
-			{
-				if ((this._Payment_Date != value))
-				{
-					this.OnPayment_DateChanging(value);
-					this.SendPropertyChanging();
-					this._Payment_Date = value;
-					this.SendPropertyChanged("Payment_Date");
-					this.OnPayment_DateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_Invoice", Storage="_Invoices", ThisKey="Order_Id", OtherKey="Order_Id")]
-		public EntitySet<Invoice> Invoices
-		{
-			get
-			{
-				return this._Invoices;
-			}
-			set
-			{
-				this._Invoices.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Client", ThisKey="Client_ID", OtherKey="Client_Id", IsForeignKey=true)]
-		public Client Client
-		{
-			get
-			{
-				return this._Client.Entity;
-			}
-			set
-			{
-				Client previousValue = this._Client.Entity;
-				if (((previousValue != value) 
-							|| (this._Client.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Client.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Client.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._Client_ID = value.Client_Id;
-					}
-					else
-					{
-						this._Client_ID = default(int);
-					}
-					this.SendPropertyChanged("Client");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Delivery_Order", Storage="_Delivery", ThisKey="Delivery_Id", OtherKey="Delivery_Id", IsForeignKey=true)]
-		public Delivery Delivery
-		{
-			get
-			{
-				return this._Delivery.Entity;
-			}
-			set
-			{
-				Delivery previousValue = this._Delivery.Entity;
-				if (((previousValue != value) 
-							|| (this._Delivery.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Delivery.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Delivery.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._Delivery_Id = value.Delivery_Id;
-					}
-					else
-					{
-						this._Delivery_Id = default(int);
-					}
-					this.SendPropertyChanged("Delivery");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Payment_Order", Storage="_Payment", ThisKey="Payment_Id", OtherKey="Payment_Id", IsForeignKey=true)]
-		public Payment Payment
-		{
-			get
-			{
-				return this._Payment.Entity;
-			}
-			set
-			{
-				Payment previousValue = this._Payment.Entity;
-				if (((previousValue != value) 
-							|| (this._Payment.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Payment.Entity = null;
-						previousValue.Orders.Remove(this);
-					}
-					this._Payment.Entity = value;
-					if ((value != null))
-					{
-						value.Orders.Add(this);
-						this._Payment_Id = value.Payment_Id;
-					}
-					else
-					{
-						this._Payment_Id = default(int);
-					}
-					this.SendPropertyChanged("Payment");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Invoices(Invoice entity)
-		{
-			this.SendPropertyChanging();
-			entity.Order = this;
-		}
-		
-		private void detach_Invoices(Invoice entity)
-		{
-			this.SendPropertyChanging();
-			entity.Order = null;
 		}
 	}
 	
@@ -880,9 +427,9 @@ namespace Techno_Service
 		
 		private System.Nullable<char> _Active;
 		
-		private EntitySet<Order> _Orders;
-		
 		private EntitySet<Cart> _Carts;
+		
+		private EntitySet<Order> _Orders;
 		
 		private EntitySet<OrderDetail> _OrderDetails;
 		
@@ -924,8 +471,8 @@ namespace Techno_Service
 		
 		public Client()
 		{
-			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
 			this._Carts = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts), new Action<Cart>(this.detach_Carts));
+			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
 			this._OrderDetails = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetails), new Action<OrderDetail>(this.detach_OrderDetails));
 			OnCreated();
 		}
@@ -1230,19 +777,6 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Orders", ThisKey="Client_Id", OtherKey="Client_ID")]
-		public EntitySet<Order> Orders
-		{
-			get
-			{
-				return this._Orders;
-			}
-			set
-			{
-				this._Orders.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Cart", Storage="_Carts", ThisKey="Client_Id", OtherKey="user_Id")]
 		public EntitySet<Cart> Carts
 		{
@@ -1253,6 +787,19 @@ namespace Techno_Service
 			set
 			{
 				this._Carts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Orders", ThisKey="Client_Id", OtherKey="Client_ID")]
+		public EntitySet<Order> Orders
+		{
+			get
+			{
+				return this._Orders;
+			}
+			set
+			{
+				this._Orders.Assign(value);
 			}
 		}
 		
@@ -1289,18 +836,6 @@ namespace Techno_Service
 			}
 		}
 		
-		private void attach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
-		}
-		
 		private void attach_Carts(Cart entity)
 		{
 			this.SendPropertyChanging();
@@ -1308,6 +843,18 @@ namespace Techno_Service
 		}
 		
 		private void detach_Carts(Cart entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = null;
+		}
+		
+		private void attach_Orders(Order entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = this;
+		}
+		
+		private void detach_Orders(Order entity)
 		{
 			this.SendPropertyChanging();
 			entity.Client = null;
@@ -1821,6 +1368,459 @@ namespace Techno_Service
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Orders")]
+	public partial class Order : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Order_Id;
+		
+		private int _Client_ID;
+		
+		private int _Payment_Id;
+		
+		private int _Delivery_Id;
+		
+		private int _OrderNumber;
+		
+		private System.DateTime _OrderDate;
+		
+		private System.DateTime _ShipDate;
+		
+		private decimal _Tax;
+		
+		private string _Delivery_Status;
+		
+		private string _Payment_Status;
+		
+		private System.DateTime _Payment_Date;
+		
+		private EntitySet<Invoice> _Invoices;
+		
+		private EntityRef<Client> _Client;
+		
+		private EntityRef<Delivery> _Delivery;
+		
+		private EntityRef<Payment> _Payment;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnOrder_IdChanging(int value);
+    partial void OnOrder_IdChanged();
+    partial void OnClient_IDChanging(int value);
+    partial void OnClient_IDChanged();
+    partial void OnPayment_IdChanging(int value);
+    partial void OnPayment_IdChanged();
+    partial void OnDelivery_IdChanging(int value);
+    partial void OnDelivery_IdChanged();
+    partial void OnOrderNumberChanging(int value);
+    partial void OnOrderNumberChanged();
+    partial void OnOrderDateChanging(System.DateTime value);
+    partial void OnOrderDateChanged();
+    partial void OnShipDateChanging(System.DateTime value);
+    partial void OnShipDateChanged();
+    partial void OnTaxChanging(decimal value);
+    partial void OnTaxChanged();
+    partial void OnDelivery_StatusChanging(string value);
+    partial void OnDelivery_StatusChanged();
+    partial void OnPayment_StatusChanging(string value);
+    partial void OnPayment_StatusChanged();
+    partial void OnPayment_DateChanging(System.DateTime value);
+    partial void OnPayment_DateChanged();
+    #endregion
+		
+		public Order()
+		{
+			this._Invoices = new EntitySet<Invoice>(new Action<Invoice>(this.attach_Invoices), new Action<Invoice>(this.detach_Invoices));
+			this._Client = default(EntityRef<Client>);
+			this._Delivery = default(EntityRef<Delivery>);
+			this._Payment = default(EntityRef<Payment>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Order_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Order_Id
+		{
+			get
+			{
+				return this._Order_Id;
+			}
+			set
+			{
+				if ((this._Order_Id != value))
+				{
+					this.OnOrder_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Order_Id = value;
+					this.SendPropertyChanged("Order_Id");
+					this.OnOrder_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Client_ID", DbType="Int NOT NULL")]
+		public int Client_ID
+		{
+			get
+			{
+				return this._Client_ID;
+			}
+			set
+			{
+				if ((this._Client_ID != value))
+				{
+					if (this._Client.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnClient_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Client_ID = value;
+					this.SendPropertyChanged("Client_ID");
+					this.OnClient_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Id", DbType="Int NOT NULL")]
+		public int Payment_Id
+		{
+			get
+			{
+				return this._Payment_Id;
+			}
+			set
+			{
+				if ((this._Payment_Id != value))
+				{
+					if (this._Payment.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPayment_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Payment_Id = value;
+					this.SendPropertyChanged("Payment_Id");
+					this.OnPayment_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Id", DbType="Int NOT NULL")]
+		public int Delivery_Id
+		{
+			get
+			{
+				return this._Delivery_Id;
+			}
+			set
+			{
+				if ((this._Delivery_Id != value))
+				{
+					if (this._Delivery.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDelivery_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Delivery_Id = value;
+					this.SendPropertyChanged("Delivery_Id");
+					this.OnDelivery_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderNumber", DbType="Int NOT NULL")]
+		public int OrderNumber
+		{
+			get
+			{
+				return this._OrderNumber;
+			}
+			set
+			{
+				if ((this._OrderNumber != value))
+				{
+					this.OnOrderNumberChanging(value);
+					this.SendPropertyChanging();
+					this._OrderNumber = value;
+					this.SendPropertyChanged("OrderNumber");
+					this.OnOrderNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrderDate", DbType="Date NOT NULL")]
+		public System.DateTime OrderDate
+		{
+			get
+			{
+				return this._OrderDate;
+			}
+			set
+			{
+				if ((this._OrderDate != value))
+				{
+					this.OnOrderDateChanging(value);
+					this.SendPropertyChanging();
+					this._OrderDate = value;
+					this.SendPropertyChanged("OrderDate");
+					this.OnOrderDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShipDate", DbType="Date NOT NULL")]
+		public System.DateTime ShipDate
+		{
+			get
+			{
+				return this._ShipDate;
+			}
+			set
+			{
+				if ((this._ShipDate != value))
+				{
+					this.OnShipDateChanging(value);
+					this.SendPropertyChanging();
+					this._ShipDate = value;
+					this.SendPropertyChanged("ShipDate");
+					this.OnShipDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tax", DbType="Decimal(18,0) NOT NULL")]
+		public decimal Tax
+		{
+			get
+			{
+				return this._Tax;
+			}
+			set
+			{
+				if ((this._Tax != value))
+				{
+					this.OnTaxChanging(value);
+					this.SendPropertyChanging();
+					this._Tax = value;
+					this.SendPropertyChanged("Tax");
+					this.OnTaxChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Delivery_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Delivery_Status
+		{
+			get
+			{
+				return this._Delivery_Status;
+			}
+			set
+			{
+				if ((this._Delivery_Status != value))
+				{
+					this.OnDelivery_StatusChanging(value);
+					this.SendPropertyChanging();
+					this._Delivery_Status = value;
+					this.SendPropertyChanged("Delivery_Status");
+					this.OnDelivery_StatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Payment_Status
+		{
+			get
+			{
+				return this._Payment_Status;
+			}
+			set
+			{
+				if ((this._Payment_Status != value))
+				{
+					this.OnPayment_StatusChanging(value);
+					this.SendPropertyChanging();
+					this._Payment_Status = value;
+					this.SendPropertyChanged("Payment_Status");
+					this.OnPayment_StatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Payment_Date", DbType="Date NOT NULL")]
+		public System.DateTime Payment_Date
+		{
+			get
+			{
+				return this._Payment_Date;
+			}
+			set
+			{
+				if ((this._Payment_Date != value))
+				{
+					this.OnPayment_DateChanging(value);
+					this.SendPropertyChanging();
+					this._Payment_Date = value;
+					this.SendPropertyChanged("Payment_Date");
+					this.OnPayment_DateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Order_Invoice", Storage="_Invoices", ThisKey="Order_Id", OtherKey="Order_Id")]
+		public EntitySet<Invoice> Invoices
+		{
+			get
+			{
+				return this._Invoices;
+			}
+			set
+			{
+				this._Invoices.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Order", Storage="_Client", ThisKey="Client_ID", OtherKey="Client_Id", IsForeignKey=true)]
+		public Client Client
+		{
+			get
+			{
+				return this._Client.Entity;
+			}
+			set
+			{
+				Client previousValue = this._Client.Entity;
+				if (((previousValue != value) 
+							|| (this._Client.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Client.Entity = null;
+						previousValue.Orders.Remove(this);
+					}
+					this._Client.Entity = value;
+					if ((value != null))
+					{
+						value.Orders.Add(this);
+						this._Client_ID = value.Client_Id;
+					}
+					else
+					{
+						this._Client_ID = default(int);
+					}
+					this.SendPropertyChanged("Client");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Delivery_Order", Storage="_Delivery", ThisKey="Delivery_Id", OtherKey="Delivery_Id", IsForeignKey=true)]
+		public Delivery Delivery
+		{
+			get
+			{
+				return this._Delivery.Entity;
+			}
+			set
+			{
+				Delivery previousValue = this._Delivery.Entity;
+				if (((previousValue != value) 
+							|| (this._Delivery.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Delivery.Entity = null;
+						previousValue.Orders.Remove(this);
+					}
+					this._Delivery.Entity = value;
+					if ((value != null))
+					{
+						value.Orders.Add(this);
+						this._Delivery_Id = value.Delivery_Id;
+					}
+					else
+					{
+						this._Delivery_Id = default(int);
+					}
+					this.SendPropertyChanged("Delivery");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Payment_Order", Storage="_Payment", ThisKey="Payment_Id", OtherKey="Payment_Id", IsForeignKey=true)]
+		public Payment Payment
+		{
+			get
+			{
+				return this._Payment.Entity;
+			}
+			set
+			{
+				Payment previousValue = this._Payment.Entity;
+				if (((previousValue != value) 
+							|| (this._Payment.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Payment.Entity = null;
+						previousValue.Orders.Remove(this);
+					}
+					this._Payment.Entity = value;
+					if ((value != null))
+					{
+						value.Orders.Add(this);
+						this._Payment_Id = value.Payment_Id;
+					}
+					else
+					{
+						this._Payment_Id = default(int);
+					}
+					this.SendPropertyChanged("Payment");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Invoices(Invoice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Order = this;
+		}
+		
+		private void detach_Invoices(Invoice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Order = null;
 		}
 	}
 	
