@@ -374,7 +374,25 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC()
         {
-            
+            var product = (from p in db.Products
+                          orderby p.Price descending
+                           select p);
+
+            if(product != null)
+            {
+                List<ProductD> desc = new List<ProductD>();
+                foreach(Product de in product)
+                {
+                    ProductD pro = new ProductD
+                    {
+                        name = de.Name,
+                        description = de.Description,
+                        price = Convert.ToDouble(de.Price),
+                        quantity = de.Quantity
+                    };
+                }
+            }
+
                 return null;
         }
 
