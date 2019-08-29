@@ -13,5 +13,26 @@ namespace TechWeb
         {
 
         }
+
+
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button20_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
