@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="TechWeb.EditProduct1" %>
+﻿%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="TechWeb.EditProduct1" %>
 
 <!DOCTYPE html>
 <html >
