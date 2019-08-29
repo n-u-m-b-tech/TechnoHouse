@@ -5,15 +5,66 @@
 <html>
 <head runat="server">
     <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1,user-scale=no" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+       <div id="wrapper">
+           <div id="main">
+               <div class="inner">
+                   <header>
+                        <!-- Logo -->
+                <!-- Logo -->
+                <a href="Home.aspx" class="logo">
+                    <span class="symbol">
+                        <img src= "images/logo.png"  width="70" height="70" alt="" /></span>
+                </a>
+
+                <div class="fields">
+                <input id="txtSearch" type="search" placeholder="Search" runat="server"/><asp:Button ID="BtnSearch" runat="server" Text="Search" />
+         
+                <a href="ShoppingCart.aspx" class="scart">
+                   <span class="symbol">
+                     <img src= "<% %>"  width="20" height="20" alt="" /></span>
+                </a>
+                </div>
+               <div class="navigator">
+                  <!--Navigator-->
+                 <nav id="nav">
+                 <ul>
+                <asp:ContentPlaceHolder ID="navigation" runat="server">
+                     <li><a href="Home.aspx">Home</a></li>
+               </asp:ContentPlaceHolder>
+                 </ul>
+                 </nav>
+               </div>
+                   </header>
+                   <section class="products">
+                  <asp:ContentPlaceHolder ID="contents" runat="server">
+
+               </asp:ContentPlaceHolder>
+                   </section>
+               </div>
+           </div>
+             <!--Footer-->
+            <footer id="footer">
+                <div class="inner">
+                    <section>
+                      <h2> Follow Us</h2>
+                        <ul class="icons">
+                           <li><a href="https://www.facebook.com"><img src="images/icons/facebook.png" alt="Facebook" width="30" height="30" /></a></li>
+                            <li><a href="https://www.instagram.com"><img src="images/icons/instagram.png" alt="Instagram" width="30" height="30" /></a></li>
+                            <li><a href="https://www.twitter.com"><img src="images/icons/twitter.png" alt="Twitter" width="30" height="30" /></a></li>
+                            <li><a href="https://www.youtube.com"><img src="images/icons/youtube.png" alt="YouTube" width="30" height="30" /></a></li>
+                        </ul>
+                    </section>
+                </div>
+            </footer>
+       </div>
     </form>
 </body>
 </html>
+
