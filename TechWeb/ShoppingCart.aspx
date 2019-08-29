@@ -50,6 +50,8 @@
         }
         .auto-style10 {
             width: 112px;
+            border:1px solid gray;
+            border-radius:8px;
         }
         .auto-style11 {
             width: 32px;
