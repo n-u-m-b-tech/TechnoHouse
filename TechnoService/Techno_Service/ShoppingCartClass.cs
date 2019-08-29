@@ -9,6 +9,7 @@ namespace Techno_Service
     {
         public int Productid, Quantity;
         public String description;
+        public Double UnitPrice, Total;
 
     }
 }

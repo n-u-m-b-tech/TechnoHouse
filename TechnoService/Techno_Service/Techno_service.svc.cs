@@ -11,7 +11,7 @@ namespace Techno_Service
     // NOTE: In order to launch WCF Test Client for testing this service, please select Techno_service.svc or Techno_service.svc.cs at the Solution Explorer and start debugging.
     public class Techno_service : ITechno_service
     {
-        NUMBDBDataContext db = new NUMBDBDataContext();
+        TECHDBDataContext db = new TECHDBDataContext();
 
 
         public bool Login(string email, string password)
@@ -178,12 +178,16 @@ namespace Techno_Service
                 Surname = user.surname,
                 Contacts = user.contacs,
                 Email = user.email,
+                Username = user.username,
                 Password = Secrecy.HashPassword(user.password),
                 Address1 = user.address1,
                 Address2 = user.address2,
                 City = user.city,
+                Province = user.province,
                 ZipCode = user.ZipCode,
-                Province = user.province
+                User_type = "Test",
+                Active = 'T'
+              
             };
 
             db.Clients.InsertOnSubmit(addUser);
@@ -414,7 +418,7 @@ namespace Techno_Service
                 Price = (Decimal)addP.price,
                 Quantity = addP.quantity,
                 Category = addP.category,
-                ACTIVE = null,
+                ACTIVE = 'T',
                 Brand = addP.brand,
                 manufacture = addP.manufacture,
                 Discount = (Decimal)addP.discount
