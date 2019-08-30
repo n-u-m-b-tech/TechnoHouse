@@ -17,7 +17,7 @@ namespace Techno_Service
         [OperationContract]
         Boolean Login(string email, string password);
         [OperationContract]
-        User userinfor_Retrieval(string email);
+        User userinfor_Retrieval(int ID);
         [OperationContract]
         Boolean resetPass(int email, string password);
         [OperationContract]

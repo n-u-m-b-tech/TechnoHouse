@@ -137,10 +137,10 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        public User userinfor_Retrieval(string email)
+        public User userinfor_Retrieval(int ID)
         {
             var userinfor = (from p in db.Clients
-                             where p.Email.Equals(email)
+                             where p.Email.Equals(ID)
                              select p).FirstOrDefault();
 
             if (userinfor != null)
@@ -414,6 +414,7 @@ namespace Techno_Service
                 {
                     ProductD fprp = new ProductD
                     {
+
                         ID = prop.Product_Id,
                         name = prop.Name,
                         description = prop.Description,

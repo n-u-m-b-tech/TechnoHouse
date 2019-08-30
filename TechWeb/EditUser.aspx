@@ -20,6 +20,8 @@
                 <input type="text" name="txtadd2" id="add2" placeholder="Address Line2" runat="server" class="auto-style12" /><asp:RequiredFieldValidator ID="add2require" runat="server" ErrorMessage="*" ControlToValidate="add2"></asp:RequiredFieldValidator>
                 <br />
                 <br />
+                <input type="text" name="txtcontact" id="contact" placeholder="Contact" runat="server" class="auto-style3" />
+                <input type="text" name="txtusertype" id="user_type" placeholder="UserType" runat="server" class="auto-style3" />
                 <input type="text" name="txtcity" id="city" placeholder="City" runat="server" class="auto-style3" /><asp:RequiredFieldValidator ID="cityrequire" runat="server" ErrorMessage="*" ControlToValidate="city"></asp:RequiredFieldValidator>
                 <input type="text" name="txtprov" id="prov" placeholder="Province" runat="server" class="auto-style4" /><asp:RequiredFieldValidator ID="provrequire" runat="server" ErrorMessage="*" ControlToValidate="prov"></asp:RequiredFieldValidator>
                 <input type="text" name="txtzip" id="zip" placeholder="Zip Code" runat="server" class="auto-style8" maxlength="5" /><asp:RequiredFieldValidator ID="ziprequire" runat="server" ErrorMessage="*" ControlToValidate="zip"></asp:RequiredFieldValidator>
