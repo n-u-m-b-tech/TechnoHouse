@@ -95,7 +95,6 @@
     <Content Include="CartPage.aspx" />
     <Content Include="CatalogPage.aspx" />
     <Content Include="ContactPage.aspx" />
-    <Content Include="EditProduct.aspx" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="HomePage.aspx" />
@@ -138,7 +137,6 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
     <Content Include="SearchProduct.aspx" />
-    <Content Include="SignIn.aspx" />
     <Content Include="TransactionPage.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="css\form.css" />
@@ -181,13 +179,6 @@
     </Compile>
     <Compile Include="ContactPage.aspx.designer.cs">
       <DependentUpon>ContactPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EditProduct.aspx.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditProduct.aspx.designer.cs">
-      <DependentUpon>EditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditProductPage.aspx.cs">
       <DependentUpon>EditProductPage.aspx</DependentUpon>
@@ -262,13 +253,6 @@
     </Compile>
     <Compile Include="SearchProduct.aspx.designer.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SignIn.aspx.cs">
-      <DependentUpon>SignIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SignIn.aspx.designer.cs">
-      <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>

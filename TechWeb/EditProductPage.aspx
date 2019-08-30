@@ -7,7 +7,7 @@
     <div class="fields">
         <h2>Edit Product</h2>
         <section>
-            <img alt="" src="<%#Eval("url")%>"  width="150" height="150"/>
+            <img alt="" src='<%#Eval("url")%>'  width="150" height="150"/>
             </section>
             <div class="field">
                 <input type="text" name="txtname" id="name" placeholder="Product Name" runat="server" />
