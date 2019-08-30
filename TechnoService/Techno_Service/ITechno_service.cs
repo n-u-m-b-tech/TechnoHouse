@@ -34,6 +34,8 @@ namespace Techno_Service
         List<ProductD> price_by_ASC();
         [OperationContract]
         List<ProductD> price_by_DESC();
+        [OperationContract]
+        List<ProductD> allProducts();
 
         //transaction
         [OperationContract]

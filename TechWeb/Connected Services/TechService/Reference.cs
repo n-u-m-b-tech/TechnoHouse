@@ -32,6 +32,9 @@ namespace TechWeb.TechService {
         private string ZipCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private char activeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string address1Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -57,6 +60,9 @@ namespace TechWeb.TechService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string surnameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string usernameField;
@@ -106,6 +112,19 @@ namespace TechWeb.TechService {
                 if ((object.ReferenceEquals(this.ZipCodeField, value) != true)) {
                     this.ZipCodeField = value;
                     this.RaisePropertyChanged("ZipCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public char active {
+            get {
+                return this.activeField;
+            }
+            set {
+                if ((this.activeField.Equals(value) != true)) {
+                    this.activeField = value;
+                    this.RaisePropertyChanged("active");
                 }
             }
         }
@@ -228,6 +247,19 @@ namespace TechWeb.TechService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string username {
             get {
                 return this.usernameField;
@@ -276,6 +308,9 @@ namespace TechWeb.TechService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal discountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_urlField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string manufactureField;
@@ -378,6 +413,19 @@ namespace TechWeb.TechService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_url {
+            get {
+                return this.image_urlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_urlField, value) != true)) {
+                    this.image_urlField = value;
+                    this.RaisePropertyChanged("image_url");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string manufacture {
             get {
                 return this.manufactureField;
@@ -465,6 +513,9 @@ namespace TechWeb.TechService {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<decimal> DiscountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Image_urlField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private TechWeb.TechService.Invoice[] InvoicesField;
@@ -568,6 +619,19 @@ namespace TechWeb.TechService {
                 if ((this.DiscountField.Equals(value) != true)) {
                     this.DiscountField = value;
                     this.RaisePropertyChanged("Discount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image_url {
+            get {
+                return this.Image_urlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Image_urlField, value) != true)) {
+                    this.Image_urlField = value;
+                    this.RaisePropertyChanged("Image_url");
                 }
             }
         }
@@ -1355,6 +1419,12 @@ namespace TechWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/price_by_DESC", ReplyAction="http://tempuri.org/ITechno_service/price_by_DESCResponse")]
         System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/allProducts", ReplyAction="http://tempuri.org/ITechno_service/allProductsResponse")]
+        TechWeb.TechService.ProductD[] allProducts();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/allProducts", ReplyAction="http://tempuri.org/ITechno_service/allProductsResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> allProductsAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID);
         
@@ -1485,6 +1555,14 @@ namespace TechWeb.TechService {
         
         public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> price_by_DESCAsync() {
             return base.Channel.price_by_DESCAsync();
+        }
+        
+        public TechWeb.TechService.ProductD[] allProducts() {
+            return base.Channel.allProducts();
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> allProductsAsync() {
+            return base.Channel.allProductsAsync();
         }
         
         public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID) {
