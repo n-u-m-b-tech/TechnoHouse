@@ -13,6 +13,15 @@ namespace TechWeb {
     public partial class EditProductPage {
         
         /// <summary>
+        /// Image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Image;
+        
+        /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlInputText active;
         
         /// <summary>
-        /// url control.
+        /// Image_url control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText url;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Image_url;
         
         /// <summary>
         /// BtnEdit control.

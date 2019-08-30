@@ -6,9 +6,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
     <div class="fields">
         <h2>Edit Product</h2>
-        <section>
-            <img alt="" src='<%#Eval("url")%>'  width="150" height="150"/>
-            </section>
+       <section id="Image" runat="server">
+
+     </section>
             <div class="field">
                 <input type="text" name="txtname" id="name" placeholder="Product Name" runat="server" />
             </div>
@@ -37,7 +37,7 @@
                 <input type="text" name="txtactive" id="active" placeholder="Is it still sold?" runat="server" />
             </div>
             <div class="field">
-                <input type="text" name="txturl" id="url" placeholder="Product URL" runat="server" />
+                <input type="text" name="txturl" id="Image_url" placeholder="Product URL" runat="server" />
             </div>
         </div>
         <ul class="actions">
