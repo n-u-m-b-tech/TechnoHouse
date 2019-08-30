@@ -112,15 +112,6 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlInputText contact;
         
         /// <summary>
-        /// user_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText user_type;
-        
-        /// <summary>
         /// city control.
         /// </summary>
         /// <remarks>
@@ -202,33 +193,6 @@ namespace TechWeb {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexprss;
         
         /// <summary>
-        /// mailcom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText mailcom;
-        
-        /// <summary>
-        /// confirmrequire control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator confirmrequire;
-        
-        /// <summary>
-        /// mailcompr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator mailcompr;
-        
-        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>
@@ -247,58 +211,13 @@ namespace TechWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator userrequire;
         
         /// <summary>
-        /// pass control.
+        /// user_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword pass;
-        
-        /// <summary>
-        /// passrequire control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passrequire;
-        
-        /// <summary>
-        /// confirm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword confirm;
-        
-        /// <summary>
-        /// passconfirmrequire control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passconfirmrequire;
-        
-        /// <summary>
-        /// passcomprr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator passcomprr;
-        
-        /// <summary>
-        /// usertype control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText usertype;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText user_type;
         
         /// <summary>
         /// active control.

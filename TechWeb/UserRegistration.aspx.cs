@@ -39,7 +39,7 @@ namespace TechWeb
 
                 if (client.UserRegister(user))
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("LoginPage.aspx");
                 }
                 else
                 {

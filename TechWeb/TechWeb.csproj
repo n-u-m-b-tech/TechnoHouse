@@ -145,8 +145,6 @@
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
     <Content Include="images\smart-home-automation-2.jpg" />
-    <Content Include="LogIn.aspx" />
-    <Content Include="SignUp.aspx" />
     <Content Include="Transaction.aspx" />
     <Content Include="UserAccount.aspx" />
     <Content Include="Web.config" />
@@ -239,13 +237,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.aspx.cs">
-      <DependentUpon>LogIn.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LogIn.aspx.designer.cs">
-      <DependentUpon>LogIn.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchProduct.aspx.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
@@ -253,13 +244,6 @@
     </Compile>
     <Compile Include="SearchProduct.aspx.designer.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp.aspx.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SignUp.aspx.designer.cs">
-      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Transaction.aspx.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>

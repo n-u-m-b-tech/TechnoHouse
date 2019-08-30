@@ -114,12 +114,14 @@ namespace Techno_Service
             client.Name = user.name;
             client.Surname = user.surname;
             client.Email = user.email;
+            client.Username = user.username;
             client.Address1 = user.address1;
             client.Address2 = user.address2;
             client.Contacts = user.contacs;
             client.City = user.city;
             client.Province = user.province;
             client.ZipCode = user.ZipCode;
+            client.User_type = user.type;
             client.Active =(Char) user.active;
 
             try
@@ -140,7 +142,7 @@ namespace Techno_Service
         public User userinfor_Retrieval(int ID)
         {
             var userinfor = (from p in db.Clients
-                             where p.Email.Equals(ID)
+                             where p.Client_Id.Equals(ID)
                              select p).FirstOrDefault();
 
             if (userinfor != null)

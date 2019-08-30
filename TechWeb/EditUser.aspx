@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
- <div class="fields">
+    <div class="fields">
             <div class="field"> 
                 <h3><i>Full Name</i></h3>
                 <input type="text" name="txttitle" id="title" placeholder="Title" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="idrequire" runat="server" ErrorMessage="*" ControlToValidate="title"></asp:RequiredFieldValidator>
@@ -21,7 +21,6 @@
                 <br />
                 <br />
                 <input type="text" name="txtcontact" id="contact" placeholder="Contact" runat="server" class="auto-style3" />
-                <input type="text" name="txtusertype" id="user_type" placeholder="UserType" runat="server" class="auto-style3" />
                 <input type="text" name="txtcity" id="city" placeholder="City" runat="server" class="auto-style3" /><asp:RequiredFieldValidator ID="cityrequire" runat="server" ErrorMessage="*" ControlToValidate="city"></asp:RequiredFieldValidator>
                 <input type="text" name="txtprov" id="prov" placeholder="Province" runat="server" class="auto-style4" /><asp:RequiredFieldValidator ID="provrequire" runat="server" ErrorMessage="*" ControlToValidate="prov"></asp:RequiredFieldValidator>
                 <input type="text" name="txtzip" id="zip" placeholder="Zip Code" runat="server" class="auto-style8" maxlength="5" /><asp:RequiredFieldValidator ID="ziprequire" runat="server" ErrorMessage="*" ControlToValidate="zip"></asp:RequiredFieldValidator>
@@ -32,21 +31,13 @@
                 <asp:RegularExpressionValidator ID="regexprss" runat="server" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email"></asp:RegularExpressionValidator>
                 <br />
                 <br />
-                <input type="text" name="txtconfirmmail" id="mailcom" placeholder="Confirm Email" runat="server" class="auto-style2" /><asp:RequiredFieldValidator ID="confirmrequire" runat="server" ErrorMessage="*" ControlToValidate="mailcom"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="mailcompr" runat="server" ErrorMessage="Emails Don't Match" ControlToCompare="email" ControlToValidate="mailcom"></asp:CompareValidator>
                 <br />
                 <br />
                 <input type="text" name="txtusername" id="username" placeholder="UserName" runat="server" class="auto-style9" /><asp:RequiredFieldValidator ID="userrequire" runat="server" ErrorMessage="*" ControlToValidate="username"></asp:RequiredFieldValidator>
                 <br />
                 <br />
-                <input type="password" name="txtpass" id="pass" placeholder="Password" runat="server" class="auto-style10" /><asp:RequiredFieldValidator ID="passrequire" runat="server" ErrorMessage="*" ControlToValidate="pass"></asp:RequiredFieldValidator>
-                <br />
-                <br />
-                <input type="password" name="txtconfirm" id="confirm" placeholder="Confirm Password" runat="server" class="auto-style11" /><asp:RequiredFieldValidator ID="passconfirmrequire" runat="server" ErrorMessage="*" ControlToValidate="confirm"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="passcomprr" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
-                <br />
 
-                 <input type="text" name="txttyper" id="usertype" placeholder="User Type" runat="server" /><br />
+                 <input type="text" name="txttyper" id="user_type" placeholder="User Type" runat="server" /><br />
                 <br />
                   <input type="text" name="txtActive" id="active" placeholder="Is Active" runat="server" /><asp:RequiredFieldValidator ID="activerequire" runat="server" ErrorMessage="*" ControlToValidate="active"></asp:RequiredFieldValidator>
                 </div>

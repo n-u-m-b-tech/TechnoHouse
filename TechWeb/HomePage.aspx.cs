@@ -13,6 +13,11 @@ namespace TechWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["ID"].Equals(7016))
+            {
+                edit.Visible = false;
+            }
             dynamic products = client.allProducts();
             String display="";
 

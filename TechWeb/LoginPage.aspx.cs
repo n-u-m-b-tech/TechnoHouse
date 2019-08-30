@@ -19,9 +19,10 @@ namespace TechWeb
         protected void BtnLogIn_Click(object sender, EventArgs e)
         {
             Boolean verify = client.Login(email.Value, pass.Value);
-
             if (verify)
             {
+
+                Session["ID"] = 7016;
                 Response.Redirect("HomePage.aspx");
             }
             else
