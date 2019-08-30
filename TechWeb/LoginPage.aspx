@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
     <div class="fields">
         <div class="field">
-            <input type="text" name="txtusername" id="username" placeholder="Username" runat="server" />
+            <input type="text" name="txtemail" id="email" placeholder="Email-" runat="server" />
         </div>
         <div class="field">
             <input type="password" name="txtpass" id="pass" placeholder="Password" runat="server" />
