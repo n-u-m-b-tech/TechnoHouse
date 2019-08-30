@@ -59,8 +59,7 @@ namespace TechWeb
 
             };
 
-            String proId = Request.QueryString["ID"];
-            int ID = Convert.ToInt32(proId);
+            int ID = product.ID;
 
             if (client.EditProduct(ID).Equals(0))
             {
