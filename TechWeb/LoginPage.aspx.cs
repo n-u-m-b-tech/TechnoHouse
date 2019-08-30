@@ -21,9 +21,12 @@ namespace TechWeb
             Boolean verify = client.Login(email.Value, pass.Value);
             if (verify)
             {
-
-                Session["ID"] = 7016;
+                var user = client.userinfor_Retrieval_Email(email.Value);
+                if (user != null) { 
+                Session["userID"] = user.Id;
+                Session["userType"] = user.type;
                 Response.Redirect("HomePage.aspx");
+                }
             }
             else
             {

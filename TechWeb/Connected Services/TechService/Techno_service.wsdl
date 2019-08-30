@@ -25,6 +25,12 @@
   <wsdl:message name="ITechno_service_userinfor_Retrieval_OutputMessage">
     <wsdl:part name="parameters" element="tns:userinfor_RetrievalResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_userinfor_Retrieval_Email_InputMessage">
+    <wsdl:part name="parameters" element="tns:userinfor_Retrieval_Email" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_userinfor_Retrieval_Email_OutputMessage">
+    <wsdl:part name="parameters" element="tns:userinfor_Retrieval_EmailResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_resetPass_InputMessage">
     <wsdl:part name="parameters" element="tns:resetPass" />
   </wsdl:message>
@@ -110,6 +116,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/userinfor_Retrieval" message="tns:ITechno_service_userinfor_Retrieval_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/userinfor_RetrievalResponse" message="tns:ITechno_service_userinfor_Retrieval_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="userinfor_Retrieval_Email">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/userinfor_Retrieval_Email" message="tns:ITechno_service_userinfor_Retrieval_Email_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/userinfor_Retrieval_EmailResponse" message="tns:ITechno_service_userinfor_Retrieval_Email_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="resetPass">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/resetPass" message="tns:ITechno_service_resetPass_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/resetPassResponse" message="tns:ITechno_service_resetPass_OutputMessage" />
@@ -181,6 +191,15 @@
     </wsdl:operation>
     <wsdl:operation name="userinfor_Retrieval">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/userinfor_Retrieval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="userinfor_Retrieval_Email">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/userinfor_Retrieval_Email" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

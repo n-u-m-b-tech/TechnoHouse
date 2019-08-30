@@ -474,6 +474,43 @@ namespace Techno_Service
                 return null;
             }
         }
+
+        public User userinfor_Retrieval_Email(string email)
+        {
+            var userinfor = (from p in db.Clients
+                             where p.Email.Equals(email)
+                             select p).FirstOrDefault();
+
+            if (userinfor != null)
+            {
+                User user = new User
+                {
+
+                    Title = userinfor.Title,
+                    Id = userinfor.Client_Id,
+                    name = userinfor.Name,
+                    surname = userinfor.Surname,
+                    contacs = userinfor.Contacts,
+                    email = userinfor.Email,
+                    address1 = userinfor.Address1,
+                    address2 = userinfor.Address2,
+                    city = userinfor.City,
+                    ZipCode = userinfor.ZipCode,
+                    province = userinfor.Province,
+                    active = (Char)userinfor.Active,
+                    type = userinfor.User_type
+
+
+
+                };
+                return user;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
         

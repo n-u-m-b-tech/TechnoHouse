@@ -1377,6 +1377,12 @@ namespace TechWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/userinfor_Retrieval", ReplyAction="http://tempuri.org/ITechno_service/userinfor_RetrievalResponse")]
         System.Threading.Tasks.Task<TechWeb.TechService.User> userinfor_RetrievalAsync(int ID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/userinfor_Retrieval_Email", ReplyAction="http://tempuri.org/ITechno_service/userinfor_Retrieval_EmailResponse")]
+        TechWeb.TechService.User userinfor_Retrieval_Email(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/userinfor_Retrieval_Email", ReplyAction="http://tempuri.org/ITechno_service/userinfor_Retrieval_EmailResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.User> userinfor_Retrieval_EmailAsync(string email);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
         bool resetPass(int email, string password);
         
@@ -1499,6 +1505,14 @@ namespace TechWeb.TechService {
         
         public System.Threading.Tasks.Task<TechWeb.TechService.User> userinfor_RetrievalAsync(int ID) {
             return base.Channel.userinfor_RetrievalAsync(ID);
+        }
+        
+        public TechWeb.TechService.User userinfor_Retrieval_Email(string email) {
+            return base.Channel.userinfor_Retrieval_Email(email);
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.User> userinfor_Retrieval_EmailAsync(string email) {
+            return base.Channel.userinfor_Retrieval_EmailAsync(email);
         }
         
         public bool resetPass(int email, string password) {

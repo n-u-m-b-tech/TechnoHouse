@@ -13,10 +13,19 @@ namespace TechWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["ID"].Equals(7016))
+            edit.Visible = false;
+            register.Visible = false;
+            if (Session["userID"] != null)
             {
-                edit.Visible = false;
+                if (Session["userType"] != null)
+                {
+                    if (Session["userType"].Equals("admin"))
+                    {
+                        edit.Visible = true;
+                    }
+                }
+                login.Visible = false;
+                uregister.Visible = false;
             }
             dynamic products = client.allProducts();
             String display="";
