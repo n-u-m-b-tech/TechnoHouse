@@ -103,6 +103,24 @@ namespace TechWeb {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator add2require;
         
         /// <summary>
+        /// contact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText contact;
+        
+        /// <summary>
+        /// user_type control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText user_type;
+        
+        /// <summary>
         /// city control.
         /// </summary>
         /// <remarks>

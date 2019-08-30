@@ -85,6 +85,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CartPage.aspx" />
+    <Content Include="CatalogPage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -92,8 +94,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="CartPage.aspx" />
-    <Content Include="CatalogPage.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="EditUser.aspx" />
