@@ -20,7 +20,7 @@ namespace TechWeb
             {
                 display += "<article class='style1'>";
                 display +="<span class='image'>"; 
-                display += "<a href='EditProduct.aspx'>";
+                display += "<a href='EditProduct.aspx?ID="+p.ID+"'>";
                 display +="<img src='"+p.image_url+"' width='300' height='300' alt='' />";
                 display += "</a>";
                 display += "</span>";
