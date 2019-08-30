@@ -55,7 +55,9 @@ namespace Techno_Service
                         category = prop.Category,
                         brand = prop.Brand,
                         manufacture = prop.manufacture,
-                        discount = (Decimal)prop.Discount
+                        discount = (Decimal)prop.Discount,
+                        image_url = prop.Image_url,
+                        active = (Char)prop.ACTIVE
                     };
                     catProducts.Add(Fproduct);
                 }
@@ -117,7 +119,8 @@ namespace Techno_Service
             client.Contacts = user.contacs;
             client.City = user.city;
             client.Province = user.province;
-            client.ZipCode = client.Province;
+            client.ZipCode = user.ZipCode;
+            client.Active =(Char) user.active;
 
             try
             {
@@ -155,7 +158,11 @@ namespace Techno_Service
                     address2 = userinfor.Address2,
                     city = userinfor.City,
                     ZipCode = userinfor.ZipCode,
-                    province = userinfor.Province
+                    province = userinfor.Province,
+                    active = (Char)userinfor.Active,
+                    type = userinfor.User_type
+                    
+                    
 
                 };
                 return user;
@@ -183,7 +190,9 @@ namespace Techno_Service
                 Address2 = user.address2,
                 City = user.city,
                 ZipCode = user.ZipCode,
-                Province = user.province
+                Province = user.province,
+                Active = user.active,
+                User_type = user.type
             };
 
             db.Clients.InsertOnSubmit(addUser);
@@ -221,7 +230,10 @@ namespace Techno_Service
                     category = prop.Category,
                     brand= prop.Brand,
                     manufacture = prop.manufacture,
-                    discount = (Decimal)prop.Discount
+                    discount = (Decimal)prop.Discount,
+                    active = (Char)prop.ACTIVE,
+                    image_url = prop.Image_url
+
 
                 };
                 priceP.Add(fprp);
@@ -288,7 +300,9 @@ namespace Techno_Service
                     category = prod.Category,
                     manufacture = prod.manufacture,
                     brand = prod.Brand,
-                    discount = (Decimal)prod.Discount
+                    discount = (Decimal)prod.Discount,
+                    image_url = prod.Image_url,
+                    active = (Char)prod.ACTIVE
                 };
                 return product;
             }
@@ -385,6 +399,42 @@ namespace Techno_Service
             {
                 ex.GetBaseException();
                 return -1;
+            }
+        }
+
+        public List<ProductD> allProducts()
+        {
+            var product = (from p in db.Products
+                           select p);
+            if (product != null)
+            {
+                List<ProductD> pro = new List<ProductD>();
+
+                foreach (Product prop in product)
+                {
+                    ProductD fprp = new ProductD
+                    {
+                        ID = prop.Product_Id,
+                        name = prop.Name,
+                        description = prop.Description,
+                        price = (Double)prop.Price,
+                        quantity = prop.Quantity,
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount,
+                        image_url = prop.Image_url,
+                        active =(Char) prop.ACTIVE
+                        
+         
+                    };
+                    pro.Add(fprp);
+                }
+                return pro;
+            }
+            else
+            {
+                return null;
             }
         }
     }

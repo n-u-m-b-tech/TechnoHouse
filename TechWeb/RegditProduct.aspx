@@ -59,6 +59,12 @@
                                   <div class="field">
                                       <input type="text" name="txtquantity" id="quantity" placeholder="Product Quantity" runat="server" />
                                   </div>
+                                  <div class="field">
+                                      <input type="text" name="txtactive" id="active" placeholder="Is it still sold?" runat="server" />
+                                  </div>
+                                  <div class="field">
+                                      <input type="text" name="txturl" id="url" placeholder="Product URL" runat="server" />
+                                  </div>
                                </div>
                              <ul class="actions">
                                 <li>

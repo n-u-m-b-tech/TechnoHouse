@@ -6,6 +6,7 @@
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="active" type="ser:char" />
       <xs:element minOccurs="0" name="address1" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="address2" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
@@ -15,6 +16,7 @@
       <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="province" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -33,6 +35,7 @@
       <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="discount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="image_url" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="manufacture" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="price" type="xs:double" />
@@ -48,6 +51,7 @@
       <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Discount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Image_url" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Invoices" nillable="true" type="tns:ArrayOfInvoice" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Price" type="xs:decimal" />

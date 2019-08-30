@@ -7,7 +7,7 @@ namespace Techno_Service
 {
     public class ProductD
     {
-        public string name, description, category;
+        public string name, description, category, image_url;
         public int quantity, ID;
         public double price;
         public decimal discount;

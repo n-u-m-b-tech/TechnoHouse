@@ -10,6 +10,6 @@
 namespace TechWeb {
     
     
-    public partial class TestPage {
+    public partial class InvoicePage {
     }
 }
