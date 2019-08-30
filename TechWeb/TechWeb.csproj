@@ -92,8 +92,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="ContactUs.aspx" />
+    <Content Include="css\Catalogue.css" />
     <Content Include="EditProduct.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="images\facebook.svg" />
@@ -136,7 +138,6 @@
     <Content Include="SignIn.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="ViewProduct.aspx" />
-    <Content Include="Catalogue.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
     <Content Include="RegditProduct.aspx" />
@@ -154,12 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Catalogue.aspx.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Catalogue.aspx.designer.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.designer.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>
