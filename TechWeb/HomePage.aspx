@@ -12,64 +12,9 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
-    <article class="style1">
-        <span class="image">
-            <img src="images/icons/spotify.png" width="100" height="100" alt="" />
-        </span>
-        <a href="ViewProductPage.aspx">
-            <h2>Spotify</h2>
-            <div class="content">
-                <p>I am the details of the product, bitch</p>
-            </div>
-        </a>
-    </article>
+     <section id="catalog" runat="server">
 
-     <article class="style1">
-        <span class="image">
-            <img src="images/icons/facebook.png" width="100" height="100" alt="" />
-        </span>
-        <a href="ViewProductPage.aspx">
-            <h2>Spotify</h2>
-            <div class="content">
-                <p>I am the details of the product, bitch</p>
-            </div>
-        </a>
-    </article>
+     </section>
 
-     <article class="style1">
-        <span class="image">
-            <img src="images/icons/twitter.png" width="100" height="100" alt="" />
-        </span>
-        <a href="ViewProductPage.aspx">
-            <h2>Spotify</h2>
-            <div class="content">
-                <p>I am the details of the product, bitch</p>
-            </div>
-        </a>
-    </article>
-
-     <article class="style1">
-        <span class="image">
-            <img src="images/icons/instagram.png" width="100" height="100" alt="" />
-        </span>
-        <a href="ViewProductPage.aspx">
-            <h2>Spotify</h2>
-            <div class="content">
-                <p>I am the details of the product, bitch</p>
-            </div>
-        </a>
-    </article>
-
-     <article class="style1">
-        <span class="image">
-            <img src="images/icons/facebook.png" width="100" height="100" alt="" />
-        </span>
-        <a href="ViewProductPage.aspx">
-            <h2>Spotify</h2>
-            <div class="content">
-                <p>I am the details of the product, bitch</p>
-            </div>
-        </a>
-    </article>
 </asp:Content>
  

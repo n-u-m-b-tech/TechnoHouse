@@ -67,6 +67,12 @@
   <wsdl:message name="ITechno_service_price_by_DESC_OutputMessage">
     <wsdl:part name="parameters" element="tns:price_by_DESCResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_allProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:allProducts" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_allProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:allProductsResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_Add_to_Cart_InputMessage">
     <wsdl:part name="parameters" element="tns:Add_to_Cart" />
   </wsdl:message>
@@ -131,6 +137,10 @@
     <wsdl:operation name="price_by_DESC">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/price_by_DESC" message="tns:ITechno_service_price_by_DESC_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/price_by_DESCResponse" message="tns:ITechno_service_price_by_DESC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="allProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/allProducts" message="tns:ITechno_service_allProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/allProductsResponse" message="tns:ITechno_service_allProducts_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Add_to_Cart">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/Add_to_Cart" message="tns:ITechno_service_Add_to_Cart_InputMessage" />
@@ -234,6 +244,15 @@
     </wsdl:operation>
     <wsdl:operation name="price_by_DESC">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/price_by_DESC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allProducts">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/allProducts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
