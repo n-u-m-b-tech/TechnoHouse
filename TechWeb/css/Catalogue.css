@@ -1,0 +1,73 @@
+﻿body {
+    padding-top: 4.5rem;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.row .catalogue {
+    width: 100%;
+    overflow: auto;
+    margin: auto;
+    float: left;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 25%;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    /*margin-right: 50px;*/
+    position: relative;
+}
+
+    .card .card-img-top {
+        height: 200px;
+    }
+
+        .card .card-img-top img {
+            object-fit: scale-down;
+        }
+
+    .card .card-body {
+        height: 200px;
+    }
+
+        .card .card-body p {
+            text-overflow: ellipsis;
+        }
+
+.price {
+    color: grey;
+    height: 50px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.name {
+    font-size: 30px;
+    font-variant: small-caps;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    margin: 0;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+    input[type="submit"]:hover {
+        opacity: 0.7;
+    }

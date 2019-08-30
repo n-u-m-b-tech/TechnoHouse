@@ -253,70 +253,36 @@ namespace Techno_Service
         //*************************************************************************************************************
 
 
-        public int EditProduct(int ID)
-        {
-
-            //!!!!maisha fix this code how will you know if the product has been edited if this function is void? !!!!!!
-            ProductD pro = new ProductD();
-
-            //which product are you trying to edited or mybe you editing all the products
-            dynamic item = from p in db.Products
+        public int EditProduct(ProductD pr, int ID)
+        { 
+            
+            var item = from p in db.Products
                            where p.Product_Id.Equals(ID)
                            select p;
 
-            bool codeExists = false;
 
-            foreach (Product p in item)
-            {
-
-                if (p.Product_Id == ID)
-                {
-                    codeExists = true;
-                    Product editP = productinfor(ID);
-
-                    editP = new Product
-                    {
-                        Name = pro.name,
-                        Category = pro.category,
-                        Description = pro.description,
-                        Price = Convert.ToInt64(pro.price),
-                        Quantity = pro.quantity,
-                    };
-
-                    return 1;
-                }
-
-            }
-
-            if (codeExists == false)
-            {
-                var newProduct = new Product
-                {
-
-                    Name = pro.name,
-                    Category = pro.category,
-                    Description = pro.description,
-                    Price = Convert.ToInt64(pro.price),
-                    Quantity = pro.quantity,
-                    
-                };
-                //exception handling
+            //Just uncomment
+            //item.Name = pr.name;
+            //item.Description = pr.description;
+            //item.Price = pr.price;
+            //item.Quantity = pr.quantity;
+            //item.Category = pr.category;
+            //item.ACTIVE = pr.active;
+            //item.Brand = pr.brand;
+            //item.manufacture = pr.manufacture;
+            //item.Discount = pr.discount;
+           
+       //exception handling
                 try
                 {
                     db.SubmitChanges();
-                    return 1;
+                    return 0;
                 }
                 catch (Exception ex)
                 {
                     ex.GetBaseException();
-                    // pro.ErrorMsg();
+                return -1;
                 }
-            }
-            else
-            {
-                return 0;
-            }
-            return -1;
         }
 
         public ProductD productinfor_retrieval(int ID)
@@ -398,7 +364,7 @@ namespace Techno_Service
                     Price = prod.Price,
                     Quantity = prod.Quantity,
                     Category = prod.Category
-                };
+                                    };
                 return product;
             }
             else
