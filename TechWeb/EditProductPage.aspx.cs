@@ -7,9 +7,15 @@ using System.Web.UI.WebControls;
 
 namespace TechWeb
 {
-    public partial class Catalogue : System.Web.UI.Page
+    public partial class EditProductPage : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnEdit_Click(object sender, EventArgs e)
         {
 
         }

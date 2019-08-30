@@ -10,7 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class EditProduct {
+    public partial class ProductRegistration {
         
         /// <summary>
         /// name control.

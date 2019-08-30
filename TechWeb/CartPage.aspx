@@ -1,11 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="TechWeb.ShoppingCart" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="CartPage.aspx.cs" Inherits="TechWeb.CartPage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ <style type="text/css">
 
 
         .auto-style1 {
@@ -72,10 +67,11 @@
             border-radius: 8px;
         }
     </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
+ <div>
             <br />
             <br />
             MY CART<br />
@@ -84,7 +80,7 @@
                 <tr>
                     <td class="auto-style4">PRODUCT</td>
                     <td class="auto-style5">PRICE</td>
-                    <td class="auto-style7">QUANTUTY</td>
+                    <td class="auto-style7">QUANTITY</td>
                     <td class="auto-style9">&nbsp;TOTAL</td>
                     <td class="auto-style6"></td>
                 </tr>
@@ -328,6 +324,4 @@
             <br />
             <br />
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
