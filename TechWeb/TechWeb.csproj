@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -23,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -86,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CartPage.aspx" />
-    <Content Include="CatalogPage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -94,57 +95,74 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Catalogue.aspx" />
+    <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
-    <Content Include="css\style.css" />
+    <Content Include="css\Master.css" />
+    <Content Include="css\SearchBar.css" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="HomePage.aspx" />
-    <Content Include="images\avatar.png" />
-    <Content Include="images\blue avatar.png" />
-    <Content Include="images\Comcast_Event-Feature-1600.jpg" />
-    <Content Include="images\delete.png" />
-    <Content Include="images\deletebin.png" />
     <Content Include="images\facebook.svg" />
-    <Content Include="images\icons\avatar.png" />
-    <Content Include="images\icons\blue avatar.png" />
+    <Content Include="images\icons\badoo.png" />
+    <Content Include="images\icons\behance.png" />
+    <Content Include="images\icons\deviantart.png" />
+    <Content Include="images\icons\dribbble.png" />
     <Content Include="images\icons\dropbox.png" />
     <Content Include="images\icons\facebook.png" />
+    <Content Include="images\icons\flickr.png" />
+    <Content Include="images\icons\foursquare.png" />
+    <Content Include="images\icons\google-plus.png" />
     <Content Include="images\icons\instagram.png" />
+    <Content Include="images\icons\line.png" />
+    <Content Include="images\icons\linkedin.png" />
+    <Content Include="images\icons\myspace.png" />
+    <Content Include="images\icons\path.png" />
+    <Content Include="images\icons\pinterest.png" />
+    <Content Include="images\icons\quora.png" />
+    <Content Include="images\icons\skype.png" />
+    <Content Include="images\icons\snapchat.png" />
+    <Content Include="images\icons\soundcloud.png" />
+    <Content Include="images\icons\spotify.png" />
+    <Content Include="images\icons\swarm.png" />
+    <Content Include="images\icons\telegram.png" />
+    <Content Include="images\icons\tumblr.png" />
     <Content Include="images\icons\twitter.png" />
+    <Content Include="images\icons\viber.png" />
+    <Content Include="images\icons\vimeo.png" />
+    <Content Include="images\icons\vine.png" />
+    <Content Include="images\icons\whatsapp.png" />
+    <Content Include="images\icons\yelp.png" />
     <Content Include="images\icons\youtube.png" />
     <Content Include="images\instagram.svg" />
-    <Content Include="images\IOT-Smart-Home.png" />
-    <Content Include="images\istockphoto-1014664366-612x612.jpg" />
-    <Content Include="images\Luxury-Bathroom-Design_trends.jpg" />
-    <Content Include="images\Products.txt" />
-    <Content Include="images\products\amazon echo 3rd gen.jpeg" />
-    <Content Include="images\products\echobee4.png" />
-    <Content Include="images\products\google assistant.jpg" />
-    <Content Include="images\products\Hover Oven.jpg" />
-    <Content Include="images\products\Kohler smark shower head and wireless speaker.jpg" />
-    <Content Include="images\products\Large Samsung Stovetop.jpg" />
-    <Content Include="images\products\LEVOIT Smart WiFi Air Purifier.jpg" />
-    <Content Include="images\products\Moen TS3302 Shower Controller.jpg" />
-    <Content Include="images\products\Omasa Wash basin mixer tap.jpg" />
-    <Content Include="images\products\Pingo SL smart toilet.jpg" />
-    <Content Include="images\products\Samsung DishWasher.jpg" />
-    <Content Include="images\products\Samsung Refrigerator.jpg" />
-    <Content Include="images\products\Samsung Washing Machine.jpg" />
-    <Content Include="images\products\Smart Tv.jpg" />
-    <Content Include="images\products\smart-hydro-bathtub.jpg" />
-    <Content Include="images\products\Tankless-Automatic-Opening-smart-toilet-Electric-Full %281%29.jpg" />
-    <Content Include="images\products\Tankless-Automatic-Opening-smart-toilet-Electric-Full %282%29.jpg" />
-    <Content Include="images\products\Tankless-Automatic-Opening-smart-toilet-Electric-Full %283%29.jpg" />
-    <Content Include="images\smart kitchen wallpaper.jpg" />
-    <Content Include="images\smart-home-IoT-solution-624x346.jpg" />
-    <Content Include="images\Smart-House-Wallpaper-1080p-1024x576.jpg" />
-    <Content Include="images\smarthomesrethink.png" />
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
     <Content Include="Invoice.aspx" />
     <Content Include="InvoicePage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\catalogue.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="TransactionPage.aspx" />
     <Content Include="UserRegistration.aspx" />
@@ -168,12 +186,19 @@
     <Compile Include="CartPage.aspx.designer.cs">
       <DependentUpon>CartPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CatalogPage.aspx.cs">
-      <DependentUpon>CatalogPage.aspx</DependentUpon>
+    <Compile Include="Catalogue.aspx.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CatalogPage.aspx.designer.cs">
-      <DependentUpon>CatalogPage.aspx</DependentUpon>
+    <Compile Include="Catalogue.aspx.designer.cs">
+      <DependentUpon>Catalogue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CataloguePage.aspx.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CataloguePage.aspx.designer.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -312,6 +337,25 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -322,6 +366,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="images\products\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -330,11 +375,18 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\TechService\" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
