@@ -8,19 +8,21 @@ body {
 }
 
 .login-box{
-    width: 280px;
+    width: 480px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(30%, -45%);
     color: black;      
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
     .login-box h1 {
         float: left;
         font-size: 40px;
         padding: 13px;
-        border-bottom: 1px solid #b200ff;
+        border-bottom: 2px solid #b200ff;
     }
     .login-box h3 {
         float: left;
@@ -58,7 +60,7 @@ body {
 .btn{
     width:100%;
     background: none;
-    border: 2px solid #b200ff;
+    border: 1px solid #808080;
     color: white;
     padding:5px;
     font-size: 18px;

@@ -21,7 +21,7 @@
     <form id="form1" runat="server">
 
 
-    <div>
+    <div class="container">
         <ul>
             <li><a>Home</a></li>
             <li><a>Products</a>
@@ -34,28 +34,32 @@
             </li>
             <li><a>Management</a>
                 <ul>
-                    <li><a>Edit Product</a></li>
+                    <li><a href="EditProductPage.aspx">Edit Product</a></li>
                     <li><a>Add Product</a></li>
                     <li><a>Remove Product</a></li>
                     <li><a>View Stats</a></li>
-                    <li><a>Edit User Info</a></li>
+                    <li><a href="EditUser.aspx">Edit User Info</a></li>
                     <li><a>View Ratings</a></li>
-                    <li><a>Contact Boss Mash(-.-)</a></li>
+                    <li><a>Contact Mash(-.-)</a></li>
                 </ul>
             </li>
-            <li><a>Contact</a></li>
-            <li><a>About Us</a></li>
-            <li><a>Login</a></li>
-            <li><a>Sign Up</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="LoginPage.aspx">Login</a></li>
+            <li><a href="UserRegistration.aspx">Sign Up</a></li>
 
         </ul>
-   </div>
+        <br />
+
         <div class="search_box"> 
 		     <input class="input_box" type="text" name="" placeholder="Search...">
 		     <a class="btn" href="#">
 		         <i class="fas fa-search"></i>
 		     </a>
  	    </div>
+   </div>
+        
+        
 
 
 
