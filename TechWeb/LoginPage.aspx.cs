@@ -13,7 +13,8 @@ namespace TechWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblErrorMessage.Visible = false;
+            lblMsg.Visible = false;
         }
 
         protected void BtnLogIn_Click(object sender, EventArgs e)
@@ -27,9 +28,11 @@ namespace TechWeb
                 Session["userType"] = user.type;
                 Response.Redirect("HomePage.aspx");
                 }
+                lblMsg.Visible = true;
             }
             else
             {
+                lblErrorMessage.Visible = true;
                 Response.Redirect("LoginPage.aspx");
             }
         }

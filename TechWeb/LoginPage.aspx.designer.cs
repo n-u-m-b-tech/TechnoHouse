@@ -31,21 +31,30 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword pass;
         
         /// <summary>
-        /// BtnLogIn control.
+        /// btnSignIn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogIn;
+        protected global::System.Web.UI.WebControls.Button btnSignIn;
         
         /// <summary>
-        /// passrecover control.
+        /// lblErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink passrecover;
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
+        
+        /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }

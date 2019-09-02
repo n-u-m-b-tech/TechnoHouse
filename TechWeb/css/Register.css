@@ -1,0 +1,38 @@
+﻿body {
+
+}
+.register-box {
+    width: 680px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.txtbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #b200ff;
+}
+
+    .textbox i {
+        width: 26px;
+        float: left;
+        text-align: center;
+    }
+
+
+    .textbox input {
+        border: none;
+        outline: none;
+        background: none;
+        color: black;
+        font-size: 18px;
+        width: 80px;
+        float: left;
+        margin: 0 10px;
+    }

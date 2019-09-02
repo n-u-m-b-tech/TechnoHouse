@@ -98,7 +98,10 @@
     <Content Include="Catalogue.aspx" />
     <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
+    <Content Include="css\Catalogue.css" />
+    <Content Include="css\Login.css" />
     <Content Include="css\Master.css" />
+    <Content Include="css\Register.css" />
     <Content Include="css\SearchBar.css" />
     <Content Include="EditProductPage.aspx" />
     <Content Include="EditUser.aspx" />

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="css/Master.css" rel="stylesheet" />
-    <link href="css/SearchBar.css" rel="stylesheet" />
+    
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -21,15 +21,26 @@
     <form id="form1" runat="server">
 
 
-
+    <div>
         <ul>
             <li><a>Home</a></li>
             <li><a>Products</a>
                 <ul>
-                    <li>Kitchen</li>
-                    <li>Bedroom</li>
-                    <li>Living Room</li>
-                    <li>Bathroom</li>
+                    <li><a>Kitchen</a></li>
+                    <li><a>Bathroom</a></li>
+                    <li><a>Bedroom</a></li>
+                    <li><a>Living Room</a></li>
+                </ul>
+            </li>
+            <li><a>Management</a>
+                <ul>
+                    <li><a>Edit Product</a></li>
+                    <li><a>Add Product</a></li>
+                    <li><a>Remove Product</a></li>
+                    <li><a>View Stats</a></li>
+                    <li><a>Edit User Info</a></li>
+                    <li><a>View Ratings</a></li>
+                    <li><a>Contact Boss Mash(-.-)</a></li>
                 </ul>
             </li>
             <li><a>Contact</a></li>
@@ -38,6 +49,7 @@
             <li><a>Sign Up</a></li>
 
         </ul>
+   </div>
         <div class="search_box"> 
 		     <input class="input_box" type="text" name="" placeholder="Search...">
 		     <a class="btn" href="#">
