@@ -189,6 +189,7 @@
     <Content Include="Invoice.aspx" />
     <Content Include="InvoicePage.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="ProductDetailsPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="TransactionPage.aspx" />
@@ -280,6 +281,13 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetailsPage.aspx.cs">
+      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetailsPage.aspx.designer.cs">
+      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductRegistration.aspx.cs">
       <DependentUpon>ProductRegistration.aspx</DependentUpon>

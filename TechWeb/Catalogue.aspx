@@ -12,22 +12,23 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
-<br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <div class="container">
     <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="product-grid">
                 <div class="product-image">
                     <a href="#">
-                        <img class="pic-1" src="img-1.jpg">
-                        <img class="pic-2" src="img-2.jpg">
+                        <img class="pic-1" src="images/logo.png" width="70" height="70" >
+                        <img class="pic-2" src="#">
                     </a>
                     <span class="product-trend-label">Trend</span>
                     <ul class="social">
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="CartPage.aspx" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
                         <li><a href="#" data-tip="Wishlist"><i class="fa fa-heart"></i></a></li>
+                       <!--Remove this Mash-->
                         <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                        <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
                     </ul>
                 </div>
                 <div class="product-content">
@@ -35,78 +36,7 @@
                     <div class="price">$21.00</div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="img-3.jpg">
-                        <img class="pic-2" src="img-4.jpg">
-                    </a>
-                    <span class="product-trend-label">Trend</span>
-                    <span class="product-discount-label">-20%</span>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a href="#" data-tip="Wishlist"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
-                    <div class="price discount"><span>$17.00</span> $13.60</div>
-                </div>
-            </div>
-        </div>
-           
-           
-           
-           <div class="col-md-3 col-sm-6">
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="img-5.jpg">
-                        <img class="pic-2" src="img-6.jpg">
-                    </a>
-                    <span class="product-trend-label">Trend</span>
-                    <span class="product-discount-label">-20%</span>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a href="#" data-tip="Wishlist"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
-                    <div class="price discount"><span>$17.00</span> $13.60</div>
-                </div>
-            </div>
-        </div> 
-           
-            
-              <div class="col-md-3 col-sm-6">
-            <div class="product-grid">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="img-7.jpg">
-                        <img class="pic-2" src="img-8.jpg">
-                    </a>
-                    <span class="product-trend-label">Trend</span>
-                    <span class="product-discount-label">-20%</span>
-                    <ul class="social">
-                        <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li><a href="#" data-tip="Wishlist"><i class="fa fa-heart"></i></a></li>
-                        <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                        <li><a href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                    </ul>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
-                    <div class="price discount"><span>$17.00</span> $13.60</div>
-                </div>
-            </div>
-        </div>
+        </div>      
     </div>
 </div>
             <%--<div class="container">
