@@ -13,6 +13,24 @@ namespace TechWeb {
     public partial class ProductDetailsPage {
         
         /// <summary>
+        /// Image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Image;
+        
+        /// <summary>
+        /// details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl details;
+        
+        /// <summary>
         /// proname control.
         /// </summary>
         /// <remarks>
@@ -49,13 +67,13 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlInputText qty;
         
         /// <summary>
-        /// BtnAddCart control.
+        /// btnAddtoCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnAddCart;
+        protected global::System.Web.UI.WebControls.Button btnAddtoCart;
         
         /// <summary>
         /// desrcipt control.

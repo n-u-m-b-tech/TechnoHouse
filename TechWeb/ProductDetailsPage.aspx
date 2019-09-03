@@ -8,31 +8,33 @@
             background-color:lightgrey;
         }
         
+        .dropd {}
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
     <div id="product">
-        <section id="Image">
-
+        <section id="Image" runat="server">
+          
         </section>
         <br />
 
-        <section id="details">
-            <asp:Label ID="proname" runat="server" Text="Put name here"></asp:Label><br />
-            <asp:Label ID="price" runat="server" Text="Put price here"></asp:Label><br />
-            <asp:Label ID="decription" runat="server" Text="Put description here"></asp:Label><br />
+        <section id="details" runat="server">
+           <asp:Label ID = "proname" runat="server" placeholder="name"></asp:Label><br />
+            <asp:Label ID = "price" runat="server" placeholder="proprice"></asp:Label><br />
+            <asp:Label ID = "decription" runat="server" placeholder="prodescription"></asp:Label><br />
             <input type="text" id="qty" runat="server" placeholder="Qty" />
-            <asp:Button ID="BtnAddCart" runat="server" Text="Add to Cart" OnClick="BtnAddtoCart_Click" />
+           <asp:button ID="btnAddtoCart" runat="server" text="Add to Cart" class="btn" OnClick="BtnAddtoCart_Click" Width="86px"></asp:button>
+
         </section>
         <section id="Other details">
-            <button class="dropd">Description</button>
             <div class="fa-dropbox">
                <asp:Label ID="desrcipt" runat="server" Text="Put some here"  Width="100%" Height="100"></asp:Label>
             </div>
 
-             <button class="dropd">Features</button>
+             <button class="dropd">Feature</button>
             <div class="fa-dropbox">
                 <asp:Label ID="features" runat="server" Text="Put some here" Width="100%" Height="100"></asp:Label>
             </div>
