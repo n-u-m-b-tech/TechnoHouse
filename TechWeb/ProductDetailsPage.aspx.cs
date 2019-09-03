@@ -22,12 +22,22 @@ namespace TechWeb
             proname.Text = product.name;
             price.Text = Convert.ToString(product.price);
             desrcipt.Text = product.description;
+            qty.Value = "1";
         }
          
                
         protected void BtnAddtoCart_Click(object sender, EventArgs e)
         {
-
+            if (Session["userID"] != null)
+            {
+                String proId = Request.QueryString["ID"];
+                int ID = Convert.ToInt32(proId);
+                int Qty = Convert.ToInt32(qty.Value);
+                ProductD pro = client.productinfor_retrieval_ID(ID);
+                int userId = Convert.ToInt32(Session["userID"]);
+                client.Add_to_Cart(pro, userId,Qty);
+                Response.Redirect("Cartpage.aspx?ID=" + ID);
+            }
         }
     }
 }

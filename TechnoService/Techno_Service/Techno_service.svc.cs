@@ -315,26 +315,53 @@ namespace Techno_Service
             }
         }
 
-        public bool Add_to_Cart(ProductD product, int userID)
+        public bool Add_to_Cart(ProductD product, int userID,int Qty)
         {
-            Cart cart = new Cart
+            if (Qty == 0)
             {
-                user_Id = userID,
-                product_Id = product.ID,
-                Total = Convert.ToDecimal(product.price)
-
-            };
-
-            db.Carts.InsertOnSubmit(cart);
-            try
-            {
-                db.SubmitChanges();
-                return true;
+                Qty = 1;
             }
-            catch (Exception ex)
+            var existpro = (from e in db.Carts
+                                where e.Product_Name.Equals(product.name)
+                                select e).FirstOrDefault();
+            if (existpro == null)
             {
-                ex.GetBaseException();
-                return false;
+                Cart cart = new Cart
+                {
+                    user_Id = userID,
+                    product_Id = product.ID,
+                    Product_Name = product.name,
+                    Product_Description = product.description,
+                    Quantity = Qty,
+                    Total = Convert.ToDecimal(product.price) * Qty
+
+                };
+
+                db.Carts.InsertOnSubmit(cart);
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+            }
+            else
+            {
+                existpro.Quantity += 1;
+                existpro.Total = Convert.ToDecimal(product.price * existpro.Quantity);
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }catch(Exception e)
+                {
+                    e.GetBaseException();
+                    return false;
+                }
             }
 
         }
