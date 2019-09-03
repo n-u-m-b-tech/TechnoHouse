@@ -29,10 +29,5 @@ namespace TechWeb
         {
 
         }
-
-        protected void BtnAddtoCart_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -26,7 +26,7 @@
             <asp:Label ID = "price" runat="server" placeholder="proprice"></asp:Label><br />
             <asp:Label ID = "decription" runat="server" placeholder="prodescription"></asp:Label><br />
             <input type="text" id="qty" runat="server" placeholder="Qty" />
-           <asp:button ID="btnAddtoCart" runat="server" text="Add to Cart" class="btn" OnClick="BtnAddtoCart_Click" Width="86px"></asp:button>
+           <asp:button ID="btnAddCart" runat="server" text="Add to Cart" class="btn" OnClick="BtnAddtoCart_Click" Width="86px"></asp:button>
 
         </section>
         <section id="Other details">
