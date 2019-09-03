@@ -12,14 +12,30 @@
 
     <link href="css/Master.css" rel="stylesheet" />
     
-
-
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
+       <header>
+                <!-- Logo -->
+                <a href="Home.aspx" class="logo">
+                    <span class="symbol">
+                        <img src= "images/logo.png"  width="70" height="70" alt="" /></span>
+                </a>
+         
+                <a href="ShoppingCart.aspx" class="scart">
+                   <span class="symbol">
+                     <img src= "<% %>"  width="20" height="20" alt="" /></span>
+                </a>
+           <div class="search_box"> 
+		     <input class="input_box" type="text" name="" placeholder="Search...">
+		     <a class="btn" href="#">
+		         <i class="fas fa-search"></i>
+		     </a>
+ 	    </div>
+           </header>
     <form id="form1" runat="server">
-
 
     <div class="container">
         <ul>
@@ -51,103 +67,7 @@
         </ul>
         <br />
 
-        <div class="search_box"> 
-		     <input class="input_box" type="text" name="" placeholder="Search...">
-		     <a class="btn" href="#">
-		         <i class="fas fa-search"></i>
-		     </a>
- 	    </div>
-   </div>
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <div class="topnav" id="myTopnav">
-          <a href="#" class="active">Home</a>
-          <a href="#">Products</a>
-          <a href="#">Contact</a>
-          <a href="#">About</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>--%>
-<%--<!--Navigation Bar-->
-		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-				<a class="navbar-brand" href="HomePage.aspx">TAH</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				  </button>
-
-				  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="HomePage.aspx">Home</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="catalogue.aspx" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy</a>
-							
-							<div class="dropdown-menu" aria-labelledby="dropdown01">
-								<a class="dropdown-item" href="#">Kitchen</a>
-								<a class="dropdown-item" href="#">Bedroom</a>
-								<a class="dropdown-item" href="#">Living Room</a>
-								<a class="dropdown-item" href="#">Bathroom</a>
-							</div>
-						</li>
-					</ul>
-
-<!--					<ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="catalogue.aspx" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Work</a>
-							
-							<div class="dropdown-menu" aria-labelledby="dropdown01">
-								<a class="dropdown-item" href="#">Stats</a>
-								<a class="dropdown-item" href="catalogue_plants.aspx">Remove Items</a>
-								<a class="dropdown-item" href="#">Add Items</a>
-						
-							</div>
-						</li>-->
-
-                      <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item dropdown">
-                            <!--<a class="nav-link dropdown-toggle" href="catalogue.aspx" id="dropdown03"  aria-haspopup="true" aria-expanded="false"></a>-->
-							
-						<a class="nav-link dropdown-toggle" href="#" runat="server" id="welcomeID" data-toggle="dropdown" visible="false" aria-haspopup="true">welcome </a>
-						<div class="dropdown-menu" aria-labelledby="dropdown01">
-								<a class="dropdown-item" href="#">Stats</a>
-								<a class="dropdown-item" href="#">Remove Products</a>
-								<a class="dropdown-item" href="#">Add Products</a>
-						        <a class="dropdown-item" href="#">Edit Products</a>
-							</div>
-                        </li>
-
-                        <li class="nav-item">
-						<a class="nav-link" href="#" runat="server" id="logoutID" visible="false"><i class="fa fa-sign-in" aria-hidden="true"> </i>    Logout</a>
-						</li>
-                        
-						<li class="nav-item">
-						<a class="nav-link" href="signIn.aspx" runat="server" id="SNid" visible="true"><i class="fa fa-sign-in" aria-hidden="true"> </i>    Sign In</a>
-						</li>
-
-						<li class="nav-item">
-						<a class="nav-link" href="signUp.aspx" runat="server" id="SUid" visible="true"><i class="fa fa-user" aria-hidden="true"> </i>    Sign Up</a>
-						</li>
-					</ul>
-				</div>
-			</nav>--%>
+     </div>
 		<!--/Navigation Bar-->
         <asp:ContentPlaceHolder ID="navigation" runat="server">
                      
@@ -160,9 +80,7 @@
 
             <asp:ContentPlaceHolder ID="BodyContent" runat="server">
             </asp:ContentPlaceHolder>
-
         </div>
-
     </form>
 
 	<!-- Bootstrap js -->
