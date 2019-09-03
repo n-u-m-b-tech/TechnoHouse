@@ -24,7 +24,7 @@
             <asp:Label ID="price" runat="server" Text="Put price here"></asp:Label><br />
             <asp:Label ID="decription" runat="server" Text="Put description here"></asp:Label><br />
             <input type="text" id="qty" runat="server" placeholder="Qty" />
-            <input type="submit" id="BtnAddtoCart" runat="server" value="Add To Cart" onclick="BtnAddtoCart_Click" />
+            <asp:Button ID="BtnAddCart" runat="server" Text="Add to Cart" OnClick="BtnAddtoCart_Click" />
         </section>
         <section id="Other details">
             <button class="dropd">Description</button>
