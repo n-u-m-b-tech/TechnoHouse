@@ -65,7 +65,7 @@ namespace TechWeb
             {
                 display += "<article class='style1'>";
                 display += "<span class='image'>";
-                display += "<a href='EditProductPage.aspx?ID=" + product[i].ID + "'>";
+                display += "<a href='ProductDetailsPage.aspx?ID=" + product[i].ID + "'>";
                 display += "<img src='" + product[i].image_url + "' width='300' height='300' alt='' />";
                 display += "</a>";
                 display += "</span>";
