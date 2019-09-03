@@ -13,5 +13,15 @@ namespace TechWeb
         {
 
         }
+
+        protected void BtnPlus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnMinus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

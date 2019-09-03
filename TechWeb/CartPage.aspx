@@ -54,9 +54,6 @@
         .auto-style13 {
             width: 119px;
         }
-        .auto-style15 {
-            width: 107px;
-        }
         .auto-style16 {
             width: 528px;
         }
@@ -88,201 +85,15 @@
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style8">
-                        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
+                        <asp:Button ID="plus" runat="server" OnClick="BtnPlus_Click" Text="+" Width="24px" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button4" runat="server" Text="-" Width="25px" />
+                        <asp:Button ID="minus" runat="server" Text="-" Width="25px" OnClick="BtnMinus_Click" />
                     </td>
                     <td class="auto-style10">&nbsp;</td>
                     <td class="auto-style11">
                         &nbsp;</td>
                 </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button5" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button6" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button7" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button8" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button9" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button10" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button11" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button12" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button13" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button14" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button15" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button16" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button17" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button18" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button19" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button20" runat="server" Text="-" Width="25px" OnClick="Button20_Click" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button21" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button22" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button23" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button24" runat="server" Text="-" Width="25px" OnClick="Button24_Click" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button25" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button26" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button27" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button28" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button29" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button30" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button31" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button32" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button33" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button34" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button35" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button36" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style8">
-                        <asp:Button ID="Button37" runat="server" OnClick="Button3_Click" Text="+" Width="24px" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        <asp:Button ID="Button38" runat="server" Text="-" Width="25px" />
-                    </td>
-                    <td class="auto-style10">&nbsp;</td>
-                    <td class="auto-style11">&nbsp;</td>
-                </tr>
+ 
             </table>
             <br />
 &nbsp;&nbsp;
@@ -291,7 +102,7 @@
              
     <tr>
                     <td class="auto-style16">&nbsp;Cart Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R
-                        <input id="Text4" class="auto-style15" type="text" /></td>
+                         id="Text4" class="auto-style15" type="text" /></td>
                 </tr>
                 <tr>
                     <td class="auto-style16">Shipping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **FREE**</td>
