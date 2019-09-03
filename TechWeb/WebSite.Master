@@ -56,14 +56,13 @@
                     <li><a>View Stats</a></li>
                     <li><a href="EditUser.aspx">Edit User Info</a></li>
                     <li><a>View Ratings</a></li>
-                    <li><a>Contact Mash(-.-)</a></li>
                 </ul>
             </li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About Us</a></li>
+            <li><a href="UserRegistration.aspx">Register</a></li>
             <li><a href="LoginPage.aspx">Login</a></li>
-            <li><a href="UserRegistration.aspx">Sign Up</a></li>
-
+            <li><a href="HomePage.aspx">LogOut</a></li>
         </ul>
         <br />
 
