@@ -47,7 +47,7 @@ ul li:hover ul li{
     left: 67%;
     background-color: #2f3640;
     border-radius: 40px;
-    padding: 0px;
+    padding: 0.1px;
     margin: 10px;
 }
 
