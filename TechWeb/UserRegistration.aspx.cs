@@ -32,7 +32,9 @@ namespace TechWeb
                     ZipCode = zip.Value,
                     city = city.Value,
                     username = username.Value,
-                    province = prov.Value
+                    province = prov.Value,
+                    active = 'T'
+               
 
 
                 };
@@ -43,7 +45,7 @@ namespace TechWeb
                 }
                 else
                 {
-                    Response.Redirect("SignUp.aspx");
+                    Response.Redirect("UserRegistration.aspx");
                 }
 
             }

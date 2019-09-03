@@ -17,7 +17,7 @@ namespace TechWeb
 
             int ID = Convert.ToInt32(proId);
             String display = "";
-            var product = client.productinfor_retrieval(ID);
+            var product = client.productinfor_retrieval_ID(ID);
 
             display += "<span class='image'>";
             display += "<img src='" + product.image_url + "' width='300' height='300' alt='' />";
@@ -61,7 +61,7 @@ namespace TechWeb
 
             int ID = product.ID;
 
-            if (client.EditProduct(ID).Equals(0))
+            if (client.EditProduct(product,ID).Equals(0))
             {
                 Response.Redirect("HomePage.aspx");
             }

@@ -34,7 +34,7 @@ namespace TechWeb
             //displaying only two products per catergory
             dynamic LivingRoom = client.search_by_cat("Living Room");
             dynamic BathRoom = client.search_by_cat("Bath Room");
-            dynamic KitchenRoom = client.search_by_cat("Kitchen Room");
+            dynamic KitchenRoom = client.search_by_cat("Kitchen");
             dynamic BedRoom = client.search_by_cat("Bed Room");
             if (LivingRoom != null)
             {
@@ -42,11 +42,11 @@ namespace TechWeb
             }
             if (BathRoom != null)
             {
-               // displaypro(BathRoom);
+                displaypro(BathRoom);
             }
             if (KitchenRoom != null)
             {
-                //displaypro(KitchenRoom);
+                displaypro(KitchenRoom);
             }
             if (BedRoom != null)
             {

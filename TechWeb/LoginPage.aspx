@@ -36,7 +36,7 @@
         <br />
             <div>
 	<!-- Sign in button -->
-	     <asp:button ID="btnSignIn" runat="server" text="Sign in" class="btn"></asp:button>
+	     <asp:button ID="btnSignIn" runat="server" text="Sign in" class="btn" OnClick="BtnLogIn_Click"></asp:button>
                     
     <div>
          <asp:Label ID="lblErrorMessage" runat="server" Text="Incorrect User Credential" ForeColor ="red"></asp:Label>

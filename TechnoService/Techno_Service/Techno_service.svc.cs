@@ -122,7 +122,7 @@ namespace Techno_Service
             client.Province = user.province;
             client.ZipCode = user.ZipCode;
             client.User_type = user.type;
-            client.Active =(Char) user.active;
+            client.Active = (Char)user.active;
 
             try
             {
@@ -163,8 +163,8 @@ namespace Techno_Service
                     province = userinfor.Province,
                     active = (Char)userinfor.Active,
                     type = userinfor.User_type
-                    
-                    
+
+
 
                 };
                 return user;
@@ -230,7 +230,7 @@ namespace Techno_Service
                     price = (Double)prop.Price,
                     quantity = prop.Quantity,
                     category = prop.Category,
-                    brand= prop.Brand,
+                    brand = prop.Brand,
                     manufacture = prop.manufacture,
                     discount = (Decimal)prop.Discount,
                     active = (Char)prop.ACTIVE,
@@ -248,44 +248,45 @@ namespace Techno_Service
 
         //should also pass the instance you want to add
         //noted changes made
-       
+
         //line divider added
         //*************************************************************************************************************
 
 
         public int EditProduct(ProductD pr, int ID)
-        { 
-            
-            var item = from p in db.Products
-                           where p.Product_Id.Equals(ID)
-                           select p;
+        {
+
+            var item = (from p in db.Products
+                        where p.Product_Id.Equals(ID)
+                        select p).FirstOrDefault();
+
+            item.Name = pr.name;
+            item.Description = pr.description;
+            item.Price = Convert.ToDecimal(pr.price);
+            item.Quantity = pr.quantity;
+            item.Category = pr.category;
+            item.ACTIVE = pr.active;
+            item.Brand = pr.brand;
+            item.manufacture = pr.manufacture;
+            item.Discount = pr.discount;
+            item.Image_url = pr.image_url;
 
 
-            //Just uncomment
-            //item.Name = pr.name;
-            //item.Description = pr.description;
-            //item.Price = pr.price;
-            //item.Quantity = pr.quantity;
-            //item.Category = pr.category;
-            //item.ACTIVE = pr.active;
-            //item.Brand = pr.brand;
-            //item.manufacture = pr.manufacture;
-            //item.Discount = pr.discount;
-           
-       //exception handling
-                try
-                {
-                    db.SubmitChanges();
-                    return 0;
-                }
-                catch (Exception ex)
-                {
-                    ex.GetBaseException();
+
+
+            try
+            {
+                db.SubmitChanges();
+                return 0;
+            }
+            catch (Exception ex)
+            {
+                ex.GetBaseException();
                 return -1;
-                }
+            }
         }
 
-        public ProductD productinfor_retrieval(int ID)
+        public ProductD productinfor_retrieval_ID(int ID)
         {
             var prod = (from p in db.Products
                         where p.Product_Id.Equals(ID)
@@ -338,33 +339,89 @@ namespace Techno_Service
 
         }
 
-        public List<ProductD> price_by_ASC()
+        public List<ProductD> price_by_ASC(String category)
         {
-            
-                return null;
+            dynamic Product = (from p in db.Products
+                               where p.Category.Equals(category)
+                               orderby p.Price ascending
+                               select p);
+            List<ProductD> pro = new List<ProductD>();
+
+            foreach (Product prop in Product)
+            {
+                ProductD asc = new ProductD
+                {
+                    ID = prop.Product_Id,
+                    name = prop.Name,
+                    description = prop.Description,
+                    price = (Double)prop.Price,
+                    quantity = prop.Quantity,
+                    category = prop.Category,
+                    brand = prop.Brand,
+                    manufacture = prop.manufacture,
+                    discount = (Decimal)prop.Discount,
+                    active = (Char)prop.ACTIVE,
+                    image_url = prop.Image_url
+                };
+                pro.Add(asc);
+            }
+
+            return pro;
+
         }
 
-        public List<ProductD> price_by_DESC()
+        public List<ProductD> price_by_DESC(String category)
         {
-            throw new NotImplementedException();
+            dynamic Product = (from p in db.Products
+                               where p.Category.Equals(category)
+                               orderby p.Price descending
+                               select p);
+            List<ProductD> pro = new List<ProductD>();
+
+            foreach (Product prop in Product)
+            {
+                ProductD desc = new ProductD
+                {
+                    ID = prop.Product_Id,
+                    name = prop.Name,
+                    description = prop.Description,
+                    price = (Double)prop.Price,
+                    quantity = prop.Quantity,
+                    category = prop.Category,
+                    brand = prop.Brand,
+                    manufacture = prop.manufacture,
+                    discount = (Decimal)prop.Discount,
+                    active = (Char)prop.ACTIVE,
+                    image_url = prop.Image_url
+                };
+                pro.Add(desc);
+            }
+
+            return pro;
+
         }
 
-        public Product productinfor(int ID)
+        public ProductD productinfor(int ID)
         {
             var prod = (from p in db.Products
                         where p.Product_Id.Equals(ID)
                         select p).FirstOrDefault();
             if (prod != null)
             {
-                Product product = new Product
+                ProductD product = new ProductD
                 {
-                    //ID = prod.Product_Id,
-                    Name = prod.Name,
-                    Description = prod.Description,
-                    Price = prod.Price,
-                    Quantity = prod.Quantity,
-                    Category = prod.Category
-                                    };
+                    ID = prod.Product_Id,
+                    name = prod.Name,
+                    description = prod.Description,
+                    price = Convert.ToDouble(prod.Price),
+                    quantity = prod.Quantity,
+                    category = prod.Category,
+                    active = (Char)prod.ACTIVE,
+                    brand = prod.Brand,
+                    manufacture = prod.manufacture,
+                    discount = Convert.ToDecimal(prod.Discount),
+                    image_url = prod.Image_url
+                };
                 return product;
             }
             else
@@ -373,7 +430,7 @@ namespace Techno_Service
             }
         }
 
-    
+
 
         public int AddProduct(ProductD addP)
         {
@@ -384,10 +441,11 @@ namespace Techno_Service
                 Price = (Decimal)addP.price,
                 Quantity = addP.quantity,
                 Category = addP.category,
-                ACTIVE = null,
+                ACTIVE = addP.active,
                 Brand = addP.brand,
                 manufacture = addP.manufacture,
-                Discount = (Decimal)addP.discount
+                Discount = (Decimal)addP.discount,
+                Image_url = addP.image_url
 
             };
 
@@ -427,9 +485,9 @@ namespace Techno_Service
                         manufacture = prop.manufacture,
                         discount = (Decimal)prop.Discount,
                         image_url = prop.Image_url,
-                        active =(Char) prop.ACTIVE
-                        
-         
+                        active = (Char)prop.ACTIVE
+
+
                     };
                     pro.Add(fprp);
                 }
@@ -477,6 +535,41 @@ namespace Techno_Service
                 return null;
             }
         }
+
+        public ProductD productinfor_retrieval_Name(string name)
+        {
+
+
+            dynamic prod = (from p in db.Products
+                            where p.Name.Equals(name)
+                            select p).FirstOrDefault();
+            if (prod != null)
+            {
+                ProductD product = new ProductD
+                {
+                    ID = prod.Product_Id,
+                    name = prod.Name,
+                    description = prod.Description,
+                    price = prod.Price,
+                    quantity = prod.Quantity,
+                    category = prod.Category,
+                    active = prod.ACTIVE,
+                    brand = prod.Brand,
+                    manufacture = prod.manufacture,
+                    discount = prod.Discount,
+                    image_url = prod.Image_url
+                };
+                return product;
+            }
+            else
+            {
+                return null;
+            }
+
+
+        }
+
+       
     }
 }
         
