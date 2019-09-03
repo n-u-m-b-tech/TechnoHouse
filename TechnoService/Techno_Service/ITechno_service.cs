@@ -31,11 +31,13 @@ namespace Techno_Service
         [OperationContract]
         List<ProductD> search_by_price(string value);
         [OperationContract]
-        ProductD productinfor_retrieval(int ID);
+        ProductD productinfor_retrieval_ID(int ID);
         [OperationContract]
-        List<ProductD> price_by_ASC();
+        ProductD productinfor_retrieval_Name(String name);
         [OperationContract]
-        List<ProductD> price_by_DESC();
+        List<ProductD> price_by_ASC(String category);
+        [OperationContract]
+        List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
 
@@ -51,7 +53,7 @@ namespace Techno_Service
         [OperationContract]
         int EditProduct(ProductD pr, int ID);
         [OperationContract]
-        Product productinfor(int ID);
+        ProductD productinfor(int ID);
 
 
     }

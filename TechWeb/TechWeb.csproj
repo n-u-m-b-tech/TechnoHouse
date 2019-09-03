@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CartPage.aspx" />
+    <Content Include="Catalogue.aspx" />
+    <Content Include="CataloguePage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -95,8 +97,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Catalogue.aspx" />
-    <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="css\Catalogue.css" />
     <Content Include="css\Login.css" />
@@ -153,6 +153,22 @@
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
+    <None Include="Connected Services\TechService\Techno_service.wsdl" />
+    <None Include="Connected Services\TechService\Techno_service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TechService\Techno_service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TechService\Techno_service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\TechService\TechWeb.TechService.ProductD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TechService\TechWeb.TechService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -320,25 +336,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <None Include="Connected Services\TechService\Techno_service.wsdl" />
-    <None Include="Connected Services\TechService\Techno_service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TechService\Techno_service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TechService\Techno_service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\TechService\TechWeb.TechService.Product.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\TechService\TechWeb.TechService.ProductD.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\TechService\TechWeb.TechService.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
@@ -376,13 +373,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TechService\" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\TechService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
