@@ -44,7 +44,7 @@
                               <div class="fields">
                                   <div class="field">
                                       <input type="text" name="txtname" id="txt" placeholder="Product Name" runat="server" class="auto-style1" /><br />
-&nbsp;<asp:Button ID="btnEditProduct" runat="server" OnClick="btnEditProduct_Click" Text="Edit Product" />
+&nbsp;<asp:Button ID="btnEditProduct" runat="server" OnClick="btnEditProduct_Click" Text="Edit Product" style="height: 26px" />
                                   </div>
                                </div>
                              </form>

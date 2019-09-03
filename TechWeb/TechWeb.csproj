@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CartPage.aspx" />
+    <Content Include="Catalogue.aspx" />
+    <Content Include="CataloguePage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -95,8 +97,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Catalogue.aspx" />
-    <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="css\Catalogue.css" />
     <Content Include="css\Login.css" />
@@ -362,9 +362,6 @@
     <None Include="Connected Services\TechService\Techno_service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\TechService\TechWeb.TechService.Product.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\TechService\TechWeb.TechService.ProductD.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -388,10 +385,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\TechService\" />
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <WCFMetadataStorage Include="Connected Services\TechService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

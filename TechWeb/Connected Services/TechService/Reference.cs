@@ -570,10 +570,10 @@ namespace TechWeb.TechService {
         System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> allProductsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
-        bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID);
+        bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID, int Qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
-        System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID);
+        System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID, int Qty);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
         int AddProduct(TechWeb.TechService.ProductD addP);
@@ -725,12 +725,12 @@ namespace TechWeb.TechService {
             return base.Channel.allProductsAsync();
         }
         
-        public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID) {
-            return base.Channel.Add_to_Cart(product, userID);
+        public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID, int Qty) {
+            return base.Channel.Add_to_Cart(product, userID, Qty);
         }
         
-        public System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID) {
-            return base.Channel.Add_to_CartAsync(product, userID);
+        public System.Threading.Tasks.Task<bool> Add_to_CartAsync(TechWeb.TechService.ProductD product, int userID, int Qty) {
+            return base.Channel.Add_to_CartAsync(product, userID, Qty);
         }
         
         public int AddProduct(TechWeb.TechService.ProductD addP) {

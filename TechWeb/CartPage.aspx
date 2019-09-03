@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="CartPage.aspx.cs" Inherits="TechWeb.CartPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <style type="text/css">
+    <style type="text/css">
 
 
         .auto-style1 {
@@ -71,7 +71,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
- <div>
+    <div>
             <br />
             <br />
             MY CART<br />
@@ -309,12 +309,12 @@
                 </tr>
                 <tr>
                     <td class="auto-style16">
-                        <asp:Button ID="Button1" runat="server" Text="CHECKOUT >" />
+                        <asp:Button ID="Button1" runat="server" Text="CHECKOUT >" OnClick="Button1_Click" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style16">
-                        <asp:Button ID="Button2" runat="server" Text="ADD MORE ITEMS" />
+                        <asp:Button ID="Button2" runat="server" Text="ADD MORE ITEMS" OnClick="Button2_Click" />
                     </td>
                 </tr>
             </table>

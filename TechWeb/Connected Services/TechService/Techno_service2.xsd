@@ -189,6 +189,7 @@
       <xs:sequence>
         <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="product" nillable="true" type="q12:ProductD" />
         <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="Qty" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
