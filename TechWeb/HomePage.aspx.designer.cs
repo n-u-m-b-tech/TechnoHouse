@@ -58,6 +58,15 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl produ;
         
         /// <summary>
+        /// productmanangement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor productmanangement;
+        
+        /// <summary>
         /// proedit control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,42 @@ namespace TechWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl proreg;
         
         /// <summary>
+        /// stats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl stats;
+        
+        /// <summary>
+        /// rat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rat;
+        
+        /// <summary>
+        /// usermanagement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor usermanagement;
+        
+        /// <summary>
+        /// uedit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl uedit;
+        
+        /// <summary>
         /// login control.
         /// </summary>
         /// <remarks>
@@ -92,15 +137,6 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl uregister;
-        
-        /// <summary>
-        /// uedit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl uedit;
         
         /// <summary>
         /// logout control.

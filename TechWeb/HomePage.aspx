@@ -20,22 +20,22 @@
                     <li><a href="Catalogue.aspx">Living Room</a></li>
                 </ul>
             </li>
-            <li><a>Product Management</a>
+            <li><a id="productmanangement" runat="server">Product Management</a>
                 <ul>
                     <li id="proedit" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
                     <li id="proreg" runat="server"><a href="SearchUser.aspx">Add Product</a></li>
                     <!--<li><a>Remove Product</a></li>-->
-                    <li><a>View Stats</a></li>
-                    <li><a>View Ratings</a></li>
+                    <li id ="stats" runat="server"><a>View Stats</a></li>
+                    <li id="rat" runat="server"><a>View Ratings</a></li>
                 </ul>
             </li>
-            <li><a> User Management</a>
+            <li><a id="usermanagement" runat="server"> User Management</a>
                 <ul>
-                     <li id="login" runat="server"><a href="LoginPage.aspx">Login</a></li>
-                   <li id="uregister" runat="server"><a href="UserRegistration.aspx">Register</a></li>
-                   <li id="uedit" runat="server"><a href="UserRegistration.aspx">Edit User</a></li>
+                   <li id="uedit" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
                     </ul>
-              </li> 
+              </li>
+              <li id="login" runat="server"><a href="LoginPage.aspx">Login</a></li>
+                <li id="uregister" runat="server"><a href="UserRegistration.aspx">Register</a></li>
             <li><a href="ContactPage.aspx">Contact</a></li>
             <li><a href="#">About Us</a></li>      
             <li id="logout" runat="server"><a href="HomePage.aspx">LogOut</a></li>

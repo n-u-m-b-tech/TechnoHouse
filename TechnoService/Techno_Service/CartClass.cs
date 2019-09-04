@@ -9,6 +9,6 @@ namespace Techno_Service
     {
         public int CartId, userId, productId,Qty;
         public String productName, productDescription;
-        public double Total;
+        public double Total,unit;
     }
 }
