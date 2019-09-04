@@ -577,13 +577,13 @@ namespace Techno_Service
                     ID = prod.Product_Id,
                     name = prod.Name,
                     description = prod.Description,
-                    price = prod.Price,
+                    price = Convert.ToDouble(prod.Price),
                     quantity = prod.Quantity,
                     category = prod.Category,
                     active = prod.ACTIVE,
                     brand = prod.Brand,
                     manufacture = prod.manufacture,
-                    discount = prod.Discount,
+                    discount = Convert.ToDecimal(prod.Discount),
                     image_url = prod.Image_url
                 };
                 return product;
@@ -596,7 +596,39 @@ namespace Techno_Service
 
         }
 
-       
+        public List<CartClass> getUser_Cart(int userID)
+        {
+            dynamic cart = (from c in db.Carts
+                            where c.user_Id.Equals(userID)
+                            select c);
+            if (cart != null)
+            {
+                List<CartClass> list = new List<CartClass>();
+
+                foreach(Cart c in cart)
+                {
+                    CartClass usercart = new CartClass
+                    {
+                        CartId = c.Cart_Id,
+                        userId = c.user_Id,
+                        productId = c.product_Id,
+                        productName = c.Product_Name,
+                        productDescription = c.Product_Description,
+                        Qty = c.Quantity,
+                        Total = Convert.ToDouble(c.Total)
+                    };
+                    list.Add(usercart);
+                }
+                return list;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
     }
 }
         
