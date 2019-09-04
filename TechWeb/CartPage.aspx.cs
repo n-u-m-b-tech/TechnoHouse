@@ -16,12 +16,22 @@ namespace TechWeb
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            //checkout
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            //add  more items
+        }
 
+        protected void BtnPlus_Click(object sender, EventArgs e)
+        {
+            //add qty
+        }
+
+        protected void BtnMinus_Click(object sender, EventArgs e)
+        {
+              //min qty
         }
     }
 }

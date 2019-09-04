@@ -43,4 +43,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ProductD" nillable="true" type="tns:ProductD" />
+  <xs:complexType name="ArrayOfCartClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CartClass" nillable="true" type="tns:CartClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCartClass" nillable="true" type="tns:ArrayOfCartClass" />
+  <xs:complexType name="CartClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CartId" type="xs:int" />
+      <xs:element minOccurs="0" name="Qty" type="xs:int" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="productDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productId" type="xs:int" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CartClass" nillable="true" type="tns:CartClass" />
 </xs:schema>

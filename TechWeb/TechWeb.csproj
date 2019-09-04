@@ -362,6 +362,9 @@
     <None Include="Connected Services\TechService\Techno_service2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\TechService\TechWeb.TechService.CartClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\TechService\TechWeb.TechService.ProductD.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

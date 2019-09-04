@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="52c6e6fb-a5d6-4bab-81be-9aeb713a3d5b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ad8f5cc-da9f-4053-88df-9522231c80f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:50012/Techno_service.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Techno_service.xsd" MetadataType="Schema" ID="fda6ccb2-f0a6-401c-a3a4-440cdcc61b45" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Techno_service1.xsd" MetadataType="Schema" ID="326c1565-fa57-412c-a03e-20f49e174229" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Techno_service.disco" MetadataType="Disco" ID="42f6e3f8-4831-4d7e-8b2c-bfcf7f07833e" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?disco" />
-    <MetadataFile FileName="Techno_service2.xsd" MetadataType="Schema" ID="431c5c2f-8386-490b-979c-4093148c664a" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Techno_service.wsdl" MetadataType="Wsdl" ID="792e1782-9862-4efb-9a54-934a5862525f" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?wsdl" />
+    <MetadataFile FileName="Techno_service.xsd" MetadataType="Schema" ID="0d4a28fd-3240-411a-a0f5-b970317923c1" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd1" />
+    <MetadataFile FileName="Techno_service1.xsd" MetadataType="Schema" ID="8a8dcc57-6026-4d11-98b0-d244bcb03e6f" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Techno_service.disco" MetadataType="Disco" ID="34782c2d-cf74-48d2-a4d1-5f86c96a2c23" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?disco" />
+    <MetadataFile FileName="Techno_service2.xsd" MetadataType="Schema" ID="f2d92f36-5223-4e3f-98be-91deb06bd8e5" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Techno_service.wsdl" MetadataType="Wsdl" ID="07852fab-f7f0-4d2e-98f3-41402a803a48" SourceId="1" SourceUrl="http://localhost:50012/Techno_service.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -75,6 +75,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartClass.cs" />
     <Compile Include="ITechno_service.cs" />
     <Compile Include="NUMBDB.designer.cs">
       <AutoGen>True</AutoGen>

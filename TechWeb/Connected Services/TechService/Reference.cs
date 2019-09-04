@@ -487,6 +487,147 @@ namespace TechWeb.TechService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CartClass", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class CartClass : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CartIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QtyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int productIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CartId {
+            get {
+                return this.CartIdField;
+            }
+            set {
+                if ((this.CartIdField.Equals(value) != true)) {
+                    this.CartIdField = value;
+                    this.RaisePropertyChanged("CartId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Qty {
+            get {
+                return this.QtyField;
+            }
+            set {
+                if ((this.QtyField.Equals(value) != true)) {
+                    this.QtyField = value;
+                    this.RaisePropertyChanged("Qty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productDescription {
+            get {
+                return this.productDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productDescriptionField, value) != true)) {
+                    this.productDescriptionField = value;
+                    this.RaisePropertyChanged("productDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int productId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                if ((this.productIdField.Equals(value) != true)) {
+                    this.productIdField = value;
+                    this.RaisePropertyChanged("productId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productName {
+            get {
+                return this.productNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productNameField, value) != true)) {
+                    this.productNameField = value;
+                    this.RaisePropertyChanged("productName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                if ((this.userIdField.Equals(value) != true)) {
+                    this.userIdField = value;
+                    this.RaisePropertyChanged("userId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TechService.ITechno_service")]
     public interface ITechno_service {
@@ -568,6 +709,12 @@ namespace TechWeb.TechService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/allProducts", ReplyAction="http://tempuri.org/ITechno_service/allProductsResponse")]
         System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> allProductsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUser_Cart", ReplyAction="http://tempuri.org/ITechno_service/getUser_CartResponse")]
+        TechWeb.TechService.CartClass[] getUser_Cart(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUser_Cart", ReplyAction="http://tempuri.org/ITechno_service/getUser_CartResponse")]
+        System.Threading.Tasks.Task<TechWeb.TechService.CartClass[]> getUser_CartAsync(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID, int Qty);
@@ -723,6 +870,14 @@ namespace TechWeb.TechService {
         
         public System.Threading.Tasks.Task<TechWeb.TechService.ProductD[]> allProductsAsync() {
             return base.Channel.allProductsAsync();
+        }
+        
+        public TechWeb.TechService.CartClass[] getUser_Cart(int userID) {
+            return base.Channel.getUser_Cart(userID);
+        }
+        
+        public System.Threading.Tasks.Task<TechWeb.TechService.CartClass[]> getUser_CartAsync(int userID) {
+            return base.Channel.getUser_CartAsync(userID);
         }
         
         public bool Add_to_Cart(TechWeb.TechService.ProductD product, int userID, int Qty) {

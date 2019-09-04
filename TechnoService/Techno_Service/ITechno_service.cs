@@ -40,6 +40,9 @@ namespace Techno_Service
         List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
+        [OperationContract]
+        List<CartClass> getUser_Cart(int userID);
+
 
         //transaction
         [OperationContract]
