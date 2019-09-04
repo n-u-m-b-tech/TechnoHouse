@@ -89,7 +89,6 @@
   <ItemGroup>
     <Content Include="CartPage.aspx" />
     <Content Include="Catalogue.aspx" />
-    <Content Include="CataloguePage.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -186,7 +185,6 @@
     <Content Include="images\products\Wilson-Ottoman-1.jpg" />
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
-    <Content Include="Invoice.aspx" />
     <Content Include="InvoicePage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="ProductDetailsPage.aspx" />
@@ -197,11 +195,9 @@
     <Content Include="UserRegistration.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
-    <Content Include="RegditProduct.aspx" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
     <Content Include="images\smart-home-automation-2.jpg" />
-    <Content Include="Transaction.aspx" />
     <Content Include="UserAccount.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebSite.Master" />
@@ -221,13 +217,6 @@
     </Compile>
     <Compile Include="Catalogue.aspx.designer.cs">
       <DependentUpon>Catalogue.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CataloguePage.aspx.cs">
-      <DependentUpon>CataloguePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CataloguePage.aspx.designer.cs">
-      <DependentUpon>CataloguePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -262,13 +251,6 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Invoice.aspx.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Invoice.aspx.designer.cs">
-      <DependentUpon>Invoice.aspx</DependentUpon>
-    </Compile>
     <Compile Include="InvoicePage.aspx.cs">
       <DependentUpon>InvoicePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,13 +279,6 @@
     <Compile Include="ProductRegistration.aspx.designer.cs">
       <DependentUpon>ProductRegistration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RegditProduct.aspx.cs">
-      <DependentUpon>RegditProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RegditProduct.aspx.designer.cs">
-      <DependentUpon>RegditProduct.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -321,13 +296,6 @@
     </Compile>
     <Compile Include="SearchUser.aspx.designer.cs">
       <DependentUpon>SearchUser.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction.aspx.cs">
-      <DependentUpon>Transaction.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Transaction.aspx.designer.cs">
-      <DependentUpon>Transaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="TransactionPage.aspx.cs">
       <DependentUpon>TransactionPage.aspx</DependentUpon>

@@ -13,5 +13,10 @@ namespace TechWeb
         {
 
         }
+
+        protected void btnEditUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
