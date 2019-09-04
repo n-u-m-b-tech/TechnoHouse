@@ -8,9 +8,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale-1,user-scale=no" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="css/Master.css" rel="stylesheet" />
+    <link href="css/Master.css" rel="stylesheet" /> -->
     
     <asp:ContentPlaceHolder ID="head" runat="server">
 
@@ -35,7 +35,7 @@
            </header>
 
     <div class="container">
-        <ul>
+        <!--<ul>
             <li><a>Home</a></li>
             <li><a>Products</a>
                 <ul>
@@ -61,13 +61,15 @@
             <li><a href="LoginPage.aspx">Login</a></li>
             <li><a href="HomePage.aspx">LogOut</a></li>
         </ul>
-        <br />
+        <br /> -->
 
      </div>
+                     <ul>
 		<!--/Navigation Bar-->
         <asp:ContentPlaceHolder ID="navigation" runat="server">
-                     
+
         </asp:ContentPlaceHolder>
+                     </ul>
         <asp:ContentPlaceHolder ID="contents" runat="server">
 
         </asp:ContentPlaceHolder>
