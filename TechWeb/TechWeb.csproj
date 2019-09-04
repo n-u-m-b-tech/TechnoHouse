@@ -98,6 +98,7 @@
     </None>
     <Content Include="ContactPage.aspx" />
     <Content Include="css\Catalogue.css" />
+    <Content Include="css\Default.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\Master.css" />
     <Content Include="css\Register.css" />

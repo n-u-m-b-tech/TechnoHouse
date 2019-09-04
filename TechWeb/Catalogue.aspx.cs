@@ -30,8 +30,8 @@ namespace TechWeb
                 display += "<ul class='social'>";
                 display += "<li><a href='' data-tip='Add to Cart'><i class='fa fa-shopping-cart'></i></a></li>";
                 display+="<li><a href ='#' data-tip='Wishlist'><i class='fa fa-heart'></i></a></li>";
-                display+= "<!--Remove this Mash-->";
-             //   display += "<li><a href ='#' data-tip='Compare'>< i class='fa fa-random'></i></a></li>";
+               
+
                 display += "<li><a href='ProductDetailsPage.aspx?ID="+pro.ID+"' data-tip='Quick View'><i class='fa fa-search'></i></a></li>";
                 display += "</ul>";
                 display += "</div>";
