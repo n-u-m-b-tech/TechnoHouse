@@ -18,10 +18,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
        <header>
                 <!-- Logo -->
-                <a href="Home.aspx" class="logo">
+                <a href="HomePage.aspx" class="logo">
                     <span class="symbol">
                         <img src= "images/logo.png"  width="70" height="70" alt="" /></span>
                 <asp:TextBox ID="search" runat="server" placeholder="Search Product" Width="70%"></asp:TextBox>
@@ -29,7 +28,7 @@
          
                 <a href="ShoppingCart.aspx" class="scart">
                    <span class="symbol">
-                     <img src= "<% %>"  width="20" height="20" alt="" /></span>
+                     <img src= "images/icons/cart.jpg"  width="20" height="20" alt="" /></span>
                 </a>
           
            </header>

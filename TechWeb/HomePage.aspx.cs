@@ -15,8 +15,8 @@ namespace TechWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             //hiding edit product hypelink if no admin is logged in
-            edit.Visible = false;
-            register.Visible = false;
+            uedit.Visible = false;
+            uregister.Visible = false;
             if (Session["userID"] != null)
             {
                 if (Session["userType"] != null)
@@ -24,7 +24,7 @@ namespace TechWeb
                     if (Session["userType"].Equals("admin"))
                     {
                         //show hidden hyper links if logged in user is admin
-                        edit.Visible = true;
+                        uedit.Visible = true;
                     }
                 }
                 login.Visible = false;
