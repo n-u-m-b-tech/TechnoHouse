@@ -13,22 +13,13 @@ namespace TechWeb {
     public partial class CartPage {
         
         /// <summary>
-        /// plus control.
+        /// cartTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button plus;
-        
-        /// <summary>
-        /// minus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button minus;
+        protected global::System.Web.UI.WebControls.Table cartTable;
         
         /// <summary>
         /// Button1 control.

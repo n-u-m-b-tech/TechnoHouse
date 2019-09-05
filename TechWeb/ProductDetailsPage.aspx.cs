@@ -22,7 +22,8 @@ namespace TechWeb
             proname.Text = product.name;
             price.Text = Convert.ToString(product.price);
             desrcipt.Text = product.description;
-            qty.Value = "1";
+            
+           
         }
          
                
@@ -32,11 +33,22 @@ namespace TechWeb
             {
                 String proId = Request.QueryString["ID"];
                 int ID = Convert.ToInt32(proId);
-                int Qty = Convert.ToInt32(qty.Value);
-                ProductD pro = client.productinfor_retrieval_ID(ID);
-                int userId = Convert.ToInt32(Session["userID"]);
-                client.Add_to_Cart(pro, userId,Qty);
-                Response.Redirect("Cartpage.aspx?ID=" + ID);
+                if (!qty.Value.Equals(""))
+                {
+                    int Qty = Convert.ToInt32(qty.Value);
+                    ProductD pro = client.productinfor_retrieval_ID(ID);
+                    int userId = Convert.ToInt32(Session["userID"]);
+                    client.Add_to_Cart(pro, userId, Qty);
+                    Response.Redirect("Cartpage.aspx?ID=" + ID);
+                }
+                else
+                {
+                    int Qty = 1;
+                    ProductD pro = client.productinfor_retrieval_ID(ID);
+                    int userId = Convert.ToInt32(Session["userID"]);
+                    client.Add_to_Cart(pro, userId, Qty);
+                    Response.Redirect("Cartpage.aspx?ID=" + ID);
+                }
             }
         }
     }
