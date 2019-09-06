@@ -99,6 +99,7 @@
     <Content Include="ContactPage.aspx" />
     <Content Include="css\Catalogue.css" />
     <Content Include="css\Default.css" />
+    <Content Include="css\landing.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\Master.css" />
     <Content Include="css\Register.css" />
@@ -109,6 +110,7 @@
     <Content Include="images\facebook.svg" />
     <Content Include="images\icons\badoo.png" />
     <Content Include="images\icons\behance.png" />
+    <Content Include="images\icons\cart.jpg" />
     <Content Include="images\icons\deviantart.png" />
     <Content Include="images\icons\dribbble.png" />
     <Content Include="images\icons\dropbox.png" />
@@ -187,6 +189,7 @@
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
     <Content Include="InvoicePage.aspx" />
+    <Content Include="LandingPage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="logoutPage.aspx" />
     <Content Include="ProductDetailsPage.aspx" />
@@ -260,6 +263,13 @@
     <Compile Include="InvoicePage.aspx.designer.cs">
       <DependentUpon>InvoicePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -305,6 +315,13 @@
     </Compile>
     <Compile Include="SearchUser.aspx.designer.cs">
       <DependentUpon>SearchUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TECHNO.Master.cs">
+      <DependentUpon>TECHNO.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TECHNO.Master.designer.cs">
+      <DependentUpon>TECHNO.Master</DependentUpon>
     </Compile>
     <Compile Include="TransactionPage.aspx.cs">
       <DependentUpon>TransactionPage.aspx</DependentUpon>
@@ -357,6 +374,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="packages.config" />
+    <Content Include="TECHNO.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
