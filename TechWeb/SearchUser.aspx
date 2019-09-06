@@ -15,7 +15,7 @@
                     <section>
                      <div class="fields">
                       <div class="field">
-                       <input type="text" name="email" id="txt" placeholder="Enter User Email" runat="server" /><br />
+                       <input type="text" name="email" id="email" placeholder="Enter User Email" runat="server" /><br />
                         <asp:Button ID="btnEditUser" runat="server" OnClick="btnEditUser_Click" Text="Edit User" style="height: 26px" />
                            </div>
                             </div>

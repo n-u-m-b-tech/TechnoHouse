@@ -57,6 +57,7 @@
       <xs:element minOccurs="0" name="productDescription" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="productId" type="xs:int" />
       <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unit" type="xs:double" />
       <xs:element minOccurs="0" name="userId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

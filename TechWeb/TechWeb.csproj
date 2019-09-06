@@ -188,6 +188,7 @@
     <Content Include="images\youtube.svg" />
     <Content Include="InvoicePage.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="logoutPage.aspx" />
     <Content Include="ProductDetailsPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
     <Content Include="SearchProduct.aspx" />
@@ -265,6 +266,13 @@
     </Compile>
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logoutPage.aspx.cs">
+      <DependentUpon>logoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logoutPage.aspx.designer.cs">
+      <DependentUpon>logoutPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDetailsPage.aspx.cs">
       <DependentUpon>ProductDetailsPage.aspx</DependentUpon>

@@ -169,6 +169,8 @@ namespace Techno_Service
 		
 		private int _Quantity;
 		
+		private System.Nullable<decimal> _Unit_Price;
+		
 		private decimal _Total;
 		
 		private EntityRef<Client> _Client;
@@ -191,6 +193,8 @@ namespace Techno_Service
     partial void OnProduct_DescriptionChanged();
     partial void OnQuantityChanging(int value);
     partial void OnQuantityChanged();
+    partial void OnUnit_PriceChanging(System.Nullable<decimal> value);
+    partial void OnUnit_PriceChanged();
     partial void OnTotalChanging(decimal value);
     partial void OnTotalChanged();
     #endregion
@@ -326,6 +330,26 @@ namespace Techno_Service
 					this._Quantity = value;
 					this.SendPropertyChanged("Quantity");
 					this.OnQuantityChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Unit_Price", DbType="Money")]
+		public System.Nullable<decimal> Unit_Price
+		{
+			get
+			{
+				return this._Unit_Price;
+			}
+			set
+			{
+				if ((this._Unit_Price != value))
+				{
+					this.OnUnit_PriceChanging(value);
+					this.SendPropertyChanging();
+					this._Unit_Price = value;
+					this.SendPropertyChanged("Unit_Price");
+					this.OnUnit_PriceChanged();
 				}
 			}
 		}

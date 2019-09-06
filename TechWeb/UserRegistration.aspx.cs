@@ -25,6 +25,7 @@ namespace TechWeb
                     Title = title.Value,
                     name = name.Value,
                     surname = surname.Value,
+                    contacs = "0115689325",
                     email = email.Value,
                     password = pass.Value,
                     address1 = add1.Value,
@@ -33,6 +34,7 @@ namespace TechWeb
                     city = city.Value,
                     username = username.Value,
                     province = prov.Value,
+                    type = "user",
                     active = 'T'
                
 

@@ -515,6 +515,9 @@ namespace TechWeb.TechService {
         private string productNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double unitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int userIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -601,6 +604,19 @@ namespace TechWeb.TechService {
                 if ((object.ReferenceEquals(this.productNameField, value) != true)) {
                     this.productNameField = value;
                     this.RaisePropertyChanged("productName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double unit {
+            get {
+                return this.unitField;
+            }
+            set {
+                if ((this.unitField.Equals(value) != true)) {
+                    this.unitField = value;
+                    this.RaisePropertyChanged("unit");
                 }
             }
         }

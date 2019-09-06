@@ -17,7 +17,7 @@ namespace TechWeb
             //hiding edit product hypelink if no admin is logged in
             productmanangement.Visible = false;
             usermanagement.Visible = false;
-            edit.Visible = false;
+            uedit.Visible = false;
             proedit.Visible = false;
             proreg.Visible = false;
             rat.Visible = false;
@@ -36,7 +36,7 @@ namespace TechWeb
                         proreg.Visible = true;
                         rat.Visible = true;
                         stats.Visible = true;
-                        edit.Visible = true;
+                        uedit.Visible = true;
                     }
                 }
                 login.Visible = false;

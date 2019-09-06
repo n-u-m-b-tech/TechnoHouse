@@ -11,14 +11,16 @@ namespace TechWeb
     public partial class CartPage : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
+        int userId;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
             {
-                int userId = Convert.ToInt32(Session["userID"]);
+                 userId = Convert.ToInt32(Session["userID"]);
                 var cart = client.getUser_Cart(userId);
                 if (cart != null)
                 {
+                    
                     foreach(CartClass c in cart)
                     {
                         TableRow row = new TableRow();
@@ -47,6 +49,8 @@ namespace TechWeb
         protected void Button1_Click(object sender, EventArgs e)
         {
             //checkout
+            Response.Redirect("TransactionPage.aspx?ID="+userId);
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)

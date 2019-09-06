@@ -55,10 +55,15 @@
         </div>
     <div class="container-right">
         <p>Confirm your order</p>
-            <div class="cart-up">
-                <div >
-
-                </div>
+            <div class="cart-up" id="confirm" runat="server">
+              <asp:Table ID="confirmTable" runat="server" Width="100%">
+                  <asp:TableRow>
+                      <asp:TableCell>Product Name</asp:TableCell>
+                      <asp:TableCell>Unit Price</asp:TableCell>
+                      <asp:TableCell>Quantity</asp:TableCell>
+                      <asp:TableCell>Total</asp:TableCell>
+                  </asp:TableRow>
+              </asp:Table>
             </div>
         <div class="deliv-down">
             <p>Delivery </p>

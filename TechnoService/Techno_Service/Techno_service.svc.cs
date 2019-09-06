@@ -154,6 +154,7 @@ namespace Techno_Service
                     Id = userinfor.Client_Id,
                     name = userinfor.Name,
                     surname = userinfor.Surname,
+                    username = userinfor.Username,
                     contacs = userinfor.Contacts,
                     email = userinfor.Email,
                     address1 = userinfor.Address1,
@@ -187,6 +188,7 @@ namespace Techno_Service
                 Surname = user.surname,
                 Contacts = user.contacs,
                 Email = user.email,
+                Username = user.username,
                 Password = Secrecy.HashPassword(user.password),
                 Address1 = user.address1,
                 Address2 = user.address2,
@@ -317,10 +319,7 @@ namespace Techno_Service
 
         public bool Add_to_Cart(ProductD product, int userID,int Qty)
         {
-            if (Qty == 0)
-            {
-                Qty = 1;
-            }
+           
             var existpro = (from e in db.Carts
                                 where e.Product_Name.Equals(product.name)
                                 select e).FirstOrDefault();
@@ -333,6 +332,7 @@ namespace Techno_Service
                     Product_Name = product.name,
                     Product_Description = product.description,
                     Quantity = Qty,
+                    Unit_Price = Convert.ToDecimal(product.price),
                     Total = Convert.ToDecimal(product.price) * Qty
 
                 };
@@ -351,7 +351,7 @@ namespace Techno_Service
             }
             else
             {
-                existpro.Quantity += 1;
+                existpro.Quantity += Qty;
                 existpro.Total = Convert.ToDecimal(product.price * existpro.Quantity);
                 try
                 {

@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="TechWeb.HomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-  <!--  <link rel="stylesheet" href="css/Default.css" /> -->
+    <!--  <link rel="stylesheet" href="css/Default.css" /> -->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
     <li><a href="HomePage.aspx">Home</a></li>
             <li id="produ" runat="server"><a>Products</a>
                 <ul>
-                    <li><a href="Catalogue.aspx">Kitchen</a></li>
-                    <li><a href="Catalogue.aspx":>Bathroom</a></li>
-                    <li><a href="Catalogue.aspx">Bedroom</a></li>
-                    <li><a href="Catalogue.aspx">Living Room</a></li>
+                    <li><a href="Catalogue.aspx?ID=Kitchen">Kitchen</a></li>
+                    <li><a href="Catalogue.aspx?ID=Bath Room":>Bathroom</a></li>
+                    <li><a href="Catalogue.aspx?ID=Bed Room">Bedroom</a></li>
+                    <li><a href="Catalogue.aspx?ID=Living Room">Living Room</a></li>
                 </ul>
             </li>
             <li><a id="productmanangement" runat="server">Product Management</a>
@@ -30,7 +30,7 @@
                 <li id="uregister" runat="server"><a href="UserRegistration.aspx">Register</a></li>
             <li><a href="ContactPage.aspx">Contact</a></li>
             <li><a href="#">About Us</a></li>      
-            <li id="logout" runat="server"><a href="HomePage.aspx">LogOut</a></li>
+            <li id="logout" runat="server"><a href="logoutPage.aspx">LogOut</a></li>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
      <section id="catalog" runat="server">

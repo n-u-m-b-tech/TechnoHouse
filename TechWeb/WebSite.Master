@@ -21,7 +21,7 @@
 
        <header>
                 <!-- Logo -->
-                <a href="Home.aspx" class="logo">
+                <a href="HomePage.aspx" class="logo">
                     <span class="symbol">
                         <img src= "images/logo.png"  width="70" height="70" alt="" /></span>
                 <asp:TextBox ID="search" runat="server" placeholder="Search Product" Width="70%"></asp:TextBox>
@@ -64,10 +64,10 @@
         <br /> -->
 
      </div>
-                     <ul>
+              <ul>
 		<!--/Navigation Bar-->
         <asp:ContentPlaceHolder ID="navigation" runat="server">
-
+           
         </asp:ContentPlaceHolder>
                      </ul>
         <asp:ContentPlaceHolder ID="contents" runat="server">
