@@ -1,15 +1,12 @@
-﻿<%@ Page Title="User Registration" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="UserRegistration.aspx.cs" Inherits="TechWeb.UserRegistration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="UserRegistrationPage.aspx.cs" Inherits="TechWeb.UserRegistrationPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/Login.css" rel="stylesheet" />
     <link href="css/Register.css" rel="stylesheet" />
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
-
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-       <div class="register-box">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<div class="register-box">
            <h1>Create an account</h1>
                 <div class="txtbox">          
                     <input type="text" name="txttitle" id="title" placeholder="Title" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="idrequire" runat="server" ErrorMessage="*" ControlToValidate="title"></asp:RequiredFieldValidator>
@@ -44,4 +41,7 @@
                 <asp:Button ID="BtnRegister" runat="server" type="register" Text="Register" class="btn" OnClick="BtnRegister_Click" />
         </div>
     
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

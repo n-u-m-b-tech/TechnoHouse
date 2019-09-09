@@ -87,8 +87,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CartPage.aspx" />
-    <Content Include="Catalogue.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -96,16 +94,44 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="CataloguePage.aspx" />
     <Content Include="ContactPage.aspx" />
     <Content Include="css\Catalogue.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\default-skin\default-skin.css" />
+    <Content Include="css\default-skin\default-skin.png" />
+    <Content Include="css\default-skin\default-skin.svg" />
+    <Content Include="css\default-skin\preloader.gif" />
     <Content Include="css\Default.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\landing.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\Master.css" />
+    <Content Include="css\MyCss.css" />
+    <Content Include="css\popuo-box.css" />
     <Content Include="css\Register.css" />
     <Content Include="css\SearchBar.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="css\styles-merged.css" />
+    <Content Include="css\vendor\animate.css" />
+    <Content Include="css\vendor\bootstrap.min.css" />
+    <Content Include="css\vendor\default-skin.css" />
+    <Content Include="css\vendor\flexslider.css" />
+    <Content Include="css\vendor\icomoon.css" />
+    <Content Include="css\vendor\magnific-popup.css" />
+    <Content Include="css\vendor\owl.carousel.min.css" />
+    <Content Include="css\vendor\owl.theme.default.min.css" />
+    <Content Include="css\vendor\photoswipe.css" />
     <Content Include="EditProductPage.aspx" />
-    <Content Include="EditUser.aspx" />
+    <Content Include="EditUserPage.aspx" />
+    <Content Include="fonts\icomoon demo\demo-files\demo.css" />
+    <Content Include="fonts\icomoon demo\demo-files\demo.js" />
+    <Content Include="fonts\icomoon demo\demo.html" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.svg" />
+    <Content Include="fonts\icomoon demo\Read Me.txt" />
+    <Content Include="fonts\icomoon demo\style.css" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="HomePage.aspx" />
     <Content Include="images\facebook.svg" />
     <Content Include="images\icons\badoo.png" />
@@ -192,36 +218,48 @@
     <Content Include="LandingPage.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="logoutPage.aspx" />
+    <Content Include="Models\custom.js" />
+    <Content Include="Models\google-map.js" />
+    <Content Include="Models\main.js" />
+    <Content Include="Models\main.min.js" />
+    <Content Include="Models\scripts.js" />
+    <Content Include="Models\scripts.min.js" />
+    <Content Include="Models\vendor\bootstrap.min.js" />
+    <Content Include="Models\vendor\circle-progress.min.js" />
+    <Content Include="Models\vendor\html5shiv.min.js" />
+    <Content Include="Models\vendor\jquery.appear.js" />
+    <Content Include="Models\vendor\jquery.appear.min.js" />
+    <Content Include="Models\vendor\jquery.countTo.js" />
+    <Content Include="Models\vendor\jquery.easing.1.3.js" />
+    <Content Include="Models\vendor\jquery.flexslider-min.js" />
+    <Content Include="Models\vendor\jquery.magnific-popup.min.js" />
+    <Content Include="Models\vendor\jquery.min.js" />
+    <Content Include="Models\vendor\jquery.stellar.min.js" />
+    <Content Include="Models\vendor\jquery.waypoints.min.js" />
+    <Content Include="Models\vendor\owl.carousel.min.js" />
+    <Content Include="Models\vendor\respond.min.js" />
+    <Content Include="NewCartPage.aspx" />
     <Content Include="ProductDetailsPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
     <Content Include="SearchProduct.aspx" />
-    <Content Include="SearchUser.aspx" />
+    <Content Include="SearchUserPage.aspx" />
     <Content Include="TransactionPage.aspx" />
-    <Content Include="UserRegistration.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
     <Content Include="images\smart-home-automation-2.jpg" />
-    <Content Include="UserAccount.aspx" />
+    <Content Include="UserRegistrationPage.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebSite.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CartPage.aspx.cs">
-      <DependentUpon>CartPage.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CartPage.aspx.designer.cs">
-      <DependentUpon>CartPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogue.aspx.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catalogue.aspx.designer.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.designer.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -242,12 +280,12 @@
     <Compile Include="EditProductPage.aspx.designer.cs">
       <DependentUpon>EditProductPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditUser.aspx.cs">
-      <DependentUpon>EditUser.aspx</DependentUpon>
+    <Compile Include="EditUserPage.aspx.cs">
+      <DependentUpon>EditUserPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditUser.aspx.designer.cs">
-      <DependentUpon>EditUser.aspx</DependentUpon>
+    <Compile Include="EditUserPage.aspx.designer.cs">
+      <DependentUpon>EditUserPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
@@ -284,6 +322,13 @@
     <Compile Include="logoutPage.aspx.designer.cs">
       <DependentUpon>logoutPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NewCartPage.aspx.cs">
+      <DependentUpon>NewCartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewCartPage.aspx.designer.cs">
+      <DependentUpon>NewCartPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductDetailsPage.aspx.cs">
       <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,12 +354,12 @@
     <Compile Include="SearchProduct.aspx.designer.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SearchUser.aspx.cs">
-      <DependentUpon>SearchUser.aspx</DependentUpon>
+    <Compile Include="SearchUserPage.aspx.cs">
+      <DependentUpon>SearchUserPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchUser.aspx.designer.cs">
-      <DependentUpon>SearchUser.aspx</DependentUpon>
+    <Compile Include="SearchUserPage.aspx.designer.cs">
+      <DependentUpon>SearchUserPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="TECHNO.Master.cs">
       <DependentUpon>TECHNO.Master</DependentUpon>
@@ -330,26 +375,12 @@
     <Compile Include="TransactionPage.aspx.designer.cs">
       <DependentUpon>TransactionPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount.aspx.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
+    <Compile Include="UserRegistrationPage.aspx.cs">
+      <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserAccount.aspx.designer.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserRegistration.aspx.cs">
-      <DependentUpon>UserRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserRegistration.aspx.designer.cs">
-      <DependentUpon>UserRegistration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebSite.Master.cs">
-      <DependentUpon>WebSite.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebSite.Master.designer.cs">
-      <DependentUpon>WebSite.Master</DependentUpon>
+    <Compile Include="UserRegistrationPage.aspx.designer.cs">
+      <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -373,8 +404,24 @@
     <Content Include="Connected Services\TechService\TechWeb.TechService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\styles-merged.css.map" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\icomoon demo\.DS_Store" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.woff" />
+    <Content Include="fonts\icomoon demo\selection.json" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="Models\.DS_Store" />
+    <Content Include="Models\vendor\.DS_Store" />
     <None Include="packages.config" />
     <Content Include="TECHNO.Master" />
+    <Content Include="scss\.DS_Store" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_custom-settings.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -385,7 +432,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="js\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

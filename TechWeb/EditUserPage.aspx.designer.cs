@@ -10,16 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class UserRegistration {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class EditUserPage {
         
         /// <summary>
         /// title control.
@@ -28,7 +19,17 @@ namespace TechWeb {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText title;
+        
+        /// <summary>
+        /// idrequire control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator idrequire;
+        
         /// <summary>
         /// name control.
         /// </summary>
@@ -37,7 +38,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText name;
-
+        
         /// <summary>
         /// namerequire control.
         /// </summary>
@@ -46,7 +47,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator namerequire;
-
+        
         /// <summary>
         /// surname control.
         /// </summary>
@@ -55,7 +56,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText surname;
-
+        
         /// <summary>
         /// surnamerequire control.
         /// </summary>
@@ -64,7 +65,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator surnamerequire;
-
+        
         /// <summary>
         /// add1 control.
         /// </summary>
@@ -73,7 +74,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText add1;
-
+        
         /// <summary>
         /// add1require control.
         /// </summary>
@@ -82,7 +83,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator add1require;
-
+        
         /// <summary>
         /// add2 control.
         /// </summary>
@@ -91,7 +92,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText add2;
-
+        
         /// <summary>
         /// add2require control.
         /// </summary>
@@ -100,7 +101,16 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator add2require;
-
+        
+        /// <summary>
+        /// contact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText contact;
+        
         /// <summary>
         /// city control.
         /// </summary>
@@ -109,7 +119,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText city;
-
+        
         /// <summary>
         /// cityrequire control.
         /// </summary>
@@ -118,7 +128,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator cityrequire;
-
+        
         /// <summary>
         /// prov control.
         /// </summary>
@@ -127,7 +137,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText prov;
-
+        
         /// <summary>
         /// provrequire control.
         /// </summary>
@@ -136,7 +146,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator provrequire;
-
+        
         /// <summary>
         /// zip control.
         /// </summary>
@@ -145,7 +155,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText zip;
-
+        
         /// <summary>
         /// ziprequire control.
         /// </summary>
@@ -154,7 +164,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ziprequire;
-
+        
         /// <summary>
         /// email control.
         /// </summary>
@@ -163,7 +173,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText email;
-
+        
         /// <summary>
         /// emailrequitre control.
         /// </summary>
@@ -172,7 +182,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator emailrequitre;
-
+        
         /// <summary>
         /// regexprss control.
         /// </summary>
@@ -181,34 +191,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regexprss;
-
-        /// <summary>
-        /// mailcom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText mailcom;
-
-        /// <summary>
-        /// confirmrequire control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator confirmrequire;
-
-        /// <summary>
-        /// mailcompr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator mailcompr;
-
+        
         /// <summary>
         /// username control.
         /// </summary>
@@ -217,7 +200,7 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText username;
-
+        
         /// <summary>
         /// userrequire control.
         /// </summary>
@@ -226,59 +209,41 @@ namespace TechWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator userrequire;
-
+        
         /// <summary>
-        /// pass control.
+        /// user_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword pass;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText user_type;
+        
         /// <summary>
-        /// passrequire control.
+        /// active control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passrequire;
-
+        protected global::System.Web.UI.HtmlControls.HtmlInputText active;
+        
         /// <summary>
-        /// confirm control.
+        /// activerequire control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword confirm;
-
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator activerequire;
+        
         /// <summary>
-        /// passconfirmrequire control.
+        /// BtnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator passconfirmrequire;
-
-        /// <summary>
-        /// passcomprr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator passcomprr;
-
-        /// <summary>
-        /// BtnRegister control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnRegister;
+        protected global::System.Web.UI.WebControls.Button BtnEdit;
     }
 }

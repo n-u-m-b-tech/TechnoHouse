@@ -4,18 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.Techno_serviceClient;
 using TechWeb.TechService;
 
-namespace Techno_Web
+namespace TechWeb
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class UserRegistrationPage : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
-
         protected void Page_Load(object sender, EventArgs e)
         {
-        
+
         }
 
         protected void BtnRegister_Click(object sender, EventArgs e)
@@ -27,6 +25,7 @@ namespace Techno_Web
                     Title = title.Value,
                     name = name.Value,
                     surname = surname.Value,
+                    contacs = "0115689325",
                     email = email.Value,
                     password = pass.Value,
                     address1 = add1.Value,
@@ -34,19 +33,23 @@ namespace Techno_Web
                     ZipCode = zip.Value,
                     city = city.Value,
                     username = username.Value,
-                    province = prov.Value
-                                  
-                    
+                    province = prov.Value,
+                    type = "user",
+                    active = 'T'
+
+
+
                 };
 
-               if(client.UserRegister(user))
+                if (client.UserRegister(user))
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("LoginPage.aspx");
                 }
                 else
                 {
-                    Response.Redirect("UserRegister.aspx");
+                    Response.Redirect("UserRegistrationPage.aspx");
                 }
+
             }
         }
     }
