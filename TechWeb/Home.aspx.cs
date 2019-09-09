@@ -8,7 +8,7 @@ using TechWeb.TechService;
 
 namespace TechWeb
 {
-    public partial class HomePage : System.Web.UI.Page
+    public partial class Home : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
         String display = "";
@@ -23,7 +23,7 @@ namespace TechWeb
             rat.Visible = false;
             stats.Visible = false;
             logout.Visible = false;
-                
+
             if (Session["userID"] != null)
             {
                 if (Session["userType"] != null)

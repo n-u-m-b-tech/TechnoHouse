@@ -1,9 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="EditProductPage.aspx.cs" Inherits="TechWeb.EditProductPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="EditProduct.aspx.cs" Inherits="TechWeb.EditProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="fields">
         <h2>Edit Product</h2>
        <section id="Image" runat="server">
@@ -45,4 +43,7 @@
             <asp:Button ID="BtnEdit" runat="server" type="edit" Text="Submit" class="primary" OnClick="BtnEdit_Click" />
         </li>
     </ul>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

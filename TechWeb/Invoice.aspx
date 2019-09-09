@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="InvoicePage.aspx.cs" Inherits="TechWeb.InvoicePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="Invoice.aspx.cs" Inherits="TechWeb.Invoice" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -6,9 +6,7 @@
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div id="invoice-details" class="invoice">
         <table class="auto-style1">
             <tr>
@@ -21,4 +19,8 @@
             </tr>
         </table>
     </div>
+
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

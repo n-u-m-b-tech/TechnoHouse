@@ -5,15 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TechWeb.TechService;
+
 namespace TechWeb
 {
-    public partial class EditProductPage : System.Web.UI.Page
+    public partial class EditProduct : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             String proId = Request.QueryString["ID"];
-          
+
 
             int ID = Convert.ToInt32(proId);
             String display = "";
@@ -35,10 +36,6 @@ namespace TechWeb
             manufacturer.Value = product.manufacture;
             discount.Value = Convert.ToString(product.discount);
             Image_url.Value = product.image_url;
-
-
-
-
 
         }
 
@@ -63,7 +60,7 @@ namespace TechWeb
 
 
             int ID = Convert.ToInt32(proId);
-            if (client.EditProduct(product,ID).Equals(0))
+            if (client.EditProduct(product, ID).Equals(0))
             {
                 Response.Redirect("HomePage.aspx");
             }

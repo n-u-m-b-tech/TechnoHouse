@@ -94,8 +94,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="AboutUs.aspx" />
     <Content Include="CataloguePage.aspx" />
-    <Content Include="ContactPage.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="css\Catalogue.css" />
     <Content Include="css\custom.css" />
     <Content Include="css\default-skin\default-skin.css" />
@@ -123,7 +124,7 @@
     <Content Include="css\vendor\owl.carousel.min.css" />
     <Content Include="css\vendor\owl.theme.default.min.css" />
     <Content Include="css\vendor\photoswipe.css" />
-    <Content Include="EditProductPage.aspx" />
+    <Content Include="EditProduct.aspx" />
     <Content Include="EditUserPage.aspx" />
     <Content Include="fonts\icomoon demo\demo-files\demo.css" />
     <Content Include="fonts\icomoon demo\demo-files\demo.js" />
@@ -132,7 +133,7 @@
     <Content Include="fonts\icomoon demo\Read Me.txt" />
     <Content Include="fonts\icomoon demo\style.css" />
     <Content Include="fonts\icomoon\icomoon.svg" />
-    <Content Include="HomePage.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="images\facebook.svg" />
     <Content Include="images\icons\badoo.png" />
     <Content Include="images\icons\behance.png" />
@@ -214,9 +215,9 @@
     <Content Include="images\products\Wilson-Ottoman-1.jpg" />
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
-    <Content Include="InvoicePage.aspx" />
+    <Content Include="Invoice.aspx" />
     <Content Include="LandingPage.aspx" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="logoutPage.aspx" />
     <Content Include="Models\custom.js" />
     <Content Include="Models\google-map.js" />
@@ -253,6 +254,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CataloguePage.aspx.cs">
       <DependentUpon>CataloguePage.aspx</DependentUpon>
@@ -266,19 +274,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ContactPage.aspx.cs">
-      <DependentUpon>ContactPage.aspx</DependentUpon>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContactPage.aspx.designer.cs">
-      <DependentUpon>ContactPage.aspx</DependentUpon>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditProductPage.aspx.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditProductPage.aspx.designer.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditUserPage.aspx.cs">
       <DependentUpon>EditUserPage.aspx</DependentUpon>
@@ -287,19 +295,19 @@
     <Compile Include="EditUserPage.aspx.designer.cs">
       <DependentUpon>EditUserPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InvoicePage.aspx.cs">
-      <DependentUpon>InvoicePage.aspx</DependentUpon>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InvoicePage.aspx.designer.cs">
-      <DependentUpon>InvoicePage.aspx</DependentUpon>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="LandingPage.aspx.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
@@ -308,12 +316,12 @@
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="logoutPage.aspx.cs">
       <DependentUpon>logoutPage.aspx</DependentUpon>

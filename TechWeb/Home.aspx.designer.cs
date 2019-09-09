@@ -10,7 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class HomePage {
+    public partial class Home {
         
         /// <summary>
         /// produ control.
