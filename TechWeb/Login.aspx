@@ -9,7 +9,7 @@
     <br /><br />
 		<div class="form-w3-agile">
 			<h2><b>LOGIN HERE</b></h2>
-			<form action="#" method="post">
+			<form runat="server" action="#" method="post">
 				<div class="form-sub-w3">
 					<input type="text" name="Username" placeholder="Customer number or username " required="" />
 				<div class="icon-w3">

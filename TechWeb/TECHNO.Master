@@ -13,6 +13,11 @@
     <title>Techno House</title>
 
     <!-- Link to CSS -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -50,13 +55,7 @@
         </div>
      <!--END: Body contents-->
 
-    
-
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-			
-            </asp:ContentPlaceHolder>
-        </div>
+   
   <!--START: Footer-->
      <footer class="probootstrap-footer probootstrap-bg">
     <div class="container">
