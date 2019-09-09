@@ -1,0 +1,15 @@
+.container2{
+    width: 100%;
+    height: 1000px;
+}
+.left-cont{
+    width:50%;
+    float:left;
+    height: 430px;
+}
+
+.right-cont{
+    float:left;
+    height: 430px;
+    width: 553px;
+}
