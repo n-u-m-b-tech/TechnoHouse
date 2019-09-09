@@ -62,7 +62,7 @@ namespace TechWeb
             int ID = Convert.ToInt32(proId);
             if (client.EditProduct(product, ID).Equals(0))
             {
-                Response.Redirect("HomePage.aspx");
+                Response.Redirect("Home.aspx");
             }
             else
             {

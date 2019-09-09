@@ -32,12 +32,12 @@
           <ul class="probootstrap-main-nav">
              <li class="active"><a href="LandingPage.aspx">Home</a></li>
              <li id="product" runat="server"><a href="Landing.aspx">Products</a></li>
-             <li><a href="LandingPage.aspx">Add Product</a></li>
-             <li><a href="LandingPage.aspx">Edit Product</a></li>
-             <li><a href="LandingPage.aspx">Edit User</a></li>
+             <li><a href="RegisterProduct.aspx">Add Product</a></li>
+             <li><a href="EditProduct">Edit Product</a></li>
+             <li><a href="EditUserPage.aspx">Edit User</a></li>
              <li id="login" runat="server"><a href="Login.aspx">Login</a></li>
-             <li id="uregister" runat="server"><a href="UserRegistration.aspx">Register</a></li>
-             <li id="logout" runat="server"><a href="LandingPage.aspx">LogOut</a></li>            
+             <li id="uregister" runat="server"><a href="UserRegistrationPage.aspx">Register</a></li>
+             <li id="logout" runat="server"><a href="LogoutPage.aspx">LogOut</a></li>            
              <li><a href="ContactUs.aspx">Contact</a></li>
              <li><a href="AboutUs.aspx">About Us</a></li>      
           </ul>
@@ -68,10 +68,10 @@
           <div class="probootstrap-footer-widget probootstrap-link-wrap">
             <h4 class="heading">Quick Links</h4>
             <ul class="stack-link">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="Home.aspx">Home</a></li>
+              <li><a href="AboutUs.aspx">About</a></li>
               <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
+              <li><a href="CataloguePage.aspx">Products</a></li>
               <li><a href="#">Testimonial</a></li>
             </ul>
           </div>

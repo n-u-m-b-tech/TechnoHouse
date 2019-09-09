@@ -21,7 +21,7 @@ namespace TechWeb
             if (user != null)
             {
                 int userId = user.Id;
-                Response.Redirect("EditUser.aspx?ID=" + userId);
+                Response.Redirect("EditUserPage.aspx?ID=" + userId);
             }
         }
 

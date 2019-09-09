@@ -11,13 +11,13 @@
 			<h2><b>LOGIN HERE</b></h2>
 			<form runat="server" action="#" method="post">
 				<div class="form-sub-w3">
-					<input type="text" name="Username" placeholder="Customer number or username " required="" />
+					<input type="text" name="Username" id="email" runat="server" placeholder="Customer number or username " required="" />
 				<div class="icon-w3">
 					<i class="fa fa-user" aria-hidden="true"></i>
 				</div>
 				</div>
 				<div class="form-sub-w3">
-					<input type="password" name="Password" placeholder="Password" required="" />
+					<input type="password" name="Password" id="pass" runat="server"  placeholder="Password" required="" />
 				<div class="icon-w3">
 					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 				</div>

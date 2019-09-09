@@ -11,7 +11,7 @@
             <div class="col-md-12 text-center">
               <div class="slides-text probootstrap-animate">
                 <h2>Your Home Re-invented.</h2>
-                <p><a href="Catalogue.aspx" target="_blank" class="btn btn-primary">Shop now</a></p>
+                <p><a href="CataloguePage.aspx" target="_blank" class="btn btn-primary">Shop now</a></p>
               </div>
             </div>
           </div>
@@ -23,7 +23,7 @@
             <div class="col-md-12 text-center">
               <div class="slides-text probootstrap-animate">
                 <h2>Smart Kitchen Design.</h2>
-                <p><a href="Catalogue.aspx" target="_blank" class="btn btn-primary">Shop now</a></p>
+                <p><a href="CataloguePage.aspx" target="_blank" class="btn btn-primary">Shop now</a></p>
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@
             <div class="col-md-12 text-center">
               <div class="slides-text probootstrap-animate">
                 <h2>Smart Living Design.</h2>
-                <p><a href="Catalogue.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
+                <p><a href="CataloguePage.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@
             <div class="col-md-12 text-center">
               <div class="slides-text probootstrap-animate">
                 <h2>Smart Bathroom Design.</h2>
-                <p><a href="Catalogue.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
+                <p><a href="CataloguePage.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
               </div>
             </div>
           </div>
@@ -62,7 +62,7 @@
             <div class="col-md-12 text-center">
               <div class="slides-text probootstrap-animate">
                 <h2>Featured Samsung Smart Appliances.</h2>
-                <p><a href="Catalogue.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
+                <p><a href="CataloguePage.aspx"" target="_blank" class="btn btn-primary">Shop now</a></p>
               </div>
             </div>
           </div>

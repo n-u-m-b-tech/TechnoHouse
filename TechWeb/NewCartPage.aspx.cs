@@ -49,7 +49,7 @@ namespace TechWeb
         protected void Button1_Click(object sender, EventArgs e)
         {
             //checkout
-            Response.Redirect("TransactionPage.aspx?ID=" + userId);
+            Response.Redirect("Transaction.aspx?ID=" + userId);
 
         }
 

@@ -5,7 +5,7 @@
     <link href="css/Register.css" rel="stylesheet" />
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="register-box">
            <h1>Create an account</h1>
                 <div class="txtbox">          
@@ -42,6 +42,4 @@
         </div>
     
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

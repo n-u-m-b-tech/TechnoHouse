@@ -62,15 +62,12 @@ namespace TechWeb
 
             if (client.updateuser(user, ID))
             {
-                Response.Redirect("Homepage.aspx");
+                Response.Redirect("Home.aspx");
             }
             else
             {
-                Response.Redirect("EditUser.aspx?ID=" + ID);
+                Response.Redirect("EditUserPage.aspx?ID=" + ID);
             }
-
-
-
         }
     }
 }

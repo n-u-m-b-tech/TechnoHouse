@@ -35,7 +35,7 @@ namespace TechWeb
                     display += "<li><a href ='#' data-tip='Wishlist'><i class='fa fa-heart'></i></a></li>";
 
 
-                    display += "<li><a href='ProductDetailsPage.aspx?ID=" + pro.ID + "' data-tip='Quick View'><i class='fa fa-search'></i></a></li>";
+                    display += "<li><a href='ViewProduct.aspx?ID=" + pro.ID + "' data-tip='Quick View'><i class='fa fa-search'></i></a></li>";
                     display += "</ul>";
                     display += "</div>";
                     display += "<div class='product-content'>";
@@ -69,7 +69,7 @@ namespace TechWeb
                     display += "<li><a href ='#' data-tip='Wishlist'><i class='fa fa-heart'></i></a></li>";
 
 
-                    display += "<li><a href='ProductDetailsPage.aspx?ID=" + pro.ID + "' data-tip='Quick View'><i class='fa fa-search'></i></a></li>";
+                    display += "<li><a href='ViewProduct.aspx?ID=" + pro.ID + "' data-tip='Quick View'><i class='fa fa-search'></i></a></li>";
                     display += "</ul>";
                     display += "</div>";
                     display += "<div class='product-content'>";
