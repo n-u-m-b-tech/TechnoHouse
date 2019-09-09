@@ -89,7 +89,7 @@
             <div class="field">
                 <asp:Label ID="lbldiscount" runat="server" class="label" Text="Add Discount Code"></asp:Label>
                 <br />
-                <input type="text" name="txtcard" id="Text2"  runat="server" />
+                <input type="text" name="txtcard" id="discount"  runat="server" />
                 <asp:Button ID="BtnDiscount" runat="server" Text="Use" OnClick="BtnDiscount_Click" />
                 </div>
 

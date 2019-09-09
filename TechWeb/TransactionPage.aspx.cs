@@ -18,7 +18,8 @@ namespace TechWeb
             if (Session["userID"] != null)
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
-                var cart = client.getUser_Cart(id);
+                dynamic cart = client.getUser_Cart(id);
+                
                 if (cart != null)
                 {
                     foreach (CartClass c in cart)
@@ -51,7 +52,12 @@ namespace TechWeb
 
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
+            //order button
 
+            if (Session["userID"] != null)
+            {
+                Res
+            }
         }
     }
 }

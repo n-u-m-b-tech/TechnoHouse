@@ -321,7 +321,8 @@ namespace Techno_Service
         {
            
             var existpro = (from e in db.Carts
-                                where e.Product_Name.Equals(product.name)
+                                where e.Product_Name.Equals(product.name) && 
+                                e.user_Id.Equals(userID)
                                 select e).FirstOrDefault();
             if (existpro == null)
             {
@@ -628,7 +629,10 @@ namespace Techno_Service
             }
         }
 
-
+        public bool payment(string type, DateTime date, decimal Amount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
         
