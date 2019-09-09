@@ -240,8 +240,8 @@
     <Content Include="Models\vendor\owl.carousel.min.js" />
     <Content Include="Models\vendor\respond.min.js" />
     <Content Include="NewCartPage.aspx" />
-    <Content Include="ProductRegistration.aspx" />
-    <Content Include="SearchProduct.aspx" />
+    <Content Include="RegisterProduct.aspx" />
+    <Content Include="SearchProductPage.aspx" />
     <Content Include="SearchUserPage.aspx" />
     <Content Include="TransactionPage.aspx" />
     <Content Include="css\form.css" />
@@ -337,23 +337,23 @@
     <Compile Include="NewCartPage.aspx.designer.cs">
       <DependentUpon>NewCartPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductRegistration.aspx.cs">
-      <DependentUpon>ProductRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductRegistration.aspx.designer.cs">
-      <DependentUpon>ProductRegistration.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchProduct.aspx.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
+    <Compile Include="RegisterProduct.aspx.cs">
+      <DependentUpon>RegisterProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchProduct.aspx.designer.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
+    <Compile Include="RegisterProduct.aspx.designer.cs">
+      <DependentUpon>RegisterProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProductPage.aspx.cs">
+      <DependentUpon>SearchProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchProductPage.aspx.designer.cs">
+      <DependentUpon>SearchProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SearchUserPage.aspx.cs">
       <DependentUpon>SearchUserPage.aspx</DependentUpon>
