@@ -8,7 +8,7 @@ using TechWeb.TechService;
 
 namespace TechWeb
 {
-    public partial class ProductDetailsPage : System.Web.UI.Page
+    public partial class ViewProduct : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
@@ -22,11 +22,11 @@ namespace TechWeb
             proname.Text = product.name;
             price.Text = Convert.ToString(product.price);
             desrcipt.Text = product.description;
-            
-           
+
+
         }
-         
-               
+
+
         protected void BtnAddtoCart_Click(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
@@ -39,7 +39,7 @@ namespace TechWeb
                     ProductD pro = client.productinfor_retrieval_ID(ID);
                     int userId = Convert.ToInt32(Session["userID"]);
                     client.Add_to_Cart(pro, userId, Qty);
-                    Response.Redirect("Cartpage.aspx?ID=" + ID);
+                    Response.Redirect("NewCartPage.aspx?ID=" + ID);
                 }
                 else
                 {
@@ -47,7 +47,7 @@ namespace TechWeb
                     ProductD pro = client.productinfor_retrieval_ID(ID);
                     int userId = Convert.ToInt32(Session["userID"]);
                     client.Add_to_Cart(pro, userId, Qty);
-                    Response.Redirect("Cartpage.aspx?ID=" + ID);
+                    Response.Redirect("NewCartPage.aspx?ID=" + ID);
                 }
             }
         }

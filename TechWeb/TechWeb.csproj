@@ -240,7 +240,6 @@
     <Content Include="Models\vendor\owl.carousel.min.js" />
     <Content Include="Models\vendor\respond.min.js" />
     <Content Include="NewCartPage.aspx" />
-    <Content Include="ProductDetailsPage.aspx" />
     <Content Include="ProductRegistration.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUserPage.aspx" />
@@ -251,6 +250,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\smart-home-automation-2.jpg" />
     <Content Include="UserRegistrationPage.aspx" />
+    <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -337,13 +337,6 @@
     <Compile Include="NewCartPage.aspx.designer.cs">
       <DependentUpon>NewCartPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductDetailsPage.aspx.cs">
-      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductDetailsPage.aspx.designer.cs">
-      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ProductRegistration.aspx.cs">
       <DependentUpon>ProductRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -389,6 +382,13 @@
     </Compile>
     <Compile Include="UserRegistrationPage.aspx.designer.cs">
       <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

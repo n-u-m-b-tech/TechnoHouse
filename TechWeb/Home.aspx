@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="TechWeb.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <ul>
     <li><a href="HomePage.aspx">Home</a></li>
             <li id="produ" runat="server"><a>Products</a>
@@ -32,10 +32,7 @@
             <li><a href="#">About Us</a></li>      
             <li id="logout" runat="server"><a href="logoutPage.aspx">LogOut</a></li>
     </ul>
-</asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <section id="catalog" runat="server">
+    <section id="catalog" runat="server">
 
      </section>
 </asp:Content>

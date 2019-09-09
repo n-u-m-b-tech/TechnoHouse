@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/login.css" />
 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="main-agileits">
  <!--form-stars-here-->
     <br /><br />
@@ -33,6 +33,4 @@
 </div> 
 
 
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

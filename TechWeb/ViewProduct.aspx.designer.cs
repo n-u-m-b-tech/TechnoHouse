@@ -10,7 +10,7 @@
 namespace TechWeb {
     
     
-    public partial class ProductDetailsPage {
+    public partial class ViewProduct {
         
         /// <summary>
         /// Image control.

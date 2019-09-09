@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="ProductDetailsPage.aspx.cs" Inherits="TechWeb.ProductDetailsPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="ViewProduct.aspx.cs" Inherits="TechWeb.ViewProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         #Image {
@@ -12,9 +12,7 @@
         
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="product">
         <section id="Image" runat="server">
           
@@ -45,7 +43,6 @@
             </div>
         </section>
     </div>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="BodyContent" runat="server">
+
 
 </asp:Content>
