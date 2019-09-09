@@ -37,8 +37,6 @@ namespace TechWeb
                     type = "user",
                     active = 'T'
 
-
-
                 };
 
                 if (client.UserRegister(user))

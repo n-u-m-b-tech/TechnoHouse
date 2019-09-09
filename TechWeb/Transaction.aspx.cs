@@ -8,18 +8,18 @@ using TechWeb.TechService;
 
 namespace TechWeb
 {
-    public partial class TransactionPage : System.Web.UI.Page
+    public partial class Transaction : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-         
+
 
             if (Session["userID"] != null)
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
                 dynamic cart = client.getUser_Cart(id);
-                
+
                 if (cart != null)
                 {
                     foreach (CartClass c in cart)
@@ -38,7 +38,7 @@ namespace TechWeb
                         row.Cells.Add(Unit_Price);
                         row.Cells.Add(Quantity);
                         row.Cells.Add(Total);
-                       confirmTable.Rows.Add(row);
+                        confirmTable.Rows.Add(row);
                     }
                 }
             }
@@ -56,7 +56,7 @@ namespace TechWeb
 
             if (Session["userID"] != null)
             {
-               
+
             }
         }
     }

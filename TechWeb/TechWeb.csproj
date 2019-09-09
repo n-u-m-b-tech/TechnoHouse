@@ -216,6 +216,26 @@
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
     <Content Include="Invoice.aspx" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\google-map.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\main.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\scripts.min.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\circle-progress.min.js" />
+    <Content Include="js\vendor\html5shiv.min.js" />
+    <Content Include="js\vendor\jquery.appear.js" />
+    <Content Include="js\vendor\jquery.appear.min.js" />
+    <Content Include="js\vendor\jquery.countTo.js" />
+    <Content Include="js\vendor\jquery.easing.1.3.js" />
+    <Content Include="js\vendor\jquery.flexslider-min.js" />
+    <Content Include="js\vendor\jquery.magnific-popup.min.js" />
+    <Content Include="js\vendor\jquery.min.js" />
+    <Content Include="js\vendor\jquery.stellar.min.js" />
+    <Content Include="js\vendor\jquery.waypoints.min.js" />
+    <Content Include="js\vendor\owl.carousel.min.js" />
+    <Content Include="js\vendor\respond.min.js" />
     <Content Include="LandingPage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="logoutPage.aspx" />
@@ -243,7 +263,7 @@
     <Content Include="RegisterProduct.aspx" />
     <Content Include="SearchProductPage.aspx" />
     <Content Include="SearchUserPage.aspx" />
-    <Content Include="TransactionPage.aspx" />
+    <Content Include="Transaction.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
     <Content Include="Global.asax" />
@@ -369,12 +389,12 @@
     <Compile Include="TECHNO.Master.designer.cs">
       <DependentUpon>TECHNO.Master</DependentUpon>
     </Compile>
-    <Compile Include="TransactionPage.aspx.cs">
-      <DependentUpon>TransactionPage.aspx</DependentUpon>
+    <Compile Include="Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TransactionPage.aspx.designer.cs">
-      <DependentUpon>TransactionPage.aspx</DependentUpon>
+    <Compile Include="Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserRegistrationPage.aspx.cs">
       <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
@@ -425,6 +445,8 @@
     <Content Include="fonts\icomoon\icomoon.woff" />
     <Content Include="Models\.DS_Store" />
     <Content Include="Models\vendor\.DS_Store" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="js\vendor\.DS_Store" />
     <None Include="packages.config" />
     <Content Include="TECHNO.Master" />
     <Content Include="scss\.DS_Store" />
@@ -440,7 +462,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="js\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

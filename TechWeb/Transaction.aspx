@@ -1,9 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite.Master" AutoEventWireup="true" CodeBehind="TransactionPage.aspx.cs" Inherits="TechWeb.TransactionPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TECHNO.Master" AutoEventWireup="true" CodeBehind="Transaction.aspx.cs" Inherits="TechWeb.Transaction" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="navigation" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="contents" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container-left">
             <h2>Process payment</h2>
                                 
@@ -100,4 +98,5 @@
             <asp:Button ID="BtnOrder" runat="server" type="register" Text="Order" class="primary" OnClick="BtnRegister_Click" />
         </li>
     </ul>
+
 </asp:Content>
