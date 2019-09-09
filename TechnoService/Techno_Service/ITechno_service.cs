@@ -47,7 +47,7 @@ namespace Techno_Service
         //transaction
         [OperationContract]
         Boolean Add_to_Cart(ProductD product,int userID,int Qty);
-        Boolean payment(String type, DateTime date, Decimal Amount);
+        Boolean payment(String type, DateTime date, Decimal Amount, int userID);
 
 
 

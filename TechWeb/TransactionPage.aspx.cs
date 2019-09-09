@@ -56,7 +56,10 @@ namespace TechWeb
 
             if (Session["userID"] != null)
             {
-                Res
+                if (!cardnum.Value.Equals(""))
+                {
+                    //client.payment();
+                }
             }
         }
     }

@@ -629,9 +629,30 @@ namespace Techno_Service
             }
         }
 
-        public bool payment(string type, DateTime date, decimal Amount)
+        public bool payment(string type, DateTime date, decimal amount,int userID)
         {
-            throw new NotImplementedException();
+            Payment pay = new Payment
+            {
+                User_Id = userID,
+                Payment_Type = type,
+                Payment_Date = date,
+                Amount = amount
+            };
+
+            db.Payments.InsertOnSubmit(pay);
+
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }
+            catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+
+
         }
     }
 }
