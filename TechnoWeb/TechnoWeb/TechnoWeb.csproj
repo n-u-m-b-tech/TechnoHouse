@@ -118,6 +118,7 @@
     <Content Include="css\vendor\owl.carousel.min.css" />
     <Content Include="css\vendor\owl.theme.default.min.css" />
     <Content Include="css\vendor\photoswipe.css" />
+    <Content Include="EditUser.aspx" />
     <Content Include="fonts\icomoon demo\demo-files\demo.css" />
     <Content Include="fonts\icomoon demo\demo-files\demo.js" />
     <Content Include="fonts\icomoon demo\demo.html" />
@@ -229,6 +230,7 @@
     <Content Include="js\vendor\respond.min.js" />
     <Content Include="LandingPage.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="SearchUser.aspx" />
     <Content Include="single-page.html" />
     <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config">
@@ -258,6 +260,13 @@
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,6 +285,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchUser.aspx.cs">
+      <DependentUpon>SearchUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchUser.aspx.designer.cs">
+      <DependentUpon>SearchUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TechMaster.Master.cs">
       <DependentUpon>TechMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

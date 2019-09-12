@@ -45,74 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Protobuf, Version=3.9.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.9.1\lib\net45\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Build.Framework.16.0.461\lib\netstandard2.0\Microsoft.Build.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Data.Tools.Components, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Components.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Tools.Contracts, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Tools.Schema.Tasks.Sql, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Schema.Tasks.Sql.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Tools.Schema.Utilities.Sql, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Schema.Utilities.Sql.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Data.Tools.Utilities, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.Data.Tools.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Dac, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.SqlServer.Dac.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Dac.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.SqlServer.Dac.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.TransactSql.ScriptDom, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\Microsoft.SqlServer.TransactSql.ScriptDom.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.17\lib\net452\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
-      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
-    </Reference>
-    <Reference Include="sqlpackage, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46\sqlpackage.exe</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel" />
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.1.1\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
-    </Reference>
     <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Threading.Thread, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Thread.4.0.0\lib\net46\System.Threading.Thread.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -149,8 +87,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CartPage.aspx" />
-    <Content Include="Catalogue.aspx" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -158,17 +94,46 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="ContactPage.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="CataloguePage.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="css\Catalogue.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\default-skin\default-skin.css" />
+    <Content Include="css\default-skin\default-skin.png" />
+    <Content Include="css\default-skin\default-skin.svg" />
+    <Content Include="css\default-skin\preloader.gif" />
     <Content Include="css\Default.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\landing.css" />
     <Content Include="css\Login.css" />
     <Content Include="css\Master.css" />
+    <Content Include="css\MyCss.css" />
+    <Content Include="css\popuo-box.css" />
     <Content Include="css\Register.css" />
     <Content Include="css\SearchBar.css" />
-    <Content Include="EditProductPage.aspx" />
-    <Content Include="EditUser.aspx" />
-    <Content Include="HomePage.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style.min.css" />
+    <Content Include="css\styles-merged.css" />
+    <Content Include="css\vendor\animate.css" />
+    <Content Include="css\vendor\bootstrap.min.css" />
+    <Content Include="css\vendor\default-skin.css" />
+    <Content Include="css\vendor\flexslider.css" />
+    <Content Include="css\vendor\icomoon.css" />
+    <Content Include="css\vendor\magnific-popup.css" />
+    <Content Include="css\vendor\owl.carousel.min.css" />
+    <Content Include="css\vendor\owl.theme.default.min.css" />
+    <Content Include="css\vendor\photoswipe.css" />
+    <Content Include="EditProduct.aspx" />
+    <Content Include="EditUserPage.aspx" />
+    <Content Include="fonts\icomoon demo\demo-files\demo.css" />
+    <Content Include="fonts\icomoon demo\demo-files\demo.js" />
+    <Content Include="fonts\icomoon demo\demo.html" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.svg" />
+    <Content Include="fonts\icomoon demo\Read Me.txt" />
+    <Content Include="fonts\icomoon demo\style.css" />
+    <Content Include="fonts\icomoon\icomoon.svg" />
+    <Content Include="Home.aspx" />
     <Content Include="images\facebook.svg" />
     <Content Include="images\icons\badoo.png" />
     <Content Include="images\icons\behance.png" />
@@ -250,80 +215,119 @@
     <Content Include="images\products\Wilson-Ottoman-1.jpg" />
     <Content Include="images\twitter.svg" />
     <Content Include="images\youtube.svg" />
-    <Content Include="InvoicePage.aspx" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\google-map.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\main.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\scripts.min.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\circle-progress.min.js" />
+    <Content Include="js\vendor\html5shiv.min.js" />
+    <Content Include="js\vendor\jquery.appear.js" />
+    <Content Include="js\vendor\jquery.appear.min.js" />
+    <Content Include="js\vendor\jquery.countTo.js" />
+    <Content Include="js\vendor\jquery.easing.1.3.js" />
+    <Content Include="js\vendor\jquery.flexslider-min.js" />
+    <Content Include="js\vendor\jquery.magnific-popup.min.js" />
+    <Content Include="js\vendor\jquery.min.js" />
+    <Content Include="js\vendor\jquery.stellar.min.js" />
+    <Content Include="js\vendor\jquery.waypoints.min.js" />
+    <Content Include="js\vendor\owl.carousel.min.js" />
+    <Content Include="js\vendor\respond.min.js" />
     <Content Include="LandingPage.aspx" />
-    <Content Include="LoginPage.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="logoutPage.aspx" />
-    <Content Include="ProductDetailsPage.aspx" />
-    <Content Include="ProductRegistration.aspx" />
-    <Content Include="SearchProduct.aspx" />
-    <Content Include="SearchUser.aspx" />
-    <Content Include="TransactionPage.aspx" />
-    <Content Include="UserRegistration.aspx" />
+    <Content Include="Models\custom.js" />
+    <Content Include="Models\google-map.js" />
+    <Content Include="Models\main.js" />
+    <Content Include="Models\main.min.js" />
+    <Content Include="Models\scripts.js" />
+    <Content Include="Models\scripts.min.js" />
+    <Content Include="Models\vendor\bootstrap.min.js" />
+    <Content Include="Models\vendor\circle-progress.min.js" />
+    <Content Include="Models\vendor\html5shiv.min.js" />
+    <Content Include="Models\vendor\jquery.appear.js" />
+    <Content Include="Models\vendor\jquery.appear.min.js" />
+    <Content Include="Models\vendor\jquery.countTo.js" />
+    <Content Include="Models\vendor\jquery.easing.1.3.js" />
+    <Content Include="Models\vendor\jquery.flexslider-min.js" />
+    <Content Include="Models\vendor\jquery.magnific-popup.min.js" />
+    <Content Include="Models\vendor\jquery.min.js" />
+    <Content Include="Models\vendor\jquery.stellar.min.js" />
+    <Content Include="Models\vendor\jquery.waypoints.min.js" />
+    <Content Include="Models\vendor\owl.carousel.min.js" />
+    <Content Include="Models\vendor\respond.min.js" />
+    <Content Include="NewCartPage.aspx" />
+    <Content Include="RegisterProduct.aspx" />
+    <Content Include="SearchProductPage.aspx" />
+    <Content Include="SearchUserPage.aspx" />
+    <Content Include="Transaction.aspx" />
     <Content Include="css\form.css" />
     <Content Include="css\Techno.css" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
     <Content Include="images\smart-home-automation-2.jpg" />
-    <Content Include="UserAccount.aspx" />
+    <Content Include="UserRegistrationPage.aspx" />
+    <Content Include="ViewProduct.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebSite.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CartPage.aspx.cs">
-      <DependentUpon>CartPage.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CartPage.aspx.designer.cs">
-      <DependentUpon>CartPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogue.aspx.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catalogue.aspx.designer.cs">
-      <DependentUpon>Catalogue.aspx</DependentUpon>
+    <Compile Include="CataloguePage.aspx.designer.cs">
+      <DependentUpon>CataloguePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ContactPage.aspx.cs">
-      <DependentUpon>ContactPage.aspx</DependentUpon>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContactPage.aspx.designer.cs">
-      <DependentUpon>ContactPage.aspx</DependentUpon>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditProductPage.aspx.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditProductPage.aspx.designer.cs">
-      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditUser.aspx.cs">
-      <DependentUpon>EditUser.aspx</DependentUpon>
+    <Compile Include="EditUserPage.aspx.cs">
+      <DependentUpon>EditUserPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditUser.aspx.designer.cs">
-      <DependentUpon>EditUser.aspx</DependentUpon>
+    <Compile Include="EditUserPage.aspx.designer.cs">
+      <DependentUpon>EditUserPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InvoicePage.aspx.cs">
-      <DependentUpon>InvoicePage.aspx</DependentUpon>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InvoicePage.aspx.designer.cs">
-      <DependentUpon>InvoicePage.aspx</DependentUpon>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="LandingPage.aspx.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
@@ -332,12 +336,12 @@
     <Compile Include="LandingPage.aspx.designer.cs">
       <DependentUpon>LandingPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.aspx.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginPage.aspx.designer.cs">
-      <DependentUpon>LoginPage.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="logoutPage.aspx.cs">
       <DependentUpon>logoutPage.aspx</DependentUpon>
@@ -346,37 +350,37 @@
     <Compile Include="logoutPage.aspx.designer.cs">
       <DependentUpon>logoutPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductDetailsPage.aspx.cs">
-      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
+    <Compile Include="NewCartPage.aspx.cs">
+      <DependentUpon>NewCartPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductDetailsPage.aspx.designer.cs">
-      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ProductRegistration.aspx.cs">
-      <DependentUpon>ProductRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductRegistration.aspx.designer.cs">
-      <DependentUpon>ProductRegistration.aspx</DependentUpon>
+    <Compile Include="NewCartPage.aspx.designer.cs">
+      <DependentUpon>NewCartPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchProduct.aspx.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
+    <Compile Include="RegisterProduct.aspx.cs">
+      <DependentUpon>RegisterProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchProduct.aspx.designer.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
+    <Compile Include="RegisterProduct.aspx.designer.cs">
+      <DependentUpon>RegisterProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SearchUser.aspx.cs">
-      <DependentUpon>SearchUser.aspx</DependentUpon>
+    <Compile Include="SearchProductPage.aspx.cs">
+      <DependentUpon>SearchProductPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchUser.aspx.designer.cs">
-      <DependentUpon>SearchUser.aspx</DependentUpon>
+    <Compile Include="SearchProductPage.aspx.designer.cs">
+      <DependentUpon>SearchProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchUserPage.aspx.cs">
+      <DependentUpon>SearchUserPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchUserPage.aspx.designer.cs">
+      <DependentUpon>SearchUserPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="TECHNO.Master.cs">
       <DependentUpon>TECHNO.Master</DependentUpon>
@@ -385,38 +389,30 @@
     <Compile Include="TECHNO.Master.designer.cs">
       <DependentUpon>TECHNO.Master</DependentUpon>
     </Compile>
-    <Compile Include="TransactionPage.aspx.cs">
-      <DependentUpon>TransactionPage.aspx</DependentUpon>
+    <Compile Include="Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TransactionPage.aspx.designer.cs">
-      <DependentUpon>TransactionPage.aspx</DependentUpon>
+    <Compile Include="Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount.aspx.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
+    <Compile Include="UserRegistrationPage.aspx.cs">
+      <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserAccount.aspx.designer.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
+    <Compile Include="UserRegistrationPage.aspx.designer.cs">
+      <DependentUpon>UserRegistrationPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserRegistration.aspx.cs">
-      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    <Compile Include="ViewProduct.aspx.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserRegistration.aspx.designer.cs">
-      <DependentUpon>UserRegistration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebSite.Master.cs">
-      <DependentUpon>WebSite.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebSite.Master.designer.cs">
-      <DependentUpon>WebSite.Master</DependentUpon>
+    <Compile Include="ViewProduct.aspx.designer.cs">
+      <DependentUpon>ViewProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="TECHNO.Master" />
     <None Include="Connected Services\TechService\Techno_service.wsdl" />
     <None Include="Connected Services\TechService\Techno_service.xsd">
       <SubType>Designer</SubType>
@@ -436,7 +432,26 @@
     <Content Include="Connected Services\TechService\TechWeb.TechService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="css\.DS_Store" />
+    <Content Include="css\styles-merged.css.map" />
+    <Content Include="fonts\.DS_Store" />
+    <Content Include="fonts\icomoon demo\.DS_Store" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon demo\fonts\icomoon.woff" />
+    <Content Include="fonts\icomoon demo\selection.json" />
+    <Content Include="fonts\icomoon\icomoon.eot" />
+    <Content Include="fonts\icomoon\icomoon.ttf" />
+    <Content Include="fonts\icomoon\icomoon.woff" />
+    <Content Include="Models\.DS_Store" />
+    <Content Include="Models\vendor\.DS_Store" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="js\vendor\.DS_Store" />
     <None Include="packages.config" />
+    <Content Include="TECHNO.Master" />
+    <Content Include="scss\.DS_Store" />
+    <Content Include="scss\style.scss" />
+    <Content Include="scss\_custom-settings.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -447,7 +462,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
