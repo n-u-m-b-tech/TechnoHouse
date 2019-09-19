@@ -55,7 +55,7 @@
 					<nav class="menu">
 						<ul class="main_menu">
                             <li><a href="Home.aspx">Home</a></li>
-							<li>
+							<li id="hmanage" runat="server">
 								<a href="Catalog.aspx">Products</a>
 								<ul class="sub_menu">
 									<li><a href="Catalog.aspx"?ID="KitchenRoom">Kitchen</a>
@@ -71,18 +71,18 @@
 							</li>
                             
 
-                           	<li>
+                           	<li id="manage" runat="server">
 								<a href="#">User Management</a>
 								<ul class="sub_menu">
-									<li><a href="SearchUser.aspx">Edit User</a></li>
+									<li id="smanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
 								</ul>
 							</li>
 
-							<li>
+							<li id="pmanage" runat="server">
 								<a href="#">Product Management</a>
 								<ul class="sub_menu">
-									<li><a href="AddProduct.aspx">Add Product</a></li>
-									<li><a href="SearchProduct.aspx">Edit Product</a></li>
+									<li id="amanage" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
+									<li id="emanage" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
 								</ul>
 							</li>
 

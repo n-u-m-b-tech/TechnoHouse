@@ -35,7 +35,7 @@
 					<div class="slick3">
 						<div class="item-slick3" data-thumb="images/thumb-item-01.jpg">
 							<div class="wrap-pic-w">
-								<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+								<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT" />
 							</div>
 						</div>
 

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 namespace FinalWeb
 {
     public partial class UserRegistration : System.Web.UI.Page
     {
-       // Techno_serviceClient client = new Techno_serviceClient();
+        Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,7 +20,7 @@ namespace FinalWeb
         {
             if (pass.Value.Equals(confirm.Value))
             {
-               /* User user = new User
+                User user = new User
                 {
                     Title = title.Value,
                     name = name.Value,
@@ -46,7 +46,7 @@ namespace FinalWeb
                 else
                 {
                     Response.Redirect("UserRegistrationPage.aspx");
-                }*/
+                }
 
             }
         }

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 namespace FinalWeb
 {
     public partial class EditUser : System.Web.UI.Page
     {
-  //      Techno_serviceClient client = new Techno_serviceClient();
+        Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-           /* if (!IsPostBack)
+            if (!IsPostBack)
             {
 
                 String proId = Request.QueryString["ID"];
@@ -32,13 +32,13 @@ namespace FinalWeb
                 city.Value = user.city;
                 prov.Value = user.province;
                 zip.Value = user.ZipCode;
-                user_type.Value = user.type;
-                active.Value = Convert.ToString(user.active);*/
+                type.Value = user.type;
+                active.Value = Convert.ToString(user.active);
             }
-
+        }
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
-           /* String proId = Request.QueryString["ID"];
+              String proId = Request.QueryString["ID"];
               int ID = Convert.ToInt32(proId);
 
               var user = client.userinfor_Retrieval(ID);
@@ -54,7 +54,7 @@ namespace FinalWeb
               user.city = city.Value;
               user.province = prov.Value;
               user.ZipCode = zip.Value;
-              user.type = user_type.Value;
+              user.type = type.Value;
               user.active = Convert.ToChar(active.Value);
 
               if (client.updateuser(user, ID))
@@ -64,7 +64,7 @@ namespace FinalWeb
               else
               {
                   Response.Redirect("EditUserPage.aspx?ID=" + ID);
-              }*/
+              }
         }
     }
 }

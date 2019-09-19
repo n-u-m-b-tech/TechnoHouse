@@ -14,6 +14,10 @@
                     <input type="text" name="txttitle" id="title" placeholder="Title" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="idrequire" runat="server" ErrorMessage="*" ControlToValidate="title"></asp:RequiredFieldValidator><br />
                     <input type="text" name="txtname" id="name" placeholder="Full Name" runat="server" /><asp:RequiredFieldValidator ID="namerequire" runat="server" ErrorMessage="*" ControlToValidate="name"></asp:RequiredFieldValidator>
                     <input type="text" name="txtsurname" id="surname" placeholder="Last Name" runat="server" /><asp:RequiredFieldValidator ID="surnamerequire" runat="server" ErrorMessage="*" ControlToValidate="surname"></asp:RequiredFieldValidator>
+                    <input type="text" name="txtsurname" id="contact" placeholder="Contact" runat="server" /><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="contact"></asp:RequiredFieldValidator>                 
+                    <input type="text" name="txttitle" id="active" placeholder="Active" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="Active"></asp:RequiredFieldValidator><br />
+                    <input type="text" name="txtname" id="type" placeholder="User Type" runat="server" /><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="type"></asp:RequiredFieldValidator>
+                                        
                     <br />
                     <br />
                 </div>

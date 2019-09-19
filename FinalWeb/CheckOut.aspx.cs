@@ -4,17 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 
 namespace FinalWeb
 {
     public partial class CheckOut : System.Web.UI.Page
     {
-       // Techno_serviceClient client = new Techno_serviceClient();
+        Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
                 dynamic cart = client.getUser_Cart(id);
@@ -40,7 +40,7 @@ namespace FinalWeb
                         confirmTable.Rows.Add(row);
                     }
                 }
-            }*/
+            }
         }
 
         protected void BtnOrder_Click(object sender, EventArgs e)

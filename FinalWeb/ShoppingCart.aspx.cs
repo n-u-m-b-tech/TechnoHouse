@@ -4,17 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 namespace FinalWeb
 {
     public partial class ShoppingCart : System.Web.UI.Page
     {
-        /*Techno_serviceClient client = new Techno_serviceClient();
-        int userId;*/
+        Techno_serviceClient client = new Techno_serviceClient();
+        int userId;
         protected void Page_Load(object sender, EventArgs e)
         {
-           /* if (Session["userID"] != null)
+            if (Session["userID"] != null)
             {
                 userId = Convert.ToInt32(Session["userID"]);
                 var cart = client.getUser_Cart(userId);
@@ -40,7 +40,7 @@ namespace FinalWeb
                         cartTable.Rows.Add(row);
                     }
                 }
-            }*/
+            }
         }
     }
 }

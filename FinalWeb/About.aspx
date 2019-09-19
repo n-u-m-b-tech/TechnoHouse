@@ -36,7 +36,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading mb0">Jeremy Slater</h2>
-              <p><small>Web Designer</small></p>
+              
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
               <ul class="probootstrap-social">
                 <li><a href="#"><i class="icon-facebook2"></i></a></li>
