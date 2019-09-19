@@ -14,7 +14,7 @@ namespace FinalWeb
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           String proId = Request.QueryString["ID"];
+            String proId = Request.QueryString["ID"];
 
 
             int ID = Convert.ToInt32(proId);
@@ -26,7 +26,6 @@ namespace FinalWeb
             display += "</span>";
             Image.InnerHtml = display;
 
-            url.Value = product.image_url;
             name.Value = product.name;
             description.Value = product.description;
             price.Value = Convert.ToString(product.price);
@@ -36,7 +35,7 @@ namespace FinalWeb
             brand.Value = product.brand;
             manufacturer.Value = product.manufacture;
             discount.Value = Convert.ToString(product.discount);
-            //Image_url.Value = product.image_url;
+           url.Value = product.image_url;
 
         }
 
@@ -44,7 +43,7 @@ namespace FinalWeb
         {
             ProductD product = new ProductD
             {
-                image_url = url.Value,
+                image_url =url.Value,
                 name = name.Value,
                 description = description.Value,
                 price = Convert.ToDouble(price.Value),
