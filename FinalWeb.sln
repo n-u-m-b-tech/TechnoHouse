@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalWeb", "FinalWeb\FinalWeb.csproj", "{2514E805-9C1D-4D5C-89C9-CE93146C09B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{786093D4-E896-4F8B-9470-DEC229F7AE2E} = {786093D4-E896-4F8B-9470-DEC229F7AE2E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techno_Service", "TechnoService\Techno_Service\Techno_Service.csproj", "{786093D4-E896-4F8B-9470-DEC229F7AE2E}"
 EndProject

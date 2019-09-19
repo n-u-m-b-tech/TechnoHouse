@@ -4,17 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 namespace FinalWeb
 {
     public partial class EditProduct : System.Web.UI.Page
     {
-       // Techno_serviceClient client = new Techno_serviceClient();
+        Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           /* String proId = Request.QueryString["ID"];
+            String proId = Request.QueryString["ID"];
 
 
             int ID = Convert.ToInt32(proId);
@@ -26,7 +26,6 @@ namespace FinalWeb
             display += "</span>";
             Image.InnerHtml = display;
 
-            Image_url.Value = product.image_url;
             name.Value = product.name;
             description.Value = product.description;
             price.Value = Convert.ToString(product.price);
@@ -36,15 +35,15 @@ namespace FinalWeb
             brand.Value = product.brand;
             manufacturer.Value = product.manufacture;
             discount.Value = Convert.ToString(product.discount);
-            Image_url.Value = product.image_url;*/
+           url.Value = product.image_url;
 
         }
 
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
-         /*   ProductD product = new ProductD
+            ProductD product = new ProductD
             {
-                image_url = Image_url.Value,
+                image_url =url.Value,
                 name = name.Value,
                 description = description.Value,
                 price = Convert.ToDouble(price.Value),
@@ -68,7 +67,7 @@ namespace FinalWeb
             else
             {
                 Response.Redirect("EditProduct.aspx?ID=" + ID);
-            };*/
+            };
 
         }
     }

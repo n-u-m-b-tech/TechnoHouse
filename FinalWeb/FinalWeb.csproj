@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -92,6 +94,22 @@
     <Content Include="AddProduct.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="CheckOut.aspx" />
+    <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TechService\FinalWeb.TechService.ProductD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TechService\FinalWeb.TechService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TechService\Techno_service.disco" />
+    <None Include="Connected Services\TechService\configuration91.svcinfo" />
+    <None Include="Connected Services\TechService\configuration.svcinfo" />
+    <None Include="Connected Services\TechService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="ContactUs.aspx" />
     <Content Include="css\CustomCss.css" />
     <Content Include="css\main.css" />
@@ -2834,6 +2852,11 @@
     <Compile Include="CheckOut.aspx.designer.cs">
       <DependentUpon>CheckOut.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\TechService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3029,6 +3052,16 @@
     <Content Include="fonts\themify\fonts\themify.ttf" />
     <Content Include="fonts\themify\fonts\themify.woff" />
     <Content Include="fonts\themify\Themify IconFonts 5-23-2014.json" />
+    <None Include="Connected Services\TechService\Techno_service.wsdl" />
+    <None Include="Connected Services\TechService\Techno_service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TechService\Techno_service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TechService\Techno_service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="TechnoMaster.Master" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
@@ -3058,6 +3091,12 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\TechService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

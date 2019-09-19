@@ -4,13 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using TechWeb.TechService;
+using FinalWeb.TechService;
 
 namespace FinalWeb
 {
     public partial class AddProduct : System.Web.UI.Page
     {
-        //Techno_serviceClient client = new Techno_serviceClient();
+        Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,7 +18,7 @@ namespace FinalWeb
 
         protected void BtnRegister_Click(object sender, EventArgs e)
         {
-           /* ProductD pro = new ProductD();
+            ProductD pro = new ProductD();
 
             pro.name = name.Value;
             pro.description = description.Value;
@@ -34,12 +34,12 @@ namespace FinalWeb
             if (client.AddProduct(pro) == 0)
             {
 
-                Response.Redirect("RegisterProduct.aspx");
+                Response.Redirect("EditProduct.aspx");
             }
             else
             {
-                Response.Redirect("EditProduct.aspx");
-            }*/
+                Response.Redirect("AddProduct.aspx");
+            }
         }
     }
 }
