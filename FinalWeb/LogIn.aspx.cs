@@ -26,7 +26,15 @@ namespace FinalWeb
                 {
                     Session["userID"] = user.Id;
                     Session["userType"] = user.type;
-                    Response.Redirect("Home.aspx");
+                    if(Session["userType"].Equals("admin"))
+                    {
+                        Response.Redirect("Management.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                    
                 }
                 //lblMsg.Visible = true;
             }

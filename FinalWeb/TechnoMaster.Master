@@ -100,14 +100,14 @@
 									<li id="smanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
 								</ul>
 							</li>
-
-							<li id="pmanage" runat="server">
+                            <li id="pmanage" runat="server"><a href="Management.aspx">Management</a></li>
+							<%--<li id="pmanage" runat="server">
 								<a href="#">Product Management</a>
 								<ul class="sub_menu">
 									<li id="amanage" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
 									<li id="emanage" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
 								</ul>
-							</li>
+							</li>--%>
 
 						  <li id="login" runat="server"><a href="LogIn.aspx">Login</a></li>
 

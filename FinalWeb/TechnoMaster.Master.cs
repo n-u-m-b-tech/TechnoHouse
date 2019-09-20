@@ -15,8 +15,8 @@ namespace FinalWeb
             pmanage.Visible = false;
             manage.Visible = false;
             smanage.Visible = false;
-            amanage.Visible = false;
-            emanage.Visible = false;
+            //amanage.Visible = false;
+            //emanage.Visible = false;
             login.Visible = true;
             uregister.Visible = true;
             logout.Visible = false;
@@ -30,8 +30,8 @@ namespace FinalWeb
                     pmanage.Visible = true;
                     manage.Visible = true;
                     smanage.Visible = true;
-                    amanage.Visible = true;
-                    emanage.Visible = true;
+                    //amanage.Visible = true;
+                    //emanage.Visible = true;
                 }
             }
         }

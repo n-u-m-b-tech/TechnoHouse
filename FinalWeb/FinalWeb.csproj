@@ -92,6 +92,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddProduct.aspx" />
+    <Content Include="AdminHome.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="CheckOut.aspx" />
     <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
@@ -111,7 +112,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="ContactUs.aspx" />
+    <Content Include="css\AdminHome.css" />
     <Content Include="css\CustomCss.css" />
+    <Content Include="css\datepicker3.css" />
     <Content Include="css\main.css" />
     <Content Include="css\main.min.css" />
     <Content Include="css\util.css" />
@@ -2745,6 +2748,7 @@
     <Content Include="js\slick-custom.min.js" />
     <Content Include="LogIn.aspx" />
     <Content Include="LogOut.aspx" />
+    <Content Include="Management.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUser.aspx" />
@@ -2837,6 +2841,13 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
@@ -2901,6 +2912,13 @@
     </Compile>
     <Compile Include="LogOut.aspx.designer.cs">
       <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProductDetails.aspx.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
