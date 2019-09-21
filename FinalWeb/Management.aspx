@@ -8,6 +8,10 @@
  <!--SideBar-->
     <br />
     <br />
+     <br />
+    <br />
+    <br />
+    <br />
 
     <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">

@@ -63,7 +63,7 @@ namespace FinalWeb
               }
               else
               {
-                  Response.Redirect("EditUserPage.aspx?ID=" + ID);
+                  Response.Redirect("EditUser.aspx?ID=" + ID);
               }
         }
     }

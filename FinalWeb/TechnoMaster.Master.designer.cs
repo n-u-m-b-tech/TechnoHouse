@@ -31,24 +31,6 @@ namespace FinalWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl hmanage;
         
         /// <summary>
-        /// manage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl manage;
-        
-        /// <summary>
-        /// smanage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl smanage;
-        
-        /// <summary>
         /// pmanage control.
         /// </summary>
         /// <remarks>

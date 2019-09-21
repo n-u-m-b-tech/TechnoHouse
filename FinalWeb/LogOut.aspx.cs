@@ -12,7 +12,8 @@ namespace FinalWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["userID"] = null;
-            Response.Redirect("HomePage.aspx");
+            Session["userType"] = null;
+            Response.Redirect("Home.aspx");
         }
     }
 }

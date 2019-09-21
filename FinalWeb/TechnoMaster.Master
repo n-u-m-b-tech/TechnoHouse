@@ -94,12 +94,12 @@
 							</li>
                             
 
-                           	<li id="manage" runat="server">
+                           	<%--<li id="manage" runat="server">
 								<a href="#">User Management</a>
 								<ul class="sub_menu">
 									<li id="smanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
 								</ul>
-							</li>
+							</li>--%>
                             <li id="pmanage" runat="server"><a href="Management.aspx">Management</a></li>
 							<%--<li id="pmanage" runat="server">
 								<a href="#">Product Management</a>

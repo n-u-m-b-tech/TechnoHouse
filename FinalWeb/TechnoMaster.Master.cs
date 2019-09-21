@@ -13,8 +13,8 @@ namespace FinalWeb
         {
             hmanage.Visible = true;
             pmanage.Visible = false;
-            manage.Visible = false;
-            smanage.Visible = false;
+            //manage.Visible = false;
+            //smanage.Visible = false;
             //amanage.Visible = false;
             //emanage.Visible = false;
             login.Visible = true;
@@ -27,9 +27,13 @@ namespace FinalWeb
                 logout.Visible = true;
                 if (Session["userType"] != null)
                 {
-                    pmanage.Visible = true;
-                    manage.Visible = true;
-                    smanage.Visible = true;
+                    if(Session["userType"].Equals("admin"))
+                    {
+                        pmanage.Visible = true;
+                    }
+                    
+                    //manage.Visible = true;
+                    //smanage.Visible = true;
                     //amanage.Visible = true;
                     //emanage.Visible = true;
                 }
