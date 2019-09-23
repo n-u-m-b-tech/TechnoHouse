@@ -42,7 +42,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Living Room" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -61,7 +61,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Kitchen" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -81,7 +81,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Bath Room" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -100,13 +100,12 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Bed Room" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
 					</div>
 				</div>
-
 			</div>
             </div>
 	</section>
@@ -122,8 +121,8 @@
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Bathroom
+							<a href="Catalog.aspx?ID=Living Room" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Living Room
 							</a>
 						</div>
 					</div>
@@ -137,7 +136,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Living Room
+								Kitchen
 							</a>
 						</div>
 					</div>
