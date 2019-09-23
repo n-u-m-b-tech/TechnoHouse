@@ -69,23 +69,7 @@
 
 				<!--  -->
 				<div class="p-t-33 p-b-60">
-					<div class="flex-m flex-w p-b-10">
-						<div class="s-text15 w-size15 t-center">
-							Size
-						</div>
-
-						<div class="rs2-select2 rs3-select2 bo4 of-hidden w-size16">
-							<select class="selection-2" name="size">
-								<option>Choose an option</option>
-								<option>Size S</option>
-								<option>Size M</option>
-								<option>Size L</option>
-								<option>Size XL</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="flex-m flex-w">
+					<!--<div class="flex-m flex-w">
 						<div class="s-text15 w-size15 t-center">
 							Color
 						</div>
@@ -99,8 +83,7 @@
 								<option>Blue</option>
 							</select>
 						</div>
-					</div>
-
+					</div> -->
 					<div class="flex-r-m flex-w p-t-10">
 						<div class="w-size16 flex-m flex-w">
 							<div class="flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10">
@@ -157,7 +140,7 @@
 					</div>
 				</div>
 
-				<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+				<!--<div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
 					<h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
 						Reviews (0)
 						<i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
@@ -169,7 +152,7 @@
 							Fusce ornare mi vel risus porttitor dignissim. Nunc eget risus at ipsum blandit ornare vel sed velit. Proin gravida arcu nisl, a dignissim mauris placerat
 						</p>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
