@@ -14,21 +14,21 @@ namespace FinalWeb
         String display = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            dynamic LivingRoom = client.search_by_cat("Living Room");
-            dynamic BathRoom = client.search_by_cat("Bath Room");
-            dynamic KitchenRoom = client.search_by_cat("Kitchen");
-            dynamic BedRoom = client.search_by_cat("Bed Room");
+            ProductD[] LivingRoom = client.search_by_cat("Living Room");
+            ProductD[] BathRoom = client.search_by_cat("BathRoom");
+            ProductD[] KitchenRoom = client.search_by_cat("Kitchen");
+            ProductD[] BedRoom = client.search_by_cat("BedRoom");
             if (LivingRoom != null)
             {
-                Display(LivingRoom);
+                Display(LivingRoom[0]);
             }
             if (BathRoom != null)
             {
-                Display(BathRoom);
+                Display(BathRoom[0]);
             }
             if (KitchenRoom != null)
             {
-                Display(KitchenRoom);
+                Display(KitchenRoom[0]);
             }
             if (BedRoom != null)
             {
@@ -38,12 +38,12 @@ namespace FinalWeb
             view.InnerHtml = display;
         }
 
-        public void Display(dynamic product) {
+        public void Display(ProductD product) {
             for (int i = 0; i < 2; i++) {
-                var newPrice = product.price + (product.price*product.discount);
+                var newPrice = product.price+ (product.price*Convert.ToDouble(product.discount));
                 display += "<div class='block2'>";
                 display += "<div class='block2-img wrap-pic-w of-hidden pos-relative block2-labelsale'>";
-                display += "<img src ="+ product.image_Url +" alt='IMG-PRODUCT'>";
+                display += "<img src ="+ product.image_url +" alt='IMG-PRODUCT'>";
                 display += "<div class='block2-overlay trans-0-4'>";
                 display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
 	  		    display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
