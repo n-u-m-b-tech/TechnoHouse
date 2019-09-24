@@ -38,12 +38,13 @@ namespace FinalWeb
             view.InnerHtml = display;
         }
 
-        public void Display(dynamic product) {
+        public void Display(dynamic product)
+        {
             for (int i = 0; i < 2; i++) {
-               // var newPrice = product.price + (product.price*product.discount);
+                var newPrice = product[i].price + (product.price[i]*product[i].discount);
                 display += "<div class='block2'>";
                 display += "<div class='block2-img wrap-pic-w of-hidden pos-relative block2-labelsale'>";
-                display += "<img src ='"+ product.image_url +"' alt='IMG-PRODUCT'>";
+                display += "<img src ='"+ product[i].image_url +"' alt='IMG-PRODUCT'>";
                 display += "<div class='block2-overlay trans-0-4'>";
                 display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
 	  		    display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
@@ -55,9 +56,9 @@ namespace FinalWeb
                 display += "</div>";
                 display += "</div>";
                 display += "<div class='block2-txt p-t-20'>";
-				display += "<a href= 'ProductDetails.aspx?ID="+ product.ID+"' class='block2-name dis-block s-text3 p-b-5'>"+product.name+"</a>";
-				display += "<span class='block2-oldprice m-text7 p-r-5'>"+product.price+"</span>";
-				//display += "<span class='block2-newprice m-text8 p-r-5'>"+newPrice+"</span>";
+				display += "<a href= 'ProductDetails.aspx?ID="+ product[i].ID+"' class='block2-name dis-block s-text3 p-b-5'>"+product[i].name+"</a>";
+				display += "<span class='block2-oldprice m-text7 p-r-5'>"+product[i].price+"</span>";
+				display += "<span class='block2-newprice m-text8 p-r-5'>"+newPrice+"</span>";
 				display += "</div>";
 				display += "</div>";
             }         
