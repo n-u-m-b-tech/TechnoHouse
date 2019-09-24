@@ -24,7 +24,7 @@ namespace FinalWeb
                     display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
                     display += "<div class='block2'>";
                     display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
-                    display += "<img src ="+pro.image_url+" alt='IMG-PRODUCT'>";
+                    display += "<img src ='"+pro.image_url+"' alt='IMG-PRODUCT'>";
                     display += "<div class='block2 -overlay trans-0-4'>";
                     display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
                     display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";

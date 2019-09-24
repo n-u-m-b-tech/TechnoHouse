@@ -16,7 +16,7 @@ namespace FinalWeb
 
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
+        protected void BtnSearch_Click(object sender, EventArgs e)
         {
             var user = client.userinfor_Retrieval_Email(email.Value);
             if (user != null)
