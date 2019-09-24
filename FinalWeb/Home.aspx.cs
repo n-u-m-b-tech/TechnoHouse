@@ -42,6 +42,7 @@ namespace FinalWeb
            
             for (int i = 0; i < 2; i++) {
                 var newPrice = product[i].price + (product[i].price*Convert.ToDouble(product[i].discount));
+                display += "<div class='item-slick2 p-l-15 p-r-15'>";
                 display += "<div class='block2'>";
                 display += "<div class='block2-img wrap-pic-w of-hidden pos-relative block2-labelsale'>";
                 display += "<img src ='"+ product[i].image_url +"' alt='IMG-PRODUCT'>";
@@ -61,6 +62,7 @@ namespace FinalWeb
 				display += "<span class='block2-newprice m-text8 p-r-5'>"+newPrice+"</span>";
 				display += "</div>";
 				display += "</div>";
+                display += "</div>";
             }
             
         }

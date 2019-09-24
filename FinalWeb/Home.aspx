@@ -205,10 +205,8 @@
 			</div>
 
 			<div class="wrap-slick2">
-				<div class="slick2">
-					<div class="item-slick2 p-l-15 p-r-15" id="view" runat="server">
-
-					</div>
+				<div class="slick2" id="view" runat="server">
+					
 				</div>
 			</div>
 		</div>
