@@ -6,6 +6,6 @@
 <div class="container bgwhite p-t-35 p-b-80">
     <h2><em>Search User</em></h2><br />
     <input type="text" name="email" id="email" placeholder="User E-mail" runat="server" class="auto-style1" /><br /> <br />                 
-    <asp:Button ID="btnSearch" runat="server" Width="200" Height="30" OnClick="btnSearch_Click" Text="Search" />
+    <asp:Button ID="btnSearch" runat="server" Width="200" Height="30" OnClick="BtnSearch_Click" Text="Search" />
  </div>    
 </asp:Content>
