@@ -92,7 +92,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddProduct.aspx" />
-    <Content Include="AdminHome.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="CheckOut.aspx" />
     <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
@@ -2840,13 +2839,6 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminHome.aspx.cs">
-      <DependentUpon>AdminHome.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminHome.aspx.designer.cs">
-      <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Catalog.aspx.cs">

@@ -174,6 +174,7 @@
 					<div class="row" id="view" runat="server">
 
 					</div>
+
 					<!-- Pagination -->
 					<div class="pagination flex-m flex-w p-t-26">
 						<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>

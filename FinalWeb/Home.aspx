@@ -81,7 +81,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="Catalog.aspx?ID=Bath Room" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=BathRoom" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -135,7 +135,7 @@
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Kitchen" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Kitchen
 							</a>
 						</div>
@@ -149,13 +149,12 @@
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=Bath Room" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
 								Bath Room
 							</a>
 						</div>
 					</div>
                     </div>
-
 
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
@@ -164,8 +163,8 @@
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
-							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Living Room
+							<a href="Catalog.aspx?ID=Bed Room" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Bed Room
 							</a>
 						</div>
 					</div>
@@ -206,10 +205,8 @@
 			</div>
 
 			<div class="wrap-slick2">
-				<div class="slick2">
-					<div class="item-slick2 p-l-15 p-r-15" id="view" runat="server">
-
-					</div>
+				<div class="slick2" id="view" runat="server">
+					
 				</div>
 			</div>
 		</div>
