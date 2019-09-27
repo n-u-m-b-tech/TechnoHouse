@@ -103,6 +103,7 @@
     <Content Include="Connected Services\TechService\FinalWeb.TechService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="AdminMaster.Master" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -114,12 +115,15 @@
     <Content Include="css\AdminHome.css" />
     <Content Include="css\CustomCss.css" />
     <Content Include="css\datepicker3.css" />
+    <Content Include="css\font-face.css" />
     <Content Include="css\main.css" />
     <Content Include="css\main.min.css" />
+    <Content Include="css\theme.css" />
     <Content Include="css\util.css" />
     <Content Include="css\util.min.css" />
     <Content Include="EditProduct.aspx" />
     <Content Include="EditUser.aspx" />
+    <Content Include="Error404.aspx" />
     <Content Include="fonts\elegant-font\html-css\fonts\ElegantIcons.svg" />
     <Content Include="fonts\elegant-font\html-css\index.html" />
     <Content Include="fonts\elegant-font\html-css\lte-ie7.js" />
@@ -2618,9 +2622,11 @@
     <Content Include="images\icons\icon-header-01.png" />
     <Content Include="images\icons\icon-header-02.png" />
     <Content Include="images\icons\icon-position-map.png" />
+    <Content Include="images\icons\logo-mini.png" />
     <Content Include="images\icons\logo.png" />
     <Content Include="images\icons\mastercard.png" />
     <Content Include="images\icons\paypal.png" />
+    <Content Include="images\icons\usericon.jpg" />
     <Content Include="images\icons\video-16-9.jpg" />
     <Content Include="images\icons\visa.png" />
     <Content Include="images\instagram.svg" />
@@ -2840,6 +2846,13 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Catalog.aspx.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
@@ -2880,6 +2893,13 @@
     </Compile>
     <Compile Include="EditUser.aspx.designer.cs">
       <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

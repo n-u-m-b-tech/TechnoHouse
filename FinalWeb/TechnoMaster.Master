@@ -7,35 +7,23 @@
 <title>Welcome To Techno House</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
+
 	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 <!--===============================================================================================-->
     <asp:ContentPlaceHolder ID="head" runat="server">
         <!--Custom style sheets-->
@@ -47,8 +35,8 @@
 	<header class="header1">
 		<!-- Header desktop -->
 		<div class="container-menu-header">
-			<div class="topbar">
-				<div class="topbar-social">
+			<div class="topbar" style="background-color:#808080">
+				<div class="topbar-social" style="color:#ffffff">
 					<a href="#" class="topbar-social-item fa fa-facebook"></a>
 					<a href="#" class="topbar-social-item fa fa-instagram"></a>
 					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
@@ -56,12 +44,12 @@
 					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
 				</div>
 
-				<span class="topbar-child1">
-					Free shipping for standard order over R1500
+				<span class="topbar-child1" style="color:#ffffff">
+					<b>Free shipping for standard order over R1500</b>
 				</span>
 
 				<div class="topbar-child2">
-					<span class="topbar-email">
+					<span class="topbar-email"  style="color:#ffffff">
 						technohouse@example.com
 					</span>
 				</div>
@@ -70,7 +58,7 @@
 				<!-- Logo -->
 				<a href="Home.aspx" class="logo">
 					<!--<img src="images/icons/logo.png" alt="IMG-LOGO">-->
-                    <h3 style="color:#0094ff"><b>T</b>echno <b>H</b>ouse</h3>
+                    <h3><b>TECHNO HOUSE</b></h3>
 				</a>
 
 				<!-- Menu -->
@@ -81,39 +69,27 @@
 							<li id="hmanage" runat="server">
 								<a href="Catalog.aspx">Products</a>
 								<ul class="sub_menu">
-									<li><a href="Catalog.aspx"?ID="KitchenRoom">Kitchen</a>
-                                        <ul class="sub_menu">
-                                            <li><a href="#">Fridge</a></li>
-                                            <li><a href="#">Stove</a></li>
-                                        </ul>
-									</li>
-									<li><a href="Catalog.aspx"?ID="LivingRoom">Living Room </a></li>
-									<li><a href="Catalog.aspx"?ID="BedRoom">Bed Room</a></li>
-                                    <li><a href="Catalog.aspx"?ID="BathRoom">Bath Room</a></li>
+									<li><a href="Catalog.aspx"?ID="Kitchen">Kitchen</a></li>
+									<li><a href="Catalog.aspx"?ID="Living Room">Living Room </a></li>
+									<li><a href="Catalog.aspx"?ID="Bed Room">Bed Room</a></li>
+                                    <li><a href="Catalog.aspx"?ID="Bath Room">Bath Room</a></li>
 								</ul>
 							</li>
                             
-
-                           	<%--<li id="manage" runat="server">
-								<a href="#">User Management</a>
-								<ul class="sub_menu">
-									<li id="smanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
-								</ul>
-							</li>--%>
-                            <li id="pmanage" runat="server"><a href="Management.aspx">Management</a></li>
-							<%--<li id="pmanage" runat="server">
-								<a href="#">Product Management</a>
-								<ul class="sub_menu">
-									<li id="amanage" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
-									<li id="emanage" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
-								</ul>
-							</li>--%>
-
+                            <li id="pmanage" runat="server"><a href="Management.aspx">Management</a>
+                               <ul>
+								  <li id="amanage" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
+								  <li id="emanage" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
+							      <li id="usermanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
+                               </ul>
+								
+                            </li>
+							
 						  <li id="login" runat="server"><a href="LogIn.aspx">Login</a></li>
 
                           <li id="uregister" runat="server"><a href="UserRegistration.aspx">Register</a></li>
                           
-                          <li><a href="ContactPage.aspx">Contact</a></li>
+                          <li><a href="#footer">Contact</a></li>
                         
                           <li><a href="#">About Us</a></li>      
                         
@@ -183,7 +159,8 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="Home.aspx" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
+				<!--<img src="images/icons/logo.png" alt="IMG-LOGO">-->
+                 <h3 style="color:#dd0964"><b>T</b>echno <b>H</b>ouse</h3>
 			</a>
 
 			<!-- Button show menu -->
@@ -203,38 +180,6 @@
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
 										<img src="images/item-cart-03.jpg" alt="IMG">
@@ -319,37 +264,47 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index.html">Homepage V1</a></li>
-							<li><a href="home-02.html">Homepage V2</a></li>
-							<li><a href="home-03.html">Homepage V3</a></li>
-						</ul>
+						<a href="Home.aspx">Home</a>
 						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">Shop</a>
+                        <a href="Catalog.aspx">Products</a>
+						    <ul class="sub_menu">
+							    <li><a href="Catalog.aspx"?ID="KitchenRoom">Kitchen</a></li>
+							    <li><a href="Catalog.aspx"?ID="LivingRoom">Living Room </a></li>
+							    <li><a href="Catalog.aspx"?ID="BedRoom">Bed Room</a></li>
+                                <li><a href="Catalog.aspx"?ID="BathRoom">Bath Room</a></li>
+						    </ul>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">Sale</a>
+                        <a href="#">Management</a>
+						 <ul>
+							<li id="Li1" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
+							<li id="Li2" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
+							<li id="Li3" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
+                         </ul>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="cart.html">Features</a>
+						<a href="LogIn.aspx">Login</a>
+					</li>
+
+                    <li class="item-menu-mobile">
+						<a href="UserRegistration.aspx">Register</a>
+					</li>
+
+                    <li class="item-menu-mobile">
+						<a href="About.aspx">About</a>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="blog.html">Blog</a>
+						<a href="ContactUse.aspx">Contact</a>
 					</li>
 
-					<li class="item-menu-mobile">
-						<a href="about.html">About</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="contact.html">Contact</a>
+                    <li class="item-menu-mobile">
+						<a href="LogOut.aspx">LogOut</a>
 					</li>
 				</ul>
 			</nav>
@@ -358,7 +313,7 @@
 
    <!--END OF HEADER-->
 
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" style="background-color:#000000">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
@@ -368,7 +323,7 @@
 
 
 	<!-- Footer -->
-	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45" style="background-color:#626161">
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
 				<h4 class="s-text12 p-b-30">
@@ -435,13 +390,13 @@
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="About.aspx" class="s-text7">
 							About Us
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="#" class="s-text7">
+						<a href="ContactUs.aspx" class="s-text7">
 							Contact Us
 						</a>
 					</li>
