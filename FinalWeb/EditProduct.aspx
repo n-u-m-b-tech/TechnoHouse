@@ -2,15 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container bgwhite p-t-35 p-b-80">
+<div class="container bgwhite p-t-35 p-b-80">
 		<div class="flex-w flex-sb">
 		 <div class="w-size13 p-t-30 respon5">
 		  <div class="wrap-slick3 flex-sb flex-w">
           
               <h2><em>Edit Product</em></h2><br />
-                <section id="Image" runat="server">
 
-              </section><br />
+              <section id="Image" runat="server">
+
+              </section>
           <div>
                 <input type="text" name="txtname" id="name" placeholder="Product Name" runat="server" /><br /><br />          
                 <input type="text" name="txtdescription" id="description" placeholder="Product Desription" runat="server" /><br /><br />
@@ -24,12 +25,11 @@
                 <input type="text" name="txturl" id="url" placeholder="Product URL" runat="server" /><br /><br />            
           <ul class="actions">
             <li>
-                <asp:Button ID="BtnEdit" runat="server" type="register" Text="Update" class="primary" OnClick="BtnEdit_Click" />
+                <asp:Button ID="BtnEdit" runat="server"  Text="Update"  OnClick="BtnEdit_Click" />
             </li>
           </ul>
         </div>
         </div>
         </div>
     </div>
-    </div>
-</asp:Content>
+    </div></asp:Content>
