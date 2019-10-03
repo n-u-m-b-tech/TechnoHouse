@@ -328,8 +328,9 @@ namespace Techno_Service
             {
                 Cart cart = new Cart
                 {
+
                     user_Id = userID,
-                    product_Id = product.ID,
+                    product_Id = product.ID,                
                     Product_Name = product.name,
                     Product_Description = product.description,
                     Quantity = Qty,

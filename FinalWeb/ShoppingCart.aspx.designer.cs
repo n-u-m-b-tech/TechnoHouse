@@ -13,12 +13,12 @@ namespace FinalWeb {
     public partial class ShoppingCart {
         
         /// <summary>
-        /// cartTable control.
+        /// shopcart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table cartTable;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl shopcart;
     }
 }

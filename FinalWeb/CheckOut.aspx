@@ -6,9 +6,7 @@
 <div class="flex-w flex-sb">
   <div class="w-size13 p-t-30 respon5">
     <div class="wrap-slick3 flex-sb flex-w">
-
           <h2>Process payment</h2>
-                                
             <h4>Credit/Cheque Card</h4>
                    
             <div class="field">
