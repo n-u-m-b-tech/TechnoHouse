@@ -2,30 +2,55 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 <div class="container bgwhite p-t-35 p-b-80">
-		<div class="flex-w flex-sb">
+<div class="flex-w flex-sb">
 		 <div class="w-size13 p-t-30 respon5">
 		  <div class="wrap-slick3 flex-sb flex-w">
-          
-              <h2><em>Add Product</em></h2><br />
-          <div>
-                <input type="text" name="txtname" id="name" placeholder="Product Name" runat="server" /><br /><br />          
-                <input type="text" name="txtdescription" id="description" placeholder="Product Desription" runat="server" /><br /><br />
-                <input type="text" name="txtbrand" id="brand" placeholder="Product Brand" runat="server" /><br /><br />
-                <input type="text" name="txtmanufact" id="manufacturer" placeholder="Product Manufacturer" runat="server" /><br /><br />
-                <input type="text" name="txtcategory" id="category" placeholder="Product Category" runat="server" /><br /><br />
-                <input type="text" name="txtprice" id="price" placeholder="Product Price" runat="server" /><br /><br />
-                <input type="text" name="txtdiscount" id="discount" placeholder="Product Discount" runat="server" /><br /><br />
-                <input type="text" name="txtquantity" id="quantity" placeholder="Product Quantity" runat="server" /><br /><br />
-                <input type="text" name="txtactive" id="active" placeholder="Is it still sold?" runat="server" /><br /><br />
-                <input type="text" name="txturl" id="url" placeholder="Product URL" runat="server" /><br /><br />            
-          <ul class="actions">
-            <li>
-                <asp:Button ID="BtnRegister" runat="server" type="register" Text="Register" class="primary" OnClick="BtnRegister_Click" />
-            </li>
-          </ul>
-        </div>
+            <h4 class="m-text26 p-b-36 p-t-15">Add Product </h4>	
+               
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="name" type="text" name="name" placeholder="Product Name" required="">
+			</div>
+            
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="description" type="text" name="name" placeholder="Product Description" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="brand" type="text" name="name" placeholder="Product Brand" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="manufacturer" type="text" name="name" placeholder="Product Manufacturer" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="category" type="text" name="name" placeholder="Product Category" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="price" type="text" name="name" placeholder="Product Price" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="discount" type="text" name="name" placeholder="Product Discount" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="quantity" type="text" name="name" placeholder="Product Quantity" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="active" type="text" name="name" placeholder="Product Available" required="">
+			</div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="url" type="text" name="name" placeholder="Image URL" required="">
+			</div>
+
+            <div class="submit-w3l">
+					 <asp:Button ID="BtnRegister" runat="server"  BackColor="#CC0000" BorderColor="#666666" BorderWidth="2px" Text="Add Product" Width="220px" OnClick="BtnRegister_Click"/>
+				</div>
         </div>
         </div>
     </div>
