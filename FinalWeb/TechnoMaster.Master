@@ -67,12 +67,12 @@
 						<ul class="main_menu">
                             <li><a href="Home.aspx">Home</a></li>
 							<li id="hmanage" runat="server">
-								<a href="Catalog.aspx">Products</a>
+								<a href="Catalog.aspx?ID=ALL">Products</a>
 								<ul class="sub_menu">
-									<li><a href="Catalog.aspx"?ID="Kitchen">Kitchen</a></li>
-									<li><a href="Catalog.aspx"?ID="Living Room">Living Room </a></li>
-									<li><a href="Catalog.aspx"?ID="Bed Room">Bed Room</a></li>
-                                    <li><a href="Catalog.aspx"?ID="Bath Room">Bath Room</a></li>
+									<li><a href="Catalog.aspx?ID=Kitchen">Kitchen</a></li>
+									<li><a href="Catalog.aspx?ID=Living Room">Living Room </a></li>
+									<li><a href="Catalog.aspx?ID=Bed Room">Bed Room</a></li>
+                                    <li><a href="Catalog.aspx?ID=BathRoom">Bath Room</a></li>
 								</ul>
 							</li>
                             
