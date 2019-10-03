@@ -14,7 +14,7 @@ namespace FinalWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             String catalogue = Request.QueryString["ID"];
-            if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("Bath Room") || catalogue.Equals("Bed Room"))
+            if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("BathRoom") || catalogue.Equals("BedRoom"))
             {
                 String display = "";
                 var products = client.search_by_cat(catalogue);
