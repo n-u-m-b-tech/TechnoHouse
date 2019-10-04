@@ -2,58 +2,79 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
 <div class="container bgwhite p-t-35 p-b-80">
 		<div class="flex-w flex-sb">
 		 <div class="w-size13 p-t-30 respon5">
 		  <div class="wrap-slick3 flex-sb flex-w">
-            <h1><em>Edit User</em></h1>
-                    <br />
-                    <br />
-                <div>          
-                    <input type="text" name="txttitle" id="title" placeholder="Title" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="idrequire" runat="server" ErrorMessage="*" ControlToValidate="title"></asp:RequiredFieldValidator><br />
-                    <input type="text" name="txtname" id="name" placeholder="Full Name" runat="server" /><asp:RequiredFieldValidator ID="namerequire" runat="server" ErrorMessage="*" ControlToValidate="name"></asp:RequiredFieldValidator>
-                    <input type="text" name="txtsurname" id="surname" placeholder="Last Name" runat="server" /><asp:RequiredFieldValidator ID="surnamerequire" runat="server" ErrorMessage="*" ControlToValidate="surname"></asp:RequiredFieldValidator>
-                    <input type="text" name="txtsurname" id="contact" placeholder="Contact" runat="server" /><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="contact"></asp:RequiredFieldValidator>                 
-                    <input type="text" name="txttitle" id="active" placeholder="Active" runat="server" maxlength="5" min="2" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="Active"></asp:RequiredFieldValidator><br />
-                    <input type="text" name="txtname" id="type" placeholder="User Type" runat="server" /><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="type"></asp:RequiredFieldValidator>
-                                        
-                    <br />
-                    <br />
-                </div>
-                <div>
-                    <input type="text" name="txtemail" id="email" placeholder="Email" runat="server" class="auto-style2" /><asp:RequiredFieldValidator ID="emailrequitre" runat="server" ErrorMessage="*" ControlToValidate="email"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="regexprss" runat="server" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email"></asp:RegularExpressionValidator>
-                             <br />
+          
+              <h4 class="m-text26 p-b-36 p-t-15">Edit User</h4>	
+
+              <div class="bo4 of-hidden size15 m-b-20">
+		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="title" runat="server" type="text" name="title" placeholder="Tiitle" required="">
+              </div>
+             <div class="bo4 of-hidden size15 m-b-20">
+                  <input class="sizefull s-text7 p-l-22 p-r-22" id="name" runat="server" type="text" name="name" placeholder="Full Name(s)" required="">
+             </div>
+
+             <div class="bo4 of-hidden size15 m-b-20">
+                 <input class="sizefull s-text7 p-l-22 p-r-22" id="surname" runat="server" type="text" name="surname" placeholder="Surname" required="">
+			 </div>
+
+               <div class="bo4 of-hidden size15 m-b-20">
+                 <input class="sizefull s-text7 p-l-22 p-r-22" id="contact" runat="server" type="text" name="phone" placeholder="Phone Number(s)" required="">
+			   </div>
+
+
+              <div class="bo4 of-hidden size15 m-b-20">
+		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="add1" runat="server" type="text" name="add1" placeholder="Address Line 1" required="">
+                </div> 
+
+              <div class="bo4 of-hidden size15 m-b-20">
+                  <input class="sizefull s-text7 p-l-22 p-r-22" id="add2" runat="server" type="text" name="add2" placeholder="Address Line 2" required=""><br />
+             </div>
+
+              <div class="bo4 of-hidden size15 m-b-20"> 
+                  <input class="sizefull s-text7 p-l-22 p-r-22" id="city" runat="server" type="text" name="city" placeholder="City" required="">
+             </div>
+                 
+              <div class="bo4 of-hidden size15 m-b-20"> 
+                 <input class="sizefull s-text7 p-l-22 p-r-22" id="prov" runat="server" type="text" name="prov" placeholder="Province" required="">
+           
+              </div>
+
+             <div class="bo4 of-hidden size15 m-b-20"> 
+                 <input class="sizefull s-text7 p-l-22 p-r-22" id="zip" runat="server" type="text" name="zip" placeholder="Zip Code" required="">
+			</div>
+
+               <div class="bo4 of-hidden size15 m-b-20">
+		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="username" runat="server" type="text" name="username" placeholder="Username" required="">
+                 </div>
+
+              <div class="bo4 of-hidden size15 m-b-20">
+                   <input class="sizefull s-text7 p-l-22 p-r-22" id="email" runat="server" type="text" name="email" placeholder="Email" required=""><br />
+                   <asp:RegularExpressionValidator ID="emailValid" runat="server" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email"></asp:RegularExpressionValidator>
+                  </div>
+              <div class="bo4 of-hidden size15 m-b-20">    
+                  <input class="sizefull s-text7 p-l-22 p-r-22" id="pass" runat="server" type="password" name="pass" placeholder="Password" required="">
+                <div class="bo4 of-hidden size15 m-b-20"> 
                     </div>
+                  <input class="sizefull s-text7 p-l-22 p-r-22" id="confirm" runat="server" type="password" name="pass" placeholder="Confirm Password" required="">
+                   <asp:CompareValidator ID="passconfirm" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
+			</div>
 
-                <div>
-                    <input type="text" name="txtusername" id="username" placeholder="UserName" runat="server" class="auto-style9" /><asp:RequiredFieldValidator ID="userrequire" runat="server" ErrorMessage="*" ControlToValidate="username"></asp:RequiredFieldValidator><br />
-                    <input type="password" name="txtpass" id="pass" placeholder="Password" runat="server" class="auto-style10" /><asp:RequiredFieldValidator ID="passrequire" runat="server" ErrorMessage="*" ControlToValidate="pass"></asp:RequiredFieldValidator>
-                    <input type="password" name="txtconfirm" id="confirm" placeholder="Confirm Password" runat="server" class="auto-style11" /><asp:RequiredFieldValidator ID="passconfirmrequire" runat="server" ErrorMessage="*" ControlToValidate="confirm"></asp:RequiredFieldValidator>
-                    <asp:CompareValidator ID="passcomprr" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
-                    <br />
-                    <br />
-                </div>
+               <div class="bo4 of-hidden size15 m-b-20">
+		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="type" runat="server" type="text" name="type" placeholder="Personnel Type" required="">
+              </div>
 
-            <div>
-                <input type="text" name="txtadd1" id="add1" placeholder="Address Line1" runat="server" class="auto-style13" /><asp:RequiredFieldValidator ID="add1require" runat="server" ErrorMessage="*" ControlToValidate="add1"></asp:RequiredFieldValidator>                                   
-                <input type="text" name="txtadd2" id="add2" placeholder="Address Line2" runat="server" class="auto-style12" /><asp:RequiredFieldValidator ID="add2require" runat="server" ErrorMessage="*" ControlToValidate="add2"></asp:RequiredFieldValidator>                
-                    <br />
-                    <br />
-            </div>
-           <div>
-                <input type="text" name="txtcity" id="city" placeholder="City" runat="server" class="auto-style3" /><asp:RequiredFieldValidator ID="cityrequire" runat="server" ErrorMessage="*" ControlToValidate="city"></asp:RequiredFieldValidator>
-                <input type="text" name="txtprov" id="prov" placeholder="Province" runat="server" class="auto-style4" /><asp:RequiredFieldValidator ID="provrequire" runat="server" ErrorMessage="*" ControlToValidate="prov"></asp:RequiredFieldValidator>
-                <input type="text" name="txtzip" id="zip" placeholder="Zip Code" runat="server" class="auto-style8" maxlength="5" /><asp:RequiredFieldValidator ID="ziprequire" runat="server" ErrorMessage="*" ControlToValidate="zip"></asp:RequiredFieldValidator>
-                  <br />
-                  <br />           
-           </div>
-                <asp:Button ID="BtnEdit" runat="server" type="register" Text="Update" class="btn" OnClick="BtnEdit_Click" />
-          </div>
-          <br />
-          </div>
+               <div class="bo4 of-hidden size15 m-b-20">
+                 <input class="sizefull s-text7 p-l-22 p-r-22" id="active" runat="server" type="text" name="active" placeholder="Personnel Still Active?" required="">
+			   </div>
+
+              <div class="submit-w3l">
+					 <asp:Button ID="BtnEdit" runat="server" Text="Update"  BackColor="#CC0000" BorderColor="#666666" BorderWidth="2px"  Width="220px" OnClick="BtnEdit_Click"/>
+			  </div>
           </div>
         </div>
-
+    </div>
+      </div>
 </asp:Content>
