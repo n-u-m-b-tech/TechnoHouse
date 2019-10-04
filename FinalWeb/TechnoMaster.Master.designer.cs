@@ -94,6 +94,24 @@ namespace FinalWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl logout;
         
         /// <summary>
+        /// cartshow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartshow;
+        
+        /// <summary>
+        /// cartshow1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartshow1;
+        
+        /// <summary>
         /// Li1 control.
         /// </summary>
         /// <remarks>

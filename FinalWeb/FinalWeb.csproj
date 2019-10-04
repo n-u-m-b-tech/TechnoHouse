@@ -94,7 +94,6 @@
     <Content Include="AddProduct.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="CheckOut.aspx" />
-    <Content Include="CherkOut.aspx" />
     <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -2680,6 +2679,7 @@
     <Content Include="images\my\facebook.png" />
     <Content Include="images\my\instagram.png" />
     <Content Include="images\my\twitter.png" />
+    <Content Include="images\my\Upcoming.jpg" />
     <Content Include="images\my\youtube.png" />
     <Content Include="images\product-detail-01.jpg" />
     <Content Include="images\product-detail-02.jpg" />
@@ -3005,13 +3005,6 @@
     </Compile>
     <Compile Include="CheckOut.aspx.designer.cs">
       <DependentUpon>CheckOut.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CherkOut.aspx.cs">
-      <DependentUpon>CherkOut.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CherkOut.aspx.designer.cs">
-      <DependentUpon>CherkOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\TechService\Reference.cs">
       <AutoGen>True</AutoGen>

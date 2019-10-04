@@ -59,7 +59,6 @@ namespace FinalWeb
                 display += "<div class='block2-txt p-t-20'>";
 				display += "<a href= 'ProductDetails.aspx?ID="+ product[i].ID+"' class='block2-name dis-block s-text3 p-b-5'>"+product[i].name+"</a>";
 				display += "<span class='block2-oldprice m-text7 p-r-5'>"+product[i].price+"</span>";
-				display += "<span class='block2-newprice m-text8 p-r-5'>"+newPrice+"</span>";
 				display += "</div>";
 				display += "</div>";
                 display += "</div>";
