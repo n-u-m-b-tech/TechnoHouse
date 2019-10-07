@@ -13,6 +13,33 @@ namespace FinalWeb {
     public partial class Catalog {
         
         /// <summary>
+        /// pricelist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pricelist;
+        
+        /// <summary>
+        /// ascend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ascend;
+        
+        /// <summary>
+        /// descend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl descend;
+        
+        /// <summary>
         /// first control.
         /// </summary>
         /// <remarks>
