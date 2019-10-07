@@ -111,9 +111,6 @@
   <ItemGroup>
     <Compile Include="CartClass.cs" />
     <Compile Include="ITechno_service.cs" />
-    <Compile Include="NUMBDB.cs">
-      <DependentUpon>NUMBDB.dbml</DependentUpon>
-    </Compile>
     <Compile Include="NUMBDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

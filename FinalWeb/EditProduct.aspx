@@ -12,7 +12,7 @@
               <section id="Image" runat="server">
 
               </section>
-          <div>
+              <div>
                 <input type="text" name="txtname" id="name" placeholder="Product Name" runat="server" /><br /><br />          
                 <input type="text" name="txtdescription" id="description" placeholder="Product Desription" runat="server" /><br /><br />
                 <input type="text" name="txtbrand" id="brand" placeholder="Product Brand" runat="server" /><br /><br />
@@ -23,13 +23,13 @@
                 <input type="text" name="txtquantity" id="quantity" placeholder="Product Quantity" runat="server" /><br /><br />
                 <input type="text" name="txtactive" id="active" placeholder="Is it still sold?" runat="server" /><br /><br />
                 <input type="text" name="txturl" id="url" placeholder="Product URL" runat="server" /><br /><br />            
-          <ul class="actions">
-            <li>
-                <asp:Button ID="BtnEdit" runat="server"  Text="Update"  OnClick="BtnEdit_Click" />
-            </li>
-          </ul>
-        </div>
-        </div>
+                <ul class="actions">
+                   <li>
+                        <asp:Button ID="BtnEdit" runat="server"  Text="Update"  OnClick="BtnEdit_Click" />
+                   </li>
+                </ul>
+              </div>
+            </div>
         </div>
     </div>
     </div></asp:Content>
