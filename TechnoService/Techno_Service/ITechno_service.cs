@@ -51,7 +51,7 @@ namespace Techno_Service
 
 
 
-        //shushan code
+        //product management
         [OperationContract]
         int AddProduct(ProductD addP);
         [OperationContract]
