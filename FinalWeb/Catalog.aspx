@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TechnoMaster.Master" AutoEventWireup="true" CodeBehind="Catalog.aspx.cs" Inherits="FinalWeb.Catalog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-    <link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

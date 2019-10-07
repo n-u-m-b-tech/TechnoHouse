@@ -23,16 +23,15 @@ namespace FinalWeb
                 {
                     display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
                     display += "<div class='block2'>";
-                    display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
+                    display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative'>";
                     display += "<img src ='"+pro.image_url+"' alt='IMG-PRODUCT'>";
                     display += "<div class='block2 -overlay trans-0-4'>";
                     display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-                    display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";
-                    display += "<i class='icon -wishlist icon_heart dis-none' aria-hidden='true'></i>";
+                    display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
+                    display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                     display += "</a>";
                     display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-
-                    display += "<asp:Button ID='AddToCart' class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' runat='server' Text='Add To Cart' OnClick='BtnAddToCart_Click' />";
+                    display += "<button class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
                     display += "</div>";
                     display += "</div>";
                     display += "</div>";
@@ -81,11 +80,7 @@ namespace FinalWeb
 
         protected void BtnAddToCart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
-        }
-        protected void selected(object sender, EventArgs e)
-        {
-            Response.Redirect("Home.aspx");
+
         }
     }
 }
