@@ -26,12 +26,13 @@ namespace FinalWeb
                     display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
                     display += "<img src ='"+pro.image_url+"' alt='IMG-PRODUCT'>";
                     display += "<div class='block2 -overlay trans-0-4'>";
-                    display += "<a href = 'Home.aspx' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
+                    display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
                     display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";
                     display += "<i class='icon -wishlist icon_heart dis-none' aria-hidden='true'></i>";
                     display += "</a>";
                     display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                    display += " <button ID='BtnAddtoCart' runat='server' class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onClick='BtnAddtoCart_Click'>Add to Cart</button>";
+
+                    display += "<button class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
                     display += "</div>";
                     display += "</div>";
                     display += "</div>";
@@ -57,12 +58,13 @@ namespace FinalWeb
                     display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
                     display += "<img src =" + pro.image_url + " alt='IMG-PRODUCT'>";
                     display += "<div class='block2 -overlay trans-0-4'>";
-                    //display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-                    //display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";
-                    //display += "<i class='icon -wishlist icon_heart dis-none' aria-hidden='true'></i>";
-                   // display += "</a>";
+                    display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
+                    display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";
+                    display += "<i class='icon -wishlist icon_heart dis-none' aria-hidden='true'></i>";
+                    display += "</a>";
                     display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                    display += "<button ID='BtnAddtoCart' runat='server' Text='Add to Cart' class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onClick='BtnAddtoCart_Click'/>";
+                    display += "<asp:Button ID='AddToCart' class='flex - c - m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' runat='server' Text='Add To Cart' OnClick='BtnAddToCart_Click' />";
+                    display += "<button class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
                     display += "</div>";
                     display += "</div>";
                     display += "</div>";
@@ -75,12 +77,11 @@ namespace FinalWeb
                 }
                 view.InnerHtml = display;
             }
-
-          
         }
-        protected void BtnAddtoCart_Click(object sender, EventArgs e)
+
+        protected void BtnAddToCart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+
         }
     }
 }

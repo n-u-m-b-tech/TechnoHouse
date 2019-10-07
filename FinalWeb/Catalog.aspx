@@ -11,8 +11,7 @@
 			Your Smart Home
 		</h2>
 		<p class="m-text13 t-center">
-			New Arrivals Women Collection 2018
-		</p>
+			New Arrrival Of Home Smart 	Devices</p>
 	</section>
 
 
@@ -29,32 +28,32 @@
 
 						<ul class="p-b-54">
 							<li class="p-t-4">
-								<a href="#" class="s-text13 active1">
+								<a href="Catalog.aspx?ID=ALL" class="s-text13 active1">
 									All
 								</a>
 							</li>
 
 							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Women
+								<a href="Catalog.aspx?ID=Kitchen" class="s-text13">
+									Kitchen
 								</a>
 							</li>
 
 							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Men
+								<a href="Catalog.aspx?ID=LivingRoom" class="s-text13">
+									Living Room
 								</a>
 							</li>
 
 							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Kids
+								<a href="Catalog.aspx?ID=BathRoom" class="s-text13">
+									Bath Room
 								</a>
 							</li>
 
 							<li class="p-t-4">
-								<a href="#" class="s-text13">
-									Accesories
+								<a href="Catalog.aspx?ID=BedRoom" class="s-text13">
+									Bed Room
 								</a>
 							</li>
 						</ul>
@@ -82,52 +81,9 @@
 								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
-									Range: $<span id="value-lower">610</span> - $<span id="value-upper">980</span>
+									Range: R<span id="value-lower">0</span> - R<span id="value-upper">10 000</span>
 								</div>
 							</div>
-						</div>
-
-						<div class="filter-color p-t-22 p-b-50 bo3">
-							<div class="m-text15 p-b-12">
-								Color
-							</div>
-
-							<ul class="flex-w">
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter1" type="checkbox" name="color-filter1">
-									<label class="color-filter color-filter1" for="color-filter1"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter2" type="checkbox" name="color-filter2">
-									<label class="color-filter color-filter2" for="color-filter2"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter3" type="checkbox" name="color-filter3">
-									<label class="color-filter color-filter3" for="color-filter3"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter4" type="checkbox" name="color-filter4">
-									<label class="color-filter color-filter4" for="color-filter4"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter5" type="checkbox" name="color-filter5">
-									<label class="color-filter color-filter5" for="color-filter5"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter6" type="checkbox" name="color-filter6">
-									<label class="color-filter color-filter6" for="color-filter6"></label>
-								</li>
-
-								<li class="m-r-10">
-									<input class="checkbox-color-filter" id="color-filter7" type="checkbox" name="color-filter7">
-									<label class="color-filter color-filter7" for="color-filter7"></label>
-								</li>
-							</ul>
 						</div>
 
 						<div class="search-product pos-relative bo4 of-hidden">
@@ -147,19 +103,19 @@
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 								<select class="selection-2" name="sorting">
 									<option>Default Sorting</option>
-									<option>Price: low to high</option>
-									<option>Price: high to low</option>
+									<option id="ascend">Price: low to high</option>
+									<option id="descend">Price: high to low</option>
 								</select>
 							</div>
 
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 								<select class="selection-2" name="sorting">
 									<option>Price</option>
-									<option>$0.00 - $50.00</option>
-									<option>$50.00 - $100.00</option>
-									<option>$100.00 - $150.00</option>
-									<option>$150.00 - $200.00</option>
-									<option>$200.00+</option>
+									<option id="first"  runat="server">R 0.00 - R50.00</option>
+									<option id="second"  runat="server">R 50.00 - R100.00</option>
+									<option id="third"  runat="server">R 100.00 - R150.00</option>
+									<option id="fourth" runat="server">R 150.00 - R200.00</option>
+									<option id="fifth" runat="server">R 200.00+</option>
 
 								</select>
 							</div>
@@ -172,7 +128,7 @@
 
 					<!-- Product -->
 					<div class="row" id="view" runat="server">
-
+                       
 					</div>
 
 					<!-- Pagination -->
