@@ -467,12 +467,12 @@
                                                 </div>
                                             </div>
                                             <div class="au-chat-textfield">
-                                                <form class="au-form-icon">
+                                                <div class="au-form-icon">
                                                     <input class="au-input au-input--full au-input--h65" type="text" placeholder="Type a message">
                                                     <button class="au-input-icon">
                                                         <i class="zmdi zmdi-camera"></i>
                                                     </button>
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -490,5 +490,4 @@
                 </div>
             </div>
             <!-- END MAIN CONTENT-->
-
 </asp:Content>
