@@ -2749,6 +2749,7 @@
     <Content Include="images\twitter.svg" />
     <Content Include="images\Untitled-5.jpg" />
     <Content Include="images\youtube.svg" />
+    <Content Include="includes\contact-form.php" />
     <Content Include="js\main.js" />
     <Content Include="js\main.min.js" />
     <Content Include="js\map-custom.js" />
@@ -3237,6 +3238,7 @@
     <None Include="Connected Services\TechService\Techno_service2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="includes\config.json" />
     <None Include="packages.config" />
     <Content Include="TechnoMaster.Master" />
     <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />

@@ -53,7 +53,7 @@ namespace FinalWeb
                 display += "</a>";
                 display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
                 display += "<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
-                display += "</div";
+                display += "</div>";
                 display += "</div>";
                 display += "</div>";
                 display += "<div class='block2-txt p-t-20'>";
