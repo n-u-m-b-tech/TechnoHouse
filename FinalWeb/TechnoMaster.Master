@@ -77,7 +77,7 @@
 							</li>
                             
                             <li id="pmanage" runat="server"><a href="Management.aspx">Management</a>
-                               <ul>
+                               <ul class="sub_menu">
 								  <li id="amanage" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
 								  <li id="emanage" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
 							      <li id="usermanage" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
