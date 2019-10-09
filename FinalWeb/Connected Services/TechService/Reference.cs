@@ -506,6 +506,9 @@ namespace FinalWeb.TechService {
         private double TotalField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string image_urlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string productDescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -565,6 +568,19 @@ namespace FinalWeb.TechService {
                 if ((this.TotalField.Equals(value) != true)) {
                     this.TotalField = value;
                     this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string image_url {
+            get {
+                return this.image_urlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.image_urlField, value) != true)) {
+                    this.image_urlField = value;
+                    this.RaisePropertyChanged("image_url");
                 }
             }
         }

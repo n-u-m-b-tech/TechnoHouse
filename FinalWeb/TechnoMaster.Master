@@ -67,8 +67,8 @@
 								<ul class="sub_menu">
 									<li><a href="Catalog.aspx?ID=Kitchen">Kitchen</a></li>
 									<li><a href="Catalog.aspx?ID=Living Room">Living Room </a></li>
-									<li><a href="Catalog.aspx?ID=Bed Room">Bed Room</a></li>
-                                    <li><a href="Catalog.aspx?ID=BathRoom">Bath Room</a></li>
+									<li><a href="Catalog.aspx?ID=Bed Room">BedRoom</a></li>
+                                    <li><a href="Catalog.aspx?ID=BathRoom">BathRoom</a></li>
 								</ul>
 							</li>
                             
@@ -185,7 +185,7 @@
 
 					<li class="item-menu-mobile">
                         <a href="#">Management</a>
-						 <ul>
+						 <ul class="sub_menu">
 							<li id="add" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
 							<li id="edit" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
 							<li id="usedit" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
@@ -269,13 +269,13 @@
 					</li>
 
 					<li class="p-b-9">
-						<a href="Catalog.aspx?ID=Bed Room" class="s-text7">
+						<a href="Catalog.aspx?ID=BedRoom" class="s-text7">
 						  Smart	Bed Room
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="Catalog.aspx?ID=Bath Room" class="s-text7">
+						<a href="Catalog.aspx?ID=BathRoom" class="s-text7">
 							Smart Bath Room
 						</a>
 					</li>

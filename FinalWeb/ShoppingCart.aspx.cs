@@ -60,5 +60,10 @@ namespace FinalWeb
                         display += "</table>";
                         shopcart.InnerHtml = display;
         }
+
+        protected void CheckOut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CheckOut.aspx");
+        }
     }
 }

@@ -106,32 +106,31 @@ namespace FinalWeb
                 if (!p.name.Equals(product.name))
                 {
                     display +="<div class='item-slick2 p-l-15 p-r-15'>";
-//<!-- Block2 -->
-display+="<div class='block2'>";
-display+="<div class='block2-img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
-display+="<img src='"+p.image_url+"' alt='IMG-PRODUCT'>";
-display+="<div class='block2-overlay trans-0-4'>";
-display+="<a href='#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-display+="<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
-display+="<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
-display+="</a>";
+                    //<!-- Block2 -->
+                    display+="<div class='block2'>";
+                    display+="<div class='block2-img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
+                    display+="<img src='"+p.image_url+"' alt='IMG-PRODUCT'>";
+                    display+="<div class='block2-overlay trans-0-4'>";
+                    display+="<a href='#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
+                    display+="<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
+                    display+="<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
+                    display+="</a>";
 
-display+="<div class='block2-btn-addcart w-size1 trans-0-4'>";
-									//<!-- Button -->
-display+="<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
-								display+="</div>";
-							display+="</div>";
-                    display += "</div>";
-						display+="<div class='block2-txt p-t-20'>";
-							display+="<a href='ProductDetails.aspx?ID="+p.ID+"' class='block2-name dis-block s-text3 p-b-5'>	Herschel supply co 25l</a>";
-
-							display+="<span class='block2-price m-text6 p-r-5'>R"+p.price+"</span>";
-						display+="</div>";
+                    display+="<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                    //<!-- Button -->
+                    display+="<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
 					display+="</div>";
-				display+="</div>";
+					display+="</div>";
+                    display += "</div>";
+					display+="<div class='block2-txt p-t-20'>";
+					display+="<a href='ProductDetails.aspx?ID="+p.ID+"' class='block2-name dis-block s-text3 p-b-5'>"+p.name+"</a>";
+                    display +="<span class='block2-price m-text6 p-r-5'>R"+p.price+"</span>";
+					display+="</div>";
+					display+="</div>";
+				    display+="</div>";
                 }
             }
-            related.InnerHtml = display;
+                   related.InnerHtml = display;
 
 
         }

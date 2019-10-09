@@ -5,6 +5,7 @@
       <Column Name="Cart_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="user_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="product_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Image" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="Product_Name" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="Product_Description" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />

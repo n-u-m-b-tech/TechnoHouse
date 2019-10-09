@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<!-- breadcrumb -->
+<!-- breadcrumb 
 	<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
 		<a href="index.html" class="s-text16">
 			Home
@@ -23,7 +23,7 @@
 		<span class="s-text17">
 			Boxy T-Shirt with Roll Sleeve Detail
 		</span>
-	</div>
+	</div>-->
 
 	<!-- Product Detail -->
 	<div class="container bgwhite p-t-35 p-b-80" id="productDetails" runat="server">

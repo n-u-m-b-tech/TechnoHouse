@@ -44,9 +44,7 @@ namespace FinalWeb
                     display += "</div>";
                 }
                 view.InnerHtml = display;
-            }
-
-            else
+            }else if(catalogue.Equals("ALL"))
             {
                 String display = "";
                 var products = client.allProducts();

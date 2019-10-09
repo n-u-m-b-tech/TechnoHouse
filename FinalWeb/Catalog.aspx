@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/heading-pages-02.jpg);">
+	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/slider/smarthomerethink.png);">
 		<h2 class="l-text2 t-center">
 			Your Smart Home
 		</h2>
@@ -38,7 +38,7 @@
 							</li>
 
 							<li class="p-t-4">
-								<a href="Catalog.aspx?ID=LivingRoom" class="s-text13">
+								<a href="Catalog.aspx?ID=Living Room" class="s-text13">
 									Living Room
 								</a>
 							</li>
