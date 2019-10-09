@@ -51,33 +51,24 @@ namespace FinalWeb
 	  		    display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
                 display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                 display += "</a>";
-            //    display += "<div>";
-              //  display += "<asp:Button ID='AddToCart' runat='server' Text='Add To Cart' OnClick='AddToCart_Click' />";
-              //  display += "</div>";
                 display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                display += "<asp:button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onclick='btnAddtoCart_Click' id='addtocart' Text='Add To Cart'/>"/* Add to Cart</button>"*/;
-                display += "</div>";
+                display += "<asp::button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' ID='BtnAddToCart' runat='server' OnClick='BtnAddtocart_Click' text='Add to Cart'/>";
+                display += "</div";
                 display += "</div>";
                 display += "</div>";
                 display += "<div class='block2-txt p-t-20'>";
 				display += "<a href= 'ProductDetails.aspx?ID="+ product[i].ID+"' class='block2-name dis-block s-text3 p-b-5'>"+product[i].name+"</a>";
 				display += "<span class='block2-oldprice m-text7 p-r-5'>"+product[i].price+"</span>";
-                display += "<asp:button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onclick='btnAddtoCart_Click' id='addtocart' Text='Add To Cart'/>"/* Add to Cart</button>"*/;
-                display += "</div>";
+				display += "</div>";
 				display += "</div>";
                 display += "</div>";
             }
-            
+
         }
 
-        protected void btnAddtoCart_Click(object sender, EventArgs e)
+        protected void BtnAddtocart_Click(object sender, EventArgs e)
         {
-            Response.Redirect("LogIn.aspx");
-        }
-
-        protected void AddToCart_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("LogIn.aspx");
+            Response.Redirect("EditProduct.aspx");
         }
     }
 }

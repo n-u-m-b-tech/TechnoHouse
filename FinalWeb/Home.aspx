@@ -15,7 +15,6 @@
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Latest Home Gadgets
 						</span>
-
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
 							New arrivals
 						</h2>

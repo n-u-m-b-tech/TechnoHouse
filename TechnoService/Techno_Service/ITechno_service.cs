@@ -56,7 +56,7 @@ namespace Techno_Service
         bool increaseQue(int productId, int UserId,int num);
 
 
-        //shushan code
+        //product management
         [OperationContract]
         int AddProduct(ProductD addP);
         [OperationContract]

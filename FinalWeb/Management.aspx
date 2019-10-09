@@ -31,7 +31,7 @@
 			<li><a href="SearchProduct.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit Product</a></li>
 			<li><a href="EditUser.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit User</a></li>
             <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> Stats </a></li>
-            <li><a href="RegisteredUser"><em class="fa fa-toggle-off">&nbsp;</em> View Report </a></li>
+            <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> View Report </a></li>
 		</ul>
 	</div><!--/.sidebar-->
 
