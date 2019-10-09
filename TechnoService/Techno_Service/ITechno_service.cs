@@ -42,13 +42,18 @@ namespace Techno_Service
         List<ProductD> allProducts();
         [OperationContract]
         List<CartClass> getUser_Cart(int userID);
+        
 
 
-        //transaction
+        //transaction and cart
         [OperationContract]
         Boolean Add_to_Cart(ProductD product,int userID,int Qty);
+        [OperationContract]
         Boolean payment(String type, DateTime date, Decimal Amount, int userID);
-
+        [OperationContract]
+        bool removeItem(int userId, int productId);
+        [OperationContract]
+        bool increaseQue(int productId, int UserId,int num);
 
 
         //product management

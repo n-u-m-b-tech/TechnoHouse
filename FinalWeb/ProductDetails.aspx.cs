@@ -70,7 +70,7 @@ namespace FinalWeb
 
             display += "<div class='btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10'>";
             //<!-- Button -->
-            display += "<asp:button runat='server'  text='Add To Cart' class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'  OnClick='BtnAddToCart_Click'/>";
+            display += "<asp:Button runat='server'  Value='Add To Cart' class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'  Onclick='BtnAddToCart_Click'></asp:Button>";
             display += "</div>";
             display += "</div>";
             display += "</div>";
@@ -160,6 +160,7 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
                       Response.Redirect("NewCartPage.aspx?ID=" + ID);
                   }*/
             }
+            Response.Redirect("Home.aspx");
 }
     }
 }

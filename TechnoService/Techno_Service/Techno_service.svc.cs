@@ -655,6 +655,59 @@ namespace Techno_Service
 
 
         }
+
+        public bool removeItem(int userId, int productId)
+        {
+            var item = (from i in db.Carts
+                        where i.product_Id.Equals(productId) && i.user_Id.Equals(userId)
+                        select i).FirstOrDefault();
+            if (item != null)
+            {
+                db.Carts.DeleteOnSubmit(item);
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool increaseQue(int productId, int UserId,int num)
+        {
+            var item = (from i in db.Carts
+                        where i.product_Id.Equals(productId) && i.user_Id.Equals(UserId)
+                        select i).FirstOrDefault();
+
+            if (item != null)
+            {
+
+                item.Quantity = num;
+
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }catch(Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+               
+        }
     }
 }
         
