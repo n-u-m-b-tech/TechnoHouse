@@ -205,8 +205,8 @@
 
 			<div class="wrap-slick2">
 				<div class="slick2" id="view" runat="server">
-					
-				</div>
+                  
+                </div>
 			</div>
 		</div>
 	</section>

@@ -28,6 +28,9 @@
 	<!-- Product Detail -->
 	<div class="container bgwhite p-t-35 p-b-80" id="productDetails" runat="server">
 		
+
+        <asp:Button runat="server"  text="Add ToCart" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"  OnClick="BtnAddToCart_Click" />
+
 	</div>
 
 

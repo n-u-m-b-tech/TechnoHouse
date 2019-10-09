@@ -67,19 +67,19 @@
 							</div>
 
 							<div class="wra-filter-bar">
-								<div id="filter-bar"></div>
+								<div id="filter-bar"</div>
 							</div>
 
 							<div class="flex-sb-m flex-w p-t-16">
 								<div class="w-size11">
 									<!-- Button -->
-									<button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server">
-										Filter
-									</button>
+									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="btnFilter_Click" />
+									
+								
 								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
-									Range: R<span id="value-lower">0</span> - R<span id="value-upper">10 000</span>
+									Range: R<span id="value-lower" >0</span> - R<span id="value-upper" >10 000</span>
 								</div>
 							</div>
 						</div>

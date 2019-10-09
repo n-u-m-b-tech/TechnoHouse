@@ -13,6 +13,15 @@ namespace FinalWeb {
     public partial class Catalog {
         
         /// <summary>
+        /// Filter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Filter;
+        
+        /// <summary>
         /// pricelist control.
         /// </summary>
         /// <remarks>
