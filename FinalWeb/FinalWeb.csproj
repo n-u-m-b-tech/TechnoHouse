@@ -91,9 +91,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Add.aspx" />
     <Content Include="AddProduct.aspx" />
     <Content Include="Catalog.aspx" />
     <Content Include="CheckOut.aspx" />
+    <Content Include="AdminMaster.Master" />
     <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -103,7 +105,6 @@
     <Content Include="Connected Services\TechService\FinalWeb.TechService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="AdminMaster.Master" />
     <None Include="Connected Services\TechService\Techno_service.disco" />
     <None Include="Connected Services\TechService\configuration91.svcinfo" />
     <None Include="Connected Services\TechService\configuration.svcinfo" />
@@ -2871,6 +2872,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>

@@ -97,6 +97,24 @@
   <wsdl:message name="ITechno_service_Add_to_Cart_OutputMessage">
     <wsdl:part name="parameters" element="tns:Add_to_CartResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_payment_InputMessage">
+    <wsdl:part name="parameters" element="tns:payment" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_payment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:paymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_removeItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeItem" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_removeItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_increaseQue_InputMessage">
+    <wsdl:part name="parameters" element="tns:increaseQue" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_increaseQue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:increaseQueResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_AddProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:AddProduct" />
   </wsdl:message>
@@ -175,6 +193,18 @@
     <wsdl:operation name="Add_to_Cart">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/Add_to_Cart" message="tns:ITechno_service_Add_to_Cart_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/Add_to_CartResponse" message="tns:ITechno_service_Add_to_Cart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="payment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/payment" message="tns:ITechno_service_payment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/paymentResponse" message="tns:ITechno_service_payment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/removeItem" message="tns:ITechno_service_removeItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/removeItemResponse" message="tns:ITechno_service_removeItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="increaseQue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/increaseQue" message="tns:ITechno_service_increaseQue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/increaseQueResponse" message="tns:ITechno_service_increaseQue_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/AddProduct" message="tns:ITechno_service_AddProduct_InputMessage" />
@@ -319,6 +349,33 @@
     </wsdl:operation>
     <wsdl:operation name="Add_to_Cart">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/Add_to_Cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payment">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/payment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeItem">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/removeItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="increaseQue">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/increaseQue" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

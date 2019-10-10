@@ -17,8 +17,6 @@ namespace FinalWeb
             String display = ""; 
             int ID = Convert.ToInt32(proId);
             var product = client.productinfor_retrieval_ID(ID);
-            display += "<div class='flex-w flex-sb'>";
-            display += "<div class='w-size13 p-t-30 respon5'>";
             display += "<div class='wrap-slick3 flex-sb flex-w'>";
             display += "<div class='wrap-slick3-dots'></div>";
 
@@ -42,62 +40,36 @@ namespace FinalWeb
             display += "</div>";
             display += "</div>";
             display += "</div>";
-            display += "</div>";
 
-            display += "<div class='w-size14 p-t-30 respon5'>";
-            display += "<h4 class='product-detail-name m-text16 p-b-13'>"+product.name+" </h4>";
+            productview.InnerHtml = display;
 
-            display += "<span class='m-text17'>"+product.price+"</span>";
+            display = "";
 
-            display += "<p class='s-text8 p-t-10'>"+product.description+ "</p>";
-
-            //	<!--  -->
-            display += "<div class='p-t-33 p-b-60'>";
-
-            display += "<div class='flex-r-m flex-w p-t-10'>";
-            display += "<div class='w-size16 flex-m flex-w'>";
-            display += "<div class='flex-w bo5 of-hidden m-r-22 m-t-10 m-b-10'>";
-            display += "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>";
-            display += "<i class='fs-12 fa fa-minus' aria-hidden='true'></i>";
-            display += "</button>";
-
-            display += "<input class='size8 m-text18 t-center num-product' type='number' name='num-product' value='1'>";
-
-            display += "<button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2'>";
-            display += "<i class='fs-12 fa fa-plus' aria-hidden='true'></i>";
-            display += "</button>";
-            display += "</div>";
-
-            display += "<div class='btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10'>";
-            //<!-- Button -->
-            display += "<asp:Button runat='server'  Value='Add To Cart' class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'  Onclick='BtnAddToCart_Click'></asp:Button>";
-            display += "</div>";
-            display += "</div>";
-            display += "</div>";
-            display += "</div>";
-
-            display += "<div class='p-b-45'>";
-            display += "<span class='s-text8 m-r-35'>Serial number: "+product.ID+"</span>";
-            display += "<span class='s-text8'>Categories:"+product.category+"</span>";
-            display += "</div>";
-
-            //<!--  -->
-            display += "<div class='wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content'>";
-            display += "<h5 class='js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4'>";
-            display+= "<i class='down-mark fs-12 color1 fa fa-minus dis-none' aria-hidden='true'></i>";
-            display += "<i class='up-mark fs-12 color1 fa fa-plus' aria-hidden='true'></i>";
-            display += "</h5>";
-
-          //  display += "<div class='dropdown-content dis-none p-t-15 p-b-23'>";
-         //   display += "<p class='s-text8'>"+product.description+"</p>";
-            //display += "</div>";
-            display += "</div>";
-            display += "</div>";
-            display += "</div>";
+             display += " <h4 class='product-detail-name m-text16 p-b-13'>"+product.name+"</h4>";
+             display += " <span class='m -text17'>R"+Math.Round(product.price,2)+"</span>";
+             display += " <p class='s -text8 p-t-10'>"+product.description+"</p>";
+             display += " <div class='p -b-45'>";
+             display += " <span class='s -text8 m-r-35'>SKU: "+product.ID+"</span>";
+             display += " <span class='s -text8'>Categories: "+product.category+" Design</span>";
+             display += " </div>";
 
             productDetails.InnerHtml = display;
 
             display = "";
+
+            display += " <h5 class='js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4'>";
+            display += " Additional information";
+            display += " <i class='down-mark fs-12 color1 fa fa-minus dis-none' aria-hidden='true'></i>";
+            display += " <i class='up-mark fs-12 color1 fa fa-plus' aria-hidden='true'></i>";
+            display += " </h5>";
+            display += " <div class='dropdown-content dis-none p-t-15 p-b-23'>";
+            display += " <p class='s-text8'>Fusce ornare mi vel risus porttitor dignissim.Nunc eget risus at ipsum blandit ornare vel sed velit.Proin gravida arcu nisl, a dignissim mauris placerat</p>";
+            display += " </div>";
+
+            moreinfo.InnerHtml = display;
+         
+
+           display = "";
 
             var relatedProducts = client.search_by_cat(product.category);
 
@@ -131,8 +103,6 @@ namespace FinalWeb
                 }
             }
                    related.InnerHtml = display;
-
-
         }
 
     
@@ -143,22 +113,35 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
             {
                 String proId = Request.QueryString["ID"];
                 int ID = Convert.ToInt32(proId);
-                /*  if (!qty.Value.Equals(""))
+                 if (!qty.Value.Equals(""))
                   {
                       int Qty = Convert.ToInt32(qty.Value);
-                      ProductD pro = client.productinfor_retrieval_ID(ID);
-                      int userId = Convert.ToInt32(Session["userID"]);
-                      client.Add_to_Cart(pro, userId, Qty);
-                      Response.Redirect("NewCartPage.aspx?ID=" + ID);
-                  }
+                      var pro = client.productinfor_retrieval_ID(ID);
+                      int userId = Convert.ToInt32(Session["userID"].ToString());
+                      bool val= client.Add_to_Cart(pro, userId, Qty);
+                    if (val) { 
+                    Response.Redirect("ShoppingCart.aspx?ID=" + ID);
+                    }
+                    else
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                }
                   else
                   {
-                      int Qty = 1;
-                      ProductD pro = client.productinfor_retrieval_ID(ID);
-                      int userId = Convert.ToInt32(Session["userID"]);
-                      client.Add_to_Cart(pro, userId, Qty);
-                      Response.Redirect("NewCartPage.aspx?ID=" + ID);
-                  }*/
+                    int Qty = 1;
+                    var pro = client.productinfor_retrieval_ID(ID);
+                    int userId = Convert.ToInt32(Session["userID"].ToString());                     
+                    bool val = client.Add_to_Cart(pro, userId, Qty);
+                    if (val)
+                    {
+                        Response.Redirect("ShoppingCart.aspx?ID=" + ID);
+                    }
+                    else {
+                        Response.Redirect("Home.aspx");
+                    }
+                    
+                  }
             }
             Response.Redirect("Home.aspx");
 }

@@ -48,14 +48,8 @@
 				</h5>
 
 				<!--  -->
-				<div class="flex-w flex-sb-m p-b-12">
-					<span class="s-text18 w-size19 w-full-sm">
-						Subtotal:
-					</span>
-
-					<span class="m-text21 w-size20 w-full-sm">
-						$39.00
-					</span>
+				<div class="flex-w flex-sb-m p-b-12" id="total" runat="server">
+					
 				</div>
 
 				<!--  -->

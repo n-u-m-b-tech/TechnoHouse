@@ -102,12 +102,12 @@
 
 					<span class="linedivide1"></span>
 
-					<div class="header-wrapicon2" id="cartshow" runat="server">
-
+					<div class="header-wrapicon2" id="cartshow" runat="server">                
+                    </div>
+                    </div>
 					</div>
 				</div>
-			</div>
-		</div>
+
 
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
