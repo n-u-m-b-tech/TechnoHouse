@@ -46,38 +46,43 @@ namespace FinalWeb
                 view.InnerHtml = display;
             }else if(catalogue.Equals("ALL"))
             {
-                String display = "";
+                String Display = "";
                 var products = client.allProducts();
 
                 foreach (ProductD pro in products)
                 {
-                    display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
-                    display += "<div class='block2'>";
-                    display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative block2-labelnew'>";
-                    display += "<img src =" + pro.image_url + " alt='IMG-PRODUCT'>";
-                    display += "<div class='block2 -overlay trans-0-4'>";
-                    display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-                    display += "<i class='icon -wishlist icon_heart_alt' aria-hidden='true'></i>";
-                    display += "<i class='icon -wishlist icon_heart dis-none' aria-hidden='true'></i>";
-                    display += "</a>";
-                    display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                    display += "<asp:Button ID='AddToCart' class='flex - c - m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' runat='server' Text='Add To Cart' OnClick='BtnAddToCart_Click' />";
-                    display += "<button class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
-                    display += "</div>";
-                    display += "</div>";
-                    display += "</div>";
-                    display += "<div class='block2 -txt p-t-20'>";
-                    display += "<a href='ProductDetails.aspx?ID=" + pro.ID + "' class='block2-name dis-block s-text3 p-b-5'>" + pro.name + "</a>";
-                    display += "<span class='block2 -price m-text6 p-r-5'>" + pro.price + "</span>";
-                    display += "</div>";
-                    display += "</div>";
-                    display += "</div>";
+                    Display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
+                    Display += "<div class='block2'>";
+                    Display += "<div class='block2 -img wrap-pic-w of-hidden pos-relative'>";
+                    Display += "<img src ='" + pro.image_url + "' alt='IMG-PRODUCT'>";
+                    Display += "<div class='block2 -overlay trans-0-4'>";
+                    Display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
+                    Display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
+                    Display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
+                    Display += "</a>";
+                    Display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
+                    Display += "<asp:Button ID='AddToCart' class='flex - c - m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' runat='server' Text='Add To Cart' OnClick='BtnAddToCart_Click' />";
+                    Display += "<button class='flex -c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "<div class='block2 -txt p-t-20'>";
+                    Display += "<a href='ProductDetails.aspx?ID=" + pro.ID + "' class='block2-name dis-block s-text3 p-b-5'>" + pro.name + "</a>";
+                    Display += "<span class='block2 -price m-text6 p-r-5'>" + pro.price + "</span>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "</div>";
                 }
-                view.InnerHtml = display;
+                view.InnerHtml = Display;
             }
         }
 
         protected void BtnAddToCart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void BtnFilter_Click(object sender, EventArgs e)
         {
 
         }

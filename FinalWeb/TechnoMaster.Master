@@ -63,7 +63,7 @@
 						<ul class="main_menu">
                             <li><a href="Home.aspx">Home</a></li>
 							<li id="hmanage" runat="server">
-								<a href="Catalog.aspx?ID=ALL">Products</a>
+								<a href="Catalog.aspx?ID=ALL">Shop</a>
 								<ul class="sub_menu">
 									<li><a href="Catalog.aspx?ID=Kitchen">Kitchen</a></li>
 									<li><a href="Catalog.aspx?ID=Living Room">Living Room </a></li>
@@ -175,7 +175,7 @@
 
 					<li class="item-menu-mobile">
                         <a href="Catalog.aspx">Products</a>
-						    <ul class="sub_menu">
+						    <ul class="sub-menu-mobile">
 							    <li><a href="Catalog.aspx"?ID="KitchenRoom">Kitchen</a></li>
 							    <li><a href="Catalog.aspx"?ID="LivingRoom">Living Room </a></li>
 							    <li><a href="Catalog.aspx"?ID="BedRoom">Bed Room</a></li>
@@ -185,7 +185,7 @@
 
 					<li class="item-menu-mobile">
                         <a href="#">Management</a>
-						 <ul class="sub_menu">
+						 <ul class="sub-menu-mobile">
 							<li id="add" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
 							<li id="edit" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
 							<li id="usedit" runat="server"><a href="SearchUser.aspx">Edit User</a></li>

@@ -67,15 +67,13 @@
 							</div>
 
 							<div class="wra-filter-bar">
-								<div id="filter-bar"</div>
+								<div id="filter-bar"></div>
 							</div>
 
 							<div class="flex-sb-m flex-w p-t-16">
 								<div class="w-size11">
 									<!-- Button -->
-									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="btnFilter_Click" />
-									
-								
+									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="BtnFilter_Click" />                              
 								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
@@ -100,7 +98,7 @@
 						<div class="flex-w">
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 								<select class="selection-2" name="sorting">
-									<option id="pricelist" runat="server" OnClick="selected" AutoPostBack="True" >Default Sorting</option>
+									<option id="pricelist" runat="server" OnClick="selected">Default Sorting</option>
 									<option id="ascend" runat="server" OnClick="selected">Price: low to high </option>
 									<option id="descend" runat="server" OnClick="selected">Price: high to low</option>
 								</select>

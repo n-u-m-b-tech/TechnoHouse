@@ -191,6 +191,7 @@
 					</div>
                  </div>
             </div>
+            </div>
 	</section>
 
 	<!-- New Product -->
