@@ -18,6 +18,7 @@ namespace FinalWeb
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
+            invalid.Visible = false;
             Boolean verify = client.Login(email.Value, pass.Value);
             if (verify)
             {
@@ -36,11 +37,11 @@ namespace FinalWeb
                     }
                     
                 }
-                //lblMsg.Visible = true;
+                
             }
             else
             {
-                //lblErrorMessage.Visible = true;
+                invalid.Visible = true;
                 Response.Redirect("Login.aspx");
             }
         }

@@ -112,31 +112,31 @@ namespace FinalWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartshow1;
         
         /// <summary>
-        /// Li1 control.
+        /// add control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl add;
         
         /// <summary>
-        /// Li2 control.
+        /// edit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl edit;
         
         /// <summary>
-        /// Li3 control.
+        /// usedit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Li3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usedit;
         
         /// <summary>
         /// form1 control.

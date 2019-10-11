@@ -22,7 +22,7 @@ namespace FinalWeb
             if (user != null)
             {
                 int userId = user.Id;
-                Response.Redirect("EditUserPage.aspx?ID=" + userId);
+                Response.Redirect("EditUser.aspx?ID=" + userId);
             }
         }
     }

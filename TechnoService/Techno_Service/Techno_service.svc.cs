@@ -328,14 +328,14 @@ namespace Techno_Service
             {
                 Cart cart = new Cart
                 {
-
                     user_Id = userID,
-                    product_Id = product.ID,                
+                    product_Id = product.ID,  
+                    Quantity = Qty,
                     Product_Name = product.name,
                     Product_Description = product.description,
-                    Quantity = Qty,
+                    Image = product.image_url,
+                    Total = Convert.ToDecimal(product.price) * Qty,
                     Unit_Price = Convert.ToDecimal(product.price),
-                    Total = Convert.ToDecimal(product.price) * Qty
 
                 };
 

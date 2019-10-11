@@ -62,8 +62,8 @@
                    <asp:CompareValidator ID="passconfirm" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
 			</div>
 
-              <div class="submit-w3l">
-					 <asp:Button ID="BtnRegister" runat="server" Text="Register"  BackColor="#CC0000" BorderColor="#666666" BorderWidth="2px"  Width="220px" OnClick="BtnRegister_Click"/>
+              <div class="size14 trans-0-4 m-b-10">
+					 <asp:Button ID="BtnRegister" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" runat="server" Text="Register"  OnClick="BtnRegister_Click"/>
 			  </div>
           </div>
         </div>

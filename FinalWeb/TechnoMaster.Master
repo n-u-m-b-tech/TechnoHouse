@@ -63,12 +63,12 @@
 						<ul class="main_menu">
                             <li><a href="Home.aspx">Home</a></li>
 							<li id="hmanage" runat="server">
-								<a href="Catalog.aspx?ID=ALL">Products</a>
+								<a href="Catalog.aspx?ID=ALL">Shop</a>
 								<ul class="sub_menu">
 									<li><a href="Catalog.aspx?ID=Kitchen">Kitchen</a></li>
 									<li><a href="Catalog.aspx?ID=Living Room">Living Room </a></li>
-									<li><a href="Catalog.aspx?ID=Bed Room">Bed Room</a></li>
-                                    <li><a href="Catalog.aspx?ID=BathRoom">Bath Room</a></li>
+									<li><a href="Catalog.aspx?ID=Bed Room">BedRoom</a></li>
+                                    <li><a href="Catalog.aspx?ID=BathRoom">BathRoom</a></li>
 								</ul>
 							</li>
                             
@@ -102,12 +102,12 @@
 
 					<span class="linedivide1"></span>
 
-					<div class="header-wrapicon2" id="cartshow" runat="server">
-
+					<div class="header-wrapicon2" id="cartshow" runat="server">                
+                    </div>
+                    </div>
 					</div>
 				</div>
-			</div>
-		</div>
+
 
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
@@ -175,7 +175,7 @@
 
 					<li class="item-menu-mobile">
                         <a href="Catalog.aspx">Products</a>
-						    <ul class="sub_menu">
+						    <ul class="sub-menu-mobile">
 							    <li><a href="Catalog.aspx"?ID="KitchenRoom">Kitchen</a></li>
 							    <li><a href="Catalog.aspx"?ID="LivingRoom">Living Room </a></li>
 							    <li><a href="Catalog.aspx"?ID="BedRoom">Bed Room</a></li>
@@ -185,10 +185,10 @@
 
 					<li class="item-menu-mobile">
                         <a href="#">Management</a>
-						 <ul>
-							<li id="Li1" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
-							<li id="Li2" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
-							<li id="Li3" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
+						 <ul class="sub-menu-mobile">
+							<li id="add" runat="server"><a href="AddProduct.aspx">Add Product</a></li>
+							<li id="edit" runat="server"><a href="SearchProduct.aspx">Edit Product</a></li>
+							<li id="usedit" runat="server"><a href="SearchUser.aspx">Edit User</a></li>
                          </ul>
 					</li>
 
@@ -219,7 +219,7 @@
    <!--END OF HEADER-->
 
     <form id="form1" runat="server" >
-        <div style="background-color:#000000">
+        <div style="max-height:initial">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
@@ -269,13 +269,13 @@
 					</li>
 
 					<li class="p-b-9">
-						<a href="Catalog.aspx?ID=Bed Room" class="s-text7">
+						<a href="Catalog.aspx?ID=BedRoom" class="s-text7">
 						  Smart	Bed Room
 						</a>
 					</li>
 
 					<li class="p-b-9">
-						<a href="Catalog.aspx?ID=Bath Room" class="s-text7">
+						<a href="Catalog.aspx?ID=BathRoom" class="s-text7">
 							Smart Bath Room
 						</a>
 					</li>
@@ -407,8 +407,6 @@
 	<!-- Container Selection1 -->
 	<div id="dropDownSelect1"></div>
 
-
-
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -418,12 +416,6 @@
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script type="text/javascript">
-		$(".selection-1").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-	</script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
@@ -433,21 +425,6 @@
 	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
-	<!--<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		}); 
-
-		$('.block2-btn-addwishlist').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
-			});
-		});
-	</script>-->
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
@@ -460,17 +437,6 @@
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script type="text/javascript">
-		$(".selection-1").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-
-		$(".selection-2").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect2')
-		});
-	</script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
 	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
@@ -479,48 +445,8 @@
 	<script type="text/javascript" src="js/slick-custom.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
-	<!--<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-                swal(nameProduct, "is added to cart !", "success");
-            });
-		});
-
-		$('.block2-btn-addwishlist').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-                swal(nameProduct, "is added to wishlist !", "success");
-                
-			});
-		});
-	</script>-->
-
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/noui/nouislider.min.js"></script>
-	<script type="text/javascript">
-		/*[ No ui ]
-	    ===========================================================*/
-	    var filterBar = document.getElementById('filter-bar');
-
-	    noUiSlider.create(filterBar, {
-	        start: [ 50, 200 ],
-	        connect: true,
-	        range: {
-	            'min': 50,
-	            'max': 200
-	        }
-	    });
-
-	    var skipValues = [
-	    document.getElementById('value-lower'),
-	    document.getElementById('value-upper')
-	    ];
-
-	    filterBar.noUiSlider.on('update', function( values, handle ) {
-	        skipValues[handle].innerHTML = Math.round(values[handle]) ;
-	    });
-	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 

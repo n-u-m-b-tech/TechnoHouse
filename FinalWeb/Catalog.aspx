@@ -4,14 +4,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/heading-pages-02.jpg);">
+	<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/slider/smarthomerethink.png);">
 		<h2 class="l-text2 t-center">
 			Your Smart Home
 		</h2>
 		<p class="m-text13 t-center">
 			New Arrrival Of Home Smart 	Devices</p>
 	</section>
-
 
 	<!-- Content page -->
 	<section class="bgwhite p-t-55 p-b-65">
@@ -38,7 +37,7 @@
 							</li>
 
 							<li class="p-t-4">
-								<a href="Catalog.aspx?ID=LivingRoom" class="s-text13">
+								<a href="Catalog.aspx?ID=Living Room" class="s-text13">
 									Living Room
 								</a>
 							</li>
@@ -67,15 +66,13 @@
 							</div>
 
 							<div class="wra-filter-bar">
-								<div id="filter-bar"</div>
+								<div id="filter-bar"></div>
 							</div>
 
 							<div class="flex-sb-m flex-w p-t-16">
 								<div class="w-size11">
 									<!-- Button -->
-									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="btnFilter_Click" />
-									
-								
+									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="BtnFilter_Click" />                              
 								</div>
 
 								<div class="s-text3 p-t-10 p-b-10">
@@ -100,7 +97,7 @@
 						<div class="flex-w">
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
 								<select class="selection-2" name="sorting">
-									<option id="pricelist" runat="server" OnClick="selected" AutoPostBack="True" >Default Sorting</option>
+									<option id="pricelist" runat="server" OnClick="selected">Default Sorting</option>
 									<option id="ascend" runat="server" OnClick="selected">Price: low to high </option>
 									<option id="descend" runat="server" OnClick="selected">Price: high to low</option>
 								</select>

@@ -174,6 +174,8 @@ namespace Techno_Service
 		
 		private int _product_Id;
 		
+		private string _Image;
+		
 		private string _Product_Name;
 		
 		private string _Product_Description;
@@ -198,6 +200,8 @@ namespace Techno_Service
     partial void Onuser_IdChanged();
     partial void Onproduct_IdChanging(int value);
     partial void Onproduct_IdChanged();
+    partial void OnImageChanging(string value);
+    partial void OnImageChanged();
     partial void OnProduct_NameChanging(string value);
     partial void OnProduct_NameChanged();
     partial void OnProduct_DescriptionChanging(string value);
@@ -281,6 +285,26 @@ namespace Techno_Service
 					this._product_Id = value;
 					this.SendPropertyChanged("product_Id");
 					this.Onproduct_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Image", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Image
+		{
+			get
+			{
+				return this._Image;
+			}
+			set
+			{
+				if ((this._Image != value))
+				{
+					this.OnImageChanging(value);
+					this.SendPropertyChanging();
+					this._Image = value;
+					this.SendPropertyChanged("Image");
+					this.OnImageChanged();
 				}
 			}
 		}

@@ -54,6 +54,7 @@
       <xs:element minOccurs="0" name="CartId" type="xs:int" />
       <xs:element minOccurs="0" name="Qty" type="xs:int" />
       <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="image_url" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="productDescription" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="productId" type="xs:int" />
       <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />

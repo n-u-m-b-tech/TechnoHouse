@@ -8,7 +8,7 @@
  <!--SideBar-->
     <br />
     <br />
-     <br />
+    <br />
     <br />
     <br />
     <br />
@@ -29,7 +29,7 @@
 			<li class="active"><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
 			<li><a href="AddProduct.aspx"><em class="fa fa-calendar">&nbsp;</em> Add Product</a></li>
 			<li><a href="SearchProduct.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit Product</a></li>
-			<li><a href="EditUser.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit User</a></li>
+			<li><a href="SearchUser.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit User</a></li>
             <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> Stats </a></li>
             <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> View Report </a></li>
 		</ul>

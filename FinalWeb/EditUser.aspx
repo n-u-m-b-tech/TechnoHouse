@@ -54,13 +54,6 @@
                    <input class="sizefull s-text7 p-l-22 p-r-22" id="email" runat="server" type="text" name="email" placeholder="Email" required=""><br />
                    <asp:RegularExpressionValidator ID="emailValid" runat="server" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email"></asp:RegularExpressionValidator>
                   </div>
-              <div class="bo4 of-hidden size15 m-b-20">    
-                  <input class="sizefull s-text7 p-l-22 p-r-22" id="pass" runat="server" type="password" name="pass" placeholder="Password" required="">
-                <div class="bo4 of-hidden size15 m-b-20"> 
-                    </div>
-                  <input class="sizefull s-text7 p-l-22 p-r-22" id="confirm" runat="server" type="password" name="pass" placeholder="Confirm Password" required="">
-                   <asp:CompareValidator ID="passconfirm" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
-			</div>
 
                <div class="bo4 of-hidden size15 m-b-20">
 		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="type" runat="server" type="text" name="type" placeholder="Personnel Type" required="">

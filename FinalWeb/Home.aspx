@@ -10,7 +10,7 @@
 	<section class="slide1">
 		<div class="wrap-slick1">
           <div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/home.png);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/slider/SmartHouse.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Latest Home Gadgets
@@ -28,7 +28,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url(images/living.jpg);">
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/slider/living.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
 							Living Room Gadgets
@@ -47,7 +47,7 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/kitchen.jpg);">
+				<div class="item-slick1 item3-slick1" style="background-image: url(images/slider/kitchen.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Kitchen Gadgets and Appliances.
@@ -66,8 +66,7 @@
 					</div>
 				</div>
 
-
-                <div class="item-slick1 item3-slick1" style="background-image: url(images/bathroom.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url(images/slider/bathroom.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Bathroom Gadgets and Appliances.
@@ -89,7 +88,7 @@
                 <div class="item-slick1 item3-slick1" style="background-image: url(images/bathroom.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-							Bathroom Gadgets and Appliances.
+							Bed Room Gadgets and Appliances.
 						</span>
 
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
@@ -115,7 +114,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/bathroom.jpg" alt="IMG-BENNER">
+						<img src="images/slider/living.jpg" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -129,7 +128,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block1 -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/living.jpg" alt="IMG-BENNER">
+						<img src="images/slider/kitchen.jpg" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -168,6 +167,7 @@
 					</div>
                     </div>
 
+                	<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
 					<div class="block1 wrap-pic-w pos-relative m-b-30">
 						<img src="images/discount.jpg" alt="IMG">
@@ -178,7 +178,7 @@
 							</h4>
 
 							<p class="t-center w-size4">
-								Be the frist to know about the latest fashion news and get exclu-sive offers
+								Be the first to check out our new smart home gadgets
 							</p>
 
 							<div class="w-size2 p-t-25">
@@ -189,7 +189,8 @@
 							</div>
 						</div>
 					</div>
-		      </div>
+                 </div>
+            </div>
             </div>
 	</section>
 
@@ -201,12 +202,13 @@
 					Featured Products
 				</h3>
 			</div>
-
+           
 			<div class="wrap-slick2">
 				<div class="slick2" id="view" runat="server">
                   
                 </div>
 			</div>
+          
 		</div>
 	</section>
 

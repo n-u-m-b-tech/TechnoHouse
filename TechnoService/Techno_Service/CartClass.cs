@@ -8,7 +8,7 @@ namespace Techno_Service
     public class CartClass
     {
         public int CartId, userId, productId,Qty;
-        public String productName, productDescription;
+        public String productName, productDescription, image_url;
         public double Total,unit;
     }
 }
