@@ -738,6 +738,24 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         System.Threading.Tasks.Task<bool> Add_to_CartAsync(FinalWeb.TechService.ProductD product, int userID, int Qty);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
+        bool payment(string type, System.DateTime date, decimal Amount, int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
+        System.Threading.Tasks.Task<bool> paymentAsync(string type, System.DateTime date, decimal Amount, int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/removeItem", ReplyAction="http://tempuri.org/ITechno_service/removeItemResponse")]
+        bool removeItem(int userId, int productId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/removeItem", ReplyAction="http://tempuri.org/ITechno_service/removeItemResponse")]
+        System.Threading.Tasks.Task<bool> removeItemAsync(int userId, int productId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/increaseQue", ReplyAction="http://tempuri.org/ITechno_service/increaseQueResponse")]
+        bool increaseQue(int productId, int UserId, int num);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/increaseQue", ReplyAction="http://tempuri.org/ITechno_service/increaseQueResponse")]
+        System.Threading.Tasks.Task<bool> increaseQueAsync(int productId, int UserId, int num);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddProduct", ReplyAction="http://tempuri.org/ITechno_service/AddProductResponse")]
         int AddProduct(FinalWeb.TechService.ProductD addP);
         
@@ -902,6 +920,30 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<bool> Add_to_CartAsync(FinalWeb.TechService.ProductD product, int userID, int Qty) {
             return base.Channel.Add_to_CartAsync(product, userID, Qty);
+        }
+        
+        public bool payment(string type, System.DateTime date, decimal Amount, int userID) {
+            return base.Channel.payment(type, date, Amount, userID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> paymentAsync(string type, System.DateTime date, decimal Amount, int userID) {
+            return base.Channel.paymentAsync(type, date, Amount, userID);
+        }
+        
+        public bool removeItem(int userId, int productId) {
+            return base.Channel.removeItem(userId, productId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> removeItemAsync(int userId, int productId) {
+            return base.Channel.removeItemAsync(userId, productId);
+        }
+        
+        public bool increaseQue(int productId, int UserId, int num) {
+            return base.Channel.increaseQue(productId, UserId, num);
+        }
+        
+        public System.Threading.Tasks.Task<bool> increaseQueAsync(int productId, int UserId, int num) {
+            return base.Channel.increaseQueAsync(productId, UserId, num);
         }
         
         public int AddProduct(FinalWeb.TechService.ProductD addP) {

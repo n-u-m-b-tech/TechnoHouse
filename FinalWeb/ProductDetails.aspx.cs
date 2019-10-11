@@ -70,7 +70,8 @@ namespace FinalWeb
 
             display += "<div class='btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10'>";
             //<!-- Button -->
-            display += "<asp:Button runat='server'  Value='Add To Cart' class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'  Onclick='BtnAddToCart_Click'></asp:Button>";
+            display += "<asp:LinkButton runat='server' OnClick='BtnAddToCart_Click'  Value='Add To Cart' class='flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4'  Onclick='BtnAddToCart_Click'></asp:Button>";
+            display+= "<asp:LinkButton runat='server' OnClick='BtnAddToCart_Click'/>";
             display += "</div>";
             display += "</div>";
             display += "</div>";
@@ -140,17 +141,18 @@ display+="<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Ad
         
 protected void BtnAddToCart_Click(object sender, EventArgs e)
 {
+            int qty = 1;
             if (Session["userID"] != null)
             {
                 String proId = Request.QueryString["ID"];
                 int ID = Convert.ToInt32(proId);
-                /*  if (!qty.Value.Equals(""))
+                  if (!qty.Equals(""))
                   {
-                      int Qty = Convert.ToInt32(qty.Value);
+                      int Qty = Convert.ToInt32(qty);
                       ProductD pro = client.productinfor_retrieval_ID(ID);
                       int userId = Convert.ToInt32(Session["userID"]);
                       client.Add_to_Cart(pro, userId, Qty);
-                      Response.Redirect("NewCartPage.aspx?ID=" + ID);
+                      Response.Redirect("ShoppingCart.aspx?ID=" + ID);
                   }
                   else
                   {
@@ -158,8 +160,8 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
                       ProductD pro = client.productinfor_retrieval_ID(ID);
                       int userId = Convert.ToInt32(Session["userID"]);
                       client.Add_to_Cart(pro, userId, Qty);
-                      Response.Redirect("NewCartPage.aspx?ID=" + ID);
-                  }*/
+                      Response.Redirect("ShoppingCart.aspx?ID=" + ID);
+                  }
             }
             Response.Redirect("Home.aspx");
 }
