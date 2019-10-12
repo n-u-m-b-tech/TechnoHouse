@@ -273,9 +273,6 @@ namespace Techno_Service
             item.Discount = pr.discount;
             item.Image_url = pr.image_url;
 
-
-
-
             try
             {
                 db.SubmitChanges();
@@ -614,9 +611,11 @@ namespace Techno_Service
                         CartId = c.Cart_Id,
                         userId = c.user_Id,
                         productId = c.product_Id,
+                        image_url =c.Image,
                         productName = c.Product_Name,
                         productDescription = c.Product_Description,
                         Qty = c.Quantity,
+                        unit = Convert.ToDouble(c.Unit_Price),
                         Total = Convert.ToDouble(c.Total)
                     };
                     list.Add(usercart);
