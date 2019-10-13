@@ -91,7 +91,8 @@ namespace FinalWeb
                     display+="<div class='block2-btn-addcart w-size1 trans-0-4'>";
                     //<!-- Button -->
                     display+="<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
-					display+="</div>";
+                    display += "<a href='#BtnAddToCart_Click' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onclick='Added to cart'  onServerClick='BtnAddToCart_Click'>Add To Cart</a>";
+                    display +="</div>";
 					display+="</div>";
                     display += "</div>";
 					display+="<div class='block2-txt p-t-20'>";
@@ -113,7 +114,7 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
             {
                 String proId = Request.QueryString["ID"];
                 int ID = Convert.ToInt32(proId);
-                 if (!qty.Value.Equals("1"))
+                 if (!qty.Value.Equals(""))
                   {
                       int Qty = Convert.ToInt32(qty.Value);
                       var pro = client.productinfor_retrieval_ID(ID);
