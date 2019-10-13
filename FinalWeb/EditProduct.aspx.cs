@@ -35,28 +35,27 @@ namespace FinalWeb
             brand.Value = product.brand;
             manufacturer.Value = product.manufacture;
             discount.Value = Convert.ToString(product.discount);
-           url.Value = product.image_url;
+            url.Value = product.image_url;
 
         }
 
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
+            String proId = Request.QueryString["ID"];
+
             ProductD product = new ProductD
             {
-                image_url =url.Value,
                 name = name.Value,
                 description = description.Value,
-                price = Convert.ToDouble(price.Value),
-                quantity = Convert.ToInt32(quantity.Value),
-                category = category.Value,
-                active = Convert.ToChar(active.Value),
                 brand = brand.Value,
+                category = category.Value,
+                price = Convert.ToDouble(price.Value),
                 manufacture = manufacturer.Value,
-                discount = Convert.ToDecimal(discount.Value)
-
-            };
-
-            String proId = Request.QueryString["ID"];
+                quantity = Convert.ToInt32(quantity.Value),
+                discount = Convert.ToDecimal(discount.Value),
+                image_url = url.Value,
+                active = Convert.ToChar(active.Value),
+        };
 
 
             int ID = Convert.ToInt32(proId);
@@ -67,8 +66,7 @@ namespace FinalWeb
             else
             {
                 Response.Redirect("EditProduct.aspx?ID=" + ID);
-            };
-
+            }
         }
     }
 }

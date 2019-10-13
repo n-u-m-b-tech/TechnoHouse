@@ -31,6 +31,48 @@
 							Apply coupon
 						</button>
 					</div>
+
+              <div class="flex-c-m p-t-44 p-t-30-xl">
+					<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
+						<span class="m-text10 p-b-1 days">
+							00
+						</span>
+
+						<span class="s-text5">
+							days
+						</span>
+					</div>
+
+					<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
+						<span class="m-text10 p-b-1 hours">
+							24
+						</span>
+
+						<span class="s-text5">
+							hrs
+						</span>
+					</div>
+
+					<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
+						<span class="m-text10 p-b-1 minutes">
+							00
+						</span>
+
+						<span class="s-text5">
+							mins
+						</span>
+					</div>
+
+					<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
+						<span class="m-text10 p-b-1 seconds">
+							00
+						</span>
+
+						<span class="s-text5">
+							secs
+						</span>
+					</div>
+				</div>
 				</div>
 
 				<div class="size10 trans-0-4 m-t-10 m-b-10">

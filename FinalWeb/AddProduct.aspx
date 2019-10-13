@@ -41,16 +41,12 @@
 			</div>
 
              <div class="bo4 of-hidden size15 m-b-20">
-				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="active" type="text" name="name" placeholder="Product Available" required="">
-			</div>
-
-             <div class="bo4 of-hidden size15 m-b-20">
 				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="url" type="text" name="name" placeholder="Image URL" required="">
 			</div>
 
-            <div class="submit-w3l">
-					 <asp:Button ID="BtnRegister" runat="server"  BackColor="#CC0000" BorderColor="#666666" BorderWidth="2px" Text="Add Product" Width="220px" OnClick="BtnRegister_Click"/>
-				</div>
+            <div class="size14 trans-0-4 m-b-10">
+					 <asp:Button ID="BtnRegister" runat="server" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" Text="Add Product"  OnClick="BtnRegister_Click"/>
+		    </div>
         </div>
         </div>
     </div>

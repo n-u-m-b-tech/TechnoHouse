@@ -12,9 +12,10 @@
             <input class="sizefull s-text7 p-l-22 p-r-22" id="email" runat="server" type="text" name="email" placeholder="User Email" required="">
           </div>
         
-         <div class="submit-w3l">
-			<asp:Button ID="btnSearch" runat="server"  BackColor="#CC0000" BorderColor="#666666" BorderWidth="2px" Text="Search User" Width="220px" OnClick="BtnSearch_Click"/>
-		</div>     
+         
+            <div class="size14 trans-0-4 m-b-10">
+					 <asp:Button ID="BtnSearch" runat="server" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" Text="Serch User"  OnClick="BtnSearch_Click"/>
+		    </div>  
 </div>
      </div>
      </div>

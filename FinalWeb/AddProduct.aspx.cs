@@ -29,7 +29,7 @@ namespace FinalWeb
             pro.quantity = Convert.ToInt32(quantity.Value);
             pro.discount = Convert.ToDecimal(discount.Value);
             pro.image_url = url.Value;
-            pro.active = Convert.ToChar(active.Value);
+            pro.active = 'T';
 
             if (client.AddProduct(pro) == 0)
             {

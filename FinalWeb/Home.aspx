@@ -10,7 +10,7 @@
 	<section class="slide1">
 		<div class="wrap-slick1">
           <div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/slider/SmartHouse.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/slider/smart.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
 							Latest Home Gadgets
@@ -21,7 +21,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
 							<!-- Button -->
-							<a href="Catalog.aspx" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Catalog.aspx?ID=ALL" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -220,7 +220,7 @@
 					<div class="bgwhite hov-img-zoom pos-relative p-b-20per-ssm">
                         <h3>SECURIRY ALERT!!</h3>
                           <p>Check out our latest security devices</p>
-						<img src="images/my/Upcoming.jpg" alt="IMG-BANNER">
+						<img src="images/slider/security.jpg" alt="IMG-BANNER">
 							<div class="flex-c-m p-t-44 p-t-30-xl">
 								<div class="flex-col-c-m size3 bo1 m-l-5 m-r-5">
 									<span class="m-text10 p-b-1 days">
@@ -263,9 +263,123 @@
 								</div>
 							</div>
 						</div>
-					</div>
+				      </div>
+			 </div>
+		  </div>
+	  </section>
 
+   <!-- Galerry -->
+	<section class="blog bgwhite p-t-94 p-b-65">
+		<div class="container">
+			<div class="sec-title p-b-52">
+				<h3 class="m-text5 t-center">
+					Our Gallery
+				</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+					<!-- Block3 -->
+					<div class="block3">
+						<a href="Catalogue.aspx?ID=BathRoom" class="block3-img dis-block hov-img-zoom">
+							<img src="images/slider/SmartLiving.jpg" alt="IMG-BLOG">
+						</a>
+
+						<div class="block3-txt p-t-14">
+							<h4 class="p-b-7">
+								<a href="#" class="m-text11">
+									
+								</a>
+							</h4>
+
+							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
+
+							<p class="s-text8 p-t-16">
+								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+                				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+					<!-- Block3 -->
+					<div class="block3">
+						<a href="Catalogue.aspx?ID=BedRoom" class="block3-img dis-block hov-img-zoom">
+							<img src="images/slider/SmartBedroom.jpg" alt="IMG-BLOG">
+						</a>
+
+						<div class="block3-txt p-t-14">
+							<h4 class="p-b-7">
+								<a href="#" class="m-text11">
+									
+								</a>
+							</h4>
+
+							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
+
+							<p class="s-text8 p-t-16">
+								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+                	<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+					<!-- Block3 -->
+					<div class="block3">
+						<a href="Catalogue.aspx?ID=Liviing Room" class="block3-img dis-block hov-img-zoom">
+							<img src="images/slider/SmartLiving.jpg" alt="IMG-BLOG">
+						</a>
+
+						<div class="block3-txt p-t-14">
+							<h4 class="p-b-7">
+								<a href="#" class="m-text11">
+									
+								</a>
+							</h4>
+
+							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
+
+							<p class="s-text8 p-t-16">
+								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+                				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+					<!-- Block3 -->
+					<div class="block3">
+						<a href="Catalogue.aspx?ID=Kitchen" class="block3-img dis-block hov-img-zoom">
+							<img src="images/slider/kitchen.png" alt="IMG-BLOG">
+						</a>
+
+						<div class="block3-txt p-t-14">
+							<h4 class="p-b-7">
+								<a href="#" class="m-text11">
+									
+								</a>
+							</h4>
+
+							<span class="s-text6">By</span> <span class="s-text7">Nancy Ward</span>
+							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
+
+							<p class="s-text8 p-t-16">
+								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
+							</p>
+						</div>
+					</div>
+				</div>
+
+			
 			</div>
 		</div>
 	</section>
+
 </asp:Content>

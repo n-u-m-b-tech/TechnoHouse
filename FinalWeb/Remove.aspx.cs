@@ -8,28 +8,26 @@ using FinalWeb.TechService;
 
 namespace FinalWeb
 {
-    public partial class Add : System.Web.UI.Page
+    public partial class Remove : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
             {
-                String proId = Request.QueryString["ID"];
-                int ID = Convert.ToInt32(proId);
-                var pro = client.productinfor_retrieval_ID(ID);
+                int proId = Convert.ToInt32(Request.QueryString["ID"]);    
                 int userId = Convert.ToInt32(Session["userID"].ToString());
-                bool val = client.Add_to_Cart(pro, userId, 1);
+                bool val = client.removeItem(userId, proId);
                 if (val)
                 {
-                    Response.Redirect(Request.UrlReferrer.ToString());
+                    Response.Redirect("ShoppingCart.aspx?ID=" + userId);
                 }
                 else
                 {
                     Response.Redirect("Home.aspx");
                 }
 
-                }
+            }
         }
     }
 }

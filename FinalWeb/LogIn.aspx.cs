@@ -29,7 +29,7 @@ namespace FinalWeb
                     Session["userType"] = user.type;
                     if(Session["userType"].Equals("admin"))
                     {
-                        Response.Redirect("Management.aspx");
+                        Response.Redirect("Management.aspx?ID="+user.Id+"");
                     }
                     else
                     {

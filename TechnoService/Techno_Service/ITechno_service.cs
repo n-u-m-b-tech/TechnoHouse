@@ -40,18 +40,22 @@ namespace Techno_Service
         List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
-        [OperationContract]
-        List<CartClass> getUser_Cart(int userID);
         
 
 
         //transaction and cart
         [OperationContract]
         Boolean Add_to_Cart(ProductD product,int userID,int Qty);
+
+        [OperationContract]
+        List<CartClass> getUser_Cart(int userID);
+
         [OperationContract]
         Boolean payment(String type, DateTime date, Decimal Amount, int userID);
         [OperationContract]
         bool removeItem(int userId, int productId);
+
+       
         [OperationContract]
         bool increaseQue(int productId, int UserId,int num);
 

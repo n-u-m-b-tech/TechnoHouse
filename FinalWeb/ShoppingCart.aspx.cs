@@ -18,12 +18,13 @@ namespace FinalWeb
         {
             display += "<table class='table-shopping-cart'>";
             display += "<tr class='table-head'>";
-            display += "<th class='column-1'>Image</th>";
-            display += "<th class='column-2'>Product Name</th>";
-            display += "<th class='column-3'>Product Description</th>";
-            display += "<th class='column-4'>Price</th>";
-            display += "<th class='column-5 p-l-70'>Quantity</th>";
-            display += "<th class='column-6'>Total</th>";
+            display += "<th class='column-1'>Remove</th>";
+            display += "<th class='column-2'>Image</th>";
+            display += "<th class='column-3'>Product Name</th>";
+            display += "<th class='column-4'>Product Description</th>";
+            display += "<th class='column-5'>Price</th>";
+            display += "<th class='column-6'>Quantity</th>";
+            display += "<th class='column-7'>Total</th>";
             display += "</tr>";
             if (Session["userID"] != null)
             {
@@ -36,15 +37,18 @@ namespace FinalWeb
                     {
                         subtotal += c.Total;
                         display += "<tr class='table-row'>";
-                        display += "<td class='column-1'>";
+                        display += "<td class='column-1>";
+                        display += "<a href='Remove.aspx?ID="+c.productId+"'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button>";
+                        display += "</td>";
+                        display += "<td class='column-2'>";
                         display += "<div class='cart-img-product b-rad-4 o-f-hidden'>";
                         display += "<img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";
                         display += "</div>";
                         display += "</td>";
-                        display += "<td class='column-2'>" + c.productName + "</td>";
-                        display += "<td class='column-3'>" + c.productName + "</td>";
-                        display += "<td class='column-4'>" + Math.Round(c.unit,2) + "</td>";
-                        display += "<td class='column-5'>"; 
+                        display += "<a href='ProductDetails.aspx?ID="+c.productId+"'><td class='column-3'>" + c.productName + "</td></a>";
+                        display += "<td class='column-4'>" + c.productName + "</td>";
+                        display += "<td class='column-5'>" + Math.Round(c.unit,2) + "</td>";
+                        display += "<td class='column-6'>"; 
                         display += "<div class='flex-w bo5 of-hidden w-size17'>";
                         display += "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>";
                         display += "<i class='fs-12 fa fa-minus' aria-hidden='true'></i></button>";
@@ -54,7 +58,7 @@ namespace FinalWeb
                         display += "</button>";
                         display += "</div>";
                         display += "</td>";
-                        display += "<td class='column-6'>" + c.Total + "</td>";
+                        display += "<td class='column-7'>" + c.Total + "</td>";
                         display += "</tr>";
                        
                     }

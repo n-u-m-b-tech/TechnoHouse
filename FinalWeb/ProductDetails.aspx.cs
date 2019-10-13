@@ -113,7 +113,7 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
             {
                 String proId = Request.QueryString["ID"];
                 int ID = Convert.ToInt32(proId);
-                 if (!qty.Value.Equals(""))
+                 if (!qty.Value.Equals("1"))
                   {
                       int Qty = Convert.ToInt32(qty.Value);
                       var pro = client.productinfor_retrieval_ID(ID);
@@ -133,17 +133,9 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
                     var pro = client.productinfor_retrieval_ID(ID);
                     int userId = Convert.ToInt32(Session["userID"].ToString());                     
                     bool val = client.Add_to_Cart(pro, userId, Qty);
-                    if (val)
-                    {
-                        Response.Redirect("ShoppingCart.aspx?ID=" + ID);
-                    }
-                    else {
-                        Response.Redirect("Home.aspx");
-                    }
-                    
                   }
             }
-            Response.Redirect("Home.aspx");
+            Response.Redirect("LogIn.aspx");
 }
     }
 }
