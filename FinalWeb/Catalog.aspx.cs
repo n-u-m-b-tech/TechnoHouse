@@ -13,6 +13,8 @@ namespace FinalWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+          
+
             String catalogue = Request.QueryString["ID"];
             if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("BathRoom") || catalogue.Equals("BedRoom"))
             {
@@ -31,7 +33,7 @@ namespace FinalWeb
                     display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                     display += "</a>";
                     display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                    display += "<a href='#BtnAddToCart_Click' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onclick='Added to cart'  onServerClick='BtnAddToCart_Click'>Add To Cart</a>";
+                    display += "<a href='Add.aspx?ID="+pro.ID+"@Add"+"' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' >Add to cart</a>";
                  
                     display += "</div>";
                     display += "</div>";
@@ -61,7 +63,7 @@ namespace FinalWeb
                     Display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                     Display += "</a>";
                     Display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                    Display += "<a href='Add.aspx?ID=" + pro.ID + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add To Cart</a>";
+                    Display += "<a href='Add.aspx?ID=" + pro.ID + "@Add" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add To Cart</a>";
                     Display += "</div>";
                     Display += "</div>";
                     Display += "</div>";

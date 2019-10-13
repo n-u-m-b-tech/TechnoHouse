@@ -52,7 +52,7 @@ namespace FinalWeb
                 display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                 display += "</a>";
                 display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                display += "<a href='Add.aspx?ID="+product[i].ID+ "' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>Add To Cart</a>";
+                display += "<a href='Add.aspx?ID="+product[i].ID+ "@Add" + "' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>Add To Cart</a>";
                 display += "</div>";
                 display += "</div>";
                 display += "</div>";

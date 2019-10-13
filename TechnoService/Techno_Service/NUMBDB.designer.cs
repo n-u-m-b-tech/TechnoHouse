@@ -3103,6 +3103,8 @@ namespace Techno_Service
 		
 		private decimal _Total;
 		
+		private string _img_url;
+		
 		private EntityRef<Product> _Product;
 		
 		private EntityRef<Client> _Client;
@@ -3127,6 +3129,8 @@ namespace Techno_Service
     partial void OnUnit_PriceChanged();
     partial void OnTotalChanging(decimal value);
     partial void OnTotalChanged();
+    partial void Onimg_urlChanging(string value);
+    partial void Onimg_urlChanged();
     #endregion
 		
 		public Cart()
@@ -3300,6 +3304,26 @@ namespace Techno_Service
 					this._Total = value;
 					this.SendPropertyChanged("Total");
 					this.OnTotalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_img_url", DbType="VarChar(MAX)")]
+		public string img_url
+		{
+			get
+			{
+				return this._img_url;
+			}
+			set
+			{
+				if ((this._img_url != value))
+				{
+					this.Onimg_urlChanging(value);
+					this.SendPropertyChanging();
+					this._img_url = value;
+					this.SendPropertyChanged("img_url");
+					this.Onimg_urlChanged();
 				}
 			}
 		}

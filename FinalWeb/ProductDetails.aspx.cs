@@ -90,8 +90,8 @@ namespace FinalWeb
 
                     display+="<div class='block2-btn-addcart w-size1 trans-0-4'>";
                     //<!-- Button -->
-                    display+="<button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button>";
-                    display += "<a href='#BtnAddToCart_Click' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' onclick='Added to cart'  onServerClick='BtnAddToCart_Click'>Add To Cart</a>";
+         
+                    display += "<a href='Add.aspx?ID="+p.ID+"@Add"+"' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' runat='server'>Add To Cart</a>";
                     display +="</div>";
 					display+="</div>";
                     display += "</div>";

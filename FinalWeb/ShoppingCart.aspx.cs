@@ -38,14 +38,14 @@ namespace FinalWeb
                         subtotal += c.Total;
                         display += "<tr class='table-row'>";
                         display += "<td class='column-1>";
-                        display += "<a href='Remove.aspx?ID="+c.productId+"'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button>";
+                        display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
                         display += "</td>";
                         display += "<td class='column-2'>";
                         display += "<div class='cart-img-product b-rad-4 o-f-hidden'>";
                         display += "<img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";
                         display += "</div>";
                         display += "</td>";
-                        display += "<a href='ProductDetails.aspx?ID="+c.productId+"'><td class='column-3'>" + c.productName + "</td></a>";
+                        display += "<td class='column-3'>" + c.productName + "</td>";
                         display += "<td class='column-4'>" + c.productName + "</td>";
                         display += "<td class='column-5'>" + Math.Round(c.unit,2) + "</td>";
                         display += "<td class='column-6'>"; 

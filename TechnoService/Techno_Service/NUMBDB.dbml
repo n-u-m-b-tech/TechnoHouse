@@ -141,6 +141,7 @@
       <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Unit_Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="Total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="img_url" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Association Name="Product_Cart" Member="Product" ThisKey="product_Id" OtherKey="Product_Id" Type="Product" IsForeignKey="true" />
       <Association Name="Client_Cart" Member="Client" ThisKey="user_Id" OtherKey="Client_Id" Type="Client" IsForeignKey="true" />
     </Type>

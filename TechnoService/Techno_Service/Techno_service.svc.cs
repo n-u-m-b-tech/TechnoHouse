@@ -330,7 +330,7 @@ namespace Techno_Service
                     Quantity = Qty,
                     Product_Name = product.name,
                     Product_Description = product.description,
-                   // Image = product.image_url,
+                    img_url = product.image_url,
                     Total = Convert.ToDecimal(product.price) * Qty,
                     Unit_Price = Convert.ToDecimal(product.price),
 
@@ -611,7 +611,7 @@ namespace Techno_Service
                         CartId = c.Cart_Id,
                         userId = c.user_Id,
                         productId = c.product_Id,
-                       // image_url =c.Image,
+                        image_url =c.img_url,
                         productName = c.Product_Name,
                         productDescription = c.Product_Description,
                         Qty = c.Quantity,
