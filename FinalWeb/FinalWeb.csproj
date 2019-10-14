@@ -2655,7 +2655,6 @@
     <Content Include="LogOut.aspx" />
     <Content Include="Management.aspx" />
     <Content Include="ProductDetails.aspx" />
-    <Content Include="Remove.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUser.aspx" />
     <Content Include="ShoppingCart.aspx" />
@@ -2982,13 +2981,6 @@
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Remove.aspx.cs">
-      <DependentUpon>Remove.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Remove.aspx.designer.cs">
-      <DependentUpon>Remove.aspx</DependentUpon>
-    </Compile>
     <Compile Include="SearchProduct.aspx.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
