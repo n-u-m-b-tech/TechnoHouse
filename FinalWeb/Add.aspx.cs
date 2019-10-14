@@ -15,23 +15,35 @@ namespace FinalWeb
         {
             if (Session["userID"] != null)
             {
-                String proId = Request.QueryString["ID"];
+                String que = Request.QueryString["ID"];
+                String[] param = que.Split('@');
+                String proId = param[0];
+                String instr = param[1];
+               
                 int ID = Convert.ToInt32(proId);
                 var pro = client.productinfor_retrieval_ID(ID);
                 int userId = Convert.ToInt32(Session["userID"].ToString());
-                bool val = client.Add_to_Cart(pro, userId, 1);
-                if (val)
+                if (instr.Equals("Add"))
                 {
-                    Response.Redirect(Request.UrlReferrer.ToString());
-                }
-                else
+                    bool val = client.Add_to_Cart(pro, userId, 1);
+                    if (val)
+                    {
+                        Response.Redirect(Request.UrlReferrer.ToString());
+                    }
+                    else
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+                }else
                 {
-                    Response.Redirect("Home.aspx");
+                    bool ver = client.removeItem(userId, Convert.ToInt32(proId));
+                    if (ver)
+                    {
+                        Response.Redirect(Request.UrlReferrer.ToString());
+                    }
                 }
 
-            }
-            else if (Session["userID"] == null) {
-                Response.Redirect("LogIn.aspx");
+
             }
         }
     }

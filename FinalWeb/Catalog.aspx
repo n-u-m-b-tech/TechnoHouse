@@ -1,5 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TechnoMaster.Master" AutoEventWireup="true" CodeBehind="Catalog.aspx.cs" Inherits="FinalWeb.Catalog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script>
+            //Function which will fire when user click on anchor tag
+        function ExecuteCodeBehindClickEvent() {
+            //Get the Button reference and trigger the click event
+            document.getElementById("btnSubmit").click();
+          
+        }
+    </script>
+      
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -8,7 +17,7 @@
 		<h2 class="l-text2 t-center">
 			Your Smart Home
 		</h2>
-		<p class="m-text13 t-center">
+		<p  class="m-text13 t-center">
 			New Arrrival Of Home Smart 	Devices</p>
 	</section>
 
@@ -25,7 +34,7 @@
 
 						<ul class="p-b-54">
 							<li class="p-t-4">
-								<a href="Catalog.aspx?ID=ALL" class="s-text13 active1">
+								<a  href="Catalog.aspx?ID=ALL" class="s-text13 active1">
 									All
 								</a>
 							</li>
@@ -92,6 +101,9 @@
 						</div>
 					</div>
 				</div>
+                <div>
+                    <a  id="btnSubmit" runat="server"></a>
+                </div>
 
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
 				
@@ -120,5 +132,6 @@
 				</div>
 			</div>
 		</div>
+      
 	</section>
 </asp:Content>

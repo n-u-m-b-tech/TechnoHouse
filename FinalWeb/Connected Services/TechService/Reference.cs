@@ -742,18 +742,6 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/allProducts", ReplyAction="http://tempuri.org/ITechno_service/allProductsResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> allProductsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/RangePrice", ReplyAction="http://tempuri.org/ITechno_service/RangePriceResponse")]
-        FinalWeb.TechService.ProductD[] RangePrice(int min, int max);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/RangePrice", ReplyAction="http://tempuri.org/ITechno_service/RangePriceResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> RangePriceAsync(int min, int max);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/FiltCatPrice", ReplyAction="http://tempuri.org/ITechno_service/FiltCatPriceResponse")]
-        FinalWeb.TechService.ProductD[] FiltCatPrice(string Category, double price);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/FiltCatPrice", ReplyAction="http://tempuri.org/ITechno_service/FiltCatPriceResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> FiltCatPriceAsync(string Category, double price);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         bool Add_to_Cart(FinalWeb.TechService.ProductD product, int userID, int Qty);
         
@@ -932,22 +920,6 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> allProductsAsync() {
             return base.Channel.allProductsAsync();
-        }
-        
-        public FinalWeb.TechService.ProductD[] RangePrice(int min, int max) {
-            return base.Channel.RangePrice(min, max);
-        }
-        
-        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> RangePriceAsync(int min, int max) {
-            return base.Channel.RangePriceAsync(min, max);
-        }
-        
-        public FinalWeb.TechService.ProductD[] FiltCatPrice(string Category, double price) {
-            return base.Channel.FiltCatPrice(Category, price);
-        }
-        
-        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> FiltCatPriceAsync(string Category, double price) {
-            return base.Channel.FiltCatPriceAsync(Category, price);
         }
         
         public bool Add_to_Cart(FinalWeb.TechService.ProductD product, int userID, int Qty) {
