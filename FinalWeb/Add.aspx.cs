@@ -29,7 +29,10 @@ namespace FinalWeb
                     Response.Redirect("Home.aspx");
                 }
 
-                }
+            }
+            else if (Session["userID"] == null) {
+                Response.Redirect("LogIn.aspx");
+            }
         }
     }
 }

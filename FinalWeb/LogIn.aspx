@@ -30,9 +30,9 @@
 				</div>
 
 				<p class="p-bottom-w3ls">Are you a Techno House member?<a class="w3_play_icon1" href="UserRegistration.aspx">Register here</a></p>
-            <!--<div class="bo4 of-hidden size15 m-b-20">
-                 <asp:Label ID="invalid" class="sizefull s-text7 p-l-22 p-r-22" Width="415px" Height="150px" Text="INVALID USER NAME OR PASSWORD" runat="server"></asp:Label>
-			</div>-->
+               <div class="bo4 of-hidden size15 m-b-20" id="invalid" runat="server">
+                   <input type="text"  class="sizefull s-text7 p-l-22 p-r-22" id="invalidd"  Width="415px" Height="150px" value="INVALID E-MAIL OR PASSWORD" runat="server" />
+			 </div>
 		  </div>
           </div>
          </div>

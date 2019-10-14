@@ -85,17 +85,29 @@
   <wsdl:message name="ITechno_service_allProducts_OutputMessage">
     <wsdl:part name="parameters" element="tns:allProductsResponse" />
   </wsdl:message>
-  <wsdl:message name="ITechno_service_getUser_Cart_InputMessage">
-    <wsdl:part name="parameters" element="tns:getUser_Cart" />
+  <wsdl:message name="ITechno_service_RangePrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:RangePrice" />
   </wsdl:message>
-  <wsdl:message name="ITechno_service_getUser_Cart_OutputMessage">
-    <wsdl:part name="parameters" element="tns:getUser_CartResponse" />
+  <wsdl:message name="ITechno_service_RangePrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RangePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_FiltCatPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FiltCatPrice" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_FiltCatPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FiltCatPriceResponse" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_Add_to_Cart_InputMessage">
     <wsdl:part name="parameters" element="tns:Add_to_Cart" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_Add_to_Cart_OutputMessage">
     <wsdl:part name="parameters" element="tns:Add_to_CartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUser_Cart_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUser_Cart" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUser_Cart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUser_CartResponse" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_payment_InputMessage">
     <wsdl:part name="parameters" element="tns:payment" />
@@ -186,13 +198,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/allProducts" message="tns:ITechno_service_allProducts_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/allProductsResponse" message="tns:ITechno_service_allProducts_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getUser_Cart">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUser_Cart" message="tns:ITechno_service_getUser_Cart_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getUser_CartResponse" message="tns:ITechno_service_getUser_Cart_OutputMessage" />
+    <wsdl:operation name="RangePrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/RangePrice" message="tns:ITechno_service_RangePrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/RangePriceResponse" message="tns:ITechno_service_RangePrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FiltCatPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/FiltCatPrice" message="tns:ITechno_service_FiltCatPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/FiltCatPriceResponse" message="tns:ITechno_service_FiltCatPrice_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Add_to_Cart">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/Add_to_Cart" message="tns:ITechno_service_Add_to_Cart_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/Add_to_CartResponse" message="tns:ITechno_service_Add_to_Cart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser_Cart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUser_Cart" message="tns:ITechno_service_getUser_Cart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getUser_CartResponse" message="tns:ITechno_service_getUser_Cart_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="payment">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/payment" message="tns:ITechno_service_payment_InputMessage" />
@@ -338,8 +358,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getUser_Cart">
-      <soap:operation soapAction="http://tempuri.org/ITechno_service/getUser_Cart" style="document" />
+    <wsdl:operation name="RangePrice">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/RangePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FiltCatPrice">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/FiltCatPrice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -349,6 +378,15 @@
     </wsdl:operation>
     <wsdl:operation name="Add_to_Cart">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/Add_to_Cart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser_Cart">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getUser_Cart" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
