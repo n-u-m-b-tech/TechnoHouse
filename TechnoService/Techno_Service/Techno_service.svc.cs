@@ -685,7 +685,7 @@ namespace Techno_Service
                         select i).FirstOrDefault();
             if (item != null)
             {
-                item.Quantity = num;
+                item.Quantity += num;
                 try
                 {
                     db.SubmitChanges();

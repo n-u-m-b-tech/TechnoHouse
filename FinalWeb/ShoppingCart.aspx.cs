@@ -53,12 +53,12 @@ namespace FinalWeb
                         display += "<td class='column-5'>" + Math.Round(c.unit,2) + "</td>";
                         display += "<td class='column-6'>"; 
                         display += "<div class='flex-w bo5 of-hidden w-size17'>";
-                        display += "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>";
-                        display += "<i class='fs-12 fa fa-minus' aria-hidden='true'></i></button>";
-                        display += "<input class='size8 m-text18 t-center num-product' type='number' name='num-product2' value='" + c.Qty + "'>";
-                        display += "<button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2'>";
+                        display += "<a href='Add.aspx?ID="+c.productId+"@Increase"+"' class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>";
+                        display += "<i class='fs-12 fa fa-minus' aria-hidden='true'></i></a>";
+                        display += "<input class='size8 m-text18 t-center num-product' type='number' name='num-product2' value='" + 1 + "'>";
+                        display += "<a href='Add.aspx?ID=" + c.productId + "@Decrease" + "' class='btn-num-product-up color1 flex-c-m size7 bg8 eff2'>";
                         display += "<i class='fs-12 fa fa-plus' aria-hidden='true'></i>";
-                        display += "</button>";
+                        display += "</a>";
                         display += "</div>";
                         display += "</td>";
                         display += "<td class='column-7'>" + c.Total + "</td>";

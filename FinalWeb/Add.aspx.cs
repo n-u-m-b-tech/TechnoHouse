@@ -41,6 +41,21 @@ namespace FinalWeb
                     {
                         Response.Redirect(Request.UrlReferrer.ToString());
                     }
+                }else if (instr.Equals("Increase"))
+                {
+                    bool ver = client.increaseQue(Convert.ToInt32(proId), userId, 1);
+                    if (ver)
+                    {
+                        Response.Redirect(Request.UrlReferrer.ToString());
+                    }
+                }else if (instr.Equals("Decrease"))
+                {
+                    bool ver = client.increaseQue(Convert.ToInt32(proId), userId, -1);
+                    if (ver)
+                    {
+                        Response.Redirect(Request.UrlReferrer.ToString());
+                    }
+
                 }
 
 
