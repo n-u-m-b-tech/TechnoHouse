@@ -32,7 +32,12 @@ namespace FinalWeb
                     display += " <div class='header-cart-item-txt'>";
                     display += " <a href ='ProductDetails.aspx?ID="+ c.productId + "' class='header-cart-item-name'>" + c.productName + "</a>";
                     display += " <span class='header-cart-item-info'>" + c.Qty + " x" + c.unit + "</span>";
-                    display += " </div>";
+                    //display += " </div>";
+                   // display += "<div class='header-cart-item-txt'>";
+                    display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
+                    display += "<a href='Add.aspx?ID=" + c.productId +"@Remove"+ "'class='header-cart-item-name' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Remove</a> ";
+                    display += "</div>";
+                    display += "</div>";
                     display += " </li>";
                 }
                     display += " </ul>";

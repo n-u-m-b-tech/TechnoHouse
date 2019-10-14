@@ -38,7 +38,10 @@ namespace FinalWeb
                         subtotal += c.Total;
                         display += "<tr class='table-row'>";
                         display += "<td class='column-1>";
-                        display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
+                        //    display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
+                        display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
+                        display += "<a href='Add.aspx?ID=" + c.productId+ "@Remove" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></a>";
+                        display += "</div>";
                         display += "</td>";
                         display += "<td class='column-2'>";
                         display += "<div class='cart-img-product b-rad-4 o-f-hidden'>";

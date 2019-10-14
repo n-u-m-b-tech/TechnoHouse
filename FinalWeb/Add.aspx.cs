@@ -34,7 +34,7 @@ namespace FinalWeb
                     {
                         Response.Redirect("Home.aspx");
                     }
-                }else
+                }else if(instr.Equals("Remove"))
                 {
                     bool ver = client.removeItem(userId, Convert.ToInt32(proId));
                     if (ver)
