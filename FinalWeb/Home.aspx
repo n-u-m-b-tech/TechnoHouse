@@ -85,7 +85,7 @@
 					</div>
 				</div>
 
-                <div class="item-slick1 item3-slick1" style="background-image: url(images/bathroom.jpg);">
+                <div class="item-slick1 item3-slick1" style="background-image: url(images/slider/sbed.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
 							Bed Room Gadgets and Appliances.
@@ -142,7 +142,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/bathroom.jpg" alt="IMG-BENNER">
+						<img src="images/slider/bathroom.jpg" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
@@ -156,7 +156,7 @@
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
 					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/living.jpg" alt="IMG-BENNER">
+						<img src="images/slider/sbed.jpg" alt="IMG-BENNER">
 
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->

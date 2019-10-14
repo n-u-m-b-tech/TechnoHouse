@@ -368,7 +368,7 @@ namespace Techno_Service
         public List<ProductD> price_by_ASC(String category)
         {
             dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category)
+                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
                                orderby p.Price ascending
                                select p);
             List<ProductD> pro = new List<ProductD>();
@@ -399,7 +399,7 @@ namespace Techno_Service
         public List<ProductD> price_by_DESC(String category)
         {
             dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category)
+                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
                                orderby p.Price descending
                                select p);
             List<ProductD> pro = new List<ProductD>();
@@ -491,6 +491,7 @@ namespace Techno_Service
         public List<ProductD> allProducts()
         {
             var product = (from p in db.Products
+                           where p.ACTIVE.Equals("T")
                            select p);
             if (product != null)
             {
@@ -498,7 +499,7 @@ namespace Techno_Service
 
                 foreach (Product prop in product)
                 {
-                    ProductD fprp = new ProductD
+                    ProductD prod = new ProductD
                     {
 
                         ID = prop.Product_Id,
@@ -515,7 +516,7 @@ namespace Techno_Service
 
 
                     };
-                    pro.Add(fprp);
+                    pro.Add(prod);
                 }
                 return pro;
             }
@@ -700,6 +701,84 @@ namespace Techno_Service
                 return false;
             }
                
+        }
+
+        public List<ProductD> RangePrice(int min, int max)
+        {
+            var product = (from p in db.Products
+                           where p.ACTIVE.Equals("T") && (p.Price> min) && (p.Price<max)
+                           orderby p.Category ascending
+                           select p);
+            if (product != null)
+            {
+                List<ProductD> pro = new List<ProductD>();
+
+                foreach (Product prop in product)
+                {
+                    ProductD prod = new ProductD
+                    {
+
+                        ID = prop.Product_Id,
+                        name = prop.Name,
+                        description = prop.Description,
+                        price = (Double)prop.Price,
+                        quantity = prop.Quantity,
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount,
+                        image_url = prop.Image_url,
+                        active = (Char)prop.ACTIVE
+
+
+                    };
+                    pro.Add(prod);
+                }
+                return pro;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<ProductD> FiltCatPrice(string Category, double price)
+        {
+            var product = (from p in db.Products
+                           where p.ACTIVE.Equals("T") && p.Price.Equals(price)
+                           orderby p.Category ascending
+                           select p);
+            if (product != null)
+            {
+                List<ProductD> pro = new List<ProductD>();
+
+                foreach (Product prop in product)
+                {
+                    ProductD prod = new ProductD
+                    {
+
+                        ID = prop.Product_Id,
+                        name = prop.Name,
+                        description = prop.Description,
+                        price = (Double)prop.Price,
+                        quantity = prop.Quantity,
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount,
+                        image_url = prop.Image_url,
+                        active = (Char)prop.ACTIVE
+
+
+                    };
+                    pro.Add(prod);
+                }
+                return pro;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

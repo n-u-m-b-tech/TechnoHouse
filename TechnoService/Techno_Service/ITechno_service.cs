@@ -40,6 +40,12 @@ namespace Techno_Service
         List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
+
+        [OperationContract]
+        List<ProductD> RangePrice(int min, int max);
+
+        [OperationContract]
+        List<ProductD> FiltCatPrice(String Category, Double price);
         
 
 

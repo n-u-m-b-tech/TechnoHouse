@@ -73,19 +73,21 @@
 							<div class="m-text15 p-b-17">
 								Price
 							</div>
-
-							<div class="wra-filter-bar">
-								<div id="filter-bar"></div>
+							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">							
+                              <asp:DropDownList ID="drpfiltprice" runat="server" OnSelectedIndexChanged="drpfiltprice_SelectedIndexChanged">
+                                  <asp:ListItem>Select Price Range</asp:ListItem>
+                                  <asp:ListItem>R0 - R2000</asp:ListItem>
+                                  <asp:ListItem>R2000 - R4000</asp:ListItem>
+                                  <asp:ListItem>R4000 - R6000</asp:ListItem>
+                                  <asp:ListItem>R6000 - R8000</asp:ListItem>
+                                  <asp:ListItem>R8000+</asp:ListItem>
+                                </asp:DropDownList>
 							</div>
 
 							<div class="flex-sb-m flex-w p-t-16">
 								<div class="w-size11">
 									<!-- Button -->
 									<asp:Button class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4" runat="server" id="Filter" Text="Filter" onclick="BtnFilter_Click" />                              
-								</div>
-
-								<div class="s-text3 p-t-10 p-b-10">
-									Range: R<span id="value-lower" >0</span> - R<span id="value-upper" >10 000</span>
 								</div>
 							</div>
 						</div>
@@ -108,24 +110,13 @@
 					<div class="flex-sb-m flex-w p-b-35">
 						<div class="flex-w">
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-								<select class="selection-2" name="sorting">
-									<option id="pricelist" runat="server" OnClick="selected">Default Sorting</option>
-									<option id="ascend" runat="server" OnClick="selected">Price: low to high </option>
-									<option id="descend" runat="server" OnClick="selected">Price: high to low</option>
-								</select>
+                                <asp:DropDownList ID="drpPrice" CssClass="selection-2" runat="server">
+                                    <asp:ListItem >Select Price Sorting</asp:ListItem>
+                                    <asp:ListItem>Ascending (Low to High)</asp:ListItem>
+                                    <asp:ListItem>Descending (High to Low)</asp:ListItem>
+                                </asp:DropDownList>
 							</div>
 
-							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-								<select class="selection-2" name="sorting">
-									<option>Price</option>
-									<option id="first"  runat="server">R 0.00 - R50.00</option>
-									<option id="second"  runat="server">R 50.00 - R100.00</option>
-									<option id="third"  runat="server">R 100.00 - R150.00</option>
-									<option id="fourth" runat="server">R 150.00 - R200.00</option>
-									<option id="fifth" runat="server">R 200.00+</option>
-
-								</select>
-							</div>
 						</div>
 
 						<span class="s-text8 p-t-5 p-b-5">
@@ -138,11 +129,6 @@
                        
 					</div>
 
-					<!-- Pagination -->
-					<div class="pagination flex-m flex-w p-t-26">
-						<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-						<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-					</div>
 				</div>
 			</div>
 		</div>
