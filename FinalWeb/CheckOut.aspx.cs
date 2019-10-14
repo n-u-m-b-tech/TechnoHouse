@@ -37,7 +37,7 @@ namespace FinalWeb
                         row.Cells.Add(Unit_Price);
                         row.Cells.Add(Quantity);
                         row.Cells.Add(Total);
-                        confirmTable.Rows.Add(row);
+                        //confirmTable.Rows.Add(row);
                     }
                 }
             }
@@ -45,7 +45,7 @@ namespace FinalWeb
 
         protected void BtnOrder_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("Invoice.aspx");
         }
 
         protected void BtnDiscount_Click(object sender, EventArgs e)
