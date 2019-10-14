@@ -18,7 +18,7 @@
               <h4 class="m-text26 p-b-36 p-t-15">Create An Account Here</h4>	
 
               <div class="bo4 of-hidden size15 m-b-20">
-		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="title" runat="server" type="text" name="title" placeholder="Tiitle" required="">
+		      	  <input class="sizefull s-text7 p-l-22 p-r-22" id="title" runat="server" type="text" name="title" placeholder="Title" required="">
               </div>
              <div class="bo4 of-hidden size15 m-b-20">
                   <input class="sizefull s-text7 p-l-22 p-r-22" id="name" runat="server" type="text" name="name" placeholder="Full Name(s)" required="">
@@ -64,15 +64,18 @@
                   </div>
               <div class="bo4 of-hidden size15 m-b-20">    
                   <input class="sizefull s-text7 p-l-22 p-r-22" id="pass" runat="server" type="password" name="pass" placeholder="Password" required="">
-                <div class="bo4 of-hidden size15 m-b-20"> 
-                    </div>
+              </div>
+              <div class="bo4 of-hidden size15 m-b-20"> 
                   <input class="sizefull s-text7 p-l-22 p-r-22" id="confirm" runat="server" type="password" name="pass" placeholder="Confirm Password" required="">
-                   <asp:CompareValidator ID="passconfirm" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
-			</div>
+                  <asp:CompareValidator ID="passconfirm" runat="server" ErrorMessage="Passwords Don't Match" ControlToCompare="pass" ControlToValidate="confirm"></asp:CompareValidator>
+              </div>
 
               <div class="size14 trans-0-4 m-b-10">
 					 <asp:Button ID="BtnRegister" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" runat="server" Text="Register"  OnClick="BtnRegister_Click"/>
 			  </div>
+              <div>
+                 <asp:Label ID="lblErrorMessage" runat="server" Text="Something went wrong..couldn't register User. Please try again" ForeColor ="red"></asp:Label>
+              </div>
           </div>
         </div>
     </div>

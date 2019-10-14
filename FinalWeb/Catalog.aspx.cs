@@ -87,5 +87,15 @@ namespace FinalWeb
         {
 
         }
+
+        protected void drpfiltprice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void drpPrice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,9 +23,8 @@ namespace FinalWeb
             {
                 var cart = client.getUser_Cart(Convert.ToInt32(Session["userID"].ToString()));
                 foreach (CartClass c in cart)
-                {
-                    
-                    total = c.Total;
+                {   
+                    total += c.Total;
                     display += " <li class='header-cart-item'>";
                     display += " <div class='header-cart-item-img'>";
                     display += "<a href='Remove.aspx?ID="+c.productId+"'><img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";

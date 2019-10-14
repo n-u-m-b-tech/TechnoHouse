@@ -34,7 +34,7 @@ namespace FinalWeb
             if (client.AddProduct(pro) == 0)
             {
 
-                Response.Redirect("EditProduct.aspx");
+                Response.Redirect("EditProduct.aspx?ID=" +pro.ID +"");
             }
             else
             {

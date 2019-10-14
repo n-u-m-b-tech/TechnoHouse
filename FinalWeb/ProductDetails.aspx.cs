@@ -19,7 +19,6 @@ namespace FinalWeb
             var product = client.productinfor_retrieval_ID(ID);
             display += "<div class='wrap-slick3 flex-sb flex-w'>";
             display += "<div class='wrap-slick3-dots'></div>";
-
             display += "<div class='slick3'>";
             display += "<div class='item-slick3' data-thumb='"+product.image_url+"'>";
             display += "<div class='wrap-pic-w'>";
@@ -136,7 +135,11 @@ protected void BtnAddToCart_Click(object sender, EventArgs e)
                     bool val = client.Add_to_Cart(pro, userId, Qty);
                   }
             }
+            else
+            {
             Response.Redirect("LogIn.aspx");
+
+            }
 }
     }
 }
