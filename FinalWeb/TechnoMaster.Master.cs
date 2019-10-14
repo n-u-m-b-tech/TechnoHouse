@@ -24,7 +24,6 @@ namespace FinalWeb
                 var cart = client.getUser_Cart(Convert.ToInt32(Session["userID"].ToString()));
                 foreach (CartClass c in cart)
                 {
-                    
                     total = c.Total;
                     display += " <li class='header-cart-item'>";
                     display += " <div class='header-cart-item-img'>";
@@ -46,9 +45,7 @@ namespace FinalWeb
                     display += " </div>";
                     display += " </div>";
                     display += " </div>";
-                    cartshow.InnerHtml = display; 
-                
-
+                    cartshow.InnerHtml = display;                
             }
             hmanage.Visible = true;
             pmanage.Visible = false;
@@ -68,12 +65,7 @@ namespace FinalWeb
                         pmanage.Visible = true;
                     }
                 }
-                else if (Session["userType"].Equals("user")) { }
-               // CartClass[] cart = client.getUser_Cart(Convert.ToInt32(Session["userID"].ToString()));
-                //foreach (CartClass c in cart)
-                //{
-                
-
+                else if(Session["userType"].Equals("user")) { }               
             }
         }
     }

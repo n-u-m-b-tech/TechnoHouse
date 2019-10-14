@@ -28,11 +28,11 @@
 				<div class="size14 trans-0-4 m-b-10">
 					 <asp:Button ID="BtnLogin" runat="server"  Text="Log In" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" OnClick="BtnLogin_Click"/>
 				</div>
-
+               <div>
+                 <asp:Label ID="lblErrorMessage" runat="server" Text="Invalid User Credentials" ForeColor ="red"></asp:Label>
+              </div>
 				<p class="p-bottom-w3ls">Are you a Techno House member?<a class="w3_play_icon1" href="UserRegistration.aspx">Register here</a></p>
-            <!--<div class="bo4 of-hidden size15 m-b-20">
-                 <asp:Label ID="invalid" class="sizefull s-text7 p-l-22 p-r-22" Width="415px" Height="150px" Text="INVALID USER NAME OR PASSWORD" runat="server"></asp:Label>
-			</div>-->
+
 		  </div>
           </div>
          </div>

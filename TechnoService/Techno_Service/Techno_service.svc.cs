@@ -638,7 +638,6 @@ namespace Techno_Service
                 Payment_Date = date,
                 Amount = amount
             };
-
             db.Payments.InsertOnSubmit(pay);
 
             try
@@ -651,8 +650,6 @@ namespace Techno_Service
                 ex.GetBaseException();
                 return false;
             }
-
-
         }
 
         public bool removeItem(int userId, int productId)
@@ -685,12 +682,9 @@ namespace Techno_Service
             var item = (from i in db.Carts
                         where i.product_Id.Equals(productId) && i.user_Id.Equals(UserId)
                         select i).FirstOrDefault();
-
             if (item != null)
             {
-
                 item.Quantity = num;
-
                 try
                 {
                     db.SubmitChanges();

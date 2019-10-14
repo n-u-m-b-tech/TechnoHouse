@@ -13,7 +13,7 @@ namespace FinalWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblErrorMessage.Visible = false;
         }
 
         protected void BtnRegister_Click(object sender, EventArgs e)
@@ -25,18 +25,17 @@ namespace FinalWeb
                     Title = title.Value,
                     name = name.Value,
                     surname = surname.Value,
-                    contacs = "0115689325",
-                    email = email.Value,
-                    password = pass.Value,
+                    contacs = phone.Value,
                     address1 = add1.Value,
                     address2 = add2.Value,
                     ZipCode = zip.Value,
-                    city = city.Value,
-                    username = username.Value,
                     province = prov.Value,
+                    city = city.Value,                 
+                    username = username.Value,
+                    email = email.Value,
+                    password = pass.Value,
                     type = "user",
                     active = 'T'
-
                 };
 
                 if (client.UserRegister(user))
@@ -44,8 +43,9 @@ namespace FinalWeb
                     Response.Redirect("Login.aspx");
                 }
                 else
-                {
-                    Response.Redirect("UserRegistrationPage.aspx");
+                {         
+                    //Response.Redirect("UserRegistration.aspx");
+                    lblErrorMessage.Visible = true;
                 }
 
             }
