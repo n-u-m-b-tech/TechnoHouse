@@ -13,11 +13,12 @@ namespace FinalWeb
         Techno_serviceClient client = new Techno_serviceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            invalid.Visible = false;
+            lblErrorMessage.Visible = false;
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
+            //invalid.Visible = false;
             Boolean verify = client.Login(email.Value, pass.Value);
             if (verify)
             {
@@ -40,8 +41,8 @@ namespace FinalWeb
             }
             else
             {
-                invalid.Visible = true;
-            
+                lblErrorMessage.Visible = true;
+                //Response.Redirect("Login.aspx");
             }
         }
     }
