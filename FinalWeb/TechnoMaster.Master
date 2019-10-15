@@ -100,27 +100,15 @@
                    <!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									
+								<li class="header-cart-item">									
 									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">My Account</a>
+										<a href="MyAccount.aspx" class="header-cart-item-name">My Account</a>
                                         <a href="TrackOrder.aspx" class="header-cart-item-name">Track Order</a>
-                                        <a href="History.as.aspx" class="header-cart-item-name">Invoices</a>
+                                        <a href="History.aspx" class="header-cart-item-name">Invoices</a>
                                         <a href="UpdateUser" class="header-cart-item-name">Personal Details</a>
-                                        <a href="About.aspx" class="header-cart-item-name">Help</a>
-		
 									</div>
 								</li>
 							</ul>
-
-							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Profile
-									</a>
-								</div>
-							</div>
 						</div>
                        </div>
 

@@ -2661,6 +2661,7 @@
     <Content Include="LogIn.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="Management.aspx" />
+    <Content Include="MyAccount.aspx" />
     <Content Include="PrintInvoice.aspx" />
     <Content Include="ProductDetails.aspx" />
     <Content Include="ProductOnDiscount.aspx" />
@@ -2668,7 +2669,6 @@
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUser.aspx" />
     <Content Include="ShoppingCart.aspx" />
-    <Content Include="UserAccount.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.css" />
@@ -2990,6 +2990,13 @@
     <Compile Include="Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PrintInvoice.aspx.cs">
       <DependentUpon>PrintInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3046,13 +3053,6 @@
     </Compile>
     <Compile Include="TechnoMaster.Master.designer.cs">
       <DependentUpon>TechnoMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="UserAccount.aspx.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserAccount.aspx.designer.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>

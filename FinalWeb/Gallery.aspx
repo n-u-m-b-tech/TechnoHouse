@@ -27,7 +27,7 @@ div.desc {
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<div class="gallery">
+    <div class="gallery">
   <a target="_blank" href="img_5terre.jpg">
     <img src="images/slider/sbed.jpg" alt="Cinque Terre" width="600" height="400">
   </a>
