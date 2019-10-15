@@ -14,6 +14,7 @@ namespace FinalWeb
         int userId;
         String display = "";
         double subtotal= 0.00;
+        int cartID;
         protected void Page_Load(object sender, EventArgs e)
         {
             display += "<table class='table-shopping-cart'>";
@@ -36,6 +37,7 @@ namespace FinalWeb
                     foreach (CartClass c in cart)
                     {
                         subtotal += c.Total;
+                        cartID =c.CartId;
                         display += "<tr class='table-row'>";
                         display += "<td class='column-1>";
                         //    display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
