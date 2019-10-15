@@ -55,15 +55,24 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
-							<div class="large">120</div>
-							<div class="text-muted">New Orders</div>
+							<div id="salesss" runat="server" class='large'></div>
+							<div  class="text-muted">Some Stuff</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
-							<div class="large">52</div>
+							<div id="usersss" runat="server" class='large'></div>
+							<div class="text-muted" ">Registered users</div>
+						</div>
+					</div>
+				</div>
+                
+                <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+					<div class="panel panel-blue panel-widget border-right">
+						<div class="row no-padding"><em class="fa fa-bar-chart" aria-hidden="true"></em>
+							<div id="Div1" runat="server" class='large'>555</div>
 							<div class="text-muted">Registered users</div>
 						</div>
 					</div>
@@ -71,7 +80,7 @@
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-orange panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
-							<div class="large">14</div>
+							<div id="proddd" runat="server" class='large'></div>
 							<div class="text-muted">Products On Stock</div>
 						</div>
 					</div>

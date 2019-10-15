@@ -74,6 +74,8 @@ namespace Techno_Service
         int EditProduct(ProductD pr, int ID);
         [OperationContract]
         ProductD productinfor(int ID);
+        [OperationContract]
+        List<ProductD> search_by_dis();
 
         [OperationContract]
         int CountProduct();
