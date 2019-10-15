@@ -74,6 +74,13 @@ namespace Techno_Service
         [OperationContract]
         ProductD productinfor(int ID);
 
+        [OperationContract]
+        int CountProduct();
+        [OperationContract]
+        int CountUser();
+        [OperationContract]
+        int CountSales();
+
 
     }
 }

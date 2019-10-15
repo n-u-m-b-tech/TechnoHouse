@@ -125,7 +125,6 @@
     <Content Include="css\theme.css" />
     <Content Include="css\util.css" />
     <Content Include="css\util.min.css" />
-    <Content Include="Dashboard.aspx" />
     <Content Include="EditProduct.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="Error404.aspx" />
@@ -2921,13 +2920,6 @@
     </Compile>
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditProduct.aspx.cs">
       <DependentUpon>EditProduct.aspx</DependentUpon>
