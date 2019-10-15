@@ -2559,6 +2559,7 @@
     <Content Include="fonts\themify\SVG\zoom-in.svg" />
     <Content Include="fonts\themify\SVG\zoom-out.svg" />
     <Content Include="fonts\themify\themify-icons.css" />
+    <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="images\bg.jpg" />
@@ -2578,6 +2579,7 @@
     <Content Include="images\icons\usericon.jpg" />
     <Content Include="images\icons\video-16-9.jpg" />
     <Content Include="images\icons\visa.png" />
+    <Content Include="images\icons\wallet.png" />
     <Content Include="images\Products.txt" />
     <Content Include="images\products\0ec8d5576e995a281a02907f6cf1e2b0.jpg" />
     <Content Include="images\products\1000011013_main.jpg" />
@@ -2941,6 +2943,13 @@
     </Compile>
     <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
