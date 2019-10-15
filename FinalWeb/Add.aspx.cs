@@ -62,7 +62,7 @@ namespace FinalWeb
             }
             else
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("LogIn.aspx");
             }
         }
     }

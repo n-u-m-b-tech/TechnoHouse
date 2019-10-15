@@ -18,6 +18,7 @@ namespace FinalWeb
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
                 dynamic cart = client.getUser_Cart(id);
+                String itemd = "";
 
                 if (cart != null)
                 {
@@ -38,7 +39,9 @@ namespace FinalWeb
                         row.Cells.Add(Quantity);
                         row.Cells.Add(Total);
                         //confirmTable.Rows.Add(row);
+                       itemd+= "<p><a href='ProductDetails.aspx?ID="+c.productId+"'>"+c.productName+"</a> <span class='price'>R"+c.unit+"</span></p>";
                     }
+                    items.InnerHtml = itemd;
                 }
             }
         }

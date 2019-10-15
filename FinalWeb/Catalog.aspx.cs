@@ -90,7 +90,7 @@ namespace FinalWeb
 
         protected void drpfiltprice_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
 
         protected void drpPrice_SelectedIndexChanged(object sender, EventArgs e)
