@@ -184,10 +184,40 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="RangePrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="min" type="xs:int" />
+        <xs:element minOccurs="0" name="max" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RangePriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="RangePriceResult" nillable="true" type="q12:ArrayOfProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FiltCatPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="price" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FiltCatPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="FiltCatPriceResult" nillable="true" type="q13:ArrayOfProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="Add_to_Cart">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="product" nillable="true" type="q12:ProductD" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="product" nillable="true" type="q14:ProductD" />
         <xs:element minOccurs="0" name="userID" type="xs:int" />
         <xs:element minOccurs="0" name="Qty" type="xs:int" />
       </xs:sequence>
@@ -210,7 +240,7 @@
   <xs:element name="getUser_CartResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getUser_CartResult" nillable="true" type="q13:ArrayOfCartClass" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getUser_CartResult" nillable="true" type="q15:ArrayOfCartClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -265,7 +295,7 @@
   <xs:element name="AddProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="addP" nillable="true" type="q14:ProductD" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="addP" nillable="true" type="q16:ProductD" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -279,7 +309,7 @@
   <xs:element name="EditProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="pr" nillable="true" type="q15:ProductD" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="pr" nillable="true" type="q17:ProductD" />
         <xs:element minOccurs="0" name="ID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -301,7 +331,43 @@
   <xs:element name="productinforResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinforResult" nillable="true" type="q16:ProductD" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinforResult" nillable="true" type="q18:ProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountProduct">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountProductResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountUserResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountSales">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountSalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CountSalesResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

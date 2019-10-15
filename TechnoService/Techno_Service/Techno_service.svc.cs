@@ -780,6 +780,71 @@ namespace Techno_Service
                 return null;
             }
         }
+
+        public int CountProduct()
+        {
+            var product = (from p in db.Products
+                           where p.ACTIVE.Equals("T")
+                           select p);
+            int count = 0;
+
+            if (product != null)
+            {
+                foreach (Product prop in product)
+                {
+                    count += 1;
+                }
+            }
+            else
+            {
+                count = 0;
+            }
+
+            return count;
+        }
+
+        public int CountUser()
+        {
+            var usercheck = (from p in db.Clients
+                           where p.User_type.Equals("User")
+                           select p);
+            int count = 0;
+
+            if (usercheck != null)
+            {
+                foreach (Client prop in usercheck)
+                {
+                    count += 1;
+                }
+            }
+            else
+            {
+                count = 0;
+            }
+            return count;
+        }
+
+        public int CountSales()
+        {
+            var product = (from p in db.Products
+                           where p.Discount != 0
+                           select p);
+            int count = 0;
+
+            if (product != null)
+            {
+                foreach (Product prop in product)
+                {
+                    count += 1;
+                }
+            }
+            else
+            {
+                count = 0;
+            }
+
+            return count;
+        }
     }
 }
         
