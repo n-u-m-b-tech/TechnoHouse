@@ -71,6 +71,44 @@ namespace Techno_Service
             }
         }
 
+        public List<ProductD> search_by_dis()
+        {
+            var product = (from p in db.Products
+                           where p.Discount != 0
+                           select p);
+
+            List<ProductD> catProducts = new List<ProductD>();
+            if (product != null)
+            {
+
+                foreach (Product prop in product)
+                {
+                    ProductD Fproduct = new ProductD
+                    {
+                        ID = prop.Product_Id,
+                        name = prop.Name,
+                        description = prop.Description,
+                        price = (Double)prop.Price,
+                        quantity = prop.Quantity,
+                        category = prop.Category,
+                        brand = prop.Brand,
+                        manufacture = prop.manufacture,
+                        discount = (Decimal)prop.Discount,
+                        image_url = prop.Image_url,
+                        active = (Char)prop.ACTIVE
+                    };
+                    catProducts.Add(Fproduct);
+                }
+
+                return catProducts;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         //line divider added
         //*************************************************************************************************************
 

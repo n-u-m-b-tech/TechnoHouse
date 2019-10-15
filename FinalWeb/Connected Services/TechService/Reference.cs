@@ -802,6 +802,12 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
+        FinalWeb.TechService.ProductD[] search_by_dis();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountProduct", ReplyAction="http://tempuri.org/ITechno_service/CountProductResponse")]
         int CountProduct();
         
@@ -1030,6 +1036,14 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID) {
             return base.Channel.productinforAsync(ID);
+        }
+        
+        public FinalWeb.TechService.ProductD[] search_by_dis() {
+            return base.Channel.search_by_dis();
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync() {
+            return base.Channel.search_by_disAsync();
         }
         
         public int CountProduct() {

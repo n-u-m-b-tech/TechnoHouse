@@ -201,8 +201,7 @@
 				<h3 class="m-text5 t-center">
 					Featured Products
 				</h3>
-			</div>
-           
+			</div>          
 			<div class="wrap-slick2">
 				<div class="slick2" id="view" runat="server">
                   

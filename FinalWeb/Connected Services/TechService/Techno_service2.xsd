@@ -335,6 +335,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="search_by_dis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="search_by_disResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="search_by_disResult" nillable="true" type="q19:ArrayOfProductD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="CountProduct">
     <xs:complexType>
       <xs:sequence />
