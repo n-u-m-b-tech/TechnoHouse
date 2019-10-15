@@ -6,28 +6,25 @@
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
-	<title>Editable Invoice</title>
 	
 	<link rel='stylesheet' type='text/css' href='css/invoice.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
+	<title>Editable Invoice</title>
 
 </head>
 
 <body>
 
 	<div id="page-wrap">
-
 		<h2 id="header">INVOICE</h2>
-		
 		<div id="identity">
-		
             <span id="address">Chris Coyier
-123 Appleseed Street
-Appleville, WI 53719
+           123 Appleseed Street
+           Appleville, WI 53719
 
-Phone: (555) 555-5555</span>
+           Phone: (555) 555-5555</span>
 
             <div id="logo">
 

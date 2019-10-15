@@ -5,7 +5,6 @@
         function ExecuteCodeBehindClickEvent() {
             //Get the Button reference and trigger the click event
             document.getElementById("btnSubmit").click();
-          
         }
     </script>
       
@@ -76,10 +75,10 @@
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">							
                               <asp:DropDownList ID="drpfiltprice" runat="server" OnSelectedIndexChanged="drpfiltprice_SelectedIndexChanged">
                                   <asp:ListItem>Select Price Range</asp:ListItem>
-                                  <asp:ListItem>R0 - R2000</asp:ListItem>
-                                  <asp:ListItem>R2000 - R4000</asp:ListItem>
-                                  <asp:ListItem>R4000 - R6000</asp:ListItem>
-                                  <asp:ListItem>R6000 - R8000</asp:ListItem>
+                                  <asp:ListItem>R0-R2000</asp:ListItem>
+                                  <asp:ListItem>R2000-R4000</asp:ListItem>
+                                  <asp:ListItem>R4000-R6000</asp:ListItem>
+                                  <asp:ListItem>R6000-R8000</asp:ListItem>
                                   <asp:ListItem>R8000+</asp:ListItem>
                                 </asp:DropDownList>
 							</div>
@@ -112,8 +111,8 @@
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
                                 <asp:DropDownList ID="drpPrice" CssClass="selection-2" runat="server" OnSelectedIndexChanged="drpPrice_SelectedIndexChanged">
                                     <asp:ListItem >Select Price Sorting</asp:ListItem>
-                                    <asp:ListItem >Ascending (Low to High)</asp:ListItem>
-                                    <asp:ListItem>Descending (High to Low)</asp:ListItem>
+                                    <asp:ListItem>Low To High</asp:ListItem>
+                                    <asp:ListItem>High To Low</asp:ListItem>
                                 </asp:DropDownList>
 							</div>
 

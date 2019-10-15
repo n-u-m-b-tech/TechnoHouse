@@ -64,10 +64,5 @@ namespace FinalWeb
             }
 
         }
-
-        protected void BtnAddtocart_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("EditProduct.aspx");
-        }
     }
 }

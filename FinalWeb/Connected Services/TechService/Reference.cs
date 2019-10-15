@@ -742,6 +742,18 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/allProducts", ReplyAction="http://tempuri.org/ITechno_service/allProductsResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> allProductsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/RangePrice", ReplyAction="http://tempuri.org/ITechno_service/RangePriceResponse")]
+        FinalWeb.TechService.ProductD[] RangePrice(int min, int max);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/RangePrice", ReplyAction="http://tempuri.org/ITechno_service/RangePriceResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> RangePriceAsync(int min, int max);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/FiltCatPrice", ReplyAction="http://tempuri.org/ITechno_service/FiltCatPriceResponse")]
+        FinalWeb.TechService.ProductD[] FiltCatPrice(string Category, double price);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/FiltCatPrice", ReplyAction="http://tempuri.org/ITechno_service/FiltCatPriceResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> FiltCatPriceAsync(string Category, double price);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         bool Add_to_Cart(FinalWeb.TechService.ProductD product, int userID, int Qty);
         
@@ -789,6 +801,24 @@ namespace FinalWeb.TechService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountProduct", ReplyAction="http://tempuri.org/ITechno_service/CountProductResponse")]
+        int CountProduct();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountProduct", ReplyAction="http://tempuri.org/ITechno_service/CountProductResponse")]
+        System.Threading.Tasks.Task<int> CountProductAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountUser", ReplyAction="http://tempuri.org/ITechno_service/CountUserResponse")]
+        int CountUser();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountUser", ReplyAction="http://tempuri.org/ITechno_service/CountUserResponse")]
+        System.Threading.Tasks.Task<int> CountUserAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountSales", ReplyAction="http://tempuri.org/ITechno_service/CountSalesResponse")]
+        int CountSales();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountSales", ReplyAction="http://tempuri.org/ITechno_service/CountSalesResponse")]
+        System.Threading.Tasks.Task<int> CountSalesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -922,6 +952,22 @@ namespace FinalWeb.TechService {
             return base.Channel.allProductsAsync();
         }
         
+        public FinalWeb.TechService.ProductD[] RangePrice(int min, int max) {
+            return base.Channel.RangePrice(min, max);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> RangePriceAsync(int min, int max) {
+            return base.Channel.RangePriceAsync(min, max);
+        }
+        
+        public FinalWeb.TechService.ProductD[] FiltCatPrice(string Category, double price) {
+            return base.Channel.FiltCatPrice(Category, price);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> FiltCatPriceAsync(string Category, double price) {
+            return base.Channel.FiltCatPriceAsync(Category, price);
+        }
+        
         public bool Add_to_Cart(FinalWeb.TechService.ProductD product, int userID, int Qty) {
             return base.Channel.Add_to_Cart(product, userID, Qty);
         }
@@ -984,6 +1030,30 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID) {
             return base.Channel.productinforAsync(ID);
+        }
+        
+        public int CountProduct() {
+            return base.Channel.CountProduct();
+        }
+        
+        public System.Threading.Tasks.Task<int> CountProductAsync() {
+            return base.Channel.CountProductAsync();
+        }
+        
+        public int CountUser() {
+            return base.Channel.CountUser();
+        }
+        
+        public System.Threading.Tasks.Task<int> CountUserAsync() {
+            return base.Channel.CountUserAsync();
+        }
+        
+        public int CountSales() {
+            return base.Channel.CountSales();
+        }
+        
+        public System.Threading.Tasks.Task<int> CountSalesAsync() {
+            return base.Channel.CountSalesAsync();
         }
     }
 }
