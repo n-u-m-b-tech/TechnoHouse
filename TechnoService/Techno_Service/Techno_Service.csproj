@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="transactionClass.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="WalletClass.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

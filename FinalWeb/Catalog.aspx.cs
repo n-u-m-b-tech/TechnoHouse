@@ -20,6 +20,7 @@ namespace FinalWeb
             if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("BathRoom") || catalogue.Equals("BedRoom"))
             {
                 String display = "";
+                
                 dynamic products=null;
                 if (order == null)
                 {
@@ -35,124 +36,54 @@ namespace FinalWeb
                     {
                         products = client.price_by_DESC(catalogue);
                     }
-                    else if (order.Equals("0-2000"))
-                    {
-                        products = client.search_by_price(0,2000,catalogue);
-                    }
-                    else if (order.Equals("2000-4000"))
-                    {
-                        products = client.search_by_price(2000, 4000, catalogue);
-                    }
-                    else if (order.Equals("4000-6000"))
-                    {
-                        products = client.search_by_price(4000, 6000, catalogue);
-                    }
-                    else if (order.Equals("6000-8000"))
-                    {
-                        products = client.search_by_price(6000, 8000, catalogue);
-                    }
-                    else if (order.Equals("0-2000"))
-                    {
-                        products = client.search_by_price(8000, 100000, catalogue);
-                    }
+                }
 
-                }
-                if (products != null)
+                foreach (ProductD pro in products)
                 {
-                    foreach (ProductD pro in products)
-                    {
-                        display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
-                        display += "<div class='block2'>";
-                        display += "<div class='block2-img wrap-pic-w of-hidden pos-relative'>";
-                        display += "<img src ='" + pro.image_url + "' alt='IMG-PRODUCT'>";
-                        display += "<div class='block2-overlay trans-0-4'>";
-                        display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-                        display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
-                        display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
-                        display += "</a>";
-                        display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                        display += "<a href='Add.aspx?ID=" + pro.ID + "@Add" + "' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' >Add to cart</a>";
-                        display += "</div>";
-                        display += "</div>";
-                        display += "</div>";
-                        display += "<div class='block2-txt p-t-20'>";
-                        display += "<a href='ProductDetails.aspx?ID=" + pro.ID + "' class='block2-name dis-block s-text3 p-b-5'>" + pro.name + "</a>";
-                        display += "<span class='block2-price m-text6 p-r-5'>R" + pro.price + "</span>";
-                        display += "</div>";
-                        display += "</div>";
-                        display += "</div>";
-                    }
-                    view.InnerHtml = display;
+                    display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
+                    display += "<div class='block2'>";
+                    display += "<div class='block2-img wrap-pic-w of-hidden pos-relative'>";
+                    display += "<img src ='"+pro.image_url+"' alt='IMG-PRODUCT'>";
+                    display += "<div class='block2-overlay trans-0-4'>";
+                    display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                    display += "<a href='Add.aspx?ID="+pro.ID+"@Add"+"' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' >Add to cart</a>";                 
+                    display += "</div>";
+                    display += "</div>";
+                    display += "</div>";
+                    display += "<div class='block2-txt p-t-20'>";
+                    display += "<a href='ProductDetails.aspx?ID="+pro.ID+"' class='block2-name dis-block s-text3 p-b-5'>"+pro.name+"</a>";
+                    display += "<span class='block2-price m-text6 p-r-5'>R"+pro.price +"</span>";
+                    display += "</div>";
+                    display += "</div>";
+                    display += "</div>";
                 }
+                view.InnerHtml = display;
             }else if(catalogue.Equals("ALL"))
             {
 
                 String Display = "";
-                dynamic products = null;
-                if (order == null)
-                {
-                    products = client.allProducts();
-                }
-                else if (order != null)
-                {
+                var products = client.allProducts();
 
-                    if (order.Equals("Ascending"))
-                    {
-                        products = client.price_by_ASC("ALL");
-                    }
-                    else if (order.Equals("Descending"))
-                    {
-                        products = client.price_by_DESC("ALL");
-                    }
-                    else if (order.Equals("0-2000"))
-                    {
-                        products = client.search_by_price(0, 2000, catalogue);
-                    }
-                    else if (order.Equals("2000-4000"))
-                    {
-                        products = client.search_by_price(2000, 4000, catalogue);
-                    }
-                    else if (order.Equals("4000-6000"))
-                    {
-                        products = client.search_by_price(4000, 6000, catalogue);
-                    }
-                    else if (order.Equals("6000-8000"))
-                    {
-                        products = client.search_by_price(6000, 8000, catalogue);
-                    }
-                    else if (order.Equals("0-2000"))
-                    {
-                        products = client.search_by_price(8000, 100000, catalogue);
-                    }
-                }
-                if (products != null)
+                foreach (ProductD pro in products)
                 {
-                    foreach (ProductD pro in products)
-                    {
-                        Display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
-                        Display += "<div class='block2'>";
-                        Display += "<div class='block2-img wrap-pic-w of-hidden pos-relative'>";
-                        Display += "<img src ='" + pro.image_url + "' alt='IMG-PRODUCT'>";
-                        Display += "<div class='block2-overlay trans-0-4'>";
-                        Display += "<a href = '#' class='block2-btn-addwishlist hov-pointer trans-0-4'>";
-                        Display += "<i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i>";
-                        Display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
-                        Display += "</a>";
-                        Display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                        Display += "<a href='Add.aspx?ID=" + pro.ID + "@Add" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add To Cart</a>";
-                        Display += "</div>";
-                        Display += "</div>";
-                        Display += "</div>";
-                        Display += "<div class='block2 -txt p-t-20'>";
-                        Display += "<a href='ProductDetails.aspx?ID=" + pro.ID + "' class='block2-name dis-block s-text3 p-b-5'>" + pro.name + "</a>";
-                        Display += "<span class='block2-price m-text6 p-r-5'>R" + pro.price + "</span>";
-                        Display += "</div>";
-                        Display += "</div>";
-                        Display += "</div>";
-                    }
-                    view.InnerHtml = Display;
+                    Display += "<div class='col-sm-12 col-md-6 col-lg-4 p-b-50'>";
+                    Display += "<div class='block2'>";
+                    Display += "<div class='block2-img wrap-pic-w of-hidden pos-relative'>";
+                    Display += "<img src ='" + pro.image_url + "' alt='IMG-PRODUCT'>";
+                    Display += "<div class='block2-overlay trans-0-4'>";
+                    Display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                    Display += "<a href='Add.aspx?ID=" + pro.ID + "@Add" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add To Cart</a>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "<div class='block2-txt p-t-20'>";
+                    Display += "<a href='ProductDetails.aspx?ID=" + pro.ID + "'class='block2-name dis-block s-text3 p-b-5'>" + pro.name + "</a>";
+                    Display += "<span class='block2-price m-text6 p-r-5'>R" + pro.price + "</span>";
+                    Display += "</div>";
+                    Display += "</div>";
+                    Display += "</div>";
                 }
-                
+                view.InnerHtml = Display;
             }
         }
 
@@ -163,27 +94,6 @@ namespace FinalWeb
 
         protected void BtnFilter_Click(object sender, EventArgs e)
         {
-            String selectedvalue = drpfiltprice.SelectedValue.ToString();
-            if (selectedvalue.Equals("R0-R2000"))
-            {
-                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=0-2000");
-            }
-            else if (selectedvalue.Equals("R2000-R4000"))
-            {
-                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=2000-4000");
-            }
-            else if (selectedvalue.Equals("R4000-R6000"))
-            {
-                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=4000-6000");
-            }
-            else if (selectedvalue.Equals("R6000-R8000"))
-            {
-                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=6000-8000");
-            }
-            else if (selectedvalue.Equals("R8000+"))
-            {
-                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=8000");
-            }
 
         }
 

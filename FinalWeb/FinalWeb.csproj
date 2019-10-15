@@ -101,9 +101,6 @@
     <Content Include="Connected Services\TechService\FinalWeb.TechService.ProductD.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\TechService\FinalWeb.TechService.transactionClass.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\TechService\FinalWeb.TechService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -2562,6 +2559,7 @@
     <Content Include="fonts\themify\SVG\zoom-in.svg" />
     <Content Include="fonts\themify\SVG\zoom-out.svg" />
     <Content Include="fonts\themify\themify-icons.css" />
+    <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="images\bg.jpg" />
@@ -2581,6 +2579,7 @@
     <Content Include="images\icons\usericon.jpg" />
     <Content Include="images\icons\video-16-9.jpg" />
     <Content Include="images\icons\visa.png" />
+    <Content Include="images\icons\wallet.png" />
     <Content Include="images\Products.txt" />
     <Content Include="images\products\0ec8d5576e995a281a02907f6cf1e2b0.jpg" />
     <Content Include="images\products\1000011013_main.jpg" />
@@ -2662,12 +2661,14 @@
     <Content Include="LogIn.aspx" />
     <Content Include="LogOut.aspx" />
     <Content Include="Management.aspx" />
+    <Content Include="MyAccount.aspx" />
     <Content Include="PrintInvoice.aspx" />
     <Content Include="ProductDetails.aspx" />
+    <Content Include="ProductOnDiscount.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUser.aspx" />
     <Content Include="ShoppingCart.aspx" />
-    <Content Include="UserAccount.aspx" />
     <Content Include="UserRegistration.aspx" />
     <Content Include="vendor\animate\animate.css" />
     <Content Include="vendor\animsition\css\animsition.css" />
@@ -2944,6 +2945,13 @@
     <Compile Include="Error404.aspx.designer.cs">
       <DependentUpon>Error404.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2982,6 +2990,13 @@
     <Compile Include="Management.aspx.designer.cs">
       <DependentUpon>Management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MyAccount.aspx.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAccount.aspx.designer.cs">
+      <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PrintInvoice.aspx.cs">
       <DependentUpon>PrintInvoice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2996,7 +3011,21 @@
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProductOnDiscount.aspx.cs">
+      <DependentUpon>ProductOnDiscount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductOnDiscount.aspx.designer.cs">
+      <DependentUpon>ProductOnDiscount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchProduct.aspx.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3024,13 +3053,6 @@
     </Compile>
     <Compile Include="TechnoMaster.Master.designer.cs">
       <DependentUpon>TechnoMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="UserAccount.aspx.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserAccount.aspx.designer.cs">
-      <DependentUpon>UserAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>

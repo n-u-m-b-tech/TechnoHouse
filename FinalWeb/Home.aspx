@@ -151,7 +151,7 @@
 							</a>
 						</div>
 					</div>
-                    </div>
+                   </div>
 
 				<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
@@ -167,29 +167,19 @@
 					</div>
                     </div>
 
-                	<div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
+                <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
 					<!-- block -->
-					<div class="block1 wrap-pic-w pos-relative m-b-30">
-						<img src="images/discount.jpg" alt="IMG">
-
-						<div class="block1-content sizefull ab-t-l flex-col-c-m">
-							<h4 class="m-text4 t-center w-size3 p-b-8">
-								Sign up & get 20% off
-							</h4>
-
-							<p class="t-center w-size4">
-								Be the first to check out our new smart home gadgets
-							</p>
-
-							<div class="w-size2 p-t-25">
-								<!-- Button -->
-								<a href="UserRegistration.aspx" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-									Sign Up
-								</a>
-							</div>
+					<div class="block1 hov-img-zoom pos-relative m-b-30">
+						<img src="images/slider/sbed.jpg" alt="IMG-BENNER">
+                         <h2>Be the First to sign up and recieve a 20% discount if u checkout on the same of signing up</h2>
+						<div class="block1-wrapbtn w-size2">
+							<!-- Button -->
+							<a href="UserRegistration.aspx" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Sign Up and Recieve 20% Discount
+							</a>
 						</div>
 					</div>
-                 </div>
+               </div>	
             </div>
             </div>
 	</section>
@@ -201,8 +191,7 @@
 				<h3 class="m-text5 t-center">
 					Featured Products
 				</h3>
-			</div>
-           
+			</div>          
 			<div class="wrap-slick2">
 				<div class="slick2" id="view" runat="server">
                   
