@@ -20,6 +20,7 @@ namespace FinalWeb
             if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("BathRoom") || catalogue.Equals("BedRoom"))
             {
                 String display = "";
+                
                 dynamic products=null;
                 if (order == null)
                 {

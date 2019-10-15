@@ -40,16 +40,14 @@ namespace Techno_Service
         List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
-
         [OperationContract]
         List<ProductD> RangePrice(int min, int max);
-
         [OperationContract]
         List<ProductD> FiltCatPrice(String Category, Double price);
         
 
 
-        //transaction and cart
+        //transaction and cart and wallet
         [OperationContract]
         Boolean Add_to_Cart(ProductD product,int userID,int Qty);
 
@@ -60,6 +58,9 @@ namespace Techno_Service
         Boolean payment(String type, DateTime date, Decimal Amount, int userID);
         [OperationContract]
         bool removeItem(int userId, int productId);
+
+        bool add_to_wallet(int userID,double amount,String status);
+        List<WalletClass> getUser_Wallet(int userID);
 
        
         [OperationContract]

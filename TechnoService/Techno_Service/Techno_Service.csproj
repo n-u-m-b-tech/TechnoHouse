@@ -126,6 +126,7 @@
       <DependentUpon>Techno_service.svc</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="WalletClass.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
