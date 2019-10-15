@@ -11,15 +11,31 @@ namespace FinalWeb
     public partial class Catalog : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
+        String catalogue=null;
+        String order=null;
         protected void Page_Load(object sender, EventArgs e)
         {
-          
-
-            String catalogue = Request.QueryString["ID"];
+             catalogue = Request.QueryString["ID"];
+             order = Request.QueryString["ORDER"];
             if (catalogue.Equals("Kitchen") || catalogue.Equals("Living Room") || catalogue.Equals("BathRoom") || catalogue.Equals("BedRoom"))
             {
                 String display = "";
-                var products = client.search_by_cat(catalogue);
+                dynamic products=null;
+                if (order == null)
+                {
+                    products = client.search_by_cat(catalogue);
+                }
+                else if(order!=null){
+
+                    if (order.Equals("Ascending"))
+                    {
+                        products = client.price_by_ASC(catalogue);
+                    }
+                    else if (order.Equals("Descending"))
+                    {
+                        products = client.price_by_DESC(catalogue);
+                    }
+                }
 
                 foreach (ProductD pro in products)
                 {
@@ -33,8 +49,7 @@ namespace FinalWeb
                     display += "<i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i>";
                     display += "</a>";
                     display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                    display += "<a href='Add.aspx?ID="+pro.ID+"@Add"+"' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' >Add to cart</a>";
-                 
+                    display += "<a href='Add.aspx?ID="+pro.ID+"@Add"+"' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4' >Add to cart</a>";                 
                     display += "</div>";
                     display += "</div>";
                     display += "</div>";
@@ -48,6 +63,7 @@ namespace FinalWeb
                 view.InnerHtml = display;
             }else if(catalogue.Equals("ALL"))
             {
+
                 String Display = "";
                 var products = client.allProducts();
 
@@ -90,12 +106,21 @@ namespace FinalWeb
 
         protected void drpfiltprice_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            String selectedvalue = drpfiltprice.SelectedValue.ToString();
+            
         }
 
         protected void drpPrice_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            String selectedvalue = drpPrice.SelectedValue.ToString();
+            if (selectedvalue.Equals("Low To High"))
+            {
+                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=Ascending");
+            }
+            else if (selectedvalue.Equals("High To Low"))
+            {
+                Response.Redirect("Catalog.aspx?ID=" + catalogue + "&ORDER=Descending");
+            }
         }
     }
 }

@@ -1,21 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Invoice.aspx.cs" Inherits="FinalWeb.Invoice" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TechnoMaster.Master" AutoEventWireup="true" CodeBehind="Invoicee.aspx.cs" Inherits="FinalWeb.Invoicee" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
 	
 	<link rel='stylesheet' type='text/css' href='css/invoice.css' />
 	<link rel='stylesheet' type='text/css' href='css/print.css' media="print" />
 	<script type='text/javascript' src='js/jquery-1.3.2.min.js'></script>
 	<script type='text/javascript' src='js/example.js'></script>
-	<title>Editable Invoice</title>
 
-</head>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<body>
 
 	<div id="page-wrap">
 		<h2 id="header">INVOICE</h2>
@@ -119,21 +115,15 @@ c/o Steve Widget</h2>
 
 		      <td class="total-value"><span id="paid">$0.00</span></td>
 		  </tr>
-		  <tr>
-		      <td colspan="2" class="blank"> </td>
-		      <td colspan="2" class="total-line balance">Balance Due</td>
-		      <td class="total-value balance"><div class="due">$875.00</div></td>
-		  </tr>
-		
+		 
 		</table>
 		
 		<div id="terms">
 		  <h5><b>Terms</b></h5>
-		  <span>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</span>
+		  <span>NET 30 Days. Terms and Conditions Do Apply</span>
 		</div>
 	
 	</div>
 	
-</body>
 
-</html>
+</asp:Content>

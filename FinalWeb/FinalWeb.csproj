@@ -2649,6 +2649,7 @@
     <Content Include="images\slider\user.jpg" />
     <Content Include="images\slider\welcome.jpg" />
     <Content Include="Invoice.aspx" />
+    <Content Include="Invoicee.aspx" />
     <Content Include="js\example.js" />
     <Content Include="js\jquery-1.3.2.min.js" />
     <Content Include="js\main.js" />
@@ -2964,6 +2965,13 @@
     </Compile>
     <Compile Include="Invoice.aspx.designer.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoicee.aspx.cs">
+      <DependentUpon>Invoicee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoicee.aspx.designer.cs">
+      <DependentUpon>Invoicee.aspx</DependentUpon>
     </Compile>
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
