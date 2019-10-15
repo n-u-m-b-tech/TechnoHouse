@@ -61,7 +61,7 @@
   <xs:element name="resetPass">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="email" type="xs:int" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

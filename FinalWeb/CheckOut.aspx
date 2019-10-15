@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="css/Payment.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="container bgwhite p-t-35 p-b-80">
+    <div class="container bgwhite p-t-35 p-b-80">
 		<div class="flex-w flex-sb">
 		 <div class="w-size13 p-t-30 respon5">
 		  <div class="wrap-slick3 flex-sb flex-w">
@@ -70,8 +70,10 @@
   </div>
 
   <div class="col-25">
-    <div class="container" id="cartshow" runat="server">
+    <div class="container">
+        <div class="header-wrapicon2" id="cartshow" runat="server">
 
+		</div>
     </div>
   </div>
 </div>
