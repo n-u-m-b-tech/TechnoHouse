@@ -109,7 +109,7 @@
 					<div class="flex-sb-m flex-w p-b-35">
 						<div class="flex-w">
 							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
-                                <asp:DropDownList ID="drpPrice" CssClass="selection-2" runat="server" OnSelectedIndexChanged="drpPrice_SelectedIndexChanged">
+                                <asp:DropDownList ID="drpPrice" CssClass="selection-2" runat="server" autopostback="true" OnSelectedIndexChanged="drpPrice_SelectedIndexChanged">
                                     <asp:ListItem >Select Price Sorting</asp:ListItem>
                                     <asp:ListItem>Low To High</asp:ListItem>
                                     <asp:ListItem>High To Low</asp:ListItem>

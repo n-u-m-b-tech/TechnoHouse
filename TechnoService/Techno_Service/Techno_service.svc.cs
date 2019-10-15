@@ -367,10 +367,21 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC(String category)
         {
-            dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
-                               orderby p.Price ascending
-                               select p);
+            dynamic Product = null;
+            if (!category.Equals("ALL"))
+            {
+                Product = (from p in db.Products
+                                   where p.Category.Equals(category) && p.ACTIVE.Equals("T")
+                                   orderby p.Price ascending
+                                   select p);
+            }
+            else if(category.Equals("ALL"))
+            {
+                Product = (from op in db.Products
+                           where op.ACTIVE.Equals("T")
+                           orderby op.Price ascending
+                           select op);
+            }
             List<ProductD> pro = new List<ProductD>();
 
             foreach (Product prop in Product)
@@ -398,10 +409,23 @@ namespace Techno_Service
 
         public List<ProductD> price_by_DESC(String category)
         {
-            dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
-                               orderby p.Price descending
-                               select p);
+            dynamic Product = null;
+
+            if (!category.Equals("ALL"))
+            {
+
+
+                Product = (from p in db.Products
+                           where p.Category.Equals(category) && p.ACTIVE.Equals("T")
+                           orderby p.Price descending
+                           select p);
+            }else if (category.Equals("ALL"))
+            {
+                Product = (from p in db.Products
+                           where p.ACTIVE.Equals("T")
+                           orderby p.Price descending
+                           select p);
+            }
             List<ProductD> pro = new List<ProductD>();
 
             foreach (Product prop in Product)
