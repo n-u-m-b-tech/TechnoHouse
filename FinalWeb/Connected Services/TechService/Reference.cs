@@ -689,10 +689,10 @@ namespace FinalWeb.TechService {
         System.Threading.Tasks.Task<FinalWeb.TechService.User> userinfor_Retrieval_EmailAsync(string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        bool resetPass(int email, string password);
+        bool resetPass(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password);
+        System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/updateuser", ReplyAction="http://tempuri.org/ITechno_service/updateuserResponse")]
         bool updateuser(FinalWeb.TechService.User user, int Id);
@@ -886,11 +886,11 @@ namespace FinalWeb.TechService {
             return base.Channel.userinfor_Retrieval_EmailAsync(email);
         }
         
-        public bool resetPass(int email, string password) {
+        public bool resetPass(string email, string password) {
             return base.Channel.resetPass(email, password);
         }
         
-        public System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password) {
+        public System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password) {
             return base.Channel.resetPassAsync(email, password);
         }
         

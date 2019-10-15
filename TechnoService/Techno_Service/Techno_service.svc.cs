@@ -112,7 +112,7 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        public bool resetPass(int email, string password)
+        public bool resetPass(String email, string password)
         {
             var user = (from p in db.Clients
                         where p.Email.Equals(email)
@@ -723,7 +723,7 @@ namespace Techno_Service
                         select i).FirstOrDefault();
             if (item != null)
             {
-                item.Quantity = num;
+                item.Quantity += num;
                 try
                 {
                     db.SubmitChanges();

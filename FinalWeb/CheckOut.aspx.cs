@@ -12,34 +12,54 @@ namespace FinalWeb
     public partial class CheckOut : System.Web.UI.Page
     {
         Techno_serviceClient client = new Techno_serviceClient();
+        String display = "";
+        double total = 0;
+        double subtotal = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            display += " <ul class='header-cart-wrapitem'>";
             if (Session["userID"] != null)
             {
                 int id = Convert.ToInt32(Request.QueryString["ID"]);
-                dynamic cart = client.getUser_Cart(id);
+                int userID = Convert.ToInt32(Session["userID"].ToString());
+                var user = client.userinfor_Retrieval(userID);
 
-                if (cart != null)
-                {
-                    foreach (CartClass c in cart)
-                    {
-                        TableRow row = new TableRow();
-                        TableCell Product_Name = new TableCell();
-                        TableCell Unit_Price = new TableCell();
-                        TableCell Quantity = new TableCell();
-                        TableCell Total = new TableCell();
-                        Product_Name.Text = c.productName;
-                        Unit_Price.Text = Convert.ToString(c.unit);
-                        Quantity.Text = Convert.ToString(c.Qty);
-                        Total.Text = Convert.ToString(c.Total);
+                fname.Value = user.name;
+                email.Value = user.email;
+                adr.Value = user.address1;
+                city.Value = user.city;
+                prov.Value = user.province;
+                zip.Value = user.ZipCode;
 
-                        row.Cells.Add(Product_Name);
-                        row.Cells.Add(Unit_Price);
-                        row.Cells.Add(Quantity);
-                        row.Cells.Add(Total);
-                        //confirmTable.Rows.Add(row);
+                var cart = client.getUser_Cart(id);
+                if (cart != null) {                    
+                    foreach (CartClass c in cart) {
+                        total += c.Total;
+                        display += " <li class='header-cart-item'>";
+                        display += " <div class='header-cart-item-img'>";
+                        display += "<a href='Remove.aspx?ID=" + c.productId + "'><img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";
+                        display += " </div>";
+                        display += " <div class='header-cart-item-txt'>";
+                        display += " <a href ='ProductDetails.aspx?ID=" + c.productId + "' class='header-cart-item-name'>" + c.productName + "</a>";
+                        display += " <span class='header-cart-item-info'>" + c.Qty + " x" + c.unit + "</span>";
+                        display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
+                        display += "<a href='Add.aspx?ID=" + c.productId + "@Remove" + "'class='header-cart-item-name' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Remove</a> ";
+                        display += "</div>";
+                        display += "</div>";
+                        display += " </li>";
+
                     }
+                    display += " </ul>";
+                    display += " <div class='header-cart-total'>Total: " + total + "</div>";
+                    display += " <div class='header-cart-buttons'>";
+                    display += " <div class='header-cart-wrapbtn'>";
+                    display += " <a href = 'ShoppingCart.aspx' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>View Cart</a></div>";
+                    display += " <div class='header -cart-wrapbtn'>";
+                    display += " <a href ='CheckOut.aspx' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>Check Out</a>";
+                    cartshow.InnerHtml = display;
                 }
+
             }
         }
 

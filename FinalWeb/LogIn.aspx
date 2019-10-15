@@ -31,6 +31,7 @@
                <div>
                  <asp:Label ID="lblErrorMessage" runat="server" Text="Invalid User Credentials" ForeColor ="red"></asp:Label>
               </div>
+                <p class="p-bottom-w3ls">Forgot Password?<a class="w3_play_icon1" href="ResetPassword.aspx"> Reset Password</a></p>
 				<p class="p-bottom-w3ls">Are you a Techno House member?<a class="w3_play_icon1" href="UserRegistration.aspx">Register here</a></p>
 
 		  </div>

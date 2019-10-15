@@ -40,7 +40,7 @@
 				<div class="topbar-social" style="color:#ffffff">
 					<a href="CheckOut.aspx" class="topbar-social-item fa fa-facebook"></a>
 					<a href="Invoice.aspx" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+					<a href="Gallery.aspx" class="topbar-social-item fa fa-youtube-play"></a>
 				</div>
 
 				<span class="topbar-child1" style="color:#ffffff">
@@ -65,7 +65,7 @@
 								<ul class="sub_menu">
 									<li><a href="Catalog.aspx?ID=Kitchen">Kitchen</a></li>
 									<li><a href="Catalog.aspx?ID=Living Room">Living Room </a></li>
-									<li><a href="Catalog.aspx?ID=Bed Room">BedRoom</a></li>
+									<li><a href="Catalog.aspx?ID=BedRoom">BedRoom</a></li>
                                     <li><a href="Catalog.aspx?ID=BathRoom">BathRoom</a></li>
 								</ul>
 							</li>
@@ -94,13 +94,74 @@
 
 				<!-- Header Icon -->
 				<div class="header-icons">
-					<a href="UserAccount.aspx" class="header-wrapicon1 dis-block">
-						<img src="images/slider/user.jpg" class="header-icon1" alt="ICON">
-					</a>
+			
+               <div class="header-wrapicon2">
+				<img src="images/slider/user.jpg" class="header-icon1 js-show-header-dropdown" alt="ICON">					
+                   <!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">My Account</a>
+                                        <a href="TrackOrder.aspx" class="header-cart-item-name">Track Order</a>
+                                        <a href="History.as.aspx" class="header-cart-item-name">Invoices</a>
+                                        <a href="UpdateUser" class="header-cart-item-name">Personal Details</a>
+                                        <a href="About.aspx" class="header-cart-item-name">Help</a>
+		
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Profile
+									</a>
+								</div>
+							</div>
+						</div>
+                       </div>
+
+               <span class="linedivide1"></span>
+    
+                   <div class="header-wrapicon2">
+						<img src="images/icons/wallet.png" class="header-icon1 js-show-header-dropdown" alt="ICON">					
+                <!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Amount Left:
+										</a>
+
+										<span class="header-cart-item-info">
+											R 3000
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Profile
+									</a>
+								</div>
+							</div>
+						</div>
+                       </div>
+
+
 
 					<span class="linedivide1"></span>
 
-					<div class="header-wrapicon2" id="cartshow" runat="server">                
+					<div class="header-wrapicon2" id="cartshow" runat="server">  
+                        
                     </div>
                     </div>
 					</div>
