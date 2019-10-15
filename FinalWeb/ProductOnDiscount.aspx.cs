@@ -15,13 +15,13 @@ namespace FinalWeb
         String display = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ProductD[] Discount = client.search_by_dis();
-            //if (Discount != null)
-            //{
-            //    Display(Discount);
-            //}
+            ProductD[] Discount = client.search_by_dis();
+            if (Discount != null)
+            {
+                Display(Discount);
+            }
 
-            //view.InnerHtml = display;
+            view.InnerHtml = display;
         }
 
 

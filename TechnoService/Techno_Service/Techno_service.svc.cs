@@ -112,7 +112,7 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        public bool resetPass(String email, string password)
+        public bool resetPass(string email, string password)
         {
             var user = (from p in db.Clients
                         where p.Email.Equals(email)

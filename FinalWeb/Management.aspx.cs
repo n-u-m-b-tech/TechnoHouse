@@ -22,13 +22,13 @@ namespace FinalWeb
             var num2 = client.CountSales();
             var num3 = client.CountProduct();
 
-            display += Convert.ToString(num1);
+            display += "<a href='ProductOnDiscount.aspx'> " + Convert.ToString(num1) +" </a>";
             usersss.InnerHtml = display;
 
-            Sales += Convert.ToString(num2);
+            Sales += "<a href='ProductOnDiscount.aspx'> " + Convert.ToString(num2) + " </a>";
             salesss.InnerHtml = Sales;
 
-            Prod += Convert.ToString(num3);
+            Prod += "<a href='ProductOnDiscount.aspx'> " + Convert.ToString(num3) + " </a>";
             proddd.InnerHtml = Prod;
         }
     }

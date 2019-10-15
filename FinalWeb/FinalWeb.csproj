@@ -2663,6 +2663,7 @@
     <Content Include="Management.aspx" />
     <Content Include="PrintInvoice.aspx" />
     <Content Include="ProductDetails.aspx" />
+    <Content Include="ProductOnDiscount.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="SearchProduct.aspx" />
     <Content Include="SearchUser.aspx" />
@@ -3002,6 +3003,13 @@
     </Compile>
     <Compile Include="ProductDetails.aspx.designer.cs">
       <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOnDiscount.aspx.cs">
+      <DependentUpon>ProductOnDiscount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductOnDiscount.aspx.designer.cs">
+      <DependentUpon>ProductOnDiscount.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResetPassword.aspx.cs">
