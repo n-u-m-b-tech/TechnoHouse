@@ -10,6 +10,6 @@
 namespace FinalWeb {
     
     
-    public partial class Invoice {
+    public partial class PrintInvoice {
     }
 }

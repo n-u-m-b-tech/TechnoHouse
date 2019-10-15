@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace FinalWeb
 {
-    public partial class Invoice : System.Web.UI.Page
+    public partial class PrintInvoice : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
