@@ -31,6 +31,15 @@ namespace FinalWeb {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl total;
         
         /// <summary>
+        /// selection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect selection;
+        
+        /// <summary>
         /// tut control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace FinalWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox tut;
+        
+        /// <summary>
+        /// UPDATETOTAL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UPDATETOTAL;
+        
+        /// <summary>
+        /// subtotall control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl subtotall;
         
         /// <summary>
         /// CheckOut control.

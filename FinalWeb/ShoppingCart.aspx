@@ -71,12 +71,12 @@
 				</div>
 				</div>
 
-				<div class="size10 trans-0-4 m-t-10 m-b-10">
+			<!--	<div class="size10 trans-0-4 m-t-10 m-b-10">
 					<!-- Button -->
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+					<!--<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
 						Update Cart
 					</button>
-				</div>
+				</div> -->
 			</div>
 
 			<!-- Total -->
@@ -98,11 +98,11 @@
 
 					<div class="w-size20 w-full-sm">
 						<div class="rs2-select2 rs3-select2 rs4-select2 bo4 of-hidden w-size21 m-t-8 m-b-12">
-						<select class="selection-2" name="country">
+						<select class="selection-2" name="country" id="selection" runat="server">
 								<option>Select the type of courier...</option>
-								<option>Standard courier services (R 50) </option>
-								<option>Overnight service (R 75)</option>
-								<option>Same Day express (R 100)</option>
+								<option>Standard courier services (R50)</option>
+								<option>Overnight service (R75)</option>
+								<option>Same Day express (R100)</option>
                             </select>
 						
                             <br />
@@ -115,11 +115,10 @@
 							Calculate Shipping
 						</span>
 
-						<div class="size14 trans-0-4 m-b-10">
-							<!-- Button -->
-							<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-								Update Totals</button>
-						</div>
+					<div class="size15 trans-0-4">
+					<!-- Button -->
+                    <asp:Button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" ID="UPDATETOTAL" runat="server" Text="Update" OnClick="Update_Click" />
+				</div>
 					</div>
 				</div>
 
@@ -129,8 +128,8 @@
 						Total:
 					</span>
 
-					<span class="m-text21 w-size20 w-full-sm">
-						R 0.00
+					<span class="m-text21 w-size20 w-full-sm" id="subtotall" runat="server">
+					
 					</span>
 				</div>
 

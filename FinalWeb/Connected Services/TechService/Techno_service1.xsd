@@ -87,4 +87,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="transactionClass" nillable="true" type="tns:transactionClass" />
+  <xs:complexType name="ArrayOftransactionClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionClass" nillable="true" type="tns:transactionClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftransactionClass" nillable="true" type="tns:ArrayOftransactionClass" />
 </xs:schema>

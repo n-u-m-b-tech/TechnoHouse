@@ -981,28 +981,34 @@ namespace Techno_Service
             }
         }
 
-        public transactionClass getInvoice(int userId)
+        public List<transactionClass> getInvoice(int userId)
         {
             var inv = (from i in db.Invoices
                        where i.userID.Equals(userId)
-                       select i).FirstOrDefault();
+                       select i);
+
+            List<transactionClass> list = new List<transactionClass>();
             if (inv != null)
             {
-                transactionClass Invoice = new transactionClass
+                foreach (Invoice c in inv)
                 {
-                    ProId = inv.Product_Id,
-                    
-                    clientId = inv.userID,
-                    OrderId = inv.Order_Id,
-                    OrderNumber = inv.OrderNumber,
-                    Quantity = inv.Quantity,
-                    price = inv.Price,
-                    Total = inv.Total,
-                    ShipDate = inv.ShipDate,
-                    PaymentDate = inv.Payment_Date
+                    transactionClass Invoice = new transactionClass
+                    {
+                        ProId = c.Product_Id,
 
-                };
-                return Invoice;
+                        clientId = c.userID,
+                        OrderId = c.Order_Id,
+                        OrderNumber = c.OrderNumber,
+                        Quantity = c.Quantity,
+                        price = c.Price,
+                        Total = c.Total,
+                        ShipDate = c.ShipDate,
+                        PaymentDate = c.Payment_Date
+
+                    };
+                    list.Add(Invoice);
+                }
+                return list;
             }
             else
             {

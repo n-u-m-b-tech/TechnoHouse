@@ -68,7 +68,7 @@ namespace Techno_Service
         Boolean delivery(transactionClass trans);
 
         [OperationContract]
-        transactionClass getInvoice(int userId);
+        List<transactionClass> getInvoice(int userId);
         [OperationContract]
         transactionClass getOrder(int orderNumber);
         [OperationContract]

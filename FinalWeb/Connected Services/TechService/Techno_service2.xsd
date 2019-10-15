@@ -61,7 +61,7 @@
   <xs:element name="resetPass">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" type="xs:int" />
         <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -327,7 +327,7 @@
   <xs:element name="getInvoiceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getInvoiceResult" nillable="true" type="q20:transactionClass" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getInvoiceResult" nillable="true" type="q20:ArrayOftransactionClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -429,18 +429,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinforResult" nillable="true" type="q26:ProductD" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="search_by_dis">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="search_by_disResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="search_by_disResult" nillable="true" type="q19:ArrayOfProductD" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

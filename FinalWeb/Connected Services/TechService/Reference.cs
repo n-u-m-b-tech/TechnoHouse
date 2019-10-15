@@ -1022,10 +1022,10 @@ namespace FinalWeb.TechService {
         System.Threading.Tasks.Task<FinalWeb.TechService.User> userinfor_Retrieval_EmailAsync(string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        bool resetPass(string email, string password);
+        bool resetPass(int email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password);
+        System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/updateuser", ReplyAction="http://tempuri.org/ITechno_service/updateuserResponse")]
         bool updateuser(FinalWeb.TechService.User user, int Id);
@@ -1130,10 +1130,10 @@ namespace FinalWeb.TechService {
         System.Threading.Tasks.Task<bool> deliveryAsync(FinalWeb.TechService.transactionClass trans);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getInvoice", ReplyAction="http://tempuri.org/ITechno_service/getInvoiceResponse")]
-        FinalWeb.TechService.transactionClass getInvoice(int userId);
+        FinalWeb.TechService.transactionClass[] getInvoice(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getInvoice", ReplyAction="http://tempuri.org/ITechno_service/getInvoiceResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getInvoiceAsync(int userId);
+        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass[]> getInvoiceAsync(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getOrder", ReplyAction="http://tempuri.org/ITechno_service/getOrderResponse")]
         FinalWeb.TechService.transactionClass getOrder(int orderNumber);
@@ -1176,12 +1176,6 @@ namespace FinalWeb.TechService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
-        FinalWeb.TechService.ProductD[] search_by_dis();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountProduct", ReplyAction="http://tempuri.org/ITechno_service/CountProductResponse")]
         int CountProduct();
@@ -1261,11 +1255,11 @@ namespace FinalWeb.TechService {
             return base.Channel.userinfor_Retrieval_EmailAsync(email);
         }
         
-        public bool resetPass(string email, string password) {
+        public bool resetPass(int email, string password) {
             return base.Channel.resetPass(email, password);
         }
         
-        public System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password) {
+        public System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password) {
             return base.Channel.resetPassAsync(email, password);
         }
         
@@ -1405,11 +1399,11 @@ namespace FinalWeb.TechService {
             return base.Channel.deliveryAsync(trans);
         }
         
-        public FinalWeb.TechService.transactionClass getInvoice(int userId) {
+        public FinalWeb.TechService.transactionClass[] getInvoice(int userId) {
             return base.Channel.getInvoice(userId);
         }
         
-        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getInvoiceAsync(int userId) {
+        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass[]> getInvoiceAsync(int userId) {
             return base.Channel.getInvoiceAsync(userId);
         }
         
@@ -1467,14 +1461,6 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID) {
             return base.Channel.productinforAsync(ID);
-        }
-        
-        public FinalWeb.TechService.ProductD[] search_by_dis() {
-            return base.Channel.search_by_dis();
-        }
-        
-        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync() {
-            return base.Channel.search_by_disAsync();
         }
         
         public int CountProduct() {

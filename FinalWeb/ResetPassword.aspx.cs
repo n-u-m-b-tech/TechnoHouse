@@ -18,7 +18,7 @@ namespace FinalWeb
 
         protected void BtnReset_Click(object sender, EventArgs e)
         {
-            bool reset = client.resetPass(email.Value, pass.Value);
+            bool reset = client.resetPass(Convert.ToInt32(email.Value), pass.Value);
             if (reset == true)
             {
                 Response.Redirect("LogIn.aspx");
