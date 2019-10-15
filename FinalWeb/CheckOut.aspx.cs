@@ -45,7 +45,7 @@ namespace FinalWeb
 
         protected void BtnOrder_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Invoice.aspx");
+            Response.Redirect("Invoicee.aspx");
         }
 
         protected void BtnDiscount_Click(object sender, EventArgs e)
