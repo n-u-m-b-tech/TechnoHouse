@@ -15,12 +15,15 @@ namespace FinalWeb
         String display = "";
         double total = 0;
         double subtotal = 0;
+        int qty = 0;
+     
+        int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userID"] != null)
             {
-                int id = Convert.ToInt32(Request.QueryString["ID"]);
-                int userID = Convert.ToInt32(Session["userID"].ToString());
+                 
+                 userID = Convert.ToInt32(Session["userID"].ToString());
                 var user = client.userinfor_Retrieval(userID);
 
                 fname.Value = user.name;
@@ -42,11 +45,12 @@ namespace FinalWeb
                 display += "<th class='column-7'>Total</th>";
                 display += "</tr>";
 
-                var cart = client.getUser_Cart(id);
-                if (cart != null) {                    
+                var cart = client.getUser_Cart(userID);
+                if (cart != null) {
                     foreach (CartClass c in cart) {
                         subtotal += c.Total;
-                       
+                        
+
                         display += "<tr class='table-row'>";
                         display += "<td class='column-1>";
                         //    display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
@@ -88,12 +92,109 @@ namespace FinalWeb
 
         protected void BtnOrder_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Invoicee.aspx");
+            //Adding payment
+            transactionClass pay = new transactionClass
+            {
+                Total = Convert.ToDecimal(subtotal),
+                clientId = userID,
+                Payementtype = "Card",
+                PaymentDate = DateTime.Today,
+            };
+
+            var ver = client.payment(pay);
+            if (ver)
+            {
+                //if payment processed assign delivery Company
+                transactionClass delivery = new transactionClass
+                {
+                    companyName = "TECH Deliveries",
+                    phone = "0113528910",
+                    CompanyDetails = "Tech Deliveries " +
+                                     "Address : 5 Kingsway Ave, Rossmore, Johannesburg, 2092" +
+                                      " Hourse : 08h00 - 17h00 Mon-Fri" +
+                                      " 4.1 star rating"
+
+                };
+                var del = client.delivery(delivery);
+                if (del)
+                {
+                    //after delivery assigment add to order
+                    var payment = client.getpayement(userID);
+                    var deliv = client.getDelivertDetails("TECH Deliveries");
+
+                    int ordernum = GenNumber();
+                    transactionClass order = new transactionClass
+                    {
+                        clientId = userID,
+                        PaymentId = payment.PaymentId,
+                        DeliveryID = deliv.DeliveryID,
+                        OrderNumber = ordernum,
+                        OrderDate = DateTime.Today,
+                        ShipDate = DateTime.Today,
+                        tax = 15,
+                        DeliveryStatus = "Inprogress",
+                        PayemntStatus = "Accepted",
+                        PaymentDate = DateTime.Today
+
+                    };
+                    bool deli = client.addToOrder(order);
+                    var Order = client.getOrder(ordernum);
+                    var cart = client.getUser_Cart(userID);
+                    if (deli)
+                    {
+                        if (cart != null)
+                        {
+                            bool Invo = false;
+                            foreach (CartClass c in cart)
+                            {
+                                transactionClass inv = new transactionClass
+                                {
+                                    ProId = c.productId,
+                                    clientId = userID,
+                                    OrderId = Order.OrderId,
+                                    OrderNumber = order.OrderNumber,
+                                    Quantity = c.Qty,
+                                    price = Convert.ToDecimal(c.unit),
+                                    Total = Convert.ToDecimal(c.Total),
+                                    ShipDate = DateTime.Today.AddDays(2),
+                                    PaymentDate = DateTime.Today
+                                };
+                                 Invo = client.addToInvoice(inv);
+                            }
+
+                            if (Invo)
+                            {
+                                Response.Redirect("Invoicee.aspx");
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+        
+            else
+            {
+                int id = Convert.ToInt32(Request.QueryString["ID"]);
+                    Response.Redirect("CheckOut.aspx?ID="+id+"");
+            }
         }
+
+
+           
+            
+        
 
         protected void BtnDiscount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public int GenNumber()
+        {
+            Random rand = new Random();
+            return rand.Next(13268, 93652);
         }
     }
 }

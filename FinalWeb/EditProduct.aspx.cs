@@ -41,6 +41,7 @@ namespace FinalWeb
 
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
+
             String proId = Request.QueryString["ID"];
 
             ProductD product = new ProductD

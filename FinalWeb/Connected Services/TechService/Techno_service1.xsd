@@ -63,4 +63,28 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CartClass" nillable="true" type="tns:CartClass" />
+  <xs:complexType name="transactionClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryID" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Payementtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayemntStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProId" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ShipDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      <xs:element minOccurs="0" name="companyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="tax" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="transactionClass" nillable="true" type="tns:transactionClass" />
 </xs:schema>

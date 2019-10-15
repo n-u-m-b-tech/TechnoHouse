@@ -127,6 +127,7 @@
     <Compile Include="Techno_service.svc.cs">
       <DependentUpon>Techno_service.svc</DependentUpon>
     </Compile>
+    <Compile Include="transactionClass.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup />

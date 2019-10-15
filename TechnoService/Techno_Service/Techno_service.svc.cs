@@ -215,11 +215,22 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        public List<ProductD> search_by_price(string value)
+        public List<ProductD> search_by_price(Decimal Low,Decimal high,String cat)
         {
-            var productlist = (from p in db.Products
-                               where p.Price.Equals(value)
+            dynamic productlist = null;
+            if (!cat.Equals("ALL"))
+            {
+                productlist = (from p in db.Products
+                               where p.Price >= Low && p.Price <= high && p.Category.Equals(cat)
                                select p);
+            }
+            else
+            {
+                productlist = (from p in db.Products
+                               where p.Price >= Low && p.Price <= high
+                               select p);
+            }
+           
             List<ProductD> priceP = new List<ProductD>();
 
             foreach (Product prop in productlist)
@@ -868,6 +879,210 @@ namespace Techno_Service
             }
 
             return count;
+        }
+
+        public bool addToInvoice(transactionClass trans)
+        {
+            Invoice inv = new Invoice
+            {
+                Product_Id = trans.ProId,
+                userID = trans.clientId,
+                Order_Id = trans.OrderId,
+                OrderNumber = trans.OrderNumber,
+                Quantity = trans.Quantity,
+                Price = trans.price,
+                Total = trans.Total,
+                ShipDate = trans.ShipDate,
+                Payment_Date = trans.PaymentDate
+            };
+
+            db.Invoices.InsertOnSubmit(inv);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public bool addToOrder(transactionClass trans)
+        {
+            OOrder order = new OOrder
+            {
+                Client_ID = trans.clientId,
+                Payment_Id = trans.PaymentId,
+                Delivery_Id = trans.DeliveryID,
+                OrderNumber = trans.OrderNumber,
+                OrderDate = trans.OrderDate,
+                ShipDate = trans.ShipDate,
+                Tax = Convert.ToDecimal(trans.tax),
+                Delivery_Status = trans.DeliveryStatus,
+                Payment_Status = trans.PayemntStatus,
+                Payment_Date = trans.PaymentDate
+
+            };
+
+            db.OOrders.InsertOnSubmit(order);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+
+
+
+
+        }
+
+        public bool payment(transactionClass trans)
+        {
+            Payment pay = new Payment
+            {
+                User_Id = trans.clientId,
+                Payment_Type = trans.Payementtype,
+                Amount = trans.price
+            };
+            db.Payments.InsertOnSubmit(pay);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public bool delivery(transactionClass trans)
+        {
+            Delivery del = new Delivery
+            {
+                Company_Name = trans.companyName,
+                Phone = trans.phone,
+                Company_Details = trans.CompanyDetails
+            };
+            db.Deliveries.InsertOnSubmit(del);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public transactionClass getInvoice(int userId)
+        {
+            var inv = (from i in db.Invoices
+                       where i.userID.Equals(userId)
+                       select i).FirstOrDefault();
+            if (inv != null)
+            {
+                transactionClass Invoice = new transactionClass
+                {
+                    ProId = inv.Product_Id,
+                    
+                    clientId = inv.userID,
+                    OrderId = inv.Order_Id,
+                    OrderNumber = inv.OrderNumber,
+                    Quantity = inv.Quantity,
+                    price = inv.Price,
+                    Total = inv.Total,
+                    ShipDate = inv.ShipDate,
+                    PaymentDate = inv.Payment_Date
+
+                };
+                return Invoice;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getOrder(int orderNumber)
+        {
+            var order = (from i in db.OOrders
+                         where i.OrderNumber.Equals(orderNumber)
+                         select i).FirstOrDefault();
+            if (order != null)
+            {
+                transactionClass Order = new transactionClass
+                {
+                    clientId = order.Client_ID,
+                    OrderId = order.Order_Id,
+                    PaymentId = order.Payment_Id,
+                    DeliveryID = order.Delivery_Id,
+                    OrderNumber = order.OrderNumber,
+                    OrderDate = order.OrderDate,
+                    ShipDate = order.ShipDate,
+                    tax = Convert.ToDouble(order.Tax),
+                    DeliveryStatus = order.Delivery_Status,
+                    PayemntStatus = order.Payment_Status,
+                    PaymentDate = order.Payment_Date
+
+                };
+                return Order;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getpayement(int userId)
+        {
+            var pay = (from p in db.Payments
+                           where p.User_Id.Equals(userId)
+                           select p).FirstOrDefault();
+            if (pay != null)
+            {
+                transactionClass payement = new transactionClass
+                {
+                    clientId = pay.User_Id,
+                    PaymentId = pay.Payment_Id,
+                    Payementtype = pay.Payment_Type,
+                    PaymentDate = pay.Payment_Date,
+                    Total = pay.Amount
+                };
+                return payement;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getDelivertDetails(String Companyname)
+        {
+            var del = (from d in db.Deliveries
+                       where d.Company_Name.Equals(Companyname)
+                       select d).FirstOrDefault();
+            if (del != null)
+            {
+                transactionClass delivery = new transactionClass
+                {
+                    companyName = del.Company_Name,
+                    phone = del.Phone,
+                    CompanyDetails = del.Company_Details,
+                    DeliveryID = del.Delivery_Id
+                };
+                return delivery;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

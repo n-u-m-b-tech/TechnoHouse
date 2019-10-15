@@ -29,7 +29,7 @@ namespace Techno_Service
         [OperationContract]
         List<ProductD> search_by_cat(string category);
         [OperationContract]
-        List<ProductD> search_by_price(string value);
+        List<ProductD> search_by_price(Decimal Low, Decimal high, String cat);
         [OperationContract]
         ProductD productinfor_retrieval_ID(int ID);
         [OperationContract]
@@ -57,11 +57,27 @@ namespace Techno_Service
         List<CartClass> getUser_Cart(int userID);
 
         [OperationContract]
-        Boolean payment(String type, DateTime date, Decimal Amount, int userID);
-        [OperationContract]
         bool removeItem(int userId, int productId);
+        [OperationContract]
+        Boolean addToInvoice(transactionClass trans);
+        [OperationContract]
+        Boolean addToOrder(transactionClass trans);
+        [OperationContract]
+        Boolean payment(transactionClass trans);
+        [OperationContract]
+        Boolean delivery(transactionClass trans);
 
-       
+        [OperationContract]
+        transactionClass getInvoice(int userId);
+        [OperationContract]
+        transactionClass getOrder(int orderNumber);
+        [OperationContract]
+        transactionClass getpayement(int userId);
+        [OperationContract]
+        transactionClass getDelivertDetails(String Companyname);
+
+
+
         [OperationContract]
         bool increaseQue(int productId, int UserId,int num);
 

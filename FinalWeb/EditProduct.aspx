@@ -41,7 +41,7 @@
 			</div>
 
              <div class="bo4 of-hidden size15 m-b-20">
-				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="quantity" type="text" name="name" placeholder="Product Quantity" required="">
+				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="quantity" type="text" name="name" placeholder="Product Quantity"  required="">
 			</div>
 
              <div class="bo4 of-hidden size15 m-b-20">
