@@ -56,6 +56,49 @@ namespace FinalWeb
                         Response.Redirect(Request.UrlReferrer.ToString());
                     }
 
+                }else if (instr.Equals("CANCEL"))
+                {
+                    var Order = client.getOrder(Convert.ToInt32(proId));
+                    if (Order != null)
+                    {
+                        int payId = Order.PaymentId;
+                        var payment = client.getpayement(Convert.ToInt32(Session["userID"].ToString()));
+                        if (payment != null)
+                        {
+                            Decimal Refund = payment.price;
+                            WalletClass wallet = new WalletClass
+                            {
+                                userID = Convert.ToInt32(Session["userID"].ToString()),
+                                amount = Convert.ToDouble(Refund),
+                                status = "REFUND FROM CANCELLED ORDER"
+
+                            };
+                            bool ver = client.AddToWallet(Convert.ToInt32(Session["userID"].ToString()), wallet);
+                            if (ver)
+                            {
+                                bool delo = client.deleteOrder(Order.OrderNumber);
+                                if (delo)
+                                {
+                                    bool paydel = client.deletepay(payId);
+                                    if (paydel)
+                                    {
+                                        bool invoiceDel = client.deleteInvoice(Order.OrderNumber);
+                                        if (invoiceDel)
+                                        {
+                                            Response.Redirect("Catlog.aspx?ID=ALL");
+                                        }
+                                    }
+                                }
+                              
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
+               
                 }
 
 
