@@ -86,7 +86,7 @@ namespace FinalWeb
                                         bool invoiceDel = client.deleteInvoice(Order.OrderNumber);
                                         if (invoiceDel)
                                         {
-                                            Response.Redirect("Catlog.aspx?ID=ALL");
+                                            Response.Redirect("Catalog.aspx?ID=ALL");
                                         }
                                         else
                                         {
@@ -96,7 +96,7 @@ namespace FinalWeb
                                 }
                                 else
                                 {
-                                    Response.Redirect("Catlog.aspx?ID=ALL");
+                                    Response.Redirect("Catalog.aspx?ID=ALL");
                                 }
 
                             }
