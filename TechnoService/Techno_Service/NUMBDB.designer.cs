@@ -30,9 +30,6 @@ namespace Techno_Service
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertWallet(Wallet instance);
-    partial void UpdateWallet(Wallet instance);
-    partial void DeleteWallet(Wallet instance);
     partial void InsertCart(Cart instance);
     partial void UpdateCart(Cart instance);
     partial void DeleteCart(Cart instance);
@@ -54,6 +51,9 @@ namespace Techno_Service
     partial void InsertInvoice(Invoice instance);
     partial void UpdateInvoice(Invoice instance);
     partial void DeleteInvoice(Invoice instance);
+    partial void InsertWallet(Wallet instance);
+    partial void UpdateWallet(Wallet instance);
+    partial void DeleteWallet(Wallet instance);
     #endregion
 		
 		public NUMBDBDataContext() : 
@@ -84,14 +84,6 @@ namespace Techno_Service
 				base(connection, mappingSource)
 		{
 			OnCreated();
-		}
-		
-		public System.Data.Linq.Table<Wallet> Wallets
-		{
-			get
-			{
-				return this.GetTable<Wallet>();
-			}
 		}
 		
 		public System.Data.Linq.Table<Cart> Carts
@@ -149,179 +141,12 @@ namespace Techno_Service
 				return this.GetTable<Invoice>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Wallet")]
-	public partial class Wallet : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Wallet_Id;
-		
-		private int _UserID;
-		
-		private decimal _Balance;
-		
-		private string _Status;
-		
-		private EntityRef<Client> _Client;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnWallet_IdChanging(int value);
-    partial void OnWallet_IdChanged();
-    partial void OnUserIDChanging(int value);
-    partial void OnUserIDChanged();
-    partial void OnBalanceChanging(decimal value);
-    partial void OnBalanceChanged();
-    partial void OnStatusChanging(string value);
-    partial void OnStatusChanged();
-    #endregion
-		
-		public Wallet()
-		{
-			this._Client = default(EntityRef<Client>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Wallet_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Wallet_Id
+		public System.Data.Linq.Table<Wallet> Wallets
 		{
 			get
 			{
-				return this._Wallet_Id;
-			}
-			set
-			{
-				if ((this._Wallet_Id != value))
-				{
-					this.OnWallet_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Wallet_Id = value;
-					this.SendPropertyChanged("Wallet_Id");
-					this.OnWallet_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int NOT NULL")]
-		public int UserID
-		{
-			get
-			{
-				return this._UserID;
-			}
-			set
-			{
-				if ((this._UserID != value))
-				{
-					if (this._Client.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnUserIDChanging(value);
-					this.SendPropertyChanging();
-					this._UserID = value;
-					this.SendPropertyChanged("UserID");
-					this.OnUserIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Balance", DbType="Money NOT NULL")]
-		public decimal Balance
-		{
-			get
-			{
-				return this._Balance;
-			}
-			set
-			{
-				if ((this._Balance != value))
-				{
-					this.OnBalanceChanging(value);
-					this.SendPropertyChanging();
-					this._Balance = value;
-					this.SendPropertyChanged("Balance");
-					this.OnBalanceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string Status
-		{
-			get
-			{
-				return this._Status;
-			}
-			set
-			{
-				if ((this._Status != value))
-				{
-					this.OnStatusChanging(value);
-					this.SendPropertyChanging();
-					this._Status = value;
-					this.SendPropertyChanged("Status");
-					this.OnStatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Wallet", Storage="_Client", ThisKey="UserID", OtherKey="Client_Id", IsForeignKey=true)]
-		public Client Client
-		{
-			get
-			{
-				return this._Client.Entity;
-			}
-			set
-			{
-				Client previousValue = this._Client.Entity;
-				if (((previousValue != value) 
-							|| (this._Client.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Client.Entity = null;
-						previousValue.Wallets.Remove(this);
-					}
-					this._Client.Entity = value;
-					if ((value != null))
-					{
-						value.Wallets.Add(this);
-						this._UserID = value.Client_Id;
-					}
-					else
-					{
-						this._UserID = default(int);
-					}
-					this.SendPropertyChanged("Client");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<Wallet>();
 			}
 		}
 	}
@@ -698,8 +523,6 @@ namespace Techno_Service
 		
 		private System.Nullable<char> _Active;
 		
-		private EntitySet<Wallet> _Wallets;
-		
 		private EntitySet<Cart> _Carts;
 		
 		private EntitySet<OOrder> _OOrders;
@@ -707,6 +530,8 @@ namespace Techno_Service
 		private EntitySet<Payment> _Payments;
 		
 		private EntitySet<Invoice> _Invoices;
+		
+		private EntitySet<Wallet> _Wallets;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -746,11 +571,11 @@ namespace Techno_Service
 		
 		public Client()
 		{
-			this._Wallets = new EntitySet<Wallet>(new Action<Wallet>(this.attach_Wallets), new Action<Wallet>(this.detach_Wallets));
 			this._Carts = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts), new Action<Cart>(this.detach_Carts));
 			this._OOrders = new EntitySet<OOrder>(new Action<OOrder>(this.attach_OOrders), new Action<OOrder>(this.detach_OOrders));
 			this._Payments = new EntitySet<Payment>(new Action<Payment>(this.attach_Payments), new Action<Payment>(this.detach_Payments));
 			this._Invoices = new EntitySet<Invoice>(new Action<Invoice>(this.attach_Invoices), new Action<Invoice>(this.detach_Invoices));
+			this._Wallets = new EntitySet<Wallet>(new Action<Wallet>(this.attach_Wallets), new Action<Wallet>(this.detach_Wallets));
 			OnCreated();
 		}
 		
@@ -1054,19 +879,6 @@ namespace Techno_Service
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Wallet", Storage="_Wallets", ThisKey="Client_Id", OtherKey="UserID")]
-		public EntitySet<Wallet> Wallets
-		{
-			get
-			{
-				return this._Wallets;
-			}
-			set
-			{
-				this._Wallets.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Cart", Storage="_Carts", ThisKey="Client_Id", OtherKey="user_Id")]
 		public EntitySet<Cart> Carts
 		{
@@ -1119,6 +931,19 @@ namespace Techno_Service
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Wallet", Storage="_Wallets", ThisKey="Client_Id", OtherKey="UserID")]
+		public EntitySet<Wallet> Wallets
+		{
+			get
+			{
+				return this._Wallets;
+			}
+			set
+			{
+				this._Wallets.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1137,18 +962,6 @@ namespace Techno_Service
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_Wallets(Wallet entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = this;
-		}
-		
-		private void detach_Wallets(Wallet entity)
-		{
-			this.SendPropertyChanging();
-			entity.Client = null;
 		}
 		
 		private void attach_Carts(Cart entity)
@@ -1194,6 +1007,18 @@ namespace Techno_Service
 		}
 		
 		private void detach_Invoices(Invoice entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = null;
+		}
+		
+		private void attach_Wallets(Wallet entity)
+		{
+			this.SendPropertyChanging();
+			entity.Client = this;
+		}
+		
+		private void detach_Wallets(Wallet entity)
 		{
 			this.SendPropertyChanging();
 			entity.Client = null;
@@ -2774,6 +2599,181 @@ namespace Techno_Service
 					else
 					{
 						this._userID = default(int);
+					}
+					this.SendPropertyChanged("Client");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Wallet")]
+	public partial class Wallet : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Wallet_Id;
+		
+		private int _UserID;
+		
+		private decimal _Balance;
+		
+		private string _Status;
+		
+		private EntityRef<Client> _Client;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnWallet_IdChanging(int value);
+    partial void OnWallet_IdChanged();
+    partial void OnUserIDChanging(int value);
+    partial void OnUserIDChanged();
+    partial void OnBalanceChanging(decimal value);
+    partial void OnBalanceChanged();
+    partial void OnStatusChanging(string value);
+    partial void OnStatusChanged();
+    #endregion
+		
+		public Wallet()
+		{
+			this._Client = default(EntityRef<Client>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Wallet_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Wallet_Id
+		{
+			get
+			{
+				return this._Wallet_Id;
+			}
+			set
+			{
+				if ((this._Wallet_Id != value))
+				{
+					this.OnWallet_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Wallet_Id = value;
+					this.SendPropertyChanged("Wallet_Id");
+					this.OnWallet_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int NOT NULL")]
+		public int UserID
+		{
+			get
+			{
+				return this._UserID;
+			}
+			set
+			{
+				if ((this._UserID != value))
+				{
+					if (this._Client.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUserIDChanging(value);
+					this.SendPropertyChanging();
+					this._UserID = value;
+					this.SendPropertyChanged("UserID");
+					this.OnUserIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Balance", DbType="Money NOT NULL")]
+		public decimal Balance
+		{
+			get
+			{
+				return this._Balance;
+			}
+			set
+			{
+				if ((this._Balance != value))
+				{
+					this.OnBalanceChanging(value);
+					this.SendPropertyChanging();
+					this._Balance = value;
+					this.SendPropertyChanged("Balance");
+					this.OnBalanceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Client_Wallet", Storage="_Client", ThisKey="UserID", OtherKey="Client_Id", IsForeignKey=true)]
+		public Client Client
+		{
+			get
+			{
+				return this._Client.Entity;
+			}
+			set
+			{
+				Client previousValue = this._Client.Entity;
+				if (((previousValue != value) 
+							|| (this._Client.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Client.Entity = null;
+						previousValue.Wallets.Remove(this);
+					}
+					this._Client.Entity = value;
+					if ((value != null))
+					{
+						value.Wallets.Add(this);
+						this._UserID = value.Client_Id;
+					}
+					else
+					{
+						this._UserID = default(int);
 					}
 					this.SendPropertyChanged("Client");
 				}

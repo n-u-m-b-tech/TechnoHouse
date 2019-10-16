@@ -22,18 +22,22 @@ namespace FinalWeb
             var order = client.getOrder(Convert.ToInt32(ordernum.Value));
             
 
-                display += " <table class='table-shopping-cart'>";
-                display += " <tr class='table-head'>";
-                display += " <th class='column-1'>Order Number</th>";
-                display += " <th class='column-2'>Order Date</th>";
-                display += " <th class='column-3'>Payment Date</th> ";
-                display += " <th class='column-4'>Payment Amount</th>";
-                display += " <th class='column-5'>Ship Date</th>";
-                display += " <th class='column-6'>Delivery Status</th>";
-                display += " <th class='column-7'></th>";
-                display += " </tr>";
+             
 
                 if (order != null) {
+
+                    display += " <table class='table-shopping-cart'>";
+                    display += " <tr class='table-head'>";
+                    display += " <th class='column-1'>Order Number</th>";
+                    display += " <th class='column-2'>Order Date</th>";
+                    display += " <th class='column-3'>Payment Date</th> ";
+                    display += " <th class='column-4'>Payment Amount</th>";
+                    display += " <th class='column-5'>Ship Date</th>";
+                    display += " <th class='column-6'>Delivery Status</th>";
+                    display += " <th class='column-7'></th>";
+                    display += " </tr>";
+
+
                     display += " <tr class='table-row'>";
                     display += " <td class='column-1'>" + order.OrderNumber + "</td>";
                     display += " <td class='column-2'>" + order.OrderDate + "</td>";
@@ -54,12 +58,16 @@ namespace FinalWeb
                     display += " </table>";
 
 
-                display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
-                display += "<a href='Add.aspx?ID=" + order.OrderNumber+ "@CANCEL" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Cancel Order</a>";
-                display += "</div>";
-                display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                    display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                    display += "<a href='Add.aspx?ID=" + order.OrderNumber+ "@CANCEL" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Cancel Order</a>";
+                    display += "</div>";
+                /*display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
                 display += "<a href='Home.aspx'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Done</a>";
-                display += "</div>";
+                display += "</div>";*/
+            }
+            else
+            {
+                lblErrorMessage.Text = "Order Not Found ";
             }
               
                 

@@ -21,15 +21,12 @@
 				<input class="sizefull s-text7 p-l-22 p-r-22" runat="server" id="ordernum" type="text" name="order" placeholder="Order Number" required="">
 			</div>
                
-			<div class="bo4 of-hidden size15 m-b-20">
-             <input class="sizefull s-text7 p-l-22 p-r-22" id="email" runat="server" type="text" name="email" placeholder="Password">
-			</div>
 
     	<div class="size14 trans-0-4 m-b-10">
 		 <asp:Button ID="BtnTrack" runat="server"  Text="Track ORder" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" OnClick="BtnTrack_Click" />
 		</div>
                <div>
-                 <asp:Label ID="lblErrorMessage" runat="server" Text="Order Doesn't exist" ForeColor ="black"></asp:Label> 
+                 <asp:Label ID="lblErrorMessage" runat="server" Text="" ForeColor ="black"></asp:Label> 
               </div>
         <div id="loaded" runat="server">
           
