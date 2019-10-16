@@ -53,20 +53,6 @@
 
         <!--.panel-->
         <div class="panel panel-container">
- <%--              <asp:Chart ID="Chart1" runat="server">
-                    <Series>
-                        <asp:Series Name="Series1"></asp:Series>
-                    </Series>
-                    <Series>
-                        <asp:Series Name="djjd"></asp:Series>
-                    </Series>
-                    <ChartAreas>
-                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
-                    </ChartAreas>
-                   <ChartAreas>
-                        <asp:ChartArea Name="ChartArea2"></asp:ChartArea>
-                    </ChartAreas>
-                </asp:Chart>--%>
 
 
 			<div class="row">
@@ -114,6 +100,7 @@
 				</div>
 			</div><!--/.row-->
 		</div><!--.panel-->
+    </div>
     <br />
     <br />
     <br />
