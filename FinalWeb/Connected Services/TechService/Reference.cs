@@ -1208,6 +1208,24 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/clearCart", ReplyAction="http://tempuri.org/ITechno_service/clearCartResponse")]
         System.Threading.Tasks.Task<bool> clearCartAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deleteOrder", ReplyAction="http://tempuri.org/ITechno_service/deleteOrderResponse")]
+        bool deleteOrder(int OrderNumber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deleteOrder", ReplyAction="http://tempuri.org/ITechno_service/deleteOrderResponse")]
+        System.Threading.Tasks.Task<bool> deleteOrderAsync(int OrderNumber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deletepay", ReplyAction="http://tempuri.org/ITechno_service/deletepayResponse")]
+        bool deletepay(int payID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deletepay", ReplyAction="http://tempuri.org/ITechno_service/deletepayResponse")]
+        System.Threading.Tasks.Task<bool> deletepayAsync(int payID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deleteInvoice", ReplyAction="http://tempuri.org/ITechno_service/deleteInvoiceResponse")]
+        bool deleteInvoice(int OrderNumber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/deleteInvoice", ReplyAction="http://tempuri.org/ITechno_service/deleteInvoiceResponse")]
+        System.Threading.Tasks.Task<bool> deleteInvoiceAsync(int OrderNumber);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUser_Cart", ReplyAction="http://tempuri.org/ITechno_service/getUser_CartResponse")]
         FinalWeb.TechService.CartClass[] getUser_Cart(int userID);
         
@@ -1484,6 +1502,30 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<bool> clearCartAsync(int id) {
             return base.Channel.clearCartAsync(id);
+        }
+        
+        public bool deleteOrder(int OrderNumber) {
+            return base.Channel.deleteOrder(OrderNumber);
+        }
+        
+        public System.Threading.Tasks.Task<bool> deleteOrderAsync(int OrderNumber) {
+            return base.Channel.deleteOrderAsync(OrderNumber);
+        }
+        
+        public bool deletepay(int payID) {
+            return base.Channel.deletepay(payID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> deletepayAsync(int payID) {
+            return base.Channel.deletepayAsync(payID);
+        }
+        
+        public bool deleteInvoice(int OrderNumber) {
+            return base.Channel.deleteInvoice(OrderNumber);
+        }
+        
+        public System.Threading.Tasks.Task<bool> deleteInvoiceAsync(int OrderNumber) {
+            return base.Channel.deleteInvoiceAsync(OrderNumber);
         }
         
         public FinalWeb.TechService.CartClass[] getUser_Cart(int userID) {

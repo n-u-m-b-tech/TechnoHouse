@@ -54,6 +54,12 @@ namespace Techno_Service
         Boolean Add_to_Cart(ProductD product, int userID, int Qty);
         [OperationContract]
         bool clearCart(int id);
+        [OperationContract]
+        bool deleteOrder(int OrderNumber);
+        [OperationContract]
+        bool deletepay(int payID);
+        [OperationContract]
+        bool deleteInvoice(int OrderNumber);
 
         [OperationContract]
         List<CartClass> getUser_Cart(int userID);

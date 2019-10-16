@@ -1165,6 +1165,84 @@ namespace Techno_Service
                 return false;
             }
         }
+
+        public bool deleteOrder(int orderNumber)
+        {
+            var order = (from o in db.OOrders
+                         where o.OrderNumber.Equals(orderNumber)
+                         select o).FirstOrDefault();
+            if (order != null)
+            {
+                db.OOrders.DeleteOnSubmit(order);
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+
+                }catch(Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool deletepay(int payID)
+        {
+            var pay = (from p in db.Payments
+                       where p.Payment_Id.Equals(payID)
+                       select p).FirstOrDefault();
+            if (pay != null)
+            {
+                db.Payments.DeleteOnSubmit(pay);
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }catch(Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool deleteInvoice(int orderNumber)
+        {
+            var inv = (from i in db.Invoices
+                       where i.OrderNumber.Equals(orderNumber)
+                       select i);
+
+            if (inv != null)
+            {
+                foreach(Invoice i in inv)
+                {
+                    db.Invoices.DeleteOnSubmit(i);
+                }
+                try
+                {
+                    db.SubmitChanges();
+                    return true;
+                }catch(Exception ex)
+                {
+                    ex.GetBaseException();
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
         

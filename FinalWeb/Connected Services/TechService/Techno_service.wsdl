@@ -109,6 +109,24 @@
   <wsdl:message name="ITechno_service_clearCart_OutputMessage">
     <wsdl:part name="parameters" element="tns:clearCartResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_deleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_deleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_deletepay_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletepay" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_deletepay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletepayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_deleteInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteInvoice" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_deleteInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteInvoiceResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_getUser_Cart_InputMessage">
     <wsdl:part name="parameters" element="tns:getUser_Cart" />
   </wsdl:message>
@@ -291,6 +309,18 @@
     <wsdl:operation name="clearCart">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/clearCart" message="tns:ITechno_service_clearCart_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/clearCartResponse" message="tns:ITechno_service_clearCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/deleteOrder" message="tns:ITechno_service_deleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/deleteOrderResponse" message="tns:ITechno_service_deleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletepay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/deletepay" message="tns:ITechno_service_deletepay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/deletepayResponse" message="tns:ITechno_service_deletepay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/deleteInvoice" message="tns:ITechno_service_deleteInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/deleteInvoiceResponse" message="tns:ITechno_service_deleteInvoice_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getUser_Cart">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUser_Cart" message="tns:ITechno_service_getUser_Cart_InputMessage" />
@@ -517,6 +547,33 @@
     </wsdl:operation>
     <wsdl:operation name="clearCart">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/clearCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/deleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletepay">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/deletepay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteInvoice">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/deleteInvoice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

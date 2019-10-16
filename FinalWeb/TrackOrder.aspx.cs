@@ -19,8 +19,8 @@ namespace FinalWeb
 
         protected void BtnTrack_Click(object sender, EventArgs e)
         {
-            dynamic order = client.getOrder(Convert.ToInt32(ordernum.Value));
-            if (order != null) {
+            var order = client.getOrder(Convert.ToInt32(ordernum.Value));
+            
 
                 display += " <table class='table-shopping-cart'>";
                 display += " <tr class='table-head'>";
@@ -30,31 +30,42 @@ namespace FinalWeb
                 display += " <th class='column-4'>Payment Amount</th>";
                 display += " <th class='column-5'>Ship Date</th>";
                 display += " <th class='column-6'>Delivery Status</th>";
-                display += " <th class='column-7>Time Line</th>";
+                display += " <th class='column-7'></th>";
                 display += " </tr>";
 
-                foreach (transactionClass t in order) {
-                display += " <tr class='table-row'>";
-                display += " <td class='column-1'>" + t.OrderNumber+"</td>";
-                display += " <td class='column-2'>" + t.OrderDate + "</td>";
-                display += " <td class='column-3'>" + t.Total + "</td> ";
-                display += " <td class='column-4'>" + t.ShipDate + "</td> ";
-                display += " <td class='column-5'>" + t.OrderNumber + "</td>";
-                display += " <td class='column-6'>" + t.DeliveryStatus + "</td>";
-                display += " <td class='column-7'>";
-                display += " <ol class='progtrckr data-progtrckr-steps='5'>";
-                display += " <li class='progtrckr-done'>Order Processing</li>";
-                display += " <li class='progtrckr-done'>Pre-Production</li>";
-                display += " <li class='progtrckr-done'>In Production</li>";
-                display += " <li class='progtrckr-todo'>Shipped</li>";
-                display += " <li class='progtrckr-todo'>Delivered</li>";
-                display += " </ol>";
-                display += " </td> ";
-                display += " </tr> ";
-                }
-                display += " </table>";
-                loaded.InnerHtml = display;
+                if (order != null) {
+                    display += " <tr class='table-row'>";
+                    display += " <td class='column-1'>" + order.OrderNumber + "</td>";
+                    display += " <td class='column-2'>" + order.OrderDate + "</td>";
+                    display += " <td class='column-3'>" + order.PaymentDate + "</td> ";
+                    display += " <td class='column-4'>" + order.Total + "</td> ";
+                    display += " <td class='column-5'>" + order.ShipDate + "</td>";
+                    display += " <td class='column-6'>" + order.DeliveryStatus + "</td>";
+                    display += " <td class='column-7'>";
+                    display += " <ol class='progtrckr data-progtrckr-steps='5'>";
+                    display += " <li class='progtrckr-done'>Order Processing</li>";
+                    display += " <li class='progtrckr-done'>Pre-Production</li>";
+                    display += " <li class='progtrckr-done'>In Production</li>";
+                    display += " <li class='progtrckr-todo'>Shipped</li>";
+                    display += " <li class='progtrckr-todo'>Delivered</li>";
+                    display += " </ol>";
+                    display += " </td> ";
+                    display += " </tr> ";
+                    display += " </table>";
+
+
+                display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                display += "<a href='Add.aspx?ID=" + order.OrderNumber+ "@CANCEL" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Cancel Order</a>";
+                display += "</div>";
+                display += "<div class='block2-btn-addcart w-size1 trans-0-4'>";
+                display += "<a href='Home.aspx'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Done</a>";
+                display += "</div>";
             }
+              
+                
+               
+                loaded.InnerHtml = display;
+            
         }
 
         protected void BtnDone_Click(object sender, EventArgs e)
