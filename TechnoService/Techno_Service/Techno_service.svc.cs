@@ -71,48 +71,10 @@ namespace Techno_Service
             }
         }
 
-        public List<ProductD> search_by_dis()
-        {
-            var product = (from p in db.Products
-                           where p.Discount != 0
-                           select p);
-
-            List<ProductD> catProducts = new List<ProductD>();
-            if (product != null)
-            {
-
-                foreach (Product prop in product)
-                {
-                    ProductD Fproduct = new ProductD
-                    {
-                        ID = prop.Product_Id,
-                        name = prop.Name,
-                        description = prop.Description,
-                        price = (Double)prop.Price,
-                        quantity = prop.Quantity,
-                        category = prop.Category,
-                        brand = prop.Brand,
-                        manufacture = prop.manufacture,
-                        discount = (Decimal)prop.Discount,
-                        image_url = prop.Image_url,
-                        active = (Char)prop.ACTIVE
-                    };
-                    catProducts.Add(Fproduct);
-                }
-
-                return catProducts;
-
-            }
-            else
-            {
-                return null;
-            }
-        }
-
         //line divider added
         //*************************************************************************************************************
 
-        public bool resetPass(string email, string password)
+        public bool resetPass(int email, string password)
         {
             var user = (from p in db.Clients
                         where p.Email.Equals(email)
@@ -253,11 +215,22 @@ namespace Techno_Service
         //line divider added
         //*************************************************************************************************************
 
-        public List<ProductD> search_by_price(string value)
+        public List<ProductD> search_by_price(Decimal Low,Decimal high,String cat)
         {
-            var productlist = (from p in db.Products
-                               where p.Price.Equals(value)
+            dynamic productlist = null;
+            if (!cat.Equals("ALL"))
+            {
+                productlist = (from p in db.Products
+                               where p.Price >= Low && p.Price <= high && p.Category.Equals(cat)
                                select p);
+            }
+            else
+            {
+                productlist = (from p in db.Products
+                               where p.Price >= Low && p.Price <= high
+                               select p);
+            }
+           
             List<ProductD> priceP = new List<ProductD>();
 
             foreach (Product prop in productlist)
@@ -405,10 +378,21 @@ namespace Techno_Service
 
         public List<ProductD> price_by_ASC(String category)
         {
-            dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
-                               orderby p.Price ascending
-                               select p);
+            dynamic Product = null;
+            if (!category.Equals("ALL"))
+            {
+                Product = (from p in db.Products
+                                   where p.Category.Equals(category) && p.ACTIVE.Equals("T")
+                                   orderby p.Price ascending
+                                   select p);
+            }
+            else if(category.Equals("ALL"))
+            {
+                Product = (from op in db.Products
+                           where op.ACTIVE.Equals("T")
+                           orderby op.Price ascending
+                           select op);
+            }
             List<ProductD> pro = new List<ProductD>();
 
             foreach (Product prop in Product)
@@ -436,10 +420,23 @@ namespace Techno_Service
 
         public List<ProductD> price_by_DESC(String category)
         {
-            dynamic Product = (from p in db.Products
-                               where p.Category.Equals(category) && p.ACTIVE.Equals("T")
-                               orderby p.Price descending
-                               select p);
+            dynamic Product = null;
+
+            if (!category.Equals("ALL"))
+            {
+
+
+                Product = (from p in db.Products
+                           where p.Category.Equals(category) && p.ACTIVE.Equals("T")
+                           orderby p.Price descending
+                           select p);
+            }else if (category.Equals("ALL"))
+            {
+                Product = (from p in db.Products
+                           where p.ACTIVE.Equals("T")
+                           orderby p.Price descending
+                           select p);
+            }
             List<ProductD> pro = new List<ProductD>();
 
             foreach (Product prop in Product)
@@ -884,54 +881,259 @@ namespace Techno_Service
             return count;
         }
 
-        public bool add_to_wallet(int userID,double amount,String status)
+        public bool addToInvoice(transactionClass trans)
+        {
+            Invoice inv = new Invoice
+            {
+                Product_Id = trans.ProId,
+                userID = trans.clientId,
+                Order_Id = trans.OrderId,
+                OrderNumber = trans.OrderNumber,
+                Quantity = trans.Quantity,
+                Price = trans.price,
+                Total = trans.Total,
+                ShipDate = trans.ShipDate,
+                Payment_Date = trans.PaymentDate
+            };
+
+            db.Invoices.InsertOnSubmit(inv);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public bool addToOrder(transactionClass trans)
+        {
+            OOrder order = new OOrder
+            {
+                Client_ID = trans.clientId,
+                Payment_Id = trans.PaymentId,
+                Delivery_Id = trans.DeliveryID,
+                OrderNumber = trans.OrderNumber,
+                OrderDate = trans.OrderDate,
+                ShipDate = trans.ShipDate,
+                Tax = Convert.ToDecimal(trans.tax),
+                Delivery_Status = trans.DeliveryStatus,
+                Payment_Status = trans.PayemntStatus,
+                Payment_Date = trans.PaymentDate
+
+            };
+
+            db.OOrders.InsertOnSubmit(order);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+
+
+
+
+        }
+
+        public bool payment(transactionClass trans)
+        {
+            Payment pay = new Payment
+            {
+                User_Id = trans.clientId,
+                Payment_Type = trans.Payementtype,
+                Amount = trans.price
+            };
+            db.Payments.InsertOnSubmit(pay);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public bool delivery(transactionClass trans)
+        {
+            Delivery del = new Delivery
+            {
+                Company_Name = trans.companyName,
+                Phone = trans.phone,
+                Company_Details = trans.CompanyDetails
+            };
+            db.Deliveries.InsertOnSubmit(del);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public List<transactionClass> getInvoice(int userId)
+        {
+            var inv = (from i in db.Invoices
+                       where i.userID.Equals(userId)
+                       select i);
+
+            List<transactionClass> list = new List<transactionClass>();
+            if (inv != null)
+            {
+                foreach (Invoice c in inv)
+                {
+                    transactionClass Invoice = new transactionClass
+                    {
+                        ProId = c.Product_Id,
+
+                        clientId = c.userID,
+                        OrderId = c.Order_Id,
+                        OrderNumber = c.OrderNumber,
+                        Quantity = c.Quantity,
+                        price = c.Price,
+                        Total = c.Total,
+                        ShipDate = c.ShipDate,
+                        PaymentDate = c.Payment_Date
+
+                    };
+                    list.Add(Invoice);
+                }
+                return list;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getOrder(int orderNumber)
+        {
+            var order = (from i in db.OOrders
+                         where i.OrderNumber.Equals(orderNumber)
+                         select i).FirstOrDefault();
+            if (order != null)
+            {
+                transactionClass Order = new transactionClass
+                {
+                    clientId = order.Client_ID,
+                    OrderId = order.Order_Id,
+                    PaymentId = order.Payment_Id,
+                    DeliveryID = order.Delivery_Id,
+                    OrderNumber = order.OrderNumber,
+                    OrderDate = order.OrderDate,
+                    ShipDate = order.ShipDate,
+                    tax = Convert.ToDouble(order.Tax),
+                    DeliveryStatus = order.Delivery_Status,
+                    PayemntStatus = order.Payment_Status,
+                    PaymentDate = order.Payment_Date
+
+                };
+                return Order;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getpayement(int userId)
+        {
+            var pay = (from p in db.Payments
+                           where p.User_Id.Equals(userId)
+                           select p).FirstOrDefault();
+            if (pay != null)
+            {
+                transactionClass payement = new transactionClass
+                {
+                    clientId = pay.User_Id,
+                    PaymentId = pay.Payment_Id,
+                    Payementtype = pay.Payment_Type,
+                    PaymentDate = pay.Payment_Date,
+                    Total = pay.Amount
+                };
+                return payement;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public transactionClass getDelivertDetails(String Companyname)
+        {
+            var del = (from d in db.Deliveries
+                       where d.Company_Name.Equals(Companyname)
+                       select d).FirstOrDefault();
+            if (del != null)
+            {
+                transactionClass delivery = new transactionClass
+                {
+                    companyName = del.Company_Name,
+                    phone = del.Phone,
+                    CompanyDetails = del.Company_Details,
+                    DeliveryID = del.Delivery_Id
+                };
+                return delivery;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public bool AddToWallet(int userId, WalletClass myWallet)
         {
             Wallet wallet = new Wallet
             {
-                UserID = userID,
-                Balance= Convert.ToDecimal(amount),
-                Status = status
-             };
+               UserID = myWallet.userID,
+               Balance  =Convert.ToDecimal(myWallet.amount),
+               Status = myWallet.status
+               
+            };
 
-                db.Wallets.InsertOnSubmit(wallet);
-                try
-                {
-                    db.SubmitChanges();
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    ex.GetBaseException();
-                    return false;
-                }
-            }
-     
-        
-
-        public List<WalletClass> getUser_Wallet(int userID)
-        {
-            dynamic wallet = (from c in db.Carts
-                            where c.user_Id.Equals(userID)
-                            select c);
-            if (wallet != null)
+            db.Wallets.InsertOnSubmit(wallet);
+            try
             {
-                List<WalletClass> list = new List<WalletClass>();
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
 
-                foreach (Wallet c in wallet)
+        public List<WalletClass> getUserWallet(int userID)
+        {
+            var wall = (from i in db.Wallets
+                       where i.UserID.Equals(userID)
+                       select i);
+
+            List<WalletClass> list = new List<WalletClass>();
+            if (wall != null)
+            {
+                foreach (Wallet w in wall)
                 {
-                    WalletClass userwallet = new WalletClass
+                    WalletClass wallet = new WalletClass
                     {
-                        walletID = c.Wallet_Id,
-                        userID = c.UserID,
-                        amount = Convert.ToDouble(c.Balance),
-                         status = c.Status
-                        
-
+                       walletID = w.Wallet_Id,
+                       userID= w.UserID,
+                       amount = Convert.ToDouble(w.Balance),
                     };
-                    list.Add(userwallet);
+                    list.Add(wallet);
                 }
                 return list;
-
             }
             else
             {

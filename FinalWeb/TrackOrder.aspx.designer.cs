@@ -10,69 +10,69 @@
 namespace FinalWeb {
     
     
-    public partial class ShoppingCart {
+    public partial class TrackOrder {
         
         /// <summary>
-        /// shopcart control.
+        /// ordernum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl shopcart;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ordernum;
         
         /// <summary>
-        /// total control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl total;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText email;
         
         /// <summary>
-        /// selection control.
+        /// BtnTrack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect selection;
+        protected global::System.Web.UI.WebControls.Button BtnTrack;
         
         /// <summary>
-        /// tut control.
+        /// lblErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox tut;
+        protected global::System.Web.UI.WebControls.Label lblErrorMessage;
         
         /// <summary>
-        /// UPDATETOTAL control.
+        /// loaded control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UPDATETOTAL;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl loaded;
         
         /// <summary>
-        /// subtotall control.
+        /// BtnDone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl subtotall;
+        protected global::System.Web.UI.WebControls.Button BtnDone;
         
         /// <summary>
-        /// CheckOut control.
+        /// BtnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckOut;
+        protected global::System.Web.UI.WebControls.Button BtnCancel;
     }
 }

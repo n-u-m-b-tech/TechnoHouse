@@ -17,6 +17,7 @@ namespace FinalWeb
         int cartID;
         protected void Page_Load(object sender, EventArgs e)
         {
+            String sub = Request.QueryString["ID"];
             display += "<table class='table-shopping-cart'>";
             display += "<tr class='table-head'>";
             display += "<th class='column-1'>Remove</th>";
@@ -75,11 +76,39 @@ namespace FinalWeb
             display += "<span class='s-text18 w-size19 w-full-sm'>Subtotal:</span>";
 			display += "<span class='m-text21 w-size20 w-full-sm'>"+subtotal+"</span>";
             total.InnerHtml = display;
+            if (sub != null)
+            {
+                subtotall.InnerHtml = sub;
+            }
+            else
+            {
+                subtotall.InnerHtml = "R" + Convert.ToString(subtotal);
+            }
+           
         }               
 
         protected void CheckOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CheckOut.aspx");
+            Response.Redirect("CheckOut.aspx?ID");
+        }
+
+        protected void Update_Click(object sender,EventArgs e)
+        {
+            String value = selection.Value;
+            if(value.Equals("Standard courier services (R50)"))
+            {
+                String sub = "R" + Convert.ToString(subtotal + 50);
+                Response.Redirect("ShoppingCart.aspx?ID="+sub+"");
+            }else if(value.Equals("Overnight service (R75)"))
+            {
+                String sub = "R" + Convert.ToString(subtotal + 75);
+                Response.Redirect("ShoppingCart.aspx?ID=" + sub + "");
+            } else if (value.Equals("Same Day express (R100)"))
+            {
+                String sub = "R" + Convert.ToString(subtotal + 100);
+                Response.Redirect("ShoppingCart.aspx?ID=" + sub + "");
+            }
+
         }
     }
 }

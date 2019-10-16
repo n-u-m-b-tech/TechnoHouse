@@ -109,17 +109,71 @@
   <wsdl:message name="ITechno_service_getUser_Cart_OutputMessage">
     <wsdl:part name="parameters" element="tns:getUser_CartResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_removeItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeItem" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_removeItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_addToInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToInvoice" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_addToInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_addToOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:addToOrder" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_addToOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addToOrderResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_payment_InputMessage">
     <wsdl:part name="parameters" element="tns:payment" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_payment_OutputMessage">
     <wsdl:part name="parameters" element="tns:paymentResponse" />
   </wsdl:message>
-  <wsdl:message name="ITechno_service_removeItem_InputMessage">
-    <wsdl:part name="parameters" element="tns:removeItem" />
+  <wsdl:message name="ITechno_service_delivery_InputMessage">
+    <wsdl:part name="parameters" element="tns:delivery" />
   </wsdl:message>
-  <wsdl:message name="ITechno_service_removeItem_OutputMessage">
-    <wsdl:part name="parameters" element="tns:removeItemResponse" />
+  <wsdl:message name="ITechno_service_delivery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_AddToWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWallet" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_AddToWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUserWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserWallet" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUserWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoice" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrder" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getpayement_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpayement" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getpayement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpayementResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getDelivertDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getDelivertDetails" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getDelivertDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getDelivertDetailsResponse" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_increaseQue_InputMessage">
     <wsdl:part name="parameters" element="tns:increaseQue" />
@@ -144,12 +198,6 @@
   </wsdl:message>
   <wsdl:message name="ITechno_service_productinfor_OutputMessage">
     <wsdl:part name="parameters" element="tns:productinforResponse" />
-  </wsdl:message>
-  <wsdl:message name="ITechno_service_search_by_dis_InputMessage">
-    <wsdl:part name="parameters" element="tns:search_by_dis" />
-  </wsdl:message>
-  <wsdl:message name="ITechno_service_search_by_dis_OutputMessage">
-    <wsdl:part name="parameters" element="tns:search_by_disResponse" />
   </wsdl:message>
   <wsdl:message name="ITechno_service_CountProduct_InputMessage">
     <wsdl:part name="parameters" element="tns:CountProduct" />
@@ -238,13 +286,49 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUser_Cart" message="tns:ITechno_service_getUser_Cart_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getUser_CartResponse" message="tns:ITechno_service_getUser_Cart_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="removeItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/removeItem" message="tns:ITechno_service_removeItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/removeItemResponse" message="tns:ITechno_service_removeItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/addToInvoice" message="tns:ITechno_service_addToInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/addToInvoiceResponse" message="tns:ITechno_service_addToInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addToOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/addToOrder" message="tns:ITechno_service_addToOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/addToOrderResponse" message="tns:ITechno_service_addToOrder_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="payment">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/payment" message="tns:ITechno_service_payment_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/paymentResponse" message="tns:ITechno_service_payment_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="removeItem">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/removeItem" message="tns:ITechno_service_removeItem_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/removeItemResponse" message="tns:ITechno_service_removeItem_OutputMessage" />
+    <wsdl:operation name="delivery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/delivery" message="tns:ITechno_service_delivery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/deliveryResponse" message="tns:ITechno_service_delivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/AddToWallet" message="tns:ITechno_service_AddToWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/AddToWalletResponse" message="tns:ITechno_service_AddToWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUserWallet" message="tns:ITechno_service_getUserWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getUserWalletResponse" message="tns:ITechno_service_getUserWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getInvoice" message="tns:ITechno_service_getInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getInvoiceResponse" message="tns:ITechno_service_getInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getOrder" message="tns:ITechno_service_getOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getOrderResponse" message="tns:ITechno_service_getOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpayement">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getpayement" message="tns:ITechno_service_getpayement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getpayementResponse" message="tns:ITechno_service_getpayement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getDelivertDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getDelivertDetails" message="tns:ITechno_service_getDelivertDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getDelivertDetailsResponse" message="tns:ITechno_service_getDelivertDetails_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="increaseQue">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/increaseQue" message="tns:ITechno_service_increaseQue_InputMessage" />
@@ -261,10 +345,6 @@
     <wsdl:operation name="productinfor">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/productinfor" message="tns:ITechno_service_productinfor_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/productinforResponse" message="tns:ITechno_service_productinfor_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="search_by_dis">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/search_by_dis" message="tns:ITechno_service_search_by_dis_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/search_by_disResponse" message="tns:ITechno_service_search_by_dis_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CountProduct">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/CountProduct" message="tns:ITechno_service_CountProduct_InputMessage" />
@@ -434,6 +514,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="removeItem">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/removeItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addToInvoice">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/addToInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addToOrder">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/addToOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="payment">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/payment" style="document" />
       <wsdl:input>
@@ -443,8 +550,62 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="removeItem">
-      <soap:operation soapAction="http://tempuri.org/ITechno_service/removeItem" style="document" />
+    <wsdl:operation name="delivery">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/delivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToWallet">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/AddToWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserWallet">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getUserWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoice">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getInvoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrder">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpayement">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getpayement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDelivertDetails">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getDelivertDetails" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -481,15 +642,6 @@
     </wsdl:operation>
     <wsdl:operation name="productinfor">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/productinfor" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="search_by_dis">
-      <soap:operation soapAction="http://tempuri.org/ITechno_service/search_by_dis" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

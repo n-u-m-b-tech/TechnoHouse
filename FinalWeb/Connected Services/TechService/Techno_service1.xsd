@@ -63,4 +63,50 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CartClass" nillable="true" type="tns:CartClass" />
+  <xs:complexType name="transactionClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryID" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Payementtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayemntStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProId" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ShipDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+      <xs:element minOccurs="0" name="clientId" type="xs:int" />
+      <xs:element minOccurs="0" name="companyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="tax" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="transactionClass" nillable="true" type="tns:transactionClass" />
+  <xs:complexType name="WalletClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" type="xs:int" />
+      <xs:element minOccurs="0" name="walletID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WalletClass" nillable="true" type="tns:WalletClass" />
+  <xs:complexType name="ArrayOfWalletClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WalletClass" nillable="true" type="tns:WalletClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWalletClass" nillable="true" type="tns:ArrayOfWalletClass" />
+  <xs:complexType name="ArrayOftransactionClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionClass" nillable="true" type="tns:transactionClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftransactionClass" nillable="true" type="tns:ArrayOftransactionClass" />
 </xs:schema>

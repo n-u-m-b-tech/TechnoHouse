@@ -21,7 +21,7 @@ namespace Techno_Service
         [OperationContract]
         User userinfor_Retrieval_Email(String email);
         [OperationContract]
-        Boolean resetPass(String email, string password);
+        Boolean resetPass(int email, string password);
         [OperationContract]
         Boolean updateuser(User user, int Id);
 
@@ -29,7 +29,7 @@ namespace Techno_Service
         [OperationContract]
         List<ProductD> search_by_cat(string category);
         [OperationContract]
-        List<ProductD> search_by_price(string value);
+        List<ProductD> search_by_price(Decimal Low, Decimal high, String cat);
         [OperationContract]
         ProductD productinfor_retrieval_ID(int ID);
         [OperationContract]
@@ -40,29 +40,50 @@ namespace Techno_Service
         List<ProductD> price_by_DESC(String category);
         [OperationContract]
         List<ProductD> allProducts();
+
         [OperationContract]
         List<ProductD> RangePrice(int min, int max);
+
         [OperationContract]
         List<ProductD> FiltCatPrice(String Category, Double price);
-        
 
 
-        //transaction and cart and wallet
+
+        //transaction and cart
         [OperationContract]
-        Boolean Add_to_Cart(ProductD product,int userID,int Qty);
+        Boolean Add_to_Cart(ProductD product, int userID, int Qty);
 
         [OperationContract]
         List<CartClass> getUser_Cart(int userID);
 
         [OperationContract]
-        Boolean payment(String type, DateTime date, Decimal Amount, int userID);
-        [OperationContract]
         bool removeItem(int userId, int productId);
+        [OperationContract]
+        Boolean addToInvoice(transactionClass trans);
+        [OperationContract]
+        Boolean addToOrder(transactionClass trans);
+        [OperationContract]
+        Boolean payment(transactionClass trans);
+        [OperationContract]
+        Boolean delivery(transactionClass trans);
 
-        bool add_to_wallet(int userID,double amount,String status);
-        List<WalletClass> getUser_Wallet(int userID);
+        [OperationContract]
+        Boolean AddToWallet(int userId,WalletClass myWallet);
 
-       
+        [OperationContract]
+        List<WalletClass> getUserWallet(int userID);
+
+        [OperationContract]
+        List<transactionClass> getInvoice(int userId);
+        [OperationContract]
+        transactionClass getOrder(int orderNumber);
+        [OperationContract]
+        transactionClass getpayement(int userId);
+        [OperationContract]
+        transactionClass getDelivertDetails(String Companyname);
+
+
+
         [OperationContract]
         bool increaseQue(int productId, int UserId,int num);
 
@@ -74,8 +95,6 @@ namespace Techno_Service
         int EditProduct(ProductD pr, int ID);
         [OperationContract]
         ProductD productinfor(int ID);
-        [OperationContract]
-        List<ProductD> search_by_dis();
 
         [OperationContract]
         int CountProduct();

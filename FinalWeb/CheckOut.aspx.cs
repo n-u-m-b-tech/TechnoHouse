@@ -15,14 +15,14 @@ namespace FinalWeb
         String display = "";
         double total = 0;
         double subtotal = 0;
+      
+        int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            display += " <ul class='header-cart-wrapitem'>";
             if (Session["userID"] != null)
             {
-                int id = Convert.ToInt32(Request.QueryString["ID"]);
-                int userID = Convert.ToInt32(Session["userID"].ToString());
+                 
+                 userID = Convert.ToInt32(Session["userID"].ToString());
                 var user = client.userinfor_Retrieval(userID);
 
                 fname.Value = user.name;
@@ -32,45 +32,145 @@ namespace FinalWeb
                 prov.Value = user.province;
                 zip.Value = user.ZipCode;
 
-                var cart = client.getUser_Cart(id);
-                if (cart != null) {                    
-                    foreach (CartClass c in cart) {
-                        total += c.Total;
-                        display += " <li class='header-cart-item'>";
-                        display += " <div class='header-cart-item-img'>";
-                        display += "<a href='Remove.aspx?ID=" + c.productId + "'><img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";
-                        display += " </div>";
-                        display += " <div class='header-cart-item-txt'>";
-                        display += " <a href ='ProductDetails.aspx?ID=" + c.productId + "' class='header-cart-item-name'>" + c.productName + "</a>";
-                        display += " <span class='header-cart-item-info'>" + c.Qty + " x" + c.unit + "</span>";
-                        display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                        display += "<a href='Add.aspx?ID=" + c.productId + "@Remove" + "'class='header-cart-item-name' class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Remove</a> ";
-                        display += "</div>";
-                        display += "</div>";
-                        display += " </li>";
 
+
+                display += "<table class='table-shopping-cart'>";
+                display += "<tr class='table-head'>";
+                display += "<th class='column-1'>Ordered Item</th>";
+                display += "<th class='column-2'>Quantity</th>";
+                display += "<th class='column-3'>Amount</th>";
+                display += "</tr>";
+               
+                var cart = client.getUser_Cart(userID);
+                if (cart != null) {
+                    foreach (CartClass c in cart) {
+                        subtotal += c.Total;
+                        display += "<tr class='table-row'>";
+                        display += "<td class='column-1'>" + c.productName + "</td>";
+                        display += "<td class='column-2'>" + c.Qty + " </td>";
+                        display += "<td class='column-3'>"+c.Total+"</td>";
                     }
-                    display += " </ul>";
-                    display += " <div class='header-cart-total'>Total: " + total + "</div>";
-                    display += " <div class='header-cart-buttons'>";
-                    display += " <div class='header-cart-wrapbtn'>";
-                    display += " <a href = 'ShoppingCart.aspx' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>View Cart</a></div>";
-                    display += " <div class='header -cart-wrapbtn'>";
-                    display += " <a href ='CheckOut.aspx' class='flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4'>Check Out</a>";
-                    cartshow.InnerHtml = display;
                 }
+                total =subtotal + (subtotal * 0.15);
+                display += "</tr>";
+                display += "<tr class='table-row'>";
+                display += "<td class='col-10'>";
+                display += " <p>Subtotal:"+subtotal+"</p>";
+                display += "<p>VAT Included: 15%</p>";
+                display += "<p>Total:"+total+"</p>";
+                display += "</td>";
+                display += "</tr>";
+                display += "</table>";
+                cartshow.InnerHtml = display;
 
             }
         }
 
         protected void BtnOrder_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Invoicee.aspx");
+            //Adding payment
+            transactionClass pay = new transactionClass
+            {
+                Total = Convert.ToDecimal(subtotal),
+                clientId = userID,
+                Payementtype = "Card",
+                PaymentDate = DateTime.Today,
+            };
+
+            var ver = client.payment(pay);
+            if (ver)
+            {
+                //if payment processed assign delivery Company
+                transactionClass delivery = new transactionClass
+                {
+                    companyName = "TECH Deliveries",
+                    phone = "0113528910",
+                    CompanyDetails = "Tech Deliveries " +
+                                     "Address : 5 Kingsway Ave, Rossmore, Johannesburg, 2092" +
+                                      " Hourse : 08h00 - 17h00 Mon-Fri" +
+                                      " 4.1 star rating"
+
+                };
+                var del = client.delivery(delivery);
+                if (del)
+                {
+                    //after delivery assigment add to order
+                    var payment = client.getpayement(userID);
+                    var deliv = client.getDelivertDetails("TECH Deliveries");
+
+                    int ordernum = GenNumber();
+                    transactionClass order = new transactionClass
+                    {
+                        clientId = userID,
+                        PaymentId = payment.PaymentId,
+                        DeliveryID = deliv.DeliveryID,
+                        OrderNumber = ordernum,
+                        OrderDate = DateTime.Today,
+                        ShipDate = DateTime.Today,
+                        tax = 15,
+                        DeliveryStatus = "Inprogress",
+                        PayemntStatus = "Accepted",
+                        PaymentDate = DateTime.Today
+
+                    };
+                    bool deli = client.addToOrder(order);
+                    var Order = client.getOrder(ordernum);
+                    var cart = client.getUser_Cart(userID);
+                    if (deli)
+                    {
+                        if (cart != null)
+                        {
+                            bool Invo = false;
+                            foreach (CartClass c in cart)
+                            {
+                                transactionClass inv = new transactionClass
+                                {
+                                    ProId = c.productId,
+                                    clientId = userID,
+                                    OrderId = Order.OrderId,
+                                    OrderNumber = order.OrderNumber,
+                                    Quantity = c.Qty,
+                                    price = Convert.ToDecimal(c.unit),
+                                    Total = Convert.ToDecimal(c.Total),
+                                    ShipDate = DateTime.Today.AddDays(2),
+                                    PaymentDate = DateTime.Today
+                                };
+                                 Invo = client.addToInvoice(inv);
+                            }
+
+                            if (Invo)
+                            {
+                                Response.Redirect("Invoicee.aspx");
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+        
+            else
+            {
+                int id = Convert.ToInt32(Request.QueryString["ID"]);
+                    Response.Redirect("CheckOut.aspx?ID="+id+"");
+            }
         }
+
+
+           
+            
+        
 
         protected void BtnDiscount_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public int GenNumber()
+        {
+            Random rand = new Random();
+            return rand.Next(13268, 93652);
         }
     }
 }

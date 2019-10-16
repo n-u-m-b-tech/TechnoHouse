@@ -13,6 +13,15 @@ namespace FinalWeb {
     public partial class CheckOut {
         
         /// <summary>
+        /// cartshow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartshow;
+        
+        /// <summary>
         /// fname control.
         /// </summary>
         /// <remarks>
@@ -119,14 +128,5 @@ namespace FinalWeb {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnOrder;
-        
-        /// <summary>
-        /// cartshow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartshow;
     }
 }

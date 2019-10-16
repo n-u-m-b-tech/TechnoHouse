@@ -7,6 +7,16 @@
 		<div class="flex-w flex-sb">
 		 <div class="w-size13 p-t-30 respon5">
 		  <div class="wrap-slick3 flex-sb flex-w">
+
+      <div class="col-25">
+        <div class="container">
+      <div id="cartshow" runat="server">
+    
+      </div>
+    </div>
+   </div>
+     <div></div>
+
         <div class="row">
           <div class="col-50">
             <h3>Billing Address</h3>
@@ -69,13 +79,7 @@
     </div>
   </div>
 
-  <div class="col-25">
-    <div class="container">
-        <div class="header-wrapicon2" id="cartshow" runat="server">
 
-		</div>
-    </div>
-  </div>
 </div>
 </div>
 </asp:Content>

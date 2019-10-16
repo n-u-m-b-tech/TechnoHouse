@@ -660,6 +660,448 @@ namespace FinalWeb.TechService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="transactionClass", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class transactionClass : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DeliveryIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DeliveryStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime OrderDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int OrderNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PayementtypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PayemntStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime PaymentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PaymentIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuantityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime ShipDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int clientIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string companyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string phoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double taxField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyDetails {
+            get {
+                return this.CompanyDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyDetailsField, value) != true)) {
+                    this.CompanyDetailsField = value;
+                    this.RaisePropertyChanged("CompanyDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DeliveryID {
+            get {
+                return this.DeliveryIDField;
+            }
+            set {
+                if ((this.DeliveryIDField.Equals(value) != true)) {
+                    this.DeliveryIDField = value;
+                    this.RaisePropertyChanged("DeliveryID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DeliveryStatus {
+            get {
+                return this.DeliveryStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DeliveryStatusField, value) != true)) {
+                    this.DeliveryStatusField = value;
+                    this.RaisePropertyChanged("DeliveryStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime OrderDate {
+            get {
+                return this.OrderDateField;
+            }
+            set {
+                if ((this.OrderDateField.Equals(value) != true)) {
+                    this.OrderDateField = value;
+                    this.RaisePropertyChanged("OrderDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrderId {
+            get {
+                return this.OrderIdField;
+            }
+            set {
+                if ((this.OrderIdField.Equals(value) != true)) {
+                    this.OrderIdField = value;
+                    this.RaisePropertyChanged("OrderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int OrderNumber {
+            get {
+                return this.OrderNumberField;
+            }
+            set {
+                if ((this.OrderNumberField.Equals(value) != true)) {
+                    this.OrderNumberField = value;
+                    this.RaisePropertyChanged("OrderNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Payementtype {
+            get {
+                return this.PayementtypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PayementtypeField, value) != true)) {
+                    this.PayementtypeField = value;
+                    this.RaisePropertyChanged("Payementtype");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PayemntStatus {
+            get {
+                return this.PayemntStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PayemntStatusField, value) != true)) {
+                    this.PayemntStatusField = value;
+                    this.RaisePropertyChanged("PayemntStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PaymentDate {
+            get {
+                return this.PaymentDateField;
+            }
+            set {
+                if ((this.PaymentDateField.Equals(value) != true)) {
+                    this.PaymentDateField = value;
+                    this.RaisePropertyChanged("PaymentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PaymentId {
+            get {
+                return this.PaymentIdField;
+            }
+            set {
+                if ((this.PaymentIdField.Equals(value) != true)) {
+                    this.PaymentIdField = value;
+                    this.RaisePropertyChanged("PaymentId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProId {
+            get {
+                return this.ProIdField;
+            }
+            set {
+                if ((this.ProIdField.Equals(value) != true)) {
+                    this.ProIdField = value;
+                    this.RaisePropertyChanged("ProId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Quantity {
+            get {
+                return this.QuantityField;
+            }
+            set {
+                if ((this.QuantityField.Equals(value) != true)) {
+                    this.QuantityField = value;
+                    this.RaisePropertyChanged("Quantity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime ShipDate {
+            get {
+                return this.ShipDateField;
+            }
+            set {
+                if ((this.ShipDateField.Equals(value) != true)) {
+                    this.ShipDateField = value;
+                    this.RaisePropertyChanged("ShipDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int clientId {
+            get {
+                return this.clientIdField;
+            }
+            set {
+                if ((this.clientIdField.Equals(value) != true)) {
+                    this.clientIdField = value;
+                    this.RaisePropertyChanged("clientId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string companyName {
+            get {
+                return this.companyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.companyNameField, value) != true)) {
+                    this.companyNameField = value;
+                    this.RaisePropertyChanged("companyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string phone {
+            get {
+                return this.phoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.phoneField, value) != true)) {
+                    this.phoneField = value;
+                    this.RaisePropertyChanged("phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal price {
+            get {
+                return this.priceField;
+            }
+            set {
+                if ((this.priceField.Equals(value) != true)) {
+                    this.priceField = value;
+                    this.RaisePropertyChanged("price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double tax {
+            get {
+                return this.taxField;
+            }
+            set {
+                if ((this.taxField.Equals(value) != true)) {
+                    this.taxField = value;
+                    this.RaisePropertyChanged("tax");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WalletClass", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class WalletClass : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string statusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int walletIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                if ((this.userIDField.Equals(value) != true)) {
+                    this.userIDField = value;
+                    this.RaisePropertyChanged("userID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int walletID {
+            get {
+                return this.walletIDField;
+            }
+            set {
+                if ((this.walletIDField.Equals(value) != true)) {
+                    this.walletIDField = value;
+                    this.RaisePropertyChanged("walletID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TechService.ITechno_service")]
     public interface ITechno_service {
@@ -689,10 +1131,10 @@ namespace FinalWeb.TechService {
         System.Threading.Tasks.Task<FinalWeb.TechService.User> userinfor_Retrieval_EmailAsync(string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        bool resetPass(string email, string password);
+        bool resetPass(int email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/resetPass", ReplyAction="http://tempuri.org/ITechno_service/resetPassResponse")]
-        System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password);
+        System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/updateuser", ReplyAction="http://tempuri.org/ITechno_service/updateuserResponse")]
         bool updateuser(FinalWeb.TechService.User user, int Id);
@@ -707,10 +1149,10 @@ namespace FinalWeb.TechService {
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_catAsync(string category);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_price", ReplyAction="http://tempuri.org/ITechno_service/search_by_priceResponse")]
-        FinalWeb.TechService.ProductD[] search_by_price(string value);
+        FinalWeb.TechService.ProductD[] search_by_price(decimal Low, decimal high, string cat);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_price", ReplyAction="http://tempuri.org/ITechno_service/search_by_priceResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_priceAsync(string value);
+        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_priceAsync(decimal Low, decimal high, string cat);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor_retrieval_ID", ReplyAction="http://tempuri.org/ITechno_service/productinfor_retrieval_IDResponse")]
         FinalWeb.TechService.ProductD productinfor_retrieval_ID(int ID);
@@ -766,17 +1208,71 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUser_Cart", ReplyAction="http://tempuri.org/ITechno_service/getUser_CartResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.CartClass[]> getUser_CartAsync(int userID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
-        bool payment(string type, System.DateTime date, decimal Amount, int userID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
-        System.Threading.Tasks.Task<bool> paymentAsync(string type, System.DateTime date, decimal Amount, int userID);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/removeItem", ReplyAction="http://tempuri.org/ITechno_service/removeItemResponse")]
         bool removeItem(int userId, int productId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/removeItem", ReplyAction="http://tempuri.org/ITechno_service/removeItemResponse")]
         System.Threading.Tasks.Task<bool> removeItemAsync(int userId, int productId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/addToInvoice", ReplyAction="http://tempuri.org/ITechno_service/addToInvoiceResponse")]
+        bool addToInvoice(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/addToInvoice", ReplyAction="http://tempuri.org/ITechno_service/addToInvoiceResponse")]
+        System.Threading.Tasks.Task<bool> addToInvoiceAsync(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/addToOrder", ReplyAction="http://tempuri.org/ITechno_service/addToOrderResponse")]
+        bool addToOrder(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/addToOrder", ReplyAction="http://tempuri.org/ITechno_service/addToOrderResponse")]
+        System.Threading.Tasks.Task<bool> addToOrderAsync(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
+        bool payment(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/payment", ReplyAction="http://tempuri.org/ITechno_service/paymentResponse")]
+        System.Threading.Tasks.Task<bool> paymentAsync(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/delivery", ReplyAction="http://tempuri.org/ITechno_service/deliveryResponse")]
+        bool delivery(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/delivery", ReplyAction="http://tempuri.org/ITechno_service/deliveryResponse")]
+        System.Threading.Tasks.Task<bool> deliveryAsync(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddToWallet", ReplyAction="http://tempuri.org/ITechno_service/AddToWalletResponse")]
+        bool AddToWallet(int userId, FinalWeb.TechService.WalletClass myWallet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddToWallet", ReplyAction="http://tempuri.org/ITechno_service/AddToWalletResponse")]
+        System.Threading.Tasks.Task<bool> AddToWalletAsync(int userId, FinalWeb.TechService.WalletClass myWallet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUserWallet", ReplyAction="http://tempuri.org/ITechno_service/getUserWalletResponse")]
+        FinalWeb.TechService.WalletClass[] getUserWallet(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUserWallet", ReplyAction="http://tempuri.org/ITechno_service/getUserWalletResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.WalletClass[]> getUserWalletAsync(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getInvoice", ReplyAction="http://tempuri.org/ITechno_service/getInvoiceResponse")]
+        FinalWeb.TechService.transactionClass[] getInvoice(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getInvoice", ReplyAction="http://tempuri.org/ITechno_service/getInvoiceResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass[]> getInvoiceAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getOrder", ReplyAction="http://tempuri.org/ITechno_service/getOrderResponse")]
+        FinalWeb.TechService.transactionClass getOrder(int orderNumber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getOrder", ReplyAction="http://tempuri.org/ITechno_service/getOrderResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getOrderAsync(int orderNumber);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getpayement", ReplyAction="http://tempuri.org/ITechno_service/getpayementResponse")]
+        FinalWeb.TechService.transactionClass getpayement(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getpayement", ReplyAction="http://tempuri.org/ITechno_service/getpayementResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getpayementAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getDelivertDetails", ReplyAction="http://tempuri.org/ITechno_service/getDelivertDetailsResponse")]
+        FinalWeb.TechService.transactionClass getDelivertDetails(string Companyname);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getDelivertDetails", ReplyAction="http://tempuri.org/ITechno_service/getDelivertDetailsResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getDelivertDetailsAsync(string Companyname);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/increaseQue", ReplyAction="http://tempuri.org/ITechno_service/increaseQueResponse")]
         bool increaseQue(int productId, int UserId, int num);
@@ -801,12 +1297,6 @@ namespace FinalWeb.TechService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/productinfor", ReplyAction="http://tempuri.org/ITechno_service/productinforResponse")]
         System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
-        FinalWeb.TechService.ProductD[] search_by_dis();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/search_by_dis", ReplyAction="http://tempuri.org/ITechno_service/search_by_disResponse")]
-        System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/CountProduct", ReplyAction="http://tempuri.org/ITechno_service/CountProductResponse")]
         int CountProduct();
@@ -886,11 +1376,11 @@ namespace FinalWeb.TechService {
             return base.Channel.userinfor_Retrieval_EmailAsync(email);
         }
         
-        public bool resetPass(string email, string password) {
+        public bool resetPass(int email, string password) {
             return base.Channel.resetPass(email, password);
         }
         
-        public System.Threading.Tasks.Task<bool> resetPassAsync(string email, string password) {
+        public System.Threading.Tasks.Task<bool> resetPassAsync(int email, string password) {
             return base.Channel.resetPassAsync(email, password);
         }
         
@@ -910,12 +1400,12 @@ namespace FinalWeb.TechService {
             return base.Channel.search_by_catAsync(category);
         }
         
-        public FinalWeb.TechService.ProductD[] search_by_price(string value) {
-            return base.Channel.search_by_price(value);
+        public FinalWeb.TechService.ProductD[] search_by_price(decimal Low, decimal high, string cat) {
+            return base.Channel.search_by_price(Low, high, cat);
         }
         
-        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_priceAsync(string value) {
-            return base.Channel.search_by_priceAsync(value);
+        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_priceAsync(decimal Low, decimal high, string cat) {
+            return base.Channel.search_by_priceAsync(Low, high, cat);
         }
         
         public FinalWeb.TechService.ProductD productinfor_retrieval_ID(int ID) {
@@ -990,20 +1480,92 @@ namespace FinalWeb.TechService {
             return base.Channel.getUser_CartAsync(userID);
         }
         
-        public bool payment(string type, System.DateTime date, decimal Amount, int userID) {
-            return base.Channel.payment(type, date, Amount, userID);
-        }
-        
-        public System.Threading.Tasks.Task<bool> paymentAsync(string type, System.DateTime date, decimal Amount, int userID) {
-            return base.Channel.paymentAsync(type, date, Amount, userID);
-        }
-        
         public bool removeItem(int userId, int productId) {
             return base.Channel.removeItem(userId, productId);
         }
         
         public System.Threading.Tasks.Task<bool> removeItemAsync(int userId, int productId) {
             return base.Channel.removeItemAsync(userId, productId);
+        }
+        
+        public bool addToInvoice(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.addToInvoice(trans);
+        }
+        
+        public System.Threading.Tasks.Task<bool> addToInvoiceAsync(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.addToInvoiceAsync(trans);
+        }
+        
+        public bool addToOrder(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.addToOrder(trans);
+        }
+        
+        public System.Threading.Tasks.Task<bool> addToOrderAsync(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.addToOrderAsync(trans);
+        }
+        
+        public bool payment(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.payment(trans);
+        }
+        
+        public System.Threading.Tasks.Task<bool> paymentAsync(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.paymentAsync(trans);
+        }
+        
+        public bool delivery(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.delivery(trans);
+        }
+        
+        public System.Threading.Tasks.Task<bool> deliveryAsync(FinalWeb.TechService.transactionClass trans) {
+            return base.Channel.deliveryAsync(trans);
+        }
+        
+        public bool AddToWallet(int userId, FinalWeb.TechService.WalletClass myWallet) {
+            return base.Channel.AddToWallet(userId, myWallet);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddToWalletAsync(int userId, FinalWeb.TechService.WalletClass myWallet) {
+            return base.Channel.AddToWalletAsync(userId, myWallet);
+        }
+        
+        public FinalWeb.TechService.WalletClass[] getUserWallet(int userID) {
+            return base.Channel.getUserWallet(userID);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.WalletClass[]> getUserWalletAsync(int userID) {
+            return base.Channel.getUserWalletAsync(userID);
+        }
+        
+        public FinalWeb.TechService.transactionClass[] getInvoice(int userId) {
+            return base.Channel.getInvoice(userId);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass[]> getInvoiceAsync(int userId) {
+            return base.Channel.getInvoiceAsync(userId);
+        }
+        
+        public FinalWeb.TechService.transactionClass getOrder(int orderNumber) {
+            return base.Channel.getOrder(orderNumber);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getOrderAsync(int orderNumber) {
+            return base.Channel.getOrderAsync(orderNumber);
+        }
+        
+        public FinalWeb.TechService.transactionClass getpayement(int userId) {
+            return base.Channel.getpayement(userId);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getpayementAsync(int userId) {
+            return base.Channel.getpayementAsync(userId);
+        }
+        
+        public FinalWeb.TechService.transactionClass getDelivertDetails(string Companyname) {
+            return base.Channel.getDelivertDetails(Companyname);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.transactionClass> getDelivertDetailsAsync(string Companyname) {
+            return base.Channel.getDelivertDetailsAsync(Companyname);
         }
         
         public bool increaseQue(int productId, int UserId, int num) {
@@ -1036,14 +1598,6 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD> productinforAsync(int ID) {
             return base.Channel.productinforAsync(ID);
-        }
-        
-        public FinalWeb.TechService.ProductD[] search_by_dis() {
-            return base.Channel.search_by_dis();
-        }
-        
-        public System.Threading.Tasks.Task<FinalWeb.TechService.ProductD[]> search_by_disAsync() {
-            return base.Channel.search_by_disAsync();
         }
         
         public int CountProduct() {
