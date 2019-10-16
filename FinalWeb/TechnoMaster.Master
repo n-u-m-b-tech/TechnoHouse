@@ -270,6 +270,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <script async type="text/javascript" src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/43d0da8a7b3db2926ab3a37366becc805dba577144b64b92bc14d5a4ed43700b.js"></script>
     </form>
 
 
