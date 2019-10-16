@@ -26,13 +26,16 @@
 					</h3>
 
 					<p class="p-b-28">
-						Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci.
-					</p>
+						Whether it’s home security, home theater or home automation, Tech Home Systems can design and install a system tailored to your needs.
+                    </p>
 
 					<div class="bo13 p-l-29 m-l-9 p-b-10">
 						<p class="p-b-11">
 							Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
-						</p>
+
+                            Expert consulting, design, installation and monitoring for Security and Peace of Mind.  Tech Home Systems is the one source for all of your security, home electronics, monitoring and access control system needs. We are electronic systems specialists and are here to serve you, from design & installation to monitoring & service.
+						    Techno House gadgets let you do things such as turn your lights on using your smartphone, stream music to a speaker using Alexa, lock your doors remotely, clean your house, and much more. But smart home gadgets are about more than just convenience. These devices can also help you save on heating and energy costs, let you know if someone's trying to break in, or if there's some other emergency. 
+                        </p>
 
 						<span class="s-text7">
 							- Steve Job’s

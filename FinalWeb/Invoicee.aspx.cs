@@ -24,7 +24,7 @@ namespace FinalWeb
                     title.InnerHtml = user.username;
                     invoiceNumber.InnerHtml = Convert.ToString(invoice[0].OrderNumber);
                     date.InnerHtml = Convert.ToString(invoice[0].OrderDate);
-                    amount.InnerHtml = Convert.ToString(invoice[0].Total);
+                    amount.InnerHtml = Convert.ToString("R"+0);
 
                 }
 

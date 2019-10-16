@@ -34,13 +34,7 @@
         <div id="loaded" runat="server">
           
             </div>
-            <div class="size14 trans-0-4 m-b-10">
-		 <asp:Button ID="BtnDone" runat="server"  Text="Done" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" OnClick="BtnDone_Click" />
-		</div>
-
-        <div class="size14 trans-0-4 m-b-10">
-		 <asp:Button ID="BtnCancel" runat="server"  Text="Cancel Order" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" OnClick="BtnCancel_Click" />
-		</div>
+       
 
       <div>
           

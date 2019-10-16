@@ -24,13 +24,7 @@
 
             <div id="logo">
 
-              <div id="logoctr">
-                <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a>
-                <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
-                |
-                <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
-                <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
-              </div>
+             
 
               <div id="logohelp">
                 <input id="imageloc" type="text" size="50" value="" /><br />
