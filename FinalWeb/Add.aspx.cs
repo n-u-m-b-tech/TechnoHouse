@@ -65,7 +65,8 @@ namespace FinalWeb
                         var payment = client.getpayement(Convert.ToInt32(Session["userID"].ToString()));
                         if (payment != null)
                         {
-                            Decimal Refund = payment.price;
+                            Decimal Refund = payment.Total;
+
                             WalletClass wallet = new WalletClass
                             {
                                 userID = Convert.ToInt32(Session["userID"].ToString()),
@@ -87,10 +88,26 @@ namespace FinalWeb
                                         {
                                             Response.Redirect("Catlog.aspx?ID=ALL");
                                         }
+                                        else
+                                        {
+                                            Response.Redirect("Home.aspx");
+                                        }
                                     }
                                 }
-                              
+                                else
+                                {
+                                    Response.Redirect("Catlog.aspx?ID=ALL");
+                                }
+
                             }
+                            else
+                            {
+                                Response.Redirect("Home.aspx");
+                            }
+                        }
+                        else
+                        {
+                            Response.Redirect("Home.aspx");
                         }
 
                     }

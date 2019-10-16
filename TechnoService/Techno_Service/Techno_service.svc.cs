@@ -1096,7 +1096,7 @@ namespace Techno_Service
         {
             Wallet wallet = new Wallet
             {
-               UserID = myWallet.userID,
+               UserID = userId,
                Balance  =Convert.ToDecimal(myWallet.amount),
                Status = myWallet.status
                
