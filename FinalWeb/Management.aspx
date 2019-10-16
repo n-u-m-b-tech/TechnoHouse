@@ -32,7 +32,7 @@
 			<li><a href="AddProduct.aspx"><em class="fa fa-calendar">&nbsp;</em> Add Product</a></li>
 			<li><a href="SearchProduct.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit Product</a></li>
 			<li><a href="SearchUser.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit User</a></li>
-            <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> Stats </a></li>
+            <li><a href="ChatRoom.aspx"><em class="fa fa-toggle-off">&nbsp;</em> Chat room </a></li>
             <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> View Report </a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -52,9 +52,10 @@
 		</div><!--/.row-->
 
         <!--.panel-->
+
         <div class="panel panel-container">
-
-
+            <asp:Literal ID="chat" runat="server"></asp:Literal>
+                      
 			<div class="row">
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
