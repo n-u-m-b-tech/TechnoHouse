@@ -256,7 +256,7 @@
 				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 					<!-- Block3 -->
 					<div class="block3">
-						<a href="Catalogue.aspx?ID=BathRoom" class="block3-img dis-block hov-img-zoom">
+						<a href="#" class="block3-img dis-block hov-img-zoom">
 							<img src="images/slider/SmartLiving.jpg" alt="IMG-BLOG">
 						</a>
 
@@ -281,7 +281,7 @@
                 				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 					<!-- Block3 -->
 					<div class="block3">
-						<a href="Catalogue.aspx?ID=BedRoom" class="block3-img dis-block hov-img-zoom">
+						<a href="#" class="block3-img dis-block hov-img-zoom">
 							<img src="images/slider/SmartBedroom.jpg" alt="IMG-BLOG">
 						</a>
 
@@ -306,7 +306,7 @@
                 	<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 					<!-- Block3 -->
 					<div class="block3">
-						<a href="Catalogue.aspx?ID=Liviing Room" class="block3-img dis-block hov-img-zoom">
+						<a href="#" class="block3-img dis-block hov-img-zoom">
 							<img src="images/aaaa.jpg" alt="IMG-BLOG">
 						</a>
 
@@ -331,7 +331,7 @@
                 <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 					<!-- Block3 -->
 					<div class="block3">
-						<a href="Catalogue.aspx?ID=Kitchen" class="block3-img dis-block hov-img-zoom">
+						<a href="#" class="block3-img dis-block hov-img-zoom">
 							<img src="images/slider/stak.jpg" alt="IMG-BLOG">
 						</a>
 
