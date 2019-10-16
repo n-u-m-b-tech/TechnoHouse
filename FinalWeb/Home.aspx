@@ -271,8 +271,8 @@
 							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
+								Don't like talking and prefer controlling things the old fashioned way: by pushing buttons? The Logitech Harmony Elite is the ultimate universal remote for a reason: it controls a lot more than just TV and stereo. The pricey unit connects with the included Harmony Home Hub to control other Bluetooth, Wi-Fi, Zigbee, Z-Wave, or infrared devices in your house.
+                            </p>
 						</div>
 					</div>
 				</div>
@@ -296,8 +296,8 @@
 							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
+								If you're looking to add some smarts to small home appliances such as coffee makers, lamps, and TVs, the ConnectSense Smart Outlet 2 is an excellent choice. This versatile dual-outlet smart plug can be controlled with an Android or iOS mobile app and works with Alexa, Google Assistant, and Siri voice commands.
+                            </p>
 						</div>
 					</div>
 				</div>
@@ -307,7 +307,7 @@
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="Catalogue.aspx?ID=Liviing Room" class="block3-img dis-block hov-img-zoom">
-							<img src="images/slider/SmartLiving.jpg" alt="IMG-BLOG">
+							<img src="images/aaaa.jpg" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -321,18 +321,18 @@
 							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
+								The Brilliant Control is a unique wall switch that uses Wi-Fi to connect to and control various smart devices in your home. It has a 5-inch color touch screen with user-friendly button controls that let you play music, control lighting, set thermostat temperatures, and see who is at your door, among other things. It works with many popular smart home platforms including Ecobee, Nest, Philips Hue, Ring, and Sonos, and it has built-in Amazon Alexa voice support that allows it to do almost everything an Echo device can do. It's fairly pricey and requires wiring knowledge to install, but it's a smart addition to a high-tech home.
+                            </p>
 						</div>
 					</div>
 				</div>
 
 
-                				<div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
+                <div class="col-sm-10 col-md-4 p-b-30 m-l-r-auto">
 					<!-- Block3 -->
 					<div class="block3">
 						<a href="Catalogue.aspx?ID=Kitchen" class="block3-img dis-block hov-img-zoom">
-							<img src="images/slider/kitchen.png" alt="IMG-BLOG">
+							<img src="images/slider/stak.jpg" alt="IMG-BLOG">
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -346,8 +346,8 @@
 							<span class="s-text6">on</span> <span class="s-text7">July 22, 2017</span>
 
 							<p class="s-text8 p-t-16">
-								Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et malesuada fames
-							</p>
+							The Smart Lock Pro + Connect is the latest offering from Techno House, and as with the original Techno Smart Lock and HomeKit Enabled models, it's a winner. This third-generation smart lock offers all the bells and whistles you get with the HomeKit model, and adds a few new features, including Techno's DoorSense technology, Z-Wave compatibility, and Wi-Fi connectivity	
+                            </p>
 						</div>
 					</div>
 				</div>
