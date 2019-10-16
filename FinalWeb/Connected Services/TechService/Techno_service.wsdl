@@ -139,6 +139,18 @@
   <wsdl:message name="ITechno_service_delivery_OutputMessage">
     <wsdl:part name="parameters" element="tns:deliveryResponse" />
   </wsdl:message>
+  <wsdl:message name="ITechno_service_AddToWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWallet" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_AddToWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUserWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserWallet" />
+  </wsdl:message>
+  <wsdl:message name="ITechno_service_getUserWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserWalletResponse" />
+  </wsdl:message>
   <wsdl:message name="ITechno_service_getInvoice_InputMessage">
     <wsdl:part name="parameters" element="tns:getInvoice" />
   </wsdl:message>
@@ -293,6 +305,14 @@
     <wsdl:operation name="delivery">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/delivery" message="tns:ITechno_service_delivery_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/deliveryResponse" message="tns:ITechno_service_delivery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/AddToWallet" message="tns:ITechno_service_AddToWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/AddToWalletResponse" message="tns:ITechno_service_AddToWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getUserWallet" message="tns:ITechno_service_getUserWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITechno_service/getUserWalletResponse" message="tns:ITechno_service_getUserWallet_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getInvoice">
       <wsdl:input wsaw:Action="http://tempuri.org/ITechno_service/getInvoice" message="tns:ITechno_service_getInvoice_InputMessage" />
@@ -532,6 +552,24 @@
     </wsdl:operation>
     <wsdl:operation name="delivery">
       <soap:operation soapAction="http://tempuri.org/ITechno_service/delivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToWallet">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/AddToWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserWallet">
+      <soap:operation soapAction="http://tempuri.org/ITechno_service/getUserWallet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

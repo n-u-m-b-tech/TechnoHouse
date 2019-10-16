@@ -993,6 +993,115 @@ namespace FinalWeb.TechService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WalletClass", Namespace="http://schemas.datacontract.org/2004/07/Techno_Service")]
+    [System.SerializableAttribute()]
+    public partial class WalletClass : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double TotalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string statusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int walletIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Total {
+            get {
+                return this.TotalField;
+            }
+            set {
+                if ((this.TotalField.Equals(value) != true)) {
+                    this.TotalField = value;
+                    this.RaisePropertyChanged("Total");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userID {
+            get {
+                return this.userIDField;
+            }
+            set {
+                if ((this.userIDField.Equals(value) != true)) {
+                    this.userIDField = value;
+                    this.RaisePropertyChanged("userID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int walletID {
+            get {
+                return this.walletIDField;
+            }
+            set {
+                if ((this.walletIDField.Equals(value) != true)) {
+                    this.walletIDField = value;
+                    this.RaisePropertyChanged("walletID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TechService.ITechno_service")]
     public interface ITechno_service {
@@ -1128,6 +1237,18 @@ namespace FinalWeb.TechService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/delivery", ReplyAction="http://tempuri.org/ITechno_service/deliveryResponse")]
         System.Threading.Tasks.Task<bool> deliveryAsync(FinalWeb.TechService.transactionClass trans);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddToWallet", ReplyAction="http://tempuri.org/ITechno_service/AddToWalletResponse")]
+        bool AddToWallet(int userId, FinalWeb.TechService.WalletClass myWallet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/AddToWallet", ReplyAction="http://tempuri.org/ITechno_service/AddToWalletResponse")]
+        System.Threading.Tasks.Task<bool> AddToWalletAsync(int userId, FinalWeb.TechService.WalletClass myWallet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUserWallet", ReplyAction="http://tempuri.org/ITechno_service/getUserWalletResponse")]
+        FinalWeb.TechService.WalletClass[] getUserWallet(int userID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUserWallet", ReplyAction="http://tempuri.org/ITechno_service/getUserWalletResponse")]
+        System.Threading.Tasks.Task<FinalWeb.TechService.WalletClass[]> getUserWalletAsync(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getInvoice", ReplyAction="http://tempuri.org/ITechno_service/getInvoiceResponse")]
         FinalWeb.TechService.transactionClass[] getInvoice(int userId);
@@ -1397,6 +1518,22 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<bool> deliveryAsync(FinalWeb.TechService.transactionClass trans) {
             return base.Channel.deliveryAsync(trans);
+        }
+        
+        public bool AddToWallet(int userId, FinalWeb.TechService.WalletClass myWallet) {
+            return base.Channel.AddToWallet(userId, myWallet);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddToWalletAsync(int userId, FinalWeb.TechService.WalletClass myWallet) {
+            return base.Channel.AddToWalletAsync(userId, myWallet);
+        }
+        
+        public FinalWeb.TechService.WalletClass[] getUserWallet(int userID) {
+            return base.Channel.getUserWallet(userID);
+        }
+        
+        public System.Threading.Tasks.Task<FinalWeb.TechService.WalletClass[]> getUserWalletAsync(int userID) {
+            return base.Channel.getUserWalletAsync(userID);
         }
         
         public FinalWeb.TechService.transactionClass[] getInvoice(int userId) {

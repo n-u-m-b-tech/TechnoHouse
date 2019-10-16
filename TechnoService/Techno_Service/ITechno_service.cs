@@ -46,12 +46,12 @@ namespace Techno_Service
 
         [OperationContract]
         List<ProductD> FiltCatPrice(String Category, Double price);
-        
+
 
 
         //transaction and cart
         [OperationContract]
-        Boolean Add_to_Cart(ProductD product,int userID,int Qty);
+        Boolean Add_to_Cart(ProductD product, int userID, int Qty);
 
         [OperationContract]
         List<CartClass> getUser_Cart(int userID);
@@ -66,6 +66,12 @@ namespace Techno_Service
         Boolean payment(transactionClass trans);
         [OperationContract]
         Boolean delivery(transactionClass trans);
+
+        [OperationContract]
+        Boolean AddToWallet(int userId,WalletClass myWallet);
+
+        [OperationContract]
+        List<WalletClass> getUserWallet(int userID);
 
         [OperationContract]
         List<transactionClass> getInvoice(int userId);

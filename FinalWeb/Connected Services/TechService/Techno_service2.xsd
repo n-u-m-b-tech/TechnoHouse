@@ -317,6 +317,35 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddToWallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="myWallet" nillable="true" type="q20:WalletClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddToWalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddToWalletResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserWallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getUserWalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getUserWalletResult" nillable="true" type="q21:ArrayOfWalletClass" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="getInvoice">
     <xs:complexType>
       <xs:sequence>
@@ -327,7 +356,7 @@
   <xs:element name="getInvoiceResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getInvoiceResult" nillable="true" type="q20:ArrayOftransactionClass" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getInvoiceResult" nillable="true" type="q22:ArrayOftransactionClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -341,7 +370,7 @@
   <xs:element name="getOrderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getOrderResult" nillable="true" type="q21:transactionClass" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getOrderResult" nillable="true" type="q23:transactionClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -355,7 +384,7 @@
   <xs:element name="getpayementResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getpayementResult" nillable="true" type="q22:transactionClass" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getpayementResult" nillable="true" type="q24:transactionClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -369,7 +398,7 @@
   <xs:element name="getDelivertDetailsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getDelivertDetailsResult" nillable="true" type="q23:transactionClass" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="getDelivertDetailsResult" nillable="true" type="q25:transactionClass" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -392,7 +421,7 @@
   <xs:element name="AddProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="addP" nillable="true" type="q24:ProductD" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="addP" nillable="true" type="q26:ProductD" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -406,7 +435,7 @@
   <xs:element name="EditProduct">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="pr" nillable="true" type="q25:ProductD" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="pr" nillable="true" type="q27:ProductD" />
         <xs:element minOccurs="0" name="ID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -428,7 +457,7 @@
   <xs:element name="productinforResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinforResult" nillable="true" type="q26:ProductD" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Techno_Service" minOccurs="0" name="productinforResult" nillable="true" type="q28:ProductD" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -87,6 +87,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="transactionClass" nillable="true" type="tns:transactionClass" />
+  <xs:complexType name="WalletClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" type="xs:int" />
+      <xs:element minOccurs="0" name="walletID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WalletClass" nillable="true" type="tns:WalletClass" />
+  <xs:complexType name="ArrayOfWalletClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WalletClass" nillable="true" type="tns:WalletClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWalletClass" nillable="true" type="tns:ArrayOfWalletClass" />
   <xs:complexType name="ArrayOftransactionClass">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="transactionClass" nillable="true" type="tns:transactionClass" />

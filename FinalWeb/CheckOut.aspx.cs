@@ -15,8 +15,7 @@ namespace FinalWeb
         String display = "";
         double total = 0;
         double subtotal = 0;
-        int qty = 0;
-     
+      
         int userID;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,57 +33,34 @@ namespace FinalWeb
                 zip.Value = user.ZipCode;
 
 
+
                 display += "<table class='table-shopping-cart'>";
                 display += "<tr class='table-head'>";
-                display += "<th class='column-1'>Remove</th>";
-                display += "<th class='column-2'>Image</th>";
-                display += "<th class='column-3'>Product Name</th>";
-                display += "<th class='column-4'>Product Description</th>";
-                display += "<th class='column-5'>Price</th>";
-                display += "<th class='column-6'>Quantity</th>";
-                display += "<th class='column-7'>Total</th>";
+                display += "<th class='column-1'>Ordered Item</th>";
+                display += "<th class='column-2'>Quantity</th>";
+                display += "<th class='column-3'>Amount</th>";
                 display += "</tr>";
-
+               
                 var cart = client.getUser_Cart(userID);
                 if (cart != null) {
                     foreach (CartClass c in cart) {
                         subtotal += c.Total;
-                        
-
                         display += "<tr class='table-row'>";
-                        display += "<td class='column-1>";
-                        //    display += "<a href='Add.aspx?ID="+c.productId+ "@Remove" + "'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></button></a>";
-                        display += "<div class='block2 -btn-addcart w-size1 trans-0-4'>";
-                        display += "<a href='Add.aspx?ID=" + c.productId + "@Remove" + "'class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'><i class='fs-12 fa fa-minus' aria-hidden='true'></i></a>";
-                        display += "</div>";
-                        display += "</td>";
-                        display += "<td class='column-2'>";
-                        display += "<div class='cart-img-product b-rad-4 o-f-hidden'>";
-                        display += "<img src ='" + c.image_url + "' alt='IMG-PRODUCT'>";
-                        display += "</div>";
-                        display += "</td>";
-                        display += "<td class='column-3'>" + c.productName + "</td>";
-                        display += "<td class='column-4'>" + c.productName + "</td>";
-                        display += "<td class='column-5'>" + Math.Round(c.unit, 2) + "</td>";
-                        display += "<td class='column-6'>";
-                        display += "<div class='flex-w bo5 of-hidden w-size17'>";
-                        display += "<button class='btn-num-product-down color1 flex-c-m size7 bg8 eff2'>";
-                        display += "<i class='fs-12 fa fa-minus' aria-hidden='true'></i></button>";
-                        display += "<input class='size8 m-text18 t-center num-product' type='number' name='num-product2' value='" + c.Qty + "'>";
-                        display += "<button class='btn-num-product-up color1 flex-c-m size7 bg8 eff2'>";
-                        display += "<i class='fs-12 fa fa-plus' aria-hidden='true'></i>";
-                        display += "</button>";
-                        display += "</div>";
-                        display += "</td>";
-                        display += "<td class='column-7'>" + c.Total + "</td>";
-                        display += "</tr>";
+                        display += "<td class='column-1'>" + c.productName + "</td>";
+                        display += "<td class='column-2'>" + c.Qty + " </td>";
+                        display += "<td class='column-3'>"+c.Total+"</td>";
                     }
                 }
-
+                total =subtotal + (subtotal * 0.15);
+                display += "</tr>";
+                display += "<tr class='table-row'>";
+                display += "<td class='col-10'>";
+                display += " <p>Subtotal:"+subtotal+"</p>";
+                display += "<p>VAT Included: 15%</p>";
+                display += "<p>Total:"+total+"</p>";
+                display += "</td>";
+                display += "</tr>";
                 display += "</table>";
-                display = "";
-                display += "<span class='s-text18 w-size19 w-full-sm'>Subtotal:</span>";
-                display += "<span class='m-text21 w-size20 w-full-sm'>" + 0 + "</span>";
                 cartshow.InnerHtml = display;
 
             }

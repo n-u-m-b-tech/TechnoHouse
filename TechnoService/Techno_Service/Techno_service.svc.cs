@@ -1090,6 +1090,56 @@ namespace Techno_Service
                 return null;
             }
         }
+
+        public bool AddToWallet(int userId, WalletClass myWallet)
+        {
+            Wallet wallet = new Wallet
+            {
+               UserID = myWallet.userID,
+               Balance  =Convert.ToDecimal(myWallet.amount),
+               Status = myWallet.status
+               
+            };
+
+            db.Wallets.InsertOnSubmit(wallet);
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
+            }
+        }
+
+        public List<WalletClass> getUserWallet(int userID)
+        {
+            var wall = (from i in db.Wallets
+                       where i.UserID.Equals(userID)
+                       select i);
+
+            List<WalletClass> list = new List<WalletClass>();
+            if (wall != null)
+            {
+                foreach (Wallet w in wall)
+                {
+                    WalletClass wallet = new WalletClass
+                    {
+                       walletID = w.Wallet_Id,
+                       userID= w.UserID,
+                       amount = Convert.ToDouble(w.Balance),
+                    };
+                    list.Add(wallet);
+                }
+                return list;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }
         

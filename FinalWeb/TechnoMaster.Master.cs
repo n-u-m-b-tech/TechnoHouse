@@ -72,11 +72,7 @@ namespace FinalWeb
                     }
                 }
                 else if (Session["userType"].Equals("user")) { }
-               // CartClass[] cart = client.getUser_Cart(Convert.ToInt32(Session["userID"].ToString()));
-                //foreach (CartClass c in cart)
-                //{
-                
-
+ 
             }
         }
     }
