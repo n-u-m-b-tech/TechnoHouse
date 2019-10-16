@@ -1202,6 +1202,12 @@ namespace FinalWeb.TechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/Add_to_Cart", ReplyAction="http://tempuri.org/ITechno_service/Add_to_CartResponse")]
         System.Threading.Tasks.Task<bool> Add_to_CartAsync(FinalWeb.TechService.ProductD product, int userID, int Qty);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/clearCart", ReplyAction="http://tempuri.org/ITechno_service/clearCartResponse")]
+        bool clearCart(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/clearCart", ReplyAction="http://tempuri.org/ITechno_service/clearCartResponse")]
+        System.Threading.Tasks.Task<bool> clearCartAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITechno_service/getUser_Cart", ReplyAction="http://tempuri.org/ITechno_service/getUser_CartResponse")]
         FinalWeb.TechService.CartClass[] getUser_Cart(int userID);
         
@@ -1470,6 +1476,14 @@ namespace FinalWeb.TechService {
         
         public System.Threading.Tasks.Task<bool> Add_to_CartAsync(FinalWeb.TechService.ProductD product, int userID, int Qty) {
             return base.Channel.Add_to_CartAsync(product, userID, Qty);
+        }
+        
+        public bool clearCart(int id) {
+            return base.Channel.clearCart(id);
+        }
+        
+        public System.Threading.Tasks.Task<bool> clearCartAsync(int id) {
+            return base.Channel.clearCartAsync(id);
         }
         
         public FinalWeb.TechService.CartClass[] getUser_Cart(int userID) {

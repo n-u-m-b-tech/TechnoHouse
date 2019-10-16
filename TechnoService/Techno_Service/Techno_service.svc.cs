@@ -947,6 +947,7 @@ namespace Techno_Service
             {
                 User_Id = trans.clientId,
                 Payment_Type = trans.Payementtype,
+                Payment_Date = trans.PaymentDate,
                 Amount = trans.price
             };
             db.Payments.InsertOnSubmit(pay);
@@ -1138,6 +1139,30 @@ namespace Techno_Service
             else
             {
                 return null;
+            }
+        }
+
+        public bool clearCart(int id)
+        {
+            var cart = (from c in db.Carts
+                        where c.user_Id.Equals(id)
+                        select c);
+            if (cart != null)
+            {
+                foreach(Cart c in cart)
+                {
+                    db.Carts.DeleteOnSubmit(c);
+                }
+            }
+
+            try
+            {
+                db.SubmitChanges();
+                return true;
+            }catch(Exception ex)
+            {
+                ex.GetBaseException();
+                return false;
             }
         }
     }

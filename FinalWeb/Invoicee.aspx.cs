@@ -79,18 +79,6 @@ namespace FinalWeb
                 display += "</table>";
                 table.InnerHtml = display;
 
-
-
-
-
-
-
-
-
-
-
-
-
             }
 
         }
