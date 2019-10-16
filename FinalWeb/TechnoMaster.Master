@@ -119,17 +119,8 @@
                 <!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Amount Left:
-										</a>
+								<li class="header-cart-item"  id="walletshow" runat="server">
 
-										<span class="header-cart-item-info">
-											R 3000
-										</span>
-									</div>
 								</li>
 							</ul>
 
