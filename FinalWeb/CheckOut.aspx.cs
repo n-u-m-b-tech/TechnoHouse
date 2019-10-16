@@ -71,10 +71,10 @@ namespace FinalWeb
             //Adding payment
             transactionClass pay = new transactionClass
             {
-                Total = Convert.ToDecimal(subtotal),
                 clientId = userID,
                 Payementtype = "Card",
                 PaymentDate = DateTime.Today,
+                price = Convert.ToDecimal(subtotal)
             };
 
             var ver = client.payment(pay);
@@ -140,7 +140,11 @@ namespace FinalWeb
 
                             if (Invo)
                             {
-                                Response.Redirect("Invoicee.aspx");
+                                bool verify = client.clearCart(userID);
+                                if (verify)
+                                {
+                                    Response.Redirect("Invoicee.aspx?ID=" + total + "");
+                                }
                             }
                         }
 

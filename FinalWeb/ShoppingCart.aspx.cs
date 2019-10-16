@@ -74,7 +74,7 @@ namespace FinalWeb
                         shopcart.InnerHtml = display;
             display = "";
             display += "<span class='s-text18 w-size19 w-full-sm'>Subtotal:</span>";
-			display += "<span class='m-text21 w-size20 w-full-sm'>"+subtotal+"</span>";
+			display += "<span class='m-text21 w-size20 w-full-sm'>"+Math.Round(subtotal,2)+"</span>";
             total.InnerHtml = display;
             if (sub != null)
             {
@@ -82,14 +82,14 @@ namespace FinalWeb
             }
             else
             {
-                subtotall.InnerHtml = "R" + Convert.ToString(subtotal);
+                subtotall.InnerHtml = "R" + Convert.ToString(Math.Round(subtotal,2));
             }
            
         }               
 
         protected void CheckOut_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CheckOut.aspx?ID");
+            Response.Redirect("CheckOut.aspx?ID="+subtotal+"");
         }
 
         protected void Update_Click(object sender,EventArgs e)
