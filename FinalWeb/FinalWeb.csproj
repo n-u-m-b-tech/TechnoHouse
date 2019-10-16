@@ -2590,6 +2590,7 @@
     <Content Include="images\icons\video-16-9.jpg" />
     <Content Include="images\icons\visa.png" />
     <Content Include="images\icons\wallet.png" />
+    <Content Include="images\image.jpg" />
     <Content Include="images\Products.txt" />
     <Content Include="images\products\0ec8d5576e995a281a02907f6cf1e2b0.jpg" />
     <Content Include="images\products\1000011013_main.jpg" />

@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <iframe width="700" height="600" src="https://www.userlike.com/en/chatpanel"></iframe>
+    <iframe width="980" height="600" src="https://www.userlike.com"></iframe>
 </asp:Content>
