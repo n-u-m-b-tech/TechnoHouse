@@ -49,10 +49,27 @@ namespace FinalWeb
                     display += " </div>";
                     display += " </div>";
                     display += " </div>";
-                    cartshow.InnerHtml = display; 
-                
+                    cartshow.InnerHtml = display;
 
-            }
+                display = "";
+                var wallet = client.getUserWallet(Convert.ToInt32(Session["userID"].ToString()));
+                var amount = 0.0;
+                if(wallet != null) {
+
+                foreach(WalletClass w in wallet) {
+                  amount += w.Total;
+                  display += " <div class='header-cart-item-txt'>";
+                  display += " <a href = '#' class='header-cart-item-name'>";
+                  display += " Amount Left";
+                  display += " </a>";
+                  display += " <span class='header-cart-item-info'>"+ Math.Round(amount,2) +"</span>";
+                  display += "</div>";
+                }
+                walletshow.InnerHtml = display;
+                }
+
+
+            } 
             hmanage.Visible = true;
             pmanage.Visible = false;
 

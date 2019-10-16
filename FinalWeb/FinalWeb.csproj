@@ -46,6 +46,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -94,6 +95,7 @@
     <Content Include="Add.aspx" />
     <Content Include="AddProduct.aspx" />
     <Content Include="Catalog.aspx" />
+    <Content Include="ChatRoom.aspx" />
     <Content Include="CheckOut.aspx" />
     <Content Include="Connected Services\TechService\FinalWeb.TechService.CartClass.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -2915,6 +2917,13 @@
     </Compile>
     <Compile Include="Catalog.aspx.designer.cs">
       <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChatRoom.aspx.cs">
+      <DependentUpon>ChatRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChatRoom.aspx.designer.cs">
+      <DependentUpon>ChatRoom.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckOut.aspx.cs">
       <DependentUpon>CheckOut.aspx</DependentUpon>

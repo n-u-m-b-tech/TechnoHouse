@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/TechnoMaster.Master" AutoEventWireup="true" CodeBehind="Management.aspx.cs" Inherits="FinalWeb.Management" %>
+
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/AdminHome.css" rel="stylesheet" />
     <link href="css/datepicker3.css" rel="stylesheet">
@@ -30,7 +32,7 @@
 			<li><a href="AddProduct.aspx"><em class="fa fa-calendar">&nbsp;</em> Add Product</a></li>
 			<li><a href="SearchProduct.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit Product</a></li>
 			<li><a href="SearchUser.aspx"><em class="fa fa-bar-chart">&nbsp;</em> Edit User</a></li>
-            <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> Stats </a></li>
+            <li><a href="ChatRoom.aspx"><em class="fa fa-toggle-off">&nbsp;</em> Chat room </a></li>
             <li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> View Report </a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -50,16 +52,18 @@
 		</div><!--/.row-->
 
         <!--.panel-->
-        <div class="panel panel-container">
+
+        <div class="panel panel-container">                   
 			<div class="row">
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
 							<div id="salesss" runat="server" class='large'></div>
-							<div  class="text-muted">Some Stuff</div>
+							<div  class="text-muted">Admins</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
@@ -73,7 +77,7 @@
 					<div class="panel panel-blue panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-bar-chart" aria-hidden="true"></em>
 							<div id="Div1" runat="server" class='large'>555</div>
-							<div class="text-muted">Registered users</div>
+							<div class="text-muted">Website Visitors</div>
 						</div>
 					</div>
 				</div>
@@ -92,9 +96,10 @@
 							<div class="text-muted">Page Views</div>
 						</div>
 					</div>
-				</div>
-			</div><!--/.row-->
-		</div><!--.panel-->
+                 </div>
+            </div>
+	    </div><!--/.row-->
+	</div><!--.panel-->
     <br />
     <br />
     <br />

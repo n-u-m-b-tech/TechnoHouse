@@ -119,17 +119,8 @@
                 <!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Amount Left:
-										</a>
+								<li class="header-cart-item"  id="walletshow" runat="server">
 
-										<span class="header-cart-item-info">
-											R 3000
-										</span>
-									</div>
 								</li>
 							</ul>
 
@@ -270,6 +261,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <script async type="text/javascript" src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/43d0da8a7b3db2926ab3a37366becc805dba577144b64b92bc14d5a4ed43700b.js"></script>
     </form>
 
 
