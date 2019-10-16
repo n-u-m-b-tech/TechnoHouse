@@ -38,9 +38,9 @@
 		<div class="container-menu-header">
 			<div class="topbar" style="background-color:#808080">
 				<div class="topbar-social" style="color:#ffffff">
-					<a href="CheckOut.aspx" class="topbar-social-item fa fa-facebook"></a>
-					<a href="Invoice.aspx" class="topbar-social-item fa fa-instagram"></a>
-					<a href="Gallery.aspx" class="topbar-social-item fa fa-youtube-play"></a>
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
 				</div>
 
 				<span class="topbar-child1" style="color:#ffffff">
