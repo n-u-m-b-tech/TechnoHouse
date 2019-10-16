@@ -21,7 +21,7 @@
 				</div>
 
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment">
+					<div class="leave-comment">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Send us your message
 						</h4>
@@ -46,7 +46,7 @@
 								Send
 							</button>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
