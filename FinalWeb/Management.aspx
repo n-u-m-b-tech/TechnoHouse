@@ -53,15 +53,13 @@
 
         <!--.panel-->
 
-        <div class="panel panel-container">
-            <asp:Literal ID="chat" runat="server"></asp:Literal>
-                      
+        <div class="panel panel-container">                   
 			<div class="row">
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-teal panel-widget border-right">
 						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
 							<div id="salesss" runat="server" class='large'></div>
-							<div  class="text-muted">Admins/div>
+							<div  class="text-muted">Admins</div>
 						</div>
 					</div>
 				</div>
@@ -98,10 +96,10 @@
 							<div class="text-muted">Page Views</div>
 						</div>
 					</div>
-				</div>
-			</div><!--/.row-->
-		</div><!--.panel-->
-    </div>
+                 </div>
+            </div>
+	    </div><!--/.row-->
+	</div><!--.panel-->
     <br />
     <br />
     <br />
