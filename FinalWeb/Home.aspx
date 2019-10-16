@@ -166,20 +166,6 @@
 						</div>
 					</div>
                     </div>
-
-                <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto">
-					<!-- block -->
-					<div class="block1 hov-img-zoom pos-relative m-b-30">
-						<img src="images/slider/sbed.jpg" alt="IMG-BENNER">
-                         <h2>Be the First to sign up and recieve a 20% discount if u checkout on the same of signing up</h2>
-						<div class="block1-wrapbtn w-size2">
-							<!-- Button -->
-							<a href="UserRegistration.aspx" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Sign Up and Recieve 20% Discount
-							</a>
-						</div>
-					</div>
-               </div>	
             </div>
             </div>
 	</section>
